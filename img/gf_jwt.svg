@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 340" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="340" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">JWT — 로그인 후 '토큰'으로 매 요청을 증명한다</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">한 번 로그인하면 서버가 토큰을 발급하고, 이후엔 그 토큰을 보여 본인임을 증명합니다.</text>
+  <defs><marker id="jw" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/></marker></defs>
+  <rect x="60" y="120" width="170" height="150" rx="12" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="145" y="150" font-size="14" font-weight="700" fill="#3a6fd6" text-anchor="middle">사용자</text>
+  <text x="145" y="172" font-size="10.5" fill="#6b6b6b" text-anchor="middle">(브라우저)</text>
+  <rect x="670" y="120" width="170" height="150" rx="12" fill="#1a1a1a"/>
+  <text x="755" y="150" font-size="14" font-weight="700" fill="#fff" text-anchor="middle">서버</text>
+  <text x="755" y="172" font-size="10.5" fill="#cfcfcf" text-anchor="middle">토큰 발급·검증</text>
+  <line x1="230" y1="150" x2="668" y2="150" stroke="#9aa0a6" stroke-width="1.8" marker-end="url(#jw)"/>
+  <text x="450" y="142" font-size="11" fill="#444" text-anchor="middle">① 로그인(아이디·비번)</text>
+  <line x1="668" y1="188" x2="232" y2="188" stroke="#c98a95" stroke-width="1.8" marker-end="url(#jw)"/>
+  <text x="450" y="180" font-size="11" fill="#b00020" text-anchor="middle">② 토큰(JWT) 발급 — '서명된 신분증'</text>
+  <rect x="300" y="204" width="300" height="30" rx="6" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="450" y="224" font-size="10.5" fill="#b8860b" text-anchor="middle">토큰 저장 (누가·언제까지 유효 + 위조 방지 서명)</text>
+  <line x1="230" y1="248" x2="668" y2="248" stroke="#9aa0a6" stroke-width="1.8" marker-end="url(#jw)"/>
+  <text x="450" y="262" font-size="11" fill="#444" text-anchor="middle">③ 이후 모든 요청에 토큰 첨부 → 서버가 서명 확인만 하면 끝(DB 조회 불필요)</text>
+  <text x="40" y="308" font-size="12" fill="#6b6b6b">※ 서버가 세션을 따로 저장하지 않아(무상태) 서버를 여러 대로 늘리기 쉽습니다. 대신 즉시 무효화는 까다롭습니다.</text>
+</svg>

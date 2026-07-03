@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="320" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">정규화 — 같은 정보를 한 곳에만 저장한다</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">이름을 여러 표에 복사하면 바뀔 때 불일치가 생깁니다. 한 곳에 두고 필요할 때 JOIN.</text>
+  <rect x="36" y="92" width="392" height="200" rx="12" fill="#fdeef1" stroke="#f7c0c8"/>
+  <text x="56" y="118" font-size="14" font-weight="700" fill="#E8344E">정규화 전 — 이름이 곳곳에 중복</text>
+  <text x="56" y="140" font-size="11" fill="#6b6b6b">rsvps 표에 user_name까지 저장</text>
+  <rect x="56" y="152" width="352" height="26" rx="4" fill="#ffffff" stroke="#f7c0c8"/><text x="66" y="170" font-size="10.5" fill="#444">신청1 · user_id=7 · 김철수</text>
+  <rect x="56" y="182" width="352" height="26" rx="4" fill="#ffffff" stroke="#f7c0c8"/><text x="66" y="200" font-size="10.5" fill="#444">신청2 · user_id=7 · 김철수</text>
+  <rect x="56" y="212" width="352" height="26" rx="4" fill="#ffffff" stroke="#f7c0c8"/><text x="66" y="230" font-size="10.5" fill="#444">신청3 · user_id=7 · 김철수</text>
+  <text x="56" y="264" font-size="11" fill="#b00020">이름이 바뀌면 세 곳을 모두 고쳐야 함 → 빠뜨리면 불일치</text>
+  <rect x="472" y="92" width="392" height="200" rx="12" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="492" y="118" font-size="14" font-weight="700" fill="#1a7f37">정규화 후 — 이름은 users에 한 번만</text>
+  <rect x="492" y="136" width="150" height="70" rx="6" fill="#ffffff" stroke="#cfe9d7"/>
+  <text x="502" y="156" font-size="10.5" font-weight="700" fill="#1a7f37">users</text>
+  <text x="502" y="176" font-size="10.5" fill="#444">id=7</text>
+  <text x="502" y="194" font-size="10.5" fill="#444">김철수</text>
+  <rect x="694" y="136" width="150" height="70" rx="6" fill="#ffffff" stroke="#cfe9d7"/>
+  <text x="704" y="156" font-size="10.5" font-weight="700" fill="#1a7f37">rsvps</text>
+  <text x="704" y="176" font-size="10.5" fill="#444">신청1·2·3</text>
+  <text x="704" y="194" font-size="10.5" fill="#444">user_id=7 (참조)</text>
+  <line x1="642" y1="171" x2="692" y2="171" stroke="#9aa0a6" stroke-width="1.6"/><text x="667" y="164" font-size="9" fill="#6b6b6b" text-anchor="middle">JOIN</text>
+  <text x="492" y="240" font-size="11" fill="#1a7f37">이름 변경은 users 한 행만 → 언제나 일치</text>
+  <text x="492" y="262" font-size="11" fill="#6b6b6b">필요할 때 user_id로 JOIN해 이름을 가져옴</text>
+</svg>

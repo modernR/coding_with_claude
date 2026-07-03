@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 470" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="470" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">AWS 주요 서비스 지도 — 역할별로 자주 쓰는 것들</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">AWS는 200개가 넘는 서비스가 있지만, 실무에서 반복해 만나는 핵심은 아래 정도입니다.</text>
+
+  <!-- 컴퓨트 -->
+  <rect x="36" y="90" width="270" height="112" rx="10" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="52" y="113" font-size="12.5" font-weight="700" fill="#3a6fd6">컴퓨트 (실행)</text>
+  <text x="52" y="135" font-size="10.5" fill="#1a1a1a"><tspan font-weight="700">EC2</tspan> 가상 서버 · <tspan font-weight="700">Lambda</tspan> 서버리스 함수</text>
+  <text x="52" y="155" font-size="10.5" fill="#1a1a1a"><tspan font-weight="700">ECS·EKS</tspan> 컨테이너 · <tspan font-weight="700">Fargate</tspan> 서버리스 컨테이너</text>
+  <text x="52" y="175" font-size="10.5" fill="#1a1a1a"><tspan font-weight="700">Elastic Beanstalk</tspan> 앱 배포 자동화</text>
+  <text x="52" y="194" font-size="9.5" fill="#6b6b6b">→ 코드를 돌리는 곳 (IaaS~PaaS)</text>
+
+  <!-- 스토리지 -->
+  <rect x="315" y="90" width="270" height="112" rx="10" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="331" y="113" font-size="12.5" font-weight="700" fill="#1a7f37">스토리지 (저장)</text>
+  <text x="331" y="135" font-size="10.5" fill="#1a1a1a"><tspan font-weight="700">S3</tspan> 객체 스토리지(파일·이미지·백업)</text>
+  <text x="331" y="155" font-size="10.5" fill="#1a1a1a"><tspan font-weight="700">EBS</tspan> EC2용 디스크 · <tspan font-weight="700">EFS</tspan> 공유 파일</text>
+  <text x="331" y="175" font-size="10.5" fill="#1a1a1a"><tspan font-weight="700">Glacier</tspan> 장기 보관(저비용)</text>
+  <text x="331" y="194" font-size="9.5" fill="#6b6b6b">→ 4강의 객체 스토리지가 바로 S3</text>
+
+  <!-- 데이터베이스 -->
+  <rect x="594" y="90" width="270" height="112" rx="10" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="610" y="113" font-size="12.5" font-weight="700" fill="#b8860b">데이터베이스</text>
+  <text x="610" y="135" font-size="10.5" fill="#1a1a1a"><tspan font-weight="700">RDS·Aurora</tspan> 관계형(PostgreSQL 등)</text>
+  <text x="610" y="155" font-size="10.5" fill="#1a1a1a"><tspan font-weight="700">DynamoDB</tspan> NoSQL · <tspan font-weight="700">ElastiCache</tspan> 캐시</text>
+  <text x="610" y="175" font-size="10.5" fill="#1a1a1a"><tspan font-weight="700">Redshift</tspan> 분석용 데이터 웨어하우스</text>
+  <text x="610" y="194" font-size="9.5" fill="#6b6b6b">→ 3·4강의 DB·캐싱이 여기</text>
+
+  <!-- 네트워크·전송 -->
+  <rect x="36" y="214" width="270" height="112" rx="10" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="52" y="237" font-size="12.5" font-weight="700" fill="#1a1a1a">네트워크·전송</text>
+  <text x="52" y="259" font-size="10.5" fill="#1a1a1a"><tspan font-weight="700">VPC</tspan> 가상 네트워크 · <tspan font-weight="700">Route 53</tspan> DNS</text>
+  <text x="52" y="279" font-size="10.5" fill="#1a1a1a"><tspan font-weight="700">CloudFront</tspan> CDN · <tspan font-weight="700">ELB</tspan> 로드밸런서</text>
+  <text x="52" y="299" font-size="10.5" fill="#1a1a1a"><tspan font-weight="700">API Gateway</tspan> API 입구</text>
+  <text x="52" y="318" font-size="9.5" fill="#6b6b6b">→ 5강의 DNS·CDN·부하 분산</text>
+
+  <!-- 보안·인증 -->
+  <rect x="315" y="214" width="270" height="112" rx="10" fill="#fff5f6" stroke="#f3c9cf"/>
+  <text x="331" y="237" font-size="12.5" font-weight="700" fill="#b00020">보안·인증</text>
+  <text x="331" y="259" font-size="10.5" fill="#1a1a1a"><tspan font-weight="700">IAM</tspan> 권한 관리 · <tspan font-weight="700">Cognito</tspan> 사용자 인증</text>
+  <text x="331" y="279" font-size="10.5" fill="#1a1a1a"><tspan font-weight="700">KMS</tspan> 암호화 키 · <tspan font-weight="700">Secrets Manager</tspan></text>
+  <text x="331" y="299" font-size="10.5" fill="#1a1a1a"><tspan font-weight="700">WAF·Shield</tspan> 웹 방화벽·DDoS 방어</text>
+  <text x="331" y="318" font-size="9.5" fill="#6b6b6b">→ 5강의 시크릿·보안 위협 방어</text>
+
+  <!-- 관측·메시징 -->
+  <rect x="594" y="214" width="270" height="112" rx="10" fill="#f5f0fb" stroke="#d9c6f0"/>
+  <text x="610" y="237" font-size="12.5" font-weight="700" fill="#7c3aed">관측·메시징·CI/CD</text>
+  <text x="610" y="259" font-size="10.5" fill="#1a1a1a"><tspan font-weight="700">CloudWatch</tspan> 모니터링·로그·알림</text>
+  <text x="610" y="279" font-size="10.5" fill="#1a1a1a"><tspan font-weight="700">SQS·SNS</tspan> 큐·알림 · <tspan font-weight="700">ECR</tspan> 이미지 저장소</text>
+  <text x="610" y="299" font-size="10.5" fill="#1a1a1a"><tspan font-weight="700">CodePipeline·CodeBuild</tspan> CI/CD</text>
+  <text x="610" y="318" font-size="9.5" fill="#6b6b6b">→ 3·8절의 모니터링·큐·배포</text>
+
+  <!-- Amplify highlight -->
+  <rect x="36" y="340" width="828" height="98" rx="10" fill="#fff9e6" stroke="#e8b84b" stroke-width="1.5"/>
+  <text x="52" y="364" font-size="13.5" font-weight="700" fill="#b8860b">★ AWS Amplify — 위 서비스들을 하나로 묶은 풀스택 도구 (프론트+백엔드+호스팅)</text>
+  <text x="52" y="388" font-size="10.5" fill="#1a1a1a">TypeScript 코드로 <tspan font-weight="700">인증(Cognito)·데이터(AppSync+DynamoDB)·스토리지(S3)·함수(Lambda)</tspan> 를 한 번에 정의하고,</text>
+  <text x="52" y="408" font-size="10.5" fill="#1a1a1a">Git 브랜치별 <tspan font-weight="700">자동 배포(Amplify Hosting)</tspan> 와 개발자별 <tspan font-weight="700">클라우드 샌드박스</tspan> 를 제공합니다.</text>
+  <text x="52" y="428" font-size="10" fill="#6b6b6b">필요하면 AWS CDK로 200+ 서비스까지 확장 — 이 교재의 Vercel+Supabase 조합에 대응하는 'AWS 한 지붕' 선택지.</text>
+</svg>

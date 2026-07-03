@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="300" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">MCP를 자동으로 — 정기 실행 시나리오</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">MCP는 사람이 시키는 것만이 아니라, 정해진 시각·사건에 무인으로 돌 수도 있습니다.</text>
+
+  <defs><marker id="gm5cb" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/></marker></defs>
+
+  <!-- trigger -->
+  <rect x="40" y="110" width="150" height="80" rx="10" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="115" y="140" font-size="12" font-weight="700" fill="#7c3aed" text-anchor="middle">트리거</text>
+  <text x="115" y="162" font-size="10" fill="#444" text-anchor="middle">schedule (cron)</text>
+  <text x="115" y="178" font-size="10" fill="#444" text-anchor="middle">또는 pull_request</text>
+
+  <line x1="190" y1="150" x2="228" y2="150" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#gm5cb)"/>
+
+  <!-- claude -->
+  <rect x="232" y="110" width="160" height="80" rx="10" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="312" y="140" font-size="12" font-weight="700" fill="#1a1a1a" text-anchor="middle">Cowork 실행</text>
+  <text x="312" y="162" font-size="9.5" fill="#444" text-anchor="middle">GitHub Actions에서</text>
+  <text x="312" y="178" font-size="9.5" fill="#444" text-anchor="middle">MCP를 사람 없이 호출</text>
+
+  <line x1="392" y1="150" x2="430" y2="150" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#gm5cb)"/>
+
+  <!-- three scenarios -->
+  <rect x="434" y="98" width="426" height="30" rx="7" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="450" y="118" font-size="10.5" fill="#3a6fd6">PR 생성 시 자동 코드 리뷰 (품질·보안 코멘트 자동)</text>
+  <rect x="434" y="135" width="426" height="30" rx="7" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="450" y="155" font-size="10.5" fill="#1a7f37">정기 모니터링 (야간 에러·매출을 아침에 Slack)</text>
+  <rect x="434" y="172" width="426" height="30" rx="7" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="450" y="192" font-size="10.5" fill="#b8860b">릴리스 후 검증 (Playwright로 핵심 플로우 점검)</text>
+
+  <rect x="40" y="222" width="820" height="52" rx="9" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="56" y="246" font-size="11" fill="#8a6d00">예: cron '0 9 * * 1' (매주 월 9시 UTC) → claude "지난 7일 에러 top 5를 Linear에 등록해줘"</text>
+  <text x="56" y="266" font-size="10.5" fill="#8a6d00">본격적인 MCP + CI/CD 결합은 다음 강(운영)에서 다룹니다.</text>
+</svg>

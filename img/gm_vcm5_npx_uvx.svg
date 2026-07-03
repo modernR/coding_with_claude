@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="300" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">npx vs uvx — Node와 Python의 갈림</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">MCP 서버가 어느 언어로 구현됐느냐로 실행 방식이 갈립니다. 서버 가이드의 명령을 그대로 따르면 됩니다.</text>
+
+  <rect x="40" y="95" width="400" height="185" rx="12" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="240" y="122" font-size="14" font-weight="700" fill="#1a7f37" text-anchor="middle">npx (Node.js)</text>
+  <rect x="62" y="138" width="356" height="30" rx="6" fill="#ffffff" stroke="#cfe9d7"/>
+  <text x="76" y="158" font-size="10" fill="#444" font-family="monospace">npx -y @modelcontextprotocol/server-&lt;name&gt;</text>
+  <text x="62" y="192" font-size="11" fill="#444">빠르고 간단, 대부분의 서버가 여기</text>
+  <text x="62" y="214" font-size="11" font-weight="700" fill="#1a7f37">주요 서버</text>
+  <text x="62" y="236" font-size="10.5" fill="#444">GitHub · Slack · Playwright · filesystem · git · brave-search</text>
+  <rect x="62" y="248" width="356" height="24" rx="6" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="76" y="265" font-size="10" fill="#3a6fd6">개발·메신저·검색 계열</text>
+
+  <rect x="460" y="95" width="400" height="185" rx="12" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="660" y="122" font-size="14" font-weight="700" fill="#b8860b" text-anchor="middle">uvx (Python)</text>
+  <rect x="482" y="138" width="356" height="30" rx="6" fill="#ffffff" stroke="#f0d6b8"/>
+  <text x="496" y="158" font-size="10" fill="#444" font-family="monospace">uvx --from mcp-&lt;package&gt; &lt;command&gt;</text>
+  <text x="482" y="192" font-size="11" fill="#444">uv 런타임 필요, 데이터·ML 계열이 많음</text>
+  <text x="482" y="214" font-size="11" font-weight="700" fill="#b8860b">주요 서버</text>
+  <text x="482" y="236" font-size="10.5" fill="#444">SQLite · PostgreSQL · LLM 관련 서버</text>
+  <rect x="482" y="248" width="356" height="24" rx="6" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="496" y="265" font-size="10" fill="#8a6d00">DB·데이터·ML 계열</text>
+</svg>

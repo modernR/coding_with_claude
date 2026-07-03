@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="360" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">메타프롬프트 — 프롬프트를 만드는 프롬프트</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">한 단계를 더 두어, 작업 전에 "어떻게 하면 잘 나올지"를 먼저 설계합니다.</text>
+
+  <defs><marker id="vca6mp_ar" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/></marker></defs>
+
+  <!-- 일반 프롬프트 -->
+  <text x="40" y="108" font-size="13" font-weight="700" fill="#b00020">일반 프롬프트 — 한 번에 시도</text>
+  <rect x="40" y="122" width="200" height="52" rx="10" fill="#fff5f6" stroke="#f3c9cf"/>
+  <text x="140" y="145" font-size="11" fill="#444" text-anchor="middle">"PRD 써줘"</text>
+  <text x="140" y="163" font-size="9.5" fill="#6b6b6b" text-anchor="middle">지시 = 곧바로 작성</text>
+
+  <rect x="300" y="122" width="180" height="52" rx="10" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="390" y="145" font-size="11" font-weight="700" fill="#1a1a1a" text-anchor="middle">결과물 초안</text>
+  <text x="390" y="163" font-size="9.5" fill="#6b6b6b" text-anchor="middle">누락·편차 생기기 쉬움</text>
+  <line x1="240" y1="148" x2="298" y2="148" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#vca6mp_ar)"/>
+
+  <!-- 메타프롬프트 -->
+  <text x="40" y="222" font-size="13" font-weight="700" fill="#3a6fd6">메타프롬프트 — 프롬프트를 먼저 짠다</text>
+  <rect x="40" y="236" width="200" height="60" rx="10" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="140" y="260" font-size="11" fill="#444" text-anchor="middle">"잘 쓰려면 어떤 정보를,</text>
+  <text x="140" y="276" font-size="11" fill="#444" text-anchor="middle">어떤 구조로 써야 할지</text>
+  <text x="140" y="290" font-size="11" fill="#444" text-anchor="middle">먼저 알려줘"</text>
+
+  <rect x="300" y="236" width="180" height="60" rx="10" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="390" y="262" font-size="11" font-weight="700" fill="#b8860b" text-anchor="middle">작성 가이드 생성</text>
+  <text x="390" y="280" font-size="9.5" fill="#6b6b6b" text-anchor="middle">수집 정보·구조·어조 정리</text>
+  <line x1="240" y1="266" x2="298" y2="266" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#vca6mp_ar)"/>
+
+  <rect x="540" y="236" width="180" height="60" rx="10" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="630" y="262" font-size="11" font-weight="700" fill="#1a7f37" text-anchor="middle">가이드로 본 작성</text>
+  <text x="630" y="280" font-size="9.5" fill="#6b6b6b" text-anchor="middle">누락 적은 완성본</text>
+  <line x1="480" y1="266" x2="538" y2="266" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#vca6mp_ar)"/>
+
+  <rect x="760" y="236" width="110" height="60" rx="10" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="815" y="262" font-size="10.5" font-weight="700" fill="#7c3aed" text-anchor="middle">품질 ↑</text>
+  <text x="815" y="280" font-size="9" fill="#6b6b6b" text-anchor="middle">설계 재검토 효과</text>
+  <line x1="720" y1="266" x2="758" y2="266" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#vca6mp_ar)"/>
+
+  <text x="40" y="332" font-size="10" fill="#6b6b6b">핵심: 지시와 작성 사이에 "작성 설계" 단계를 한 번 끼워 넣는다. 단, 메타는 1단계만.</text>
+</svg>

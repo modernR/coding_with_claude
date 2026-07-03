@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="400" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">세션 분리 전략 4패턴</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">100+ 파일 프로젝트를 한 세션에 다 넣으면 컨텍스트가 폭발합니다. 축을 골라 나눕니다.</text>
+
+  <rect x="40" y="95" width="400" height="130" rx="12" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="60" y="122" font-size="13" font-weight="700" fill="#3a6fd6">A. 시간 분할</text>
+  <text x="60" y="146" font-size="10" fill="#444">작업 시간대별로 세션을 나눕니다.</text>
+  <text x="60" y="170" font-size="10" fill="#6b6b6b">예) 오전: 인증 작업 · 오후: UI 작업</text>
+  <text x="60" y="200" font-size="9.5" fill="#444">RSVP: 오전 신청 API, 오후 신청 화면</text>
+
+  <rect x="460" y="95" width="400" height="130" rx="12" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="480" y="122" font-size="13" font-weight="700" fill="#b8860b">B. 영역 분할</text>
+  <text x="480" y="146" font-size="10" fill="#444">코드베이스 영역별로 나눕니다.</text>
+  <text x="480" y="170" font-size="10" fill="#6b6b6b">예) 세션1 백엔드 · 2 프론트 · 3 통합</text>
+  <text x="480" y="200" font-size="9.5" fill="#444">RSVP: API / 화면 / E2E 를 분리</text>
+
+  <rect x="40" y="240" width="400" height="130" rx="12" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="60" y="267" font-size="13" font-weight="700" fill="#7c3aed">C. 단계 분할</text>
+  <text x="60" y="291" font-size="10" fill="#444">워크플로우 단계별로 나눕니다.</text>
+  <text x="60" y="315" font-size="10" fill="#6b6b6b">예) 설계·계획 → 구현 → 테스트·배포</text>
+  <text x="60" y="345" font-size="9.5" fill="#444">RSVP: PRD → 정원 로직 구현 → 배포</text>
+
+  <rect x="460" y="240" width="400" height="130" rx="12" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="480" y="267" font-size="13" font-weight="700" fill="#1a7f37">D. 깊이 분할 (가장 자동화 가능)</text>
+  <text x="480" y="291" font-size="10" fill="#444">메인은 큰 그림, sub가 디테일을 맡습니다.</text>
+  <text x="480" y="315" font-size="10" fill="#6b6b6b">예) 세션1 큰 그림 · 2 디테일 · 3 디테일</text>
+  <text x="480" y="345" font-size="9.5" fill="#444">서브에이전트로 자동 분배 가능</text>
+</svg>

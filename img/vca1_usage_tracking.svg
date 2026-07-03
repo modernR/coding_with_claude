@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="380" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">사용량 추적 — hook 로그에서 운영 리포트까지</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">SessionEnd 훅이 메타데이터만 사내 API로 보내고, 집계 대시보드가 ROI·제거 후보를 드러냅니다.</text>
+
+  <defs><marker id="vca1ut_ar" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/></marker></defs>
+
+  <!-- session end hook -->
+  <rect x="40" y="100" width="220" height="130" rx="11" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="150" y="124" font-size="12" font-weight="700" fill="#3a6fd6" text-anchor="middle">① SessionEnd 훅</text>
+  <text x="60" y="148" font-size="10" fill="#444">user · timestamp · duration</text>
+  <text x="60" y="166" font-size="10" fill="#444">tokens · project</text>
+  <text x="60" y="184" font-size="10" fill="#444">skills_used · commands_used</text>
+  <text x="60" y="208" font-size="9.5" fill="#b00020">내용(content)은 보내지 않음</text>
+  <text x="60" y="223" font-size="9.5" fill="#6b6b6b">메타데이터만 · 토큰은 env로</text>
+
+  <!-- log api -->
+  <rect x="330" y="120" width="220" height="90" rx="11" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="440" y="144" font-size="12" font-weight="700" fill="#b8860b" text-anchor="middle">② 사내 로그 API</text>
+  <text x="440" y="167" font-size="10" fill="#444" text-anchor="middle">/api/cowork-logs</text>
+  <text x="440" y="185" font-size="9.5" fill="#444" text-anchor="middle">Bearer 토큰 인증</text>
+  <text x="440" y="201" font-size="9.5" fill="#6b6b6b" text-anchor="middle">익명화·집계 저장</text>
+
+  <!-- dashboard -->
+  <rect x="620" y="100" width="240" height="130" rx="11" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="740" y="124" font-size="12" font-weight="700" fill="#1a7f37" text-anchor="middle">③ 월간 대시보드</text>
+  <text x="640" y="148" font-size="9.5" fill="#444">인기 플러그인·스킬 Top N</text>
+  <text x="640" y="166" font-size="9.5" fill="#444">절감 시간·비용·ROI</text>
+  <text x="640" y="184" font-size="9.5" fill="#444">미사용 스킬 = 제거 후보</text>
+  <text x="640" y="208" font-size="9.5" fill="#6b6b6b">임원 설득·예산 확보 자산</text>
+
+  <line x1="260" y1="165" x2="328" y2="165" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#vca1ut_ar)"/>
+  <line x1="550" y1="165" x2="618" y2="165" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#vca1ut_ar)"/>
+
+  <!-- privacy row -->
+  <rect x="40" y="262" width="820" height="96" rx="11" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="60" y="286" font-size="12" font-weight="700" fill="#1a1a1a">프라이버시·보안 4원칙</text>
+  <text x="60" y="310" font-size="10" fill="#444">✓ 작업 내용은 추적하지 않음 (메타데이터만)      ✓ 익명화·집계 단위로만 활용</text>
+  <text x="60" y="330" font-size="10" fill="#444">✓ 직원 요청 시 본인 데이터 삭제 가능              ✓ 데이터 보존 기간 명시 (예: 1년)</text>
+  <text x="60" y="349" font-size="9.5" fill="#6b6b6b">추적이 감시가 되지 않도록, 무엇을 왜 모으는지 투명하게 공지합니다.</text>
+</svg>

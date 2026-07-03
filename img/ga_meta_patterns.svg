@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 330" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="330" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">메타프롬프트 세 가지 패턴 — A 직접 · B 자동 · C 반복</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">"잘 쓰기 위한 가이드를 먼저 짜라"를 어떻게 운용하느냐로 갈립니다. 메타는 한 단계만.</text>
+  <defs>
+    <marker id="mp_a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#9aa0a6"/></marker>
+  </defs>
+  <g>
+    <rect x="40" y="95" width="820" height="66" rx="11" fill="#eef3fd" stroke="#bcd0f5"/>
+    <text x="58" y="118" font-size="13" font-weight="700" fill="#3a6fd6">A. 직접 메타 — 사람이 중간에 개입</text>
+    <text x="58" y="146" font-size="10.5" fill="#444">AI가 작성 가이드 제시</text>
+    <line x1="248" y1="142" x2="290" y2="142" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#mp_a)"/>
+    <text x="298" y="146" font-size="10.5" fill="#444">사람이 검토·보강</text>
+    <line x1="418" y1="142" x2="460" y2="142" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#mp_a)"/>
+    <text x="468" y="146" font-size="10.5" fill="#444">그 가이드로 본 작성</text>
+  </g>
+  <g>
+    <rect x="40" y="171" width="820" height="66" rx="11" fill="#f1faf3" stroke="#cfe9d7"/>
+    <text x="58" y="194" font-size="13" font-weight="700" fill="#1a7f37">B. 자동 메타 — 사용자는 결과만 (가장 자동화됨)</text>
+    <text x="58" y="222" font-size="10.5" fill="#444">prd-meta-planner (가이드 도출)</text>
+    <line x1="308" y1="218" x2="350" y2="218" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#mp_a)"/>
+    <text x="358" y="222" font-size="10.5" fill="#444">prd-writer (본문 작성)</text>
+    <line x1="530" y1="218" x2="572" y2="218" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#mp_a)"/>
+    <text x="580" y="222" font-size="10.5" fill="#444">완성본 전달</text>
+  </g>
+  <g>
+    <rect x="40" y="247" width="820" height="66" rx="11" fill="#ede9fe" stroke="#a78bda"/>
+    <text x="58" y="270" font-size="13" font-weight="700" fill="#7c3aed">C. 반복 메타 — 자기 개선 루프</text>
+    <text x="58" y="298" font-size="10.5" fill="#444">초안 작성</text>
+    <line x1="128" y1="294" x2="170" y2="294" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#mp_a)"/>
+    <text x="178" y="298" font-size="10.5" fill="#444">스스로 부족한 부분 분석</text>
+    <line x1="360" y1="294" x2="402" y2="294" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#mp_a)"/>
+    <text x="410" y="298" font-size="10.5" fill="#444">추가 프롬프트로 자기 재호출 (1사이클)</text>
+  </g>
+</svg>

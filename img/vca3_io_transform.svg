@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="320" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">input/output 훅 — 검증에서 변형·반환까지</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">stdin으로 입력(JSON)을 받고, action·content를 stdout으로 되돌려 보냅니다.</text>
+
+  <defs>
+    <marker id="io_a" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/>
+    </marker>
+  </defs>
+
+  <!-- 메인 에이전트 -->
+  <rect x="40" y="110" width="150" height="120" rx="11" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="115" y="160" font-size="13" font-weight="700" fill="#3a6fd6" text-anchor="middle">메인</text>
+  <text x="115" y="180" font-size="13" font-weight="700" fill="#3a6fd6" text-anchor="middle">에이전트</text>
+  <text x="115" y="204" font-size="9.5" fill="#6b6b6b" text-anchor="middle">코드 작성</text>
+
+  <!-- 훅 처리 박스 -->
+  <rect x="260" y="95" width="360" height="150" rx="12" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="280" y="120" font-size="13" font-weight="700" fill="#b8860b">변형 훅 (before_file_save)</text>
+  <rect x="278" y="135" width="150" height="40" rx="8" fill="#ffffff" stroke="#f0d6b8"/>
+  <text x="353" y="153" font-size="10" fill="#444" text-anchor="middle">1. Prettier 포맷</text>
+  <text x="353" y="168" font-size="10" fill="#444" text-anchor="middle">2. ESLint --fix</text>
+  <rect x="450" y="135" width="150" height="40" rx="8" fill="#ffffff" stroke="#f0d6b8"/>
+  <text x="525" y="153" font-size="10" fill="#444" text-anchor="middle">3. docstring 추가</text>
+  <text x="525" y="168" font-size="10" fill="#444" text-anchor="middle">import 정렬</text>
+  <rect x="278" y="188" width="322" height="40" rx="8" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="439" y="212" font-size="10.5" fill="#7c3aed" text-anchor="middle">action: "modify" · content: 변형된 코드</text>
+
+  <!-- 결과 -->
+  <rect x="690" y="110" width="170" height="120" rx="11" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="775" y="158" font-size="12.5" font-weight="700" fill="#1a7f37" text-anchor="middle">정리된 코드로</text>
+  <text x="775" y="178" font-size="12.5" font-weight="700" fill="#1a7f37" text-anchor="middle">저장·다음 작업</text>
+  <text x="775" y="202" font-size="9.5" fill="#6b6b6b" text-anchor="middle">사용자는 다듬어진</text>
+  <text x="775" y="216" font-size="9.5" fill="#6b6b6b" text-anchor="middle">코드를 검토</text>
+
+  <!-- 화살표 -->
+  <line x1="190" y1="150" x2="256" y2="150" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#io_a)"/>
+  <text x="223" y="142" font-size="9" fill="#6b6b6b" text-anchor="middle">stdin</text>
+  <line x1="620" y1="170" x2="686" y2="170" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#io_a)"/>
+  <text x="653" y="162" font-size="9" fill="#6b6b6b" text-anchor="middle">stdout</text>
+
+  <!-- 메인으로 되돌림 -->
+  <path d="M690 205 L640 205 L640 262 L115 262 L115 234" fill="none" stroke="#3a6fd6" stroke-width="1.6" stroke-dasharray="5 3" marker-end="url(#io_a)"/>
+  <text x="380" y="278" font-size="9.5" fill="#3a6fd6" text-anchor="middle">변형 결과가 메인 에이전트로 되돌아와 다음 작업의 기준이 됨</text>
+</svg>

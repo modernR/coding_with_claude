@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="420" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">메모리 3계층 — 어디에 무엇을, 얼마나 오래 기억하나</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">세션 메모리(휘발) · 프로젝트 CLAUDE.md(장기) · 글로벌 CLAUDE.md(모든 세션 공유)로 누적됩니다.</text>
+
+  <rect x="40" y="95" width="820" height="88" rx="10" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="60" y="120" font-size="13" font-weight="700" fill="#1a1a1a">세션 메모리</text>
+  <text x="60" y="141" font-size="10.5" fill="#6b6b6b">RAM(현재 대화) · 세션 끝나면 소실</text>
+  <text x="60" y="164" font-size="11" fill="#444">지금 작업의 컨텍스트. 대화가 끝나면 사라지므로, 남길 정보는 아래 두 계층으로 승격합니다.</text>
+
+  <rect x="40" y="195" width="820" height="88" rx="10" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="60" y="220" font-size="13" font-weight="700" fill="#3a6fd6">프로젝트 CLAUDE.md</text>
+  <text x="60" y="241" font-size="10.5" fill="#6b6b6b">./CLAUDE.md · 파일로 저장(장기) · git 공유 가능</text>
+  <text x="60" y="264" font-size="11" fill="#444">프로젝트별 규칙·기술 스택·폴더 구조·금기. 팀 전체가 같은 약속을 공유하는 계층입니다.</text>
+
+  <rect x="40" y="295" width="820" height="88" rx="10" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="60" y="320" font-size="13" font-weight="700" fill="#b8860b">글로벌 CLAUDE.md</text>
+  <text x="60" y="341" font-size="10.5" fill="#6b6b6b">~/.claude/CLAUDE.md · 모든 세션 공유 · 개인 전용</text>
+  <text x="60" y="364" font-size="11" fill="#444">개인 선호·역할·자주 쓰는 도구. 어느 프로젝트에서 일하든 늘 따라오는 배경 지식입니다.</text>
+
+  <rect x="700" y="118" width="150" height="42" rx="8" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="775" y="135" font-size="10.5" font-weight="700" fill="#7c3aed" text-anchor="middle">병합 순서</text>
+  <text x="775" y="151" font-size="9.5" fill="#7c3aed" text-anchor="middle">글로벌 → 프로젝트 → 세션</text>
+</svg>

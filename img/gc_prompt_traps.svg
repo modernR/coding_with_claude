@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="320" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">프롬프트 3대 함정 — 나쁜 지시 vs 고친 지시</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">에이전트에게 잘못된 지시는 잘못된 답이 아니라 잘못된 행동으로 이어집니다.</text>
+
+  <defs><marker id="pt" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/></marker></defs>
+
+  <!-- 1 추상화 -->
+  <rect x="40" y="92" width="270" height="200" rx="12" fill="#fff5f6" stroke="#f3c9cf"/>
+  <text x="60" y="118" font-size="13" font-weight="700" fill="#b00020">① 추상화 함정</text>
+  <rect x="60" y="130" width="230" height="52" rx="8" fill="#ffffff" stroke="#f3c9cf"/>
+  <text x="72" y="150" font-size="10" fill="#b00020">"알아서 정리해줘"</text>
+  <text x="72" y="168" font-size="10" fill="#6b6b6b">'잘'의 그림이 에이전트엔 없음</text>
+  <line x1="175" y1="188" x2="175" y2="206" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#pt)"/>
+  <rect x="60" y="212" width="230" height="66" rx="8" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="72" y="234" font-size="10" fill="#1a7f37">"중복 행을 제거하고 날짜순</text>
+  <text x="72" y="250" font-size="10" fill="#1a7f37">정렬해 새 시트에 저장해줘"</text>
+  <text x="72" y="270" font-size="9.5" fill="#444">구체적 동사·기준 명시</text>
+
+  <!-- 2 맥락 결손 -->
+  <rect x="320" y="92" width="270" height="200" rx="12" fill="#fff5f6" stroke="#f3c9cf"/>
+  <text x="340" y="118" font-size="13" font-weight="700" fill="#b00020">② 맥락 결손 함정</text>
+  <rect x="340" y="130" width="230" height="52" rx="8" fill="#ffffff" stroke="#f3c9cf"/>
+  <text x="352" y="150" font-size="10" fill="#b00020">"이 파일 정리해줘"</text>
+  <text x="352" y="168" font-size="10" fill="#6b6b6b">어느 파일·무슨 정리·어디 저장?</text>
+  <line x1="455" y1="188" x2="455" y2="206" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#pt)"/>
+  <rect x="340" y="212" width="230" height="66" rx="8" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="352" y="234" font-size="10" fill="#1a7f37">"data.csv의 빈 행을 지우고,</text>
+  <text x="352" y="250" font-size="10" fill="#1a7f37">결과를 report/ 에 저장해줘"</text>
+  <text x="352" y="270" font-size="9.5" fill="#444">대상·방식·위치·제약 명시</text>
+
+  <!-- 3 모순 -->
+  <rect x="600" y="92" width="260" height="200" rx="12" fill="#fff5f6" stroke="#f3c9cf"/>
+  <text x="620" y="118" font-size="13" font-weight="700" fill="#b00020">③ 모순 표현 함정</text>
+  <rect x="620" y="130" width="220" height="52" rx="8" fill="#ffffff" stroke="#f3c9cf"/>
+  <text x="632" y="150" font-size="10" fill="#b00020">"간결하면서 자세히</text>
+  <text x="632" y="168" font-size="10" fill="#b00020">풀어서 요약해줘"</text>
+  <line x1="730" y1="188" x2="730" y2="206" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#pt)"/>
+  <rect x="620" y="212" width="220" height="66" rx="8" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="632" y="234" font-size="10" fill="#1a7f37">"핵심 3줄 요약 먼저,</text>
+  <text x="632" y="250" font-size="10" fill="#1a7f37">아래에 상세 설명 5줄"</text>
+  <text x="632" y="270" font-size="9.5" fill="#444">우선순위·구조로 분리</text>
+</svg>

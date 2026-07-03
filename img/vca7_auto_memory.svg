@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="400" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">Auto Memory 계층과 수명 관리</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">메모리는 개인·프로젝트 계층으로 나뉘고, 시간이 지나면 rotation·압축·검증으로 관리합니다.</text>
+
+  <defs>
+    <marker id="am_a" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/>
+    </marker>
+  </defs>
+
+  <rect x="40" y="100" width="360" height="120" rx="12" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="60" y="127" font-size="13" font-weight="700" fill="#3a6fd6">개인 메모리</text>
+  <text x="60" y="150" font-size="10" fill="#6b6b6b">~/.claude/memory/</text>
+  <text x="60" y="174" font-size="10" fill="#444">본인만의 선호·스타일·반복 결정</text>
+  <text x="60" y="196" font-size="9.5" fill="#444">git에 올리지 않음 (개인용)</text>
+
+  <rect x="440" y="100" width="420" height="120" rx="12" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="460" y="127" font-size="13" font-weight="700" fill="#7c3aed">프로젝트 메모리</text>
+  <text x="460" y="150" font-size="10" fill="#6b6b6b">&lt;프로젝트&gt;/.claude/memory/</text>
+  <text x="460" y="174" font-size="10" fill="#444">팀 공통 결정 (예: "우리 팀 코딩 스타일은 X")</text>
+  <text x="460" y="196" font-size="9.5" fill="#444">git에 commit → 팀 공유</text>
+
+  <rect x="40" y="250" width="255" height="110" rx="11" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="167" y="277" font-size="12" font-weight="700" fill="#b8860b" text-anchor="middle">Rotation</text>
+  <text x="167" y="301" font-size="9.5" fill="#444" text-anchor="middle">30일 이상 미수정 →</text>
+  <text x="167" y="319" font-size="9.5" fill="#444" text-anchor="middle">archive로 이동</text>
+  <text x="167" y="343" font-size="9" fill="#6b6b6b" text-anchor="middle">세션 시작이 빠르고 클린</text>
+
+  <rect x="322" y="250" width="255" height="110" rx="11" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="449" y="277" font-size="12" font-weight="700" fill="#1a7f37" text-anchor="middle">압축</text>
+  <text x="449" y="301" font-size="9.5" fill="#444" text-anchor="middle">같은 주제 5개 → 1개로</text>
+  <text x="449" y="319" font-size="9.5" fill="#444" text-anchor="middle">중복 제거·최근 결정 우선</text>
+  <text x="449" y="343" font-size="9" fill="#6b6b6b" text-anchor="middle">양은 줄고 핵심은 보존</text>
+
+  <rect x="604" y="250" width="256" height="110" rx="11" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="732" y="277" font-size="12" font-weight="700" fill="#3a6fd6" text-anchor="middle">검증 (월 1회)</text>
+  <text x="732" y="301" font-size="9.5" fill="#444" text-anchor="middle">현재 상태와 일치하는지</text>
+  <text x="732" y="319" font-size="9.5" fill="#444" text-anchor="middle">끝난 것·누락된 것 점검</text>
+  <text x="732" y="343" font-size="9" fill="#6b6b6b" text-anchor="middle">메모리 정확도 유지</text>
+
+  <line x1="167" y1="220" x2="167" y2="246" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#am_a)"/>
+  <line x1="449" y1="220" x2="449" y2="246" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#am_a)"/>
+  <line x1="650" y1="220" x2="700" y2="246" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#am_a)"/>
+</svg>

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="420" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">품질 게이트 통합 아키텍처 — 훅 + 권한 규칙 + CLAUDE.md</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">세 층이 겹쳐야 우회할 수 없는 게이트가 됩니다. 정책·정적 차단·동적 검사.</text>
+
+  <defs>
+    <marker id="qg_a" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/>
+    </marker>
+  </defs>
+
+  <!-- 3 layers left -->
+  <rect x="40" y="95" width="220" height="86" rx="11" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="150" y="122" font-size="12.5" font-weight="700" fill="#7c3aed" text-anchor="middle">CLAUDE.md</text>
+  <text x="150" y="144" font-size="10" fill="#444" text-anchor="middle">정책 선언 — 무엇을 지킬지</text>
+  <text x="150" y="162" font-size="9.5" fill="#6b6b6b" text-anchor="middle">mode·rules·hooks·agents</text>
+
+  <rect x="40" y="195" width="220" height="86" rx="11" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="150" y="222" font-size="12.5" font-weight="700" fill="#3a6fd6" text-anchor="middle">권한 규칙 (정적)</text>
+  <text x="150" y="244" font-size="10" fill="#444" text-anchor="middle">무엇을 막을지</text>
+  <text x="150" y="262" font-size="9.5" fill="#6b6b6b" text-anchor="middle">allow·deny·require_approval</text>
+
+  <rect x="40" y="295" width="220" height="86" rx="11" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="150" y="322" font-size="12.5" font-weight="700" fill="#b8860b" text-anchor="middle">훅 (동적 검사)</text>
+  <text x="150" y="344" font-size="10" fill="#444" text-anchor="middle">어떻게 검사할지</text>
+  <text x="150" y="362" font-size="9.5" fill="#6b6b6b" text-anchor="middle">실행 시점의 내용 검증</text>
+
+  <!-- lifecycle chain right -->
+  <line x1="290" y1="238" x2="330" y2="238" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#qg_a)"/>
+
+  <rect x="340" y="95" width="520" height="60" rx="10" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="358" y="118" font-size="11" font-weight="700" fill="#1a1a1a">1. PreToolUse (Edit|Write)</text>
+  <text x="358" y="140" font-size="9.5" fill="#444">권한 규칙 체크(.env 차단) · 패턴 검사(API 키 차단)</text>
+
+  <rect x="340" y="163" width="520" height="72" rx="10" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="358" y="186" font-size="11" font-weight="700" fill="#3a6fd6">2. PostToolUse (Edit|Write)</text>
+  <text x="358" y="207" font-size="9.5" fill="#444">prettier+eslint · 복잡 검사→security-auditor · 테스트 누락→test-writer</text>
+  <text x="358" y="224" font-size="9.5" fill="#444">변경 로깅(metrics 시스템)</text>
+
+  <rect x="340" y="243" width="520" height="60" rx="10" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="358" y="266" font-size="11" font-weight="700" fill="#b8860b">3. PreToolUse (Bash: git commit)</text>
+  <text x="358" y="288" font-size="9.5" fill="#444">SBOM 점검 · 라이선스 감사 · 커밋 메시지 형식(Conventional)</text>
+
+  <rect x="340" y="311" width="520" height="60" rx="10" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="358" y="334" font-size="11" font-weight="700" fill="#1a7f37">4. SessionEnd / Stop</text>
+  <text x="358" y="356" font-size="9.5" fill="#444">최종 메트릭 수집 · 대시보드·Slack 알림</text>
+
+  <line x1="600" y1="155" x2="600" y2="161" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#qg_a)"/>
+  <line x1="600" y1="235" x2="600" y2="241" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#qg_a)"/>
+  <line x1="600" y1="303" x2="600" y2="309" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#qg_a)"/>
+
+  <text x="450" y="405" font-size="10.5" fill="#6b6b6b" text-anchor="middle">모든 단계는 공식 이벤트(PreToolUse·PostToolUse·SessionEnd)에 matcher를 걸어 필터링</text>
+</svg>

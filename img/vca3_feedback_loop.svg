@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 340" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="340" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">훅 → 메인 에이전트 피드백 루프</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">훅은 통과·차단을 넘어 "다음에 할 일"을 액션 배열로 지시합니다.</text>
+
+  <defs>
+    <marker id="fb_a" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/>
+    </marker>
+  </defs>
+
+  <!-- 훅 -->
+  <rect x="40" y="120" width="160" height="120" rx="11" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="120" y="170" font-size="13" font-weight="700" fill="#b8860b" text-anchor="middle">훅</text>
+  <text x="120" y="192" font-size="10" fill="#444" text-anchor="middle">파일 분석 →</text>
+  <text x="120" y="208" font-size="10" fill="#444" text-anchor="middle">findings 판정</text>
+
+  <!-- 액션 배열 -->
+  <rect x="270" y="95" width="330" height="170" rx="12" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="290" y="120" font-size="12.5" font-weight="700" fill="#6b6b6b">actions 배열 반환</text>
+
+  <rect x="288" y="135" width="294" height="38" rx="8" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="300" y="150" font-size="9.5" fill="#3a6fd6">invoke_subagent: test-writer</text>
+  <text x="300" y="165" font-size="9" fill="#6b6b6b">사유: 단위 테스트 누락</text>
+
+  <rect x="288" y="180" width="294" height="38" rx="8" fill="#fff5f6" stroke="#f3c9cf"/>
+  <text x="300" y="195" font-size="9.5" fill="#b00020">request_review: security-team</text>
+  <text x="300" y="210" font-size="9" fill="#6b6b6b">사유: 보안 영향 큼</text>
+
+  <rect x="288" y="225" width="294" height="30" rx="8" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="300" y="245" font-size="9.5" fill="#7c3aed">move_file: deprecated → 새 위치 권장</text>
+
+  <!-- 메인 -->
+  <rect x="670" y="120" width="190" height="120" rx="11" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="765" y="165" font-size="13" font-weight="700" fill="#3a6fd6" text-anchor="middle">메인 에이전트</text>
+  <text x="765" y="190" font-size="10" fill="#444" text-anchor="middle">actions 순회하며</text>
+  <text x="765" y="206" font-size="10" fill="#444" text-anchor="middle">자동 후속 조치</text>
+
+  <line x1="200" y1="180" x2="266" y2="180" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#fb_a)"/>
+  <line x1="600" y1="180" x2="666" y2="180" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#fb_a)"/>
+
+  <!-- 루프백 -->
+  <path d="M765 240 L765 295 L120 295 L120 244" fill="none" stroke="#3a6fd6" stroke-width="1.6" stroke-dasharray="5 3" marker-end="url(#fb_a)"/>
+  <text x="440" y="312" font-size="10" fill="#3a6fd6" text-anchor="middle">조치 결과가 다시 훅으로 — 검사·지시·실행이 순환</text>
+</svg>

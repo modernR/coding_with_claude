@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="360" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">자체 MCP 빌드 → 등록 → 사용 흐름</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">개념·정의부터 실제 사용까지 다섯 단계입니다. FastMCP(Python) 또는 TS SDK로 서버를 짓습니다.</text>
+  <defs>
+    <marker id="vca2build_arr" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/>
+    </marker>
+  </defs>
+
+  <rect x="40" y="100" width="150" height="115" rx="11" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="115" y="128" font-size="12" font-weight="700" fill="#3a6fd6" text-anchor="middle">① 도구 정의</text>
+  <text x="115" y="152" font-size="10" fill="#444" text-anchor="middle">자주 쓰는 데이터</text>
+  <text x="115" y="168" font-size="10" fill="#444" text-anchor="middle">5개를 함수로</text>
+  <text x="115" y="192" font-size="9.5" fill="#9aa0a6" text-anchor="middle">입력·출력 스키마</text>
+
+  <rect x="220" y="100" width="150" height="115" rx="11" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="295" y="128" font-size="12" font-weight="700" fill="#3a6fd6" text-anchor="middle">② 핸들러 구현</text>
+  <text x="295" y="152" font-size="10" fill="#444" text-anchor="middle">사내 API·DB를</text>
+  <text x="295" y="168" font-size="10" fill="#444" text-anchor="middle">실제로 호출</text>
+  <text x="295" y="192" font-size="9.5" fill="#9aa0a6" text-anchor="middle">인증·감사 로그</text>
+
+  <rect x="400" y="100" width="150" height="115" rx="11" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="475" y="128" font-size="12" font-weight="700" fill="#b8860b" text-anchor="middle">③ 테스트</text>
+  <text x="475" y="152" font-size="10" fill="#444" text-anchor="middle">Inspector로</text>
+  <text x="475" y="168" font-size="10" fill="#444" text-anchor="middle">독립 검증</text>
+  <text x="475" y="192" font-size="9.5" fill="#9aa0a6" text-anchor="middle">Cowork 연결 전</text>
+
+  <rect x="580" y="100" width="150" height="115" rx="11" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="655" y="128" font-size="12" font-weight="700" fill="#7c3aed" text-anchor="middle">④ 등록·배포</text>
+  <text x="655" y="152" font-size="10" fill="#444" text-anchor="middle">settings.json에</text>
+  <text x="655" y="168" font-size="10" fill="#444" text-anchor="middle">추가 / uvx 공유</text>
+  <text x="655" y="192" font-size="9.5" fill="#9aa0a6" text-anchor="middle">로컬 또는 원격</text>
+
+  <rect x="740" y="100" width="150" height="115" rx="11" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="815" y="128" font-size="12" font-weight="700" fill="#1a7f37" text-anchor="middle">⑤ 자연어 사용</text>
+  <text x="815" y="152" font-size="10" fill="#444" text-anchor="middle">"강남 30평대</text>
+  <text x="815" y="168" font-size="10" fill="#444" text-anchor="middle">매물 5개"</text>
+  <text x="815" y="192" font-size="9.5" fill="#1a7f37" text-anchor="middle">로그인 불필요</text>
+
+  <line x1="190" y1="157" x2="219" y2="157" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#vca2build_arr)"/>
+  <line x1="370" y1="157" x2="399" y2="157" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#vca2build_arr)"/>
+  <line x1="550" y1="157" x2="579" y2="157" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#vca2build_arr)"/>
+  <line x1="730" y1="157" x2="739" y2="157" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#vca2build_arr)"/>
+
+  <rect x="40" y="245" width="410" height="90" rx="10" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="60" y="272" font-size="13" font-weight="700" fill="#1a1a1a">서버를 짓는 두 갈래 (①②)</text>
+  <text x="60" y="296" font-size="11" fill="#444">FastMCP(Python): 데코레이터·타입 힌트만으로 빠르게.</text>
+  <text x="60" y="317" font-size="11" fill="#444">TypeScript SDK: 세밀한 제어가 필요할 때. 둘 다 같은 프로토콜.</text>
+
+  <rect x="470" y="245" width="420" height="90" rx="10" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="490" y="272" font-size="13" font-weight="700" fill="#1a1a1a">기획자의 자리 (③~⑤)</text>
+  <text x="490" y="296" font-size="11" fill="#444">코드 자체는 에이전트가 대신 짜더라도, 어떤 도구를</text>
+  <text x="490" y="317" font-size="11" fill="#444">노출하고 어떻게 검증·배포·사용할지는 기획자가 설계합니다.</text>
+</svg>

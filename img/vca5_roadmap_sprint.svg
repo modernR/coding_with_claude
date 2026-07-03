@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="400" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">로드맵 → 백로그 → 스프린트 자동 흐름</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">큰 그림에서 하루 단위까지, 단계 사이의 분해·우선순위·선택을 AI가 잇습니다.</text>
+
+  <defs><marker id="vca5rs_ar" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/></marker></defs>
+
+  <!-- level 1 roadmap -->
+  <rect x="40" y="100" width="820" height="52" rx="11" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="60" y="124" font-size="13" font-weight="700" fill="#7c3aed">① 로드맵 (분기) — 큰 그림</text>
+  <text x="60" y="143" font-size="10" fill="#444">docs/roadmap.md · 분기 목표와 Phase 구성 · 사람이 방향 확정</text>
+
+  <text x="470" y="172" font-size="9.5" fill="#6b6b6b" text-anchor="middle">AI가 Phase별 PRD 작성 후 자동 분해</text>
+  <line x1="450" y1="152" x2="450" y2="178" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#vca5rs_ar)"/>
+
+  <!-- level 2 backlog -->
+  <rect x="40" y="182" width="820" height="52" rx="11" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="60" y="206" font-size="13" font-weight="700" fill="#3a6fd6">② 백로그 (월·주) — 실행 가능한 작업 단위</text>
+  <text x="60" y="225" font-size="10" fill="#444">task-master로 100+개 작업화 → Linear·Notion 백로그에 동기화</text>
+
+  <text x="470" y="254" font-size="9.5" fill="#6b6b6b" text-anchor="middle">AI가 우선순위·의존 분석 후 이번 기간 선택</text>
+  <line x1="450" y1="234" x2="450" y2="260" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#vca5rs_ar)"/>
+
+  <!-- level 3 sprint -->
+  <rect x="40" y="264" width="820" height="52" rx="11" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="60" y="288" font-size="13" font-weight="700" fill="#1a7f37">③ 스프린트 (1~2주) — 이번 기간 할 일</text>
+  <text x="60" y="307" font-size="10" fill="#444">우선순위·의존 고려해 자동 선택 → Slack #planning 발송 · 사람이 시작 승인</text>
+
+  <text x="470" y="336" font-size="9.5" fill="#6b6b6b" text-anchor="middle">next로 하루 단위 실행</text>
+  <line x1="450" y1="316" x2="450" y2="342" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#vca5rs_ar)"/>
+
+  <!-- level 4 daily -->
+  <rect x="40" y="346" width="820" height="40" rx="11" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="60" y="371" font-size="12" font-weight="700" fill="#b8860b">④ 일일 작업 (하루) — task-master next · 작업 단위 commit · 진척 자동 기록</text>
+</svg>

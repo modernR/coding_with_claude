@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 340" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="340" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">로드맵 → 마일스톤 → 백로그 자동 전개</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">완성 PRD 한 편이 분기 로드맵·마일스톤을 거쳐 실행 가능한 작업으로 내려앉습니다.</text>
+
+  <defs><marker id="vca6rf_ar" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/></marker></defs>
+
+  <rect x="40" y="100" width="180" height="70" rx="11" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="130" y="128" font-size="12" font-weight="700" fill="#7c3aed" text-anchor="middle">완성 PRD</text>
+  <text x="130" y="149" font-size="9.5" fill="#444" text-anchor="middle">RSVP 대기열 기능</text>
+  <text x="130" y="163" font-size="9" fill="#6b6b6b" text-anchor="middle">12개 섹션</text>
+
+  <rect x="260" y="100" width="180" height="70" rx="11" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="350" y="128" font-size="12" font-weight="700" fill="#3a6fd6" text-anchor="middle">분기 로드맵</text>
+  <text x="350" y="149" font-size="9.5" fill="#444" text-anchor="middle">Q1~Q4 · 의존 관계</text>
+  <text x="350" y="163" font-size="9" fill="#6b6b6b" text-anchor="middle">리소스 추정</text>
+  <line x1="220" y1="135" x2="258" y2="135" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#vca6rf_ar)"/>
+
+  <rect x="480" y="100" width="180" height="70" rx="11" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="570" y="128" font-size="12" font-weight="700" fill="#b8860b" text-anchor="middle">마일스톤</text>
+  <text x="570" y="149" font-size="9.5" fill="#444" text-anchor="middle">분기당 1~2개</text>
+  <text x="570" y="163" font-size="9" fill="#6b6b6b" text-anchor="middle">산출물·선행 의존</text>
+  <line x1="440" y1="135" x2="478" y2="135" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#vca6rf_ar)"/>
+
+  <rect x="700" y="100" width="170" height="70" rx="11" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="785" y="128" font-size="12" font-weight="700" fill="#1a7f37" text-anchor="middle">백로그</text>
+  <text x="785" y="149" font-size="9.5" fill="#444" text-anchor="middle">100+ 세부 작업</text>
+  <text x="785" y="163" font-size="9" fill="#6b6b6b" text-anchor="middle">Task Master·Linear</text>
+  <line x1="660" y1="135" x2="698" y2="135" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#vca6rf_ar)"/>
+
+  <!-- 하단: 예시 마일스톤 -->
+  <rect x="260" y="210" width="400" height="86" rx="11" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="280" y="234" font-size="11" font-weight="700" fill="#1a1a1a">예시 — Q1 마일스톤</text>
+  <text x="280" y="256" font-size="10" fill="#444">M1: 대기열 신청·순번 관리 MVP</text>
+  <text x="280" y="274" font-size="10" fill="#444">M2: 취소 시 자동 승격 알림 베타</text>
+  <text x="280" y="291" font-size="9.5" fill="#6b6b6b">선행 의존: 정원 관리 기능 완성 · 리소스: 풀스택 2명</text>
+  <line x1="570" y1="170" x2="500" y2="208" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#vca6rf_ar)"/>
+
+  <!-- 시각화 노트 -->
+  <rect x="700" y="210" width="170" height="86" rx="11" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="785" y="234" font-size="11" font-weight="700" fill="#3a6fd6" text-anchor="middle">시각화</text>
+  <text x="785" y="256" font-size="9.5" fill="#444" text-anchor="middle">Mermaid 간트차트</text>
+  <text x="785" y="273" font-size="9.5" fill="#444" text-anchor="middle">같은 원본에서 생성</text>
+  <text x="785" y="290" font-size="9" fill="#6b6b6b" text-anchor="middle">Notion·발표 자료 삽입</text>
+
+  <text x="40" y="322" font-size="10" fill="#6b6b6b">PRD→로드맵은 이 강, 로드맵→백로그의 도구 연동은 고급 5강 패턴을 잇습니다.</text>
+</svg>

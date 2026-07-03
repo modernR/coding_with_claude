@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="360" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">자연어 hook vs 스크립트 hook — 트레이드오프</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">빈번한 검사는 스크립트, 판단이 복잡하고 가끔 도는 것은 자연어로.</text>
+
+  <!-- natural -->
+  <rect x="40" y="95" width="390" height="200" rx="12" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="235" y="120" font-size="14" font-weight="700" fill="#7c3aed" text-anchor="middle">자연어 hook (.md)</text>
+  <text x="235" y="142" font-size="10.5" fill="#6b6b6b" text-anchor="middle">의도를 문장으로 적으면 LLM이 해석·실행</text>
+  <rect x="70" y="156" width="330" height="26" rx="6" fill="#ffffff" stroke="#a78bda"/>
+  <text x="84" y="174" font-size="10" fill="#444">작성 난이도: 쉬움 (자연어만)</text>
+  <rect x="70" y="186" width="330" height="26" rx="6" fill="#ffffff" stroke="#a78bda"/>
+  <text x="84" y="204" font-size="10" fill="#444">유연성: 매우 높음 · 비용: LLM 토큰</text>
+  <rect x="70" y="216" width="330" height="26" rx="6" fill="#ffffff" stroke="#a78bda"/>
+  <text x="84" y="234" font-size="10" fill="#444">속도: 느림 · 신뢰성: LLM 오해 가능</text>
+  <rect x="70" y="252" width="330" height="30" rx="7" fill="#7c3aed"/>
+  <text x="235" y="272" font-size="10.5" font-weight="700" fill="#fff" text-anchor="middle">쓸 곳: 가끔 트리거·복잡한 판단</text>
+
+  <!-- script -->
+  <rect x="470" y="95" width="390" height="200" rx="12" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="665" y="120" font-size="14" font-weight="700" fill="#1a7f37" text-anchor="middle">스크립트 hook (.sh / .py)</text>
+  <text x="665" y="142" font-size="10.5" fill="#6b6b6b" text-anchor="middle">셸·Python 코드로 결정적 실행</text>
+  <rect x="500" y="156" width="330" height="26" rx="6" fill="#ffffff" stroke="#cfe9d7"/>
+  <text x="514" y="174" font-size="10" fill="#444">작성 난이도: 중간~어려움</text>
+  <rect x="500" y="186" width="330" height="26" rx="6" fill="#ffffff" stroke="#cfe9d7"/>
+  <text x="514" y="204" font-size="10" fill="#444">유연성: 제한적 · 비용: 무료</text>
+  <rect x="500" y="216" width="330" height="26" rx="6" fill="#ffffff" stroke="#cfe9d7"/>
+  <text x="514" y="234" font-size="10" fill="#444">속도: 빠름 · 신뢰성: 결정적</text>
+  <rect x="500" y="252" width="330" height="30" rx="7" fill="#1a7f37"/>
+  <text x="665" y="272" font-size="10.5" font-weight="700" fill="#fff" text-anchor="middle">쓸 곳: 빈번한 검사 (매 커밋·매 저장)</text>
+
+  <text x="450" y="325" font-size="11" fill="#6b6b6b" text-anchor="middle">예 — 비밀 키 검사(결정적·자주) = 스크립트 / "커밋 메시지가 변경 내용과 맞는가"(판단) = 자연어</text>
+</svg>

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="400" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">변수와 동적 커맨드 — 하나의 커맨드, 여러 상황</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">호출 시 넘긴 값이 커맨드 본문의 자리표시자로 치환되어, 같은 커맨드가 상황마다 다르게 동작합니다.</text>
+
+  <defs><marker id="vr" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/></marker></defs>
+
+  <text x="40" y="100" font-size="13" font-weight="700" fill="#7c3aed">세 종류의 변수</text>
+
+  <rect x="40" y="112" width="255" height="88" rx="10" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="58" y="136" font-size="12" font-weight="700" fill="#7c3aed">위치 변수  $1 $2 $3</text>
+  <text x="58" y="158" font-size="10" fill="#444">순서대로 값을 받음</text>
+  <text x="58" y="176" font-size="10" fill="#444">/rsvp-report 마케팅 5월</text>
+  <text x="58" y="192" font-size="10" fill="#6b6b6b">$1=마케팅  $2=5월</text>
+
+  <rect x="322" y="112" width="255" height="88" rx="10" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="340" y="136" font-size="12" font-weight="700" fill="#7c3aed">명명 변수  $name</text>
+  <text x="340" y="158" font-size="10" fill="#444">이름을 붙여 명시적으로 전달</text>
+  <text x="340" y="176" font-size="10" fill="#444">/email recipient="김팀장"</text>
+  <text x="340" y="192" font-size="10" fill="#6b6b6b">$recipient=김팀장</text>
+
+  <rect x="604" y="112" width="256" height="88" rx="10" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="622" y="136" font-size="12" font-weight="700" fill="#7c3aed">기본값 있는 변수</text>
+  <text x="622" y="158" font-size="10" fill="#444">생략하면 정해진 값 사용</text>
+  <text x="622" y="176" font-size="10" fill="#444">$focus (기본값 "전반")</text>
+  <text x="622" y="192" font-size="10" fill="#6b6b6b">필수값 없으면 되물음</text>
+
+  <!-- flow: call -> template -> result -->
+  <rect x="40" y="238" width="230" height="120" rx="10" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="58" y="262" font-size="12" font-weight="700" fill="#1a1a1a">호출</text>
+  <text x="58" y="286" font-size="11" fill="#3a6fd6" font-weight="700">/rsvp-report 개발 6월</text>
+  <text x="58" y="312" font-size="10" fill="#6b6b6b">사용자가 값 2개 전달</text>
+  <text x="58" y="332" font-size="10" fill="#6b6b6b">$1=개발  $2=6월</text>
+
+  <line x1="270" y1="298" x2="322" y2="298" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#vr)"/>
+
+  <rect x="326" y="238" width="248" height="120" rx="10" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="344" y="262" font-size="12" font-weight="700" fill="#3a6fd6">커맨드 본문 (템플릿)</text>
+  <text x="344" y="286" font-size="10" fill="#444">"$1 팀의 $2 RSVP 현황을</text>
+  <text x="344" y="302" font-size="10" fill="#444">Supabase에서 조회해 요약하라"</text>
+  <text x="344" y="326" font-size="10" fill="#6b6b6b">치환 후 →</text>
+  <text x="344" y="344" font-size="10" fill="#1a1a1a">"개발 팀의 6월 RSVP 현황을…"</text>
+
+  <line x1="574" y1="298" x2="626" y2="298" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#vr)"/>
+
+  <rect x="630" y="238" width="230" height="120" rx="10" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="648" y="262" font-size="12" font-weight="700" fill="#1a7f37">실행 결과</text>
+  <text x="648" y="286" font-size="10" fill="#444">개발팀 6월 RSVP 요약</text>
+  <text x="648" y="304" font-size="10" fill="#444">참석 42 · 취소 6 · 대기 3</text>
+  <text x="648" y="322" font-size="10" fill="#444">정원 대비 84%</text>
+  <text x="648" y="344" font-size="10" fill="#6b6b6b">같은 커맨드, 다른 값 = 다른 리포트</text>
+</svg>

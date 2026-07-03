@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="300" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">컨텍스트 엔지니어링의 5가지 레버</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">윈도우 점유자 중 조작 가능한 다섯 변수. 각 레버가 이 강의 한 절에 대응합니다.</text>
+  <g font-size="11">
+    <rect x="40" y="95" width="160" height="150" rx="11" fill="#eef3fd" stroke="#bcd0f5"/>
+    <text x="120" y="122" font-weight="700" fill="#3a6fd6" text-anchor="middle">MCP</text>
+    <text x="120" y="150" font-size="10" fill="#444" text-anchor="middle">켜진 도구 수·</text>
+    <text x="120" y="167" font-size="10" fill="#444" text-anchor="middle">메타데이터 길이</text>
+    <rect x="55" y="205" width="130" height="26" rx="6" fill="#e3edfb"/>
+    <text x="120" y="222" font-size="9.5" fill="#3a6fd6" text-anchor="middle">Tool Search</text>
+  </g>
+  <g font-size="11">
+    <rect x="212" y="95" width="160" height="150" rx="11" fill="#ede9fe" stroke="#a78bda"/>
+    <text x="292" y="122" font-weight="700" fill="#7c3aed" text-anchor="middle">CLAUDE.md</text>
+    <text x="292" y="150" font-size="10" fill="#444" text-anchor="middle">길이·모듈화·</text>
+    <text x="292" y="167" font-size="10" fill="#444" text-anchor="middle">필요 시 로드</text>
+    <rect x="227" y="205" width="130" height="26" rx="6" fill="#efeafd"/>
+    <text x="292" y="222" font-size="9.5" fill="#7c3aed" text-anchor="middle">모듈형 룰</text>
+  </g>
+  <g font-size="11">
+    <rect x="384" y="95" width="160" height="150" rx="11" fill="#f1faf3" stroke="#cfe9d7"/>
+    <text x="464" y="122" font-weight="700" fill="#1a7f37" text-anchor="middle">Auto Memory</text>
+    <text x="464" y="150" font-size="10" fill="#444" text-anchor="middle">양·rotation·</text>
+    <text x="464" y="167" font-size="10" fill="#444" text-anchor="middle">압축</text>
+    <rect x="399" y="205" width="130" height="26" rx="6" fill="#e8f6ec"/>
+    <text x="464" y="222" font-size="9.5" fill="#1a7f37" text-anchor="middle">rotation·검증</text>
+  </g>
+  <g font-size="11">
+    <rect x="556" y="95" width="160" height="150" rx="11" fill="#fff7e6" stroke="#f3d488"/>
+    <text x="636" y="122" font-weight="700" fill="#b8860b" text-anchor="middle">대화</text>
+    <text x="636" y="150" font-size="10" fill="#444" text-anchor="middle">압축·분할·</text>
+    <text x="636" y="167" font-size="10" fill="#444" text-anchor="middle">저장 후 재로드</text>
+    <rect x="571" y="205" width="130" height="26" rx="6" fill="#faf3e0"/>
+    <text x="636" y="222" font-size="9.5" fill="#b8860b" text-anchor="middle">세션 분리</text>
+  </g>
+  <g font-size="11">
+    <rect x="728" y="95" width="132" height="150" rx="11" fill="#fdecef" stroke="#f3b8c4"/>
+    <text x="794" y="122" font-weight="700" fill="#b00020" text-anchor="middle">Sub-agent</text>
+    <text x="794" y="150" font-size="10" fill="#444" text-anchor="middle">컨텍스트 분리</text>
+    <text x="794" y="167" font-size="10" fill="#444" text-anchor="middle">+ 병렬</text>
+    <rect x="743" y="205" width="102" height="26" rx="6" fill="#fbe4e9"/>
+    <text x="794" y="222" font-size="9.5" fill="#b00020" text-anchor="middle">200자 요약 격리</text>
+  </g>
+  <text x="450" y="278" font-size="11" fill="#6b6b6b" text-anchor="middle">세션 시작 순간 이미 50~250K 점유 · 600K를 넘으면 응답 품질이 떨어집니다.</text>
+</svg>

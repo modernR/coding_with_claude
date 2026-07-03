@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="420" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">비용 분석 대시보드 — 수집부터 알림까지</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">세션 훅이 지표를 수집·집계·시각화하고, 임계치를 넘으면 자동으로 알립니다.</text>
+
+  <defs>
+    <marker id="cd_a" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/>
+    </marker>
+  </defs>
+
+  <!-- pipeline -->
+  <rect x="40" y="100" width="170" height="64" rx="11" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="125" y="128" font-size="11" font-weight="700" fill="#b8860b" text-anchor="middle">Cowork 훅</text>
+  <text x="125" y="148" font-size="9" fill="#444" text-anchor="middle">매 세션 끝에 수집</text>
+
+  <rect x="245" y="100" width="170" height="64" rx="11" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="330" y="128" font-size="11" font-weight="700" fill="#3a6fd6" text-anchor="middle">사내 분석 API</text>
+  <text x="330" y="148" font-size="9" fill="#444" text-anchor="middle">매일 집계</text>
+
+  <rect x="450" y="100" width="170" height="64" rx="11" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="535" y="128" font-size="11" font-weight="700" fill="#6b6b6b" text-anchor="middle">Postgres·BigQuery</text>
+  <text x="535" y="148" font-size="9" fill="#444" text-anchor="middle">매주 ETL</text>
+
+  <rect x="655" y="100" width="205" height="64" rx="11" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="757" y="128" font-size="11" font-weight="700" fill="#1a7f37" text-anchor="middle">Grafana·Metabase</text>
+  <text x="757" y="148" font-size="9" fill="#444" text-anchor="middle">대시보드</text>
+
+  <line x1="210" y1="132" x2="241" y2="132" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#cd_a)"/>
+  <line x1="415" y1="132" x2="446" y2="132" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#cd_a)"/>
+  <line x1="620" y1="132" x2="651" y2="132" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#cd_a)"/>
+
+  <!-- 추적 지표 -->
+  <rect x="40" y="190" width="410" height="200" rx="12" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="60" y="216" font-size="12" font-weight="700" fill="#6b6b6b">추적 지표</text>
+  <text x="60" y="242" font-size="10" fill="#444">· 일별·월별 토큰 (입력·출력 분리)</text>
+  <text x="60" y="264" font-size="10" fill="#444">· 모델별 분포 (Haiku / Sonnet / Opus)</text>
+  <text x="60" y="286" font-size="10" fill="#444">· 사용자별·팀별·작업 유형별 비용</text>
+  <text x="60" y="308" font-size="10" fill="#444">· Sub-agent 분배 비율</text>
+  <text x="60" y="330" font-size="10" fill="#444">· 캐시 히트율 (Prompt Cache 효과)</text>
+  <text x="60" y="352" font-size="10" fill="#444">· 자동화 시간 절감 vs 비용 (ROI)</text>
+  <text x="60" y="378" font-size="9" fill="#b00020">익명화·집계 — 개인 추적이 아니라 정책 근거로</text>
+
+  <!-- 알림 임계치 -->
+  <rect x="470" y="190" width="390" height="200" rx="12" fill="#fdecef" stroke="#f3c0cb"/>
+  <text x="490" y="216" font-size="12" font-weight="700" fill="#b00020">알림 임계치</text>
+  <text x="490" y="242" font-size="10" fill="#444">일별 비용 평균의 200% 초과</text>
+  <text x="840" y="242" font-size="9.5" fill="#b00020" text-anchor="end">Slack 즉시</text>
+  <text x="490" y="272" font-size="10" fill="#444">한 사용자가 한도 80% 도달</text>
+  <text x="840" y="272" font-size="9.5" fill="#b8860b" text-anchor="end">본인 알림</text>
+  <text x="490" y="302" font-size="10" fill="#444">모델 fallback (Haiku → Sonnet)</text>
+  <text x="840" y="302" font-size="9.5" fill="#b8860b" text-anchor="end">시간당</text>
+  <text x="490" y="332" font-size="10" fill="#444">캐시 히트율 50% 미만</text>
+  <text x="840" y="332" font-size="9.5" fill="#3a6fd6" text-anchor="end">일별</text>
+  <text x="490" y="370" font-size="9.5" fill="#6b6b6b">임계치를 넘기면 그때 깨닫는 것이 아니라, 넘기 전에 잡습니다</text>
+</svg>

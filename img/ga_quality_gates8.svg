@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="300" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">품질 게이트 8종 — 중급 5종 + 고급 3종</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">조직의 모든 작업이 통과해야 하는 자동 검증 모음. 고급에서 세 개를 더합니다.</text>
+  <text x="60" y="98" font-size="13" font-weight="700" fill="#3a6fd6">중급 5종 (기본 게이트)</text>
+  <g font-size="10.5" fill="#444">
+    <rect x="40" y="110" width="150" height="56" rx="9" fill="#eef3fd" stroke="#bcd0f5"/>
+    <text x="55" y="132" font-weight="700" fill="#3a6fd6">1 Lint·Format</text>
+    <text x="55" y="152">저장 · 자동 fix</text>
+    <rect x="200" y="110" width="150" height="56" rx="9" fill="#eef3fd" stroke="#bcd0f5"/>
+    <text x="215" y="132" font-weight="700" fill="#3a6fd6">2 Secret Scan</text>
+    <text x="215" y="152">commit · 키 발견 차단</text>
+    <rect x="360" y="110" width="150" height="56" rx="9" fill="#eef3fd" stroke="#bcd0f5"/>
+    <text x="375" y="132" font-weight="700" fill="#3a6fd6">3 Test 통과</text>
+    <text x="375" y="152">저장·PR · 실패 차단</text>
+    <rect x="520" y="110" width="150" height="56" rx="9" fill="#eef3fd" stroke="#bcd0f5"/>
+    <text x="535" y="132" font-weight="700" fill="#3a6fd6">4 License</text>
+    <text x="535" y="152">package · 비허용 차단</text>
+    <rect x="680" y="110" width="180" height="56" rx="9" fill="#eef3fd" stroke="#bcd0f5"/>
+    <text x="695" y="132" font-weight="700" fill="#3a6fd6">5 Type Check</text>
+    <text x="695" y="152">PR · strict 실패 차단</text>
+  </g>
+  <text x="60" y="200" font-size="13" font-weight="700" fill="#1a7f37">고급 +3종 (운영 확장)</text>
+  <g font-size="10.5" fill="#444">
+    <rect x="40" y="212" width="253" height="56" rx="9" fill="#f1faf3" stroke="#cfe9d7"/>
+    <text x="55" y="234" font-weight="700" fill="#1a7f37">6 SBOM 점검</text>
+    <text x="55" y="254">package 변경 · 알려진 취약점 차단</text>
+    <rect x="303" y="212" width="253" height="56" rx="9" fill="#f1faf3" stroke="#cfe9d7"/>
+    <text x="318" y="234" font-weight="700" fill="#1a7f37">7 PR 자동 분류·라우팅</text>
+    <text x="318" y="254">PR 열림 · 라벨·리뷰어 자동 할당</text>
+    <rect x="566" y="212" width="294" height="56" rx="9" fill="#f1faf3" stroke="#cfe9d7"/>
+    <text x="581" y="234" font-weight="700" fill="#1a7f37">8 운영 메트릭 수집</text>
+    <text x="581" y="254">모든 작업 · 로깅(차단 안 함)</text>
+  </g>
+</svg>

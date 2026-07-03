@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="380" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">커맨드 폴더와 우선순위 — 가까운 쪽이 이긴다</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">같은 이름 커맨드가 여러 곳에 있으면 폴더 &gt; 프로젝트 &gt; 글로벌 순으로 가까운 것이 적용됩니다.</text>
+
+  <defs><marker id="fp" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/></marker></defs>
+
+  <rect x="40" y="100" width="250" height="150" rx="10" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="60" y="128" font-size="13" font-weight="700" fill="#1a1a1a">글로벌 (개인)</text>
+  <text x="60" y="148" font-size="10.5" fill="#6b6b6b">~/.claude/commands/</text>
+  <text x="60" y="172" font-size="10.5" fill="#444">모든 세션·모든 프로젝트에 적용</text>
+  <rect x="60" y="186" width="210" height="24" rx="6" fill="#ffffff" stroke="#e3e6ea"/><text x="70" y="202" font-size="10" fill="#444">/rsvp-report.md</text>
+  <rect x="60" y="216" width="210" height="24" rx="6" fill="#ffffff" stroke="#e3e6ea"/><text x="70" y="232" font-size="10" fill="#444">/email.md</text>
+
+  <rect x="325" y="100" width="250" height="150" rx="10" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="345" y="128" font-size="13" font-weight="700" fill="#3a6fd6">프로젝트</text>
+  <text x="345" y="148" font-size="10.5" fill="#6b6b6b">&lt;프로젝트&gt;/.claude/commands/</text>
+  <text x="345" y="172" font-size="10.5" fill="#444">그 프로젝트 안에서만 적용</text>
+  <rect x="345" y="186" width="210" height="24" rx="6" fill="#ffffff" stroke="#bcd0f5"/><text x="355" y="202" font-size="10" fill="#3a6fd6" font-weight="700">/rsvp-report.md (재정의)</text>
+  <rect x="345" y="216" width="210" height="24" rx="6" fill="#ffffff" stroke="#bcd0f5"/><text x="355" y="232" font-size="10" fill="#444">/deploy.md</text>
+
+  <rect x="610" y="100" width="250" height="150" rx="10" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="630" y="128" font-size="13" font-weight="700" fill="#b8860b">하위 폴더</text>
+  <text x="630" y="148" font-size="10.5" fill="#6b6b6b">&lt;폴더&gt;/.claude/commands/</text>
+  <text x="630" y="172" font-size="10.5" fill="#444">그 폴더 하위에서만 적용 (가장 가까움)</text>
+  <rect x="630" y="186" width="210" height="24" rx="6" fill="#ffffff" stroke="#f0d6b8"/><text x="640" y="202" font-size="10" fill="#b8860b" font-weight="700">/rsvp-report.md (최종 적용)</text>
+  <rect x="630" y="216" width="210" height="24" rx="6" fill="#ffffff" stroke="#f0d6b8"/><text x="640" y="232" font-size="10" fill="#444">/hotfix.md</text>
+
+  <line x1="290" y1="175" x2="323" y2="175" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#fp)"/>
+  <line x1="575" y1="175" x2="608" y2="175" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#fp)"/>
+  <text x="300" y="90" font-size="10.5" fill="#6b6b6b">우선순위 증가 →</text>
+
+  <rect x="40" y="272" width="820" height="88" rx="10" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="60" y="298" font-size="13" font-weight="700" fill="#1a7f37">해석 규칙 — /rsvp-report 를 호출하면?</text>
+  <text x="60" y="320" font-size="11" fill="#444">세 곳에 모두 rsvp-report.md 가 있어도, 현재 위치에서 가장 가까운 "하위 폴더" 정의가 이깁니다.</text>
+  <text x="60" y="340" font-size="11" fill="#444">팀 공통은 글로벌·프로젝트에 두고, 프로젝트별로 다르게 동작해야 하면 같은 이름으로 재정의합니다.</text>
+</svg>

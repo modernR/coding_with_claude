@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="400" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">서비스 한 사이클 — 아이디어에서 배포까지</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">Cowork에 자연어로 시키고, 계획을 검토하고, 결과를 확인하는 반복. 이 골격이 어떤 프로토타입에도 적용됩니다.</text>
+
+  <defs><marker id="bf" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/></marker></defs>
+
+  <g>
+    <rect x="40" y="100" width="180" height="66" rx="9" fill="#eef3fd" stroke="#bcd0f5"/><text x="130" y="128" font-size="12" font-weight="700" fill="#3a6fd6" text-anchor="middle">① 프로젝트 생성</text><text x="130" y="150" font-size="9.5" fill="#6b6b6b" text-anchor="middle">Next.js 골격 자동 생성</text>
+    <rect x="250" y="100" width="180" height="66" rx="9" fill="#eef3fd" stroke="#bcd0f5"/><text x="340" y="128" font-size="12" font-weight="700" fill="#3a6fd6" text-anchor="middle">② CLAUDE.md</text><text x="340" y="150" font-size="9.5" fill="#6b6b6b" text-anchor="middle">프로젝트 온보딩 위키</text>
+    <rect x="460" y="100" width="180" height="66" rx="9" fill="#fff7e6" stroke="#f3d488"/><text x="550" y="128" font-size="12" font-weight="700" fill="#b8860b" text-anchor="middle">③ DB + RLS</text><text x="550" y="150" font-size="9.5" fill="#6b6b6b" text-anchor="middle">테이블·보안 정책</text>
+    <rect x="670" y="100" width="190" height="66" rx="9" fill="#ede9fe" stroke="#a78bda"/><text x="765" y="128" font-size="12" font-weight="700" fill="#7c3aed" text-anchor="middle">④ 페이지 코드</text><text x="765" y="150" font-size="9.5" fill="#6b6b6b" text-anchor="middle">목록·상세·폼</text>
+  </g>
+  <line x1="220" y1="133" x2="248" y2="133" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#bf)"/>
+  <line x1="430" y1="133" x2="458" y2="133" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#bf)"/>
+  <line x1="640" y1="133" x2="668" y2="133" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#bf)"/>
+
+  <g>
+    <rect x="40" y="210" width="180" height="66" rx="9" fill="#f1faf3" stroke="#cfe9d7"/><text x="130" y="238" font-size="12" font-weight="700" fill="#1a7f37" text-anchor="middle">⑤ 로컬 실행·디버깅</text><text x="130" y="260" font-size="9.5" fill="#6b6b6b" text-anchor="middle">에러를 그대로 전달</text>
+    <rect x="250" y="210" width="180" height="66" rx="9" fill="#f1faf3" stroke="#cfe9d7"/><text x="340" y="238" font-size="12" font-weight="700" fill="#1a7f37" text-anchor="middle">⑥ Git + GitHub</text><text x="340" y="260" font-size="9.5" fill="#6b6b6b" text-anchor="middle">커밋·push로 공유</text>
+    <rect x="460" y="210" width="180" height="66" rx="9" fill="#f1faf3" stroke="#cfe9d7"/><text x="550" y="238" font-size="12" font-weight="700" fill="#1a7f37" text-anchor="middle">⑦ Vercel 배포</text><text x="550" y="260" font-size="9.5" fill="#6b6b6b" text-anchor="middle">환경변수 + URL 공유</text>
+    <rect x="670" y="210" width="190" height="66" rx="9" fill="#fafbfc" stroke="#e3e6ea"/><text x="765" y="238" font-size="12" font-weight="700" fill="#1a1a1a" text-anchor="middle">⑧ 회고</text><text x="765" y="260" font-size="9.5" fill="#6b6b6b" text-anchor="middle">한 사이클 완주 점검</text>
+  </g>
+  <line x1="220" y1="243" x2="248" y2="243" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#bf)"/>
+  <line x1="430" y1="243" x2="458" y2="243" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#bf)"/>
+  <line x1="640" y1="243" x2="668" y2="243" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#bf)"/>
+  <path d="M640 166 L640 188 L130 188 L130 208" fill="none" stroke="#9aa0a6" stroke-width="1.4" stroke-dasharray="4 3" marker-end="url(#bf)"/>
+
+  <rect x="40" y="300" width="820" height="80" rx="9" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="56" y="324" font-size="12" font-weight="700" fill="#1a1a1a">기획자 관점 — 이 7단계 사이클이 손에 들어오면</text>
+  <text x="56" y="346" font-size="11" fill="#444">전통적으로 1~2년 걸리던 풀스택 학습(HTML·React·SQL·API·인증·Git·배포)을 Cowork이 상당 부분 대신합니다.</text>
+  <text x="56" y="366" font-size="11" fill="#1a7f37">회사 안 어떤 작은 디지털 결과물도 1~2일 안에 데모를 만들 수 있습니다. 이것이 기획자에게 가장 큰 자산입니다.</text>
+</svg>

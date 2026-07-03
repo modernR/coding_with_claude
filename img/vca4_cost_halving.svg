@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="400" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">비용 절반화 패턴 — 작업을 쪼개 저렴한 모델에 분배</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">큰 작업을 작은 작업으로 나누고, 각각을 가장 저렴하면서 충분한 모델에 맡깁니다.</text>
+
+  <defs>
+    <marker id="ch_a" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/>
+    </marker>
+  </defs>
+
+  <rect x="40" y="95" width="360" height="200" rx="12" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="60" y="122" font-size="13.5" font-weight="700" fill="#6b6b6b">방식 A — 단일 Opus</text>
+  <rect x="120" y="150" width="200" height="80" rx="10" fill="#fdecef" stroke="#E8344E"/>
+  <text x="220" y="185" font-size="12" font-weight="700" fill="#b00020" text-anchor="middle">Opus 한 명</text>
+  <text x="220" y="207" font-size="10.5" fill="#444" text-anchor="middle">모든 작업 · 5K 토큰</text>
+  <text x="220" y="268" font-size="15" font-weight="700" fill="#b00020" text-anchor="middle">$0.25 / 회</text>
+
+  <rect x="440" y="95" width="420" height="200" rx="12" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="460" y="122" font-size="13.5" font-weight="700" fill="#1a7f37">방식 B — Agent Teams (모델 분배)</text>
+
+  <rect x="460" y="145" width="185" height="34" rx="8" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="470" y="167" font-size="9.5" fill="#b8860b">data-collector · Haiku · 1K → $0.01</text>
+  <rect x="460" y="185" width="185" height="34" rx="8" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="470" y="207" font-size="9.5" fill="#3a6fd6">analyst · Sonnet · 2K → $0.06</text>
+  <rect x="460" y="225" width="185" height="34" rx="8" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="470" y="247" font-size="9.5" fill="#3a6fd6">visualizer · Sonnet · 2K → $0.06</text>
+  <rect x="655" y="185" width="185" height="34" rx="8" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="665" y="207" font-size="9.5" fill="#3a6fd6">summarizer · Sonnet · 1K → $0.03</text>
+  <text x="748" y="252" font-size="15" font-weight="700" fill="#1a7f37" text-anchor="middle">합계 $0.16</text>
+  <text x="748" y="272" font-size="11" font-weight="700" fill="#1a7f37" text-anchor="middle">약 -36%</text>
+
+  <rect x="40" y="315" width="820" height="66" rx="10" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="60" y="338" font-size="11.5" font-weight="700" fill="#b8860b">모델 분배 정책</text>
+  <text x="60" y="358" font-size="10" fill="#444">분류·필터·요약·번역 → Haiku ($1/$5) · 일반 코드·문서·분석 → Sonnet ($3/$15) · 복잡 추론·아키텍처·코디네이터 → Opus ($5/$25)</text>
+  <text x="60" y="375" font-size="10" fill="#444">추가 절감: 같은 시스템 프롬프트를 여러 sub가 공유하면 prompt caching으로 캐시 히트 시 최대 90% 절감</text>
+</svg>

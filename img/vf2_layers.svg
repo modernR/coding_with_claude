@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 340" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="860" height="340" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">화면을 이루는 세 계층 — 구조·표현·행동</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">한 화면은 HTML(뼈대)·CSS(겉모습)·JavaScript(동작)의 분담으로 만들어집니다.</text>
+
+  <rect x="40" y="94" width="252" height="200" rx="12" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="166" y="122" font-size="16" font-weight="700" fill="#b8860b" text-anchor="middle">HTML</text>
+  <text x="166" y="144" font-size="12" fill="#6b6b6b" text-anchor="middle">구조 계층 (마크업)</text>
+  <text x="58" y="180" font-size="12.5" fill="#1a1a1a">· 요소·순서·의미를 정의</text>
+  <text x="58" y="204" font-size="12.5" fill="#1a1a1a">· "제목·버튼·목록" 골조</text>
+  <text x="58" y="256" font-size="11.5" fill="#b00020">깨지면: 스크린리더·검색엔진이</text>
+  <text x="58" y="274" font-size="11.5" fill="#b00020">의미를 못 읽음</text>
+
+  <rect x="304" y="94" width="252" height="200" rx="12" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="430" y="122" font-size="16" font-weight="700" fill="#3a6fd6" text-anchor="middle">CSS</text>
+  <text x="430" y="144" font-size="12" fill="#6b6b6b" text-anchor="middle">표현 계층 (스타일)</text>
+  <text x="322" y="180" font-size="12.5" fill="#1a1a1a">· 색·크기·위치·폰트</text>
+  <text x="322" y="204" font-size="12.5" fill="#1a1a1a">· 반응형 레이아웃·애니메이션</text>
+  <text x="322" y="256" font-size="11.5" fill="#b00020">깨지면: 의도한 디자인이</text>
+  <text x="322" y="274" font-size="11.5" fill="#b00020">표현되지 않음</text>
+
+  <rect x="568" y="94" width="252" height="200" rx="12" fill="#fdeef1" stroke="#f7c0c8"/>
+  <text x="694" y="122" font-size="16" font-weight="700" fill="#E8344E" text-anchor="middle">JavaScript</text>
+  <text x="694" y="144" font-size="12" fill="#6b6b6b" text-anchor="middle">행동 계층 (상호작용)</text>
+  <text x="586" y="180" font-size="12.5" fill="#1a1a1a">· 클릭·입력·스크롤에 반응</text>
+  <text x="586" y="204" font-size="12.5" fill="#1a1a1a">· 데이터를 받아 화면 갱신</text>
+  <text x="586" y="256" font-size="11.5" fill="#b00020">깨지면: 버튼이 안 눌리고</text>
+  <text x="586" y="274" font-size="11.5" fill="#b00020">폼 검증·동적 효과가 없음</text>
+
+  <text x="40" y="322" font-size="12.5" fill="#6b6b6b">세 계층을 의도대로 분담하면 → 빠르고, 접근 가능하고, 유지보수하기 쉬운 화면이 됩니다.</text>
+</svg>

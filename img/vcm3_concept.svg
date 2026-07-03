@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="420" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">서브에이전트 개념 — 메인은 PM, 서브는 전문가 (컨텍스트 격리)</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">메인이 요청을 나눠 맡기고, 각 서브는 자기 도메인 컨텍스트만 들고 일합니다.</text>
+
+  <defs><marker id="m3c_ar" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/></marker></defs>
+
+  <rect x="360" y="90" width="180" height="46" rx="10" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="450" y="118" font-size="12.5" font-weight="700" fill="#1a1a1a" text-anchor="middle">사용자 요청 (RSVP PR 리뷰)</text>
+
+  <rect x="330" y="160" width="240" height="70" rx="12" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="450" y="188" font-size="13.5" font-weight="700" fill="#7c3aed" text-anchor="middle">메인 에이전트 (PM)</text>
+  <text x="450" y="209" font-size="10.5" fill="#6b6b6b" text-anchor="middle">전체 맥락·대화 히스토리 보유 · 200K</text>
+  <text x="450" y="223" font-size="10.5" fill="#6b6b6b" text-anchor="middle">요청을 나눠 배분하고 결과를 통합</text>
+
+  <line x1="450" y1="136" x2="450" y2="158" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#m3c_ar)"/>
+
+  <rect x="60" y="290" width="230" height="82" rx="10" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="175" y="315" font-size="12" font-weight="700" fill="#3a6fd6" text-anchor="middle">code-reviewer</text>
+  <text x="175" y="334" font-size="9.5" fill="#6b6b6b" text-anchor="middle">독립 컨텍스트 70K</text>
+  <text x="175" y="349" font-size="9.5" fill="#6b6b6b" text-anchor="middle">변경 파일만 보고 품질·버그 검토</text>
+  <text x="175" y="363" font-size="9" fill="#9aa0a6" text-anchor="middle">메인 대화 히스토리 비공유</text>
+
+  <rect x="335" y="290" width="230" height="82" rx="10" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="450" y="315" font-size="12" font-weight="700" fill="#1a7f37" text-anchor="middle">security-reviewer</text>
+  <text x="450" y="334" font-size="9.5" fill="#6b6b6b" text-anchor="middle">독립 컨텍스트 50K</text>
+  <text x="450" y="349" font-size="9.5" fill="#6b6b6b" text-anchor="middle">.env·인증·쿼리만 보고 취약점 점검</text>
+  <text x="450" y="363" font-size="9" fill="#9aa0a6" text-anchor="middle">메인 대화 히스토리 비공유</text>
+
+  <rect x="610" y="290" width="230" height="82" rx="10" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="725" y="315" font-size="12" font-weight="700" fill="#b8860b" text-anchor="middle">ui-reviewer</text>
+  <text x="725" y="334" font-size="9.5" fill="#6b6b6b" text-anchor="middle">독립 컨텍스트 40K</text>
+  <text x="725" y="349" font-size="9.5" fill="#6b6b6b" text-anchor="middle">컴포넌트·접근성만 보고 UX 검토</text>
+  <text x="725" y="363" font-size="9" fill="#9aa0a6" text-anchor="middle">메인 대화 히스토리 비공유</text>
+
+  <line x1="380" y1="230" x2="200" y2="288" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#m3c_ar)"/>
+  <line x1="450" y1="230" x2="450" y2="288" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#m3c_ar)"/>
+  <line x1="520" y1="230" x2="700" y2="288" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#m3c_ar)"/>
+
+  <text x="268" y="256" font-size="9" fill="#7c3aed">diff 전달</text>
+  <text x="610" y="256" font-size="9" fill="#7c3aed">UI 검토 요청</text>
+</svg>

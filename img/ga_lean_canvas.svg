@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 340" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="340" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">린캔버스 9영역 — 사업 모델을 한 장으로</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">각 칸을 데이터 기반·구체적·실행 주체 관점으로 채웁니다. 추측이 아니라 숫자로.</text>
+  <g font-size="11" font-weight="700">
+    <rect x="40" y="90" width="160" height="105" rx="9" fill="#fdecef" stroke="#f3b8c4"/>
+    <text x="52" y="112" fill="#b00020">문제</text>
+    <text x="52" y="132" font-size="9.5" font-weight="400" fill="#6b6b6b">핵심 페인 포인트</text>
+    <rect x="204" y="90" width="160" height="50" rx="9" fill="#fff7e6" stroke="#f3d488"/>
+    <text x="216" y="112" fill="#b8860b">솔루션</text>
+    <text x="216" y="130" font-size="9.5" font-weight="400" fill="#6b6b6b">문제 해결 방식</text>
+    <rect x="204" y="145" width="160" height="50" rx="9" fill="#fff7e6" stroke="#f3d488"/>
+    <text x="216" y="167" fill="#b8860b">핵심 지표</text>
+    <text x="216" y="185" font-size="9.5" font-weight="400" fill="#6b6b6b">측정 가능한 값</text>
+    <rect x="368" y="90" width="164" height="105" rx="9" fill="#ede9fe" stroke="#a78bda"/>
+    <text x="380" y="112" fill="#7c3aed">가치 제안</text>
+    <text x="380" y="132" font-size="9.5" font-weight="400" fill="#6b6b6b">왜 우리를 쓰나</text>
+    <rect x="536" y="90" width="160" height="50" rx="9" fill="#f1faf3" stroke="#cfe9d7"/>
+    <text x="548" y="112" fill="#1a7f37">압도적 우위</text>
+    <text x="548" y="130" font-size="9.5" font-weight="400" fill="#6b6b6b">복제 불가 강점</text>
+    <rect x="536" y="145" width="160" height="50" rx="9" fill="#f1faf3" stroke="#cfe9d7"/>
+    <text x="548" y="167" fill="#1a7f37">채널</text>
+    <text x="548" y="185" font-size="9.5" font-weight="400" fill="#6b6b6b">고객 도달 경로</text>
+    <rect x="700" y="90" width="160" height="105" rx="9" fill="#eef3fd" stroke="#bcd0f5"/>
+    <text x="712" y="112" fill="#3a6fd6">고객 세그먼트</text>
+    <text x="712" y="132" font-size="9.5" font-weight="400" fill="#6b6b6b">규모까지 명시</text>
+    <rect x="40" y="200" width="410" height="70" rx="9" fill="#fafbfc" stroke="#e3e6ea"/>
+    <text x="52" y="222" fill="#1a1a1a">비용 구조</text>
+    <text x="52" y="242" font-size="9.5" font-weight="400" fill="#6b6b6b">고정·변동 비용</text>
+    <rect x="454" y="200" width="406" height="70" rx="9" fill="#fafbfc" stroke="#e3e6ea"/>
+    <text x="466" y="222" fill="#1a1a1a">수익 모델</text>
+    <text x="466" y="242" font-size="9.5" font-weight="400" fill="#6b6b6b">숫자가 붙은 가격 (예: 월 2.9만원)</text>
+  </g>
+  <text x="450" y="300" font-size="11" fill="#6b6b6b" text-anchor="middle">작성 후 자동 검증 — 9영역 일관성 · 경쟁 분석 충실도 · 지표 측정성 · 실행 가능성 · Top 5 위험</text>
+  <text x="450" y="322" font-size="10.5" fill="#b00020" text-anchor="middle">"구독으로 번다"(X) → "월 구독 2.9만원, Pro 5.9만원, PG 수수료 0.5%"(O)</text>
+</svg>

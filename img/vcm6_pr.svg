@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="380" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">PR 워크플로우 — 생성부터 머지까지</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">브랜치의 변경을 main에 합치기 전, 검토·검증·미리보기를 거치는 관문입니다.</text>
+
+  <defs>
+    <marker id="vcm6p_arr" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/>
+    </marker>
+  </defs>
+
+  <!-- stage 1 -->
+  <rect x="40" y="100" width="180" height="90" rx="10" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="130" y="126" font-size="13" font-weight="700" fill="#3a6fd6" text-anchor="middle">① PR 생성</text>
+  <text x="130" y="148" font-size="10" fill="#444" text-anchor="middle">push → PR 열기</text>
+  <text x="130" y="164" font-size="10" fill="#444" text-anchor="middle">제목·요약·테스트법</text>
+  <text x="130" y="180" font-size="10" fill="#444" text-anchor="middle">본문 자동 작성</text>
+
+  <!-- stage 2 -->
+  <rect x="260" y="100" width="180" height="90" rx="10" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="350" y="126" font-size="13" font-weight="700" fill="#b8860b" text-anchor="middle">② 자동 검증</text>
+  <text x="350" y="148" font-size="10" fill="#444" text-anchor="middle">CI: lint·type·test·build</text>
+  <text x="350" y="164" font-size="10" fill="#444" text-anchor="middle">서브에이전트 리뷰</text>
+  <text x="350" y="180" font-size="10" fill="#444" text-anchor="middle">Vercel Preview 배포</text>
+
+  <!-- stage 3 -->
+  <rect x="480" y="100" width="180" height="90" rx="10" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="570" y="126" font-size="13" font-weight="700" fill="#7c3aed" text-anchor="middle">③ 사람 리뷰</text>
+  <text x="570" y="148" font-size="10" fill="#444" text-anchor="middle">코멘트·수정 요청</text>
+  <text x="570" y="164" font-size="10" fill="#444" text-anchor="middle">미리보기로 QA</text>
+  <text x="570" y="180" font-size="10" fill="#444" text-anchor="middle">승인(Approve)</text>
+
+  <!-- stage 4 -->
+  <rect x="700" y="100" width="160" height="90" rx="10" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="780" y="126" font-size="13" font-weight="700" fill="#1a7f37" text-anchor="middle">④ 머지</text>
+  <text x="780" y="148" font-size="10" fill="#444" text-anchor="middle">Squash and merge</text>
+  <text x="780" y="164" font-size="10" fill="#444" text-anchor="middle">main 자동 배포</text>
+  <text x="780" y="180" font-size="10" fill="#444" text-anchor="middle">브랜치 삭제</text>
+
+  <line x1="220" y1="145" x2="256" y2="145" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#vcm6p_arr)"/>
+  <line x1="440" y1="145" x2="476" y2="145" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#vcm6p_arr)"/>
+  <line x1="660" y1="145" x2="696" y2="145" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#vcm6p_arr)"/>
+
+  <!-- gate feedback -->
+  <path d="M350,190 L350,230 L570,230 L570,192" fill="none" stroke="#E8344E" stroke-width="1.8" stroke-dasharray="5,4" marker-end="url(#vcm6p_arr)"/>
+  <text x="460" y="248" font-size="10" fill="#b00020" text-anchor="middle">검증·리뷰 실패 시 되돌려 수정 (머지 차단)</text>
+
+  <!-- good PR 5 elements -->
+  <rect x="40" y="278" width="820" height="82" rx="10" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="56" y="302" font-size="12" font-weight="700" fill="#1a1a1a">좋은 PR의 5요소</text>
+  <text x="56" y="326" font-size="10.5" fill="#444">① 제목 (Conventional Commits: feat·fix·docs)   ② 변경 요약 (무엇·왜)   ③ 스크린샷/영상 (UI면 before/after)</text>
+  <text x="56" y="347" font-size="10.5" fill="#444">④ 테스트 방법 (검토자가 검증하는 법)   ⑤ 관련 이슈·문서 링크 (Linear·Notion)</text>
+</svg>

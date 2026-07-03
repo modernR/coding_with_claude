@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="420" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">MCP Tool Search — 도구를 온디맨드로 로드</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">30~50개 도구를 등록하되 메타데이터를 상시 로드하지 않고, 호출 시점에 검색해 씁니다.</text>
+
+  <defs>
+    <marker id="ts_a" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/>
+    </marker>
+  </defs>
+
+  <rect x="40" y="100" width="150" height="70" rx="11" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="115" y="130" font-size="11.5" font-weight="700" fill="#3a6fd6" text-anchor="middle">사용자</text>
+  <text x="115" y="150" font-size="9.5" fill="#444" text-anchor="middle">"분기 매출 분석해줘"</text>
+
+  <rect x="240" y="100" width="170" height="70" rx="11" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="325" y="126" font-size="11.5" font-weight="700" fill="#7c3aed" text-anchor="middle">메인 에이전트</text>
+  <text x="325" y="146" font-size="9.5" fill="#444" text-anchor="middle">어떤 도구가 필요한지</text>
+  <text x="325" y="161" font-size="9.5" fill="#444" text-anchor="middle">판단</text>
+
+  <rect x="460" y="100" width="170" height="70" rx="11" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="545" y="126" font-size="11.5" font-weight="700" fill="#b8860b" text-anchor="middle">tool-search</text>
+  <text x="545" y="146" font-size="9.5" fill="#444" text-anchor="middle">search("sales",</text>
+  <text x="545" y="161" font-size="9.5" fill="#444" text-anchor="middle">"revenue")</text>
+
+  <rect x="680" y="100" width="180" height="70" rx="11" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="770" y="126" font-size="11.5" font-weight="700" fill="#6b6b6b" text-anchor="middle">MCP 레지스트리</text>
+  <text x="770" y="146" font-size="9.5" fill="#444" text-anchor="middle">사내 30+개 MCP</text>
+  <text x="770" y="161" font-size="9.5" fill="#444" text-anchor="middle">메타만 색인</text>
+
+  <line x1="190" y1="135" x2="236" y2="135" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#ts_a)"/>
+  <line x1="410" y1="135" x2="456" y2="135" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#ts_a)"/>
+  <line x1="630" y1="135" x2="676" y2="135" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#ts_a)"/>
+
+  <rect x="460" y="210" width="400" height="58" rx="10" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="478" y="233" font-size="10.5" font-weight="700" fill="#b8860b">후보 도구 5~10개 반환 → 선택된 도구만 로드</text>
+  <text x="478" y="253" font-size="9.5" fill="#444">company-erp.revenue_query 선택 · 나머지는 로드하지 않음</text>
+  <line x1="770" y1="170" x2="770" y2="206" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#ts_a)"/>
+
+  <rect x="460" y="286" width="400" height="58" rx="10" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="478" y="309" font-size="10.5" font-weight="700" fill="#1a7f37">호출 → 결과 수신 → 컨텍스트에서 도구 메타 제거</text>
+  <text x="478" y="329" font-size="9.5" fill="#444">revenue_query(quarter=2026-Q1) → 매출 데이터</text>
+  <line x1="660" y1="268" x2="660" y2="282" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#ts_a)"/>
+
+  <rect x="40" y="210" width="380" height="134" rx="12" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="60" y="236" font-size="12" font-weight="700" fill="#3a6fd6">비교: 상시 로드 vs 온디맨드</text>
+  <text x="60" y="262" font-size="10" fill="#444">· 30개 MCP 모두 켜둠 → 세션 시작부터 컨텍스트</text>
+  <text x="72" y="279" font-size="10" fill="#b00020">15~30% 점유</text>
+  <text x="60" y="303" font-size="10" fill="#444">· Tool Search → 작업당 5K 미만 점유</text>
+  <text x="60" y="327" font-size="10" fill="#1a7f37">등록 개수가 늘어도 상시 비용은 거의 0에 수렴</text>
+
+  <text x="450" y="392" font-size="10.5" fill="#6b6b6b" text-anchor="middle">한 사이클의 토큰 비용이 30개 MCP를 모두 켜둔 것보다 훨씬 적습니다</text>
+</svg>

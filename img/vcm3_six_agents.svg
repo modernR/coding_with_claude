@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="400" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">6개 대표 서브에이전트 — 도메인별 전문가 라인업</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">역할·주 도구·기본 모델이 각각 다릅니다. 필요한 도구만 골라 위임합니다.</text>
+
+  <rect x="40" y="95" width="265" height="130" rx="11" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="58" y="120" font-size="13" font-weight="700" fill="#3a6fd6">code-reviewer</text>
+  <text x="58" y="142" font-size="10.5" fill="#444">PR diff를 품질·버그·보안·성능</text>
+  <text x="58" y="158" font-size="10.5" fill="#444">4관점으로 검토, 심각도별 판정</text>
+  <text x="58" y="182" font-size="10" fill="#6b6b6b">도구: Read, Grep, Glob, Bash</text>
+  <text x="58" y="200" font-size="10" fill="#6b6b6b">모델: sonnet</text>
+  <text x="58" y="216" font-size="9.5" fill="#9aa0a6">가장 자주 쓰는 기본 서브</text>
+
+  <rect x="318" y="95" width="265" height="130" rx="11" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="336" y="120" font-size="13" font-weight="700" fill="#b8860b">ui-reviewer</text>
+  <text x="336" y="142" font-size="10.5" fill="#444">디자인·접근성·반응형 관점</text>
+  <text x="336" y="158" font-size="10.5" fill="#444">에서 UI 변경 검토</text>
+  <text x="336" y="182" font-size="10" fill="#6b6b6b">도구: Read, Glob</text>
+  <text x="336" y="200" font-size="10" fill="#6b6b6b">모델: sonnet</text>
+  <text x="336" y="216" font-size="9.5" fill="#9aa0a6">CSS·컴포넌트 변경 시</text>
+
+  <rect x="596" y="95" width="265" height="130" rx="11" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="614" y="120" font-size="13" font-weight="700" fill="#1a7f37">security-reviewer</text>
+  <text x="614" y="142" font-size="10.5" fill="#444">비밀 키·인증·SQLi·XSS 등</text>
+  <text x="614" y="158" font-size="10.5" fill="#444">보안 취약점 강박적 점검</text>
+  <text x="614" y="182" font-size="10" fill="#6b6b6b">도구: Read, Grep</text>
+  <text x="614" y="200" font-size="10" fill="#6b6b6b">모델: sonnet</text>
+  <text x="614" y="216" font-size="9.5" fill="#9aa0a6">.env·API 키 변경 시</text>
+
+  <rect x="40" y="240" width="265" height="130" rx="11" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="58" y="265" font-size="13" font-weight="700" fill="#7c3aed">docs-updater</text>
+  <text x="58" y="287" font-size="10.5" fill="#444">코드 변경에 맞춰 README·</text>
+  <text x="58" y="303" font-size="10.5" fill="#444">CHANGELOG·docs 자동 갱신</text>
+  <text x="58" y="327" font-size="10" fill="#6b6b6b">도구: Read, Edit, Write</text>
+  <text x="58" y="345" font-size="10" fill="#6b6b6b">모델: sonnet</text>
+  <text x="58" y="361" font-size="9.5" fill="#9aa0a6">기능 추가·API 변경 시</text>
+
+  <rect x="318" y="240" width="265" height="130" rx="11" fill="#fff5f6" stroke="#f3c9cf"/>
+  <text x="336" y="265" font-size="13" font-weight="700" fill="#b00020">test-writer</text>
+  <text x="336" y="287" font-size="10.5" fill="#444">새 함수·API의 단위·통합</text>
+  <text x="336" y="303" font-size="10.5" fill="#444">테스트 + 엣지 케이스 작성</text>
+  <text x="336" y="327" font-size="10" fill="#6b6b6b">도구: Read, Edit, Write, Bash</text>
+  <text x="336" y="345" font-size="10" fill="#6b6b6b">모델: sonnet</text>
+  <text x="336" y="361" font-size="9.5" fill="#9aa0a6">새 .ts·.py 파일 추가 시</text>
+
+  <rect x="596" y="240" width="265" height="130" rx="11" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="614" y="265" font-size="13" font-weight="700" fill="#1a1a1a">translator</text>
+  <text x="614" y="287" font-size="10.5" fill="#444">한↔영·영↔일 등 다국어</text>
+  <text x="614" y="303" font-size="10.5" fill="#444">번역, 콘텐츠별 톤 적용</text>
+  <text x="614" y="327" font-size="10" fill="#6b6b6b">도구: Read, Edit</text>
+  <text x="614" y="345" font-size="10" fill="#6b6b6b">모델: sonnet</text>
+  <text x="614" y="361" font-size="9.5" fill="#9aa0a6">UI·문서·블로그 번역 시</text>
+</svg>

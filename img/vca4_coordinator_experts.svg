@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="400" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">메인 코디네이터 + 전문가 N명 패턴</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">코디네이터가 요청을 분석해 전문가에게 분배하고, 결과를 통합해 한 번에 보고합니다.</text>
+
+  <defs>
+    <marker id="ce_a" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/>
+    </marker>
+    <marker id="ce_r" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#E8344E"/>
+    </marker>
+  </defs>
+
+  <rect x="360" y="90" width="180" height="52" rx="11" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="450" y="113" font-size="12.5" font-weight="700" fill="#b8860b" text-anchor="middle">메인 코디네이터</text>
+  <text x="450" y="132" font-size="9.5" fill="#444" text-anchor="middle">분배 · 통합 · 검증 (Opus)</text>
+
+  <rect x="360" y="30" width="180" height="34" rx="9" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="450" y="52" font-size="10.5" fill="#1a1a1a" text-anchor="middle">사용자 요청</text>
+  <line x1="450" y1="64" x2="450" y2="86" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#ce_a)"/>
+
+  <rect x="40" y="200" width="150" height="56" rx="10" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="115" y="223" font-size="10.5" font-weight="700" fill="#7c3aed" text-anchor="middle">전문가 1 · 병렬</text>
+  <text x="115" y="242" font-size="9" fill="#444" text-anchor="middle">prd-writer</text>
+
+  <rect x="210" y="200" width="150" height="56" rx="10" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="285" y="223" font-size="10.5" font-weight="700" fill="#7c3aed" text-anchor="middle">전문가 2 · 병렬</text>
+  <text x="285" y="242" font-size="9" fill="#444" text-anchor="middle">market-researcher</text>
+
+  <rect x="380" y="200" width="150" height="56" rx="10" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="455" y="223" font-size="10.5" font-weight="700" fill="#3a6fd6" text-anchor="middle">전문가 3 · 순차</text>
+  <text x="455" y="242" font-size="9" fill="#444" text-anchor="middle">architect (1·2 결과)</text>
+
+  <rect x="550" y="200" width="150" height="56" rx="10" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="625" y="223" font-size="10.5" font-weight="700" fill="#6b6b6b" text-anchor="middle">전문가 4 · 조건부</text>
+  <text x="625" y="242" font-size="9" fill="#444" text-anchor="middle">deployer</text>
+
+  <line x1="410" y1="142" x2="130" y2="196" stroke="#9aa0a6" stroke-width="1.4" marker-end="url(#ce_a)"/>
+  <line x1="430" y1="142" x2="290" y2="196" stroke="#9aa0a6" stroke-width="1.4" marker-end="url(#ce_a)"/>
+  <line x1="460" y1="142" x2="460" y2="196" stroke="#9aa0a6" stroke-width="1.4" marker-end="url(#ce_a)"/>
+  <line x1="490" y1="142" x2="620" y2="196" stroke="#9aa0a6" stroke-width="1.4" stroke-dasharray="4 3" marker-end="url(#ce_a)"/>
+
+  <line x1="190" y1="228" x2="376" y2="228" stroke="#3a6fd6" stroke-width="1.3" marker-end="url(#ce_a)"/>
+
+  <rect x="720" y="200" width="140" height="56" rx="10" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="790" y="223" font-size="10.5" font-weight="700" fill="#1a7f37" text-anchor="middle">통합 보고</text>
+  <text x="790" y="242" font-size="9" fill="#444" text-anchor="middle">PR · URL · 링크</text>
+
+  <path d="M115 256 L115 320 L440 320 L440 146" fill="none" stroke="#E8344E" stroke-width="1.4" marker-end="url(#ce_r)"/>
+  <path d="M625 256 L625 300 L470 300 L470 146" fill="none" stroke="#E8344E" stroke-width="1.4" marker-end="url(#ce_r)"/>
+  <text x="300" y="340" font-size="10" fill="#b00020" text-anchor="middle">각 전문가 결과는 코디네이터로 반환 → 통합·검증 후 최종 보고</text>
+  <line x1="540" y1="116" x2="716" y2="220" stroke="#9aa0a6" stroke-width="1.3" marker-end="url(#ce_a)"/>
+  <text x="450" y="380" font-size="10.5" fill="#6b6b6b" text-anchor="middle">실선=병렬 위임 · 파선=조건부 · 파랑=순차 의존 · 빨강=결과 반환</text>
+</svg>

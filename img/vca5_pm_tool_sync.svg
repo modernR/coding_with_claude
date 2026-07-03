@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="400" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">외부 PM 도구 통합 — MCP로 자동 동기화</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">Task Master의 작업 그래프를 회사 표준 PM 도구로 한 줄에 내보내고, 상태를 되받습니다.</text>
+
+  <defs><marker id="vca5sync_ar" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/></marker>
+  <marker id="vca5sync_arb" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#3a6fd6"/></marker></defs>
+
+  <!-- source: Task Master -->
+  <rect x="40" y="150" width="200" height="110" rx="11" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="140" y="180" font-size="13" font-weight="700" fill="#3a6fd6" text-anchor="middle">Task Master</text>
+  <text x="140" y="204" font-size="10" fill="#444" text-anchor="middle">tasks.json (master)</text>
+  <text x="140" y="224" font-size="10" fill="#444" text-anchor="middle">작업·의존·복잡도</text>
+  <text x="140" y="244" font-size="9.5" fill="#6b6b6b" text-anchor="middle">단일 진실 원천</text>
+
+  <!-- center: Cowork + MCP -->
+  <rect x="330" y="150" width="200" height="110" rx="11" fill="#1a1a1a"/>
+  <text x="430" y="180" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">Cowork + MCP</text>
+  <text x="430" y="204" font-size="10" fill="#e3e6ea" text-anchor="middle">자연어 한 줄 지시</text>
+  <text x="430" y="224" font-size="10" fill="#e3e6ea" text-anchor="middle">ID·라벨·milestone 매핑</text>
+  <text x="430" y="244" font-size="9.5" fill="#9aa0a6" text-anchor="middle">의존을 blocked-by로 변환</text>
+
+  <!-- targets -->
+  <rect x="620" y="100" width="240" height="52" rx="10" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="740" y="123" font-size="12" font-weight="700" fill="#7c3aed" text-anchor="middle">Linear</text>
+  <text x="740" y="141" font-size="9.5" fill="#444" text-anchor="middle">이슈·milestone·blocked by</text>
+
+  <rect x="620" y="160" width="240" height="52" rx="10" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="740" y="183" font-size="12" font-weight="700" fill="#1a7f37" text-anchor="middle">Notion</text>
+  <text x="740" y="201" font-size="9.5" fill="#444" text-anchor="middle">백로그 DB · Phase별 view</text>
+
+  <rect x="620" y="220" width="240" height="52" rx="10" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="740" y="243" font-size="12" font-weight="700" fill="#b8860b" text-anchor="middle">Asana · Jira</text>
+  <text x="740" y="261" font-size="9.5" fill="#444" text-anchor="middle">태스크·프로젝트 매핑</text>
+
+  <line x1="240" y1="205" x2="328" y2="205" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#vca5sync_ar)"/>
+  <line x1="530" y1="196" x2="618" y2="126" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#vca5sync_ar)"/>
+  <line x1="530" y1="205" x2="618" y2="186" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#vca5sync_ar)"/>
+  <line x1="530" y1="214" x2="618" y2="246" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#vca5sync_ar)"/>
+
+  <!-- reverse sync arrow -->
+  <path d="M 620 285 Q 430 320 240 265" fill="none" stroke="#3a6fd6" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#vca5sync_arb)"/>
+  <text x="430" y="315" font-size="10" fill="#3a6fd6" text-anchor="middle">역방향 · 이슈 상태 변경 → task-master 자동 반영 (webhook·정기 동기화)</text>
+
+  <!-- caution -->
+  <rect x="40" y="340" width="820" height="42" rx="10" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="60" y="360" font-size="10.5" fill="#444">동기화 충돌 방지 · 한 쪽을 master, 다른 쪽은 read-only로 정하고 동기화 시점을 명확히 합니다.</text>
+  <text x="60" y="376" font-size="10.5" fill="#6b6b6b">양쪽에서 자유롭게 수정하면 상태가 어긋나 어느 쪽이 맞는지 알 수 없게 됩니다.</text>
+</svg>

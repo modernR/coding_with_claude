@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="300" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">상태표시줄 — 화면 하단 한 줄에 담는 정보</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">전부 넣으면 어수선합니다. 본인에게 의미 있는 3~5개만 골라 조합합니다.</text>
+
+  <!-- status bar mockup -->
+  <rect x="40" y="95" width="820" height="46" rx="9" fill="#1a1a1a"/>
+  <text x="66" y="123" font-size="12.5" fill="#e3e6ea" font-family="monospace">rsvp-app</text>
+  <text x="150" y="123" font-size="12.5" fill="#7c3aed" font-family="monospace">|</text>
+  <text x="168" y="123" font-size="12.5" fill="#8fd4a0" font-family="monospace">main +3</text>
+  <text x="262" y="123" font-size="12.5" fill="#7c3aed" font-family="monospace">|</text>
+  <text x="280" y="123" font-size="12.5" fill="#9ec3f5" font-family="monospace">Sonnet 4.6</text>
+  <text x="400" y="123" font-size="12.5" fill="#7c3aed" font-family="monospace">|</text>
+  <text x="418" y="123" font-size="12.5" fill="#f0c674" font-family="monospace">$0.42</text>
+  <text x="492" y="123" font-size="12.5" fill="#7c3aed" font-family="monospace">|</text>
+  <text x="510" y="123" font-size="12.5" fill="#e3e6ea" font-family="monospace">MCP 3</text>
+
+  <!-- labels -->
+  <text x="66" y="170" font-size="10.5" fill="#6b6b6b">작업 디렉토리</text>
+  <text x="168" y="170" font-size="10.5" fill="#1a7f37">브랜치 · 변경 수</text>
+  <text x="280" y="170" font-size="10.5" fill="#3a6fd6">현재 모델</text>
+  <text x="418" y="170" font-size="10.5" fill="#b8860b">누적 비용</text>
+  <text x="510" y="170" font-size="10.5" fill="#444">MCP 연결 수</text>
+
+  <text x="40" y="212" font-size="12.5" font-weight="700" fill="#1a1a1a">담을 수 있는 정보</text>
+  <text x="40" y="234" font-size="11" fill="#444">디렉토리 · git 브랜치+변경 파일 수 · 현재 모델 · 세션 누적 비용 · 사용 가능한 토큰 · 시간 · MCP 활성 개수</text>
+  <rect x="40" y="252" width="820" height="30" rx="7" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="56" y="272" font-size="11" fill="#8a6d00">설정: ~/.claude/statusline.sh (셸) 또는 settings.json의 statusline 필드로 지정</text>
+</svg>

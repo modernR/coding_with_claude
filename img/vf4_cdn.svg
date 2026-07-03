@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 340" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="880" height="340" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">파일은 객체 스토리지에, 배포는 CDN으로</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">파일은 서버 디스크가 아니라 중앙 저장소(S3 등)에, 그리고 가까운 엣지에서 빠르게.</text>
+
+  <defs><marker id="cd" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/></marker></defs>
+
+  <!-- 원본 -->
+  <rect x="60" y="140" width="180" height="90" rx="12" fill="#fdeef1" stroke="#f7c0c8"/>
+  <text x="150" y="172" font-size="14" font-weight="700" fill="#E8344E" text-anchor="middle">원본 저장소</text>
+  <text x="150" y="194" font-size="11" fill="#6b6b6b" text-anchor="middle">AWS S3 (미국)</text>
+  <text x="150" y="212" font-size="10" fill="#9aa0a6" text-anchor="middle">버킷·키·객체 구조</text>
+
+  <!-- 엣지 -->
+  <g text-anchor="middle" font-size="11">
+    <rect x="360" y="96" width="150" height="44" rx="9" fill="#eef3fd" stroke="#bcd0f5"/><text x="435" y="123" fill="#3a6fd6" font-weight="700">엣지 · 서울</text>
+    <rect x="360" y="150" width="150" height="44" rx="9" fill="#eef3fd" stroke="#bcd0f5"/><text x="435" y="177" fill="#3a6fd6" font-weight="700">엣지 · 도쿄</text>
+    <rect x="360" y="204" width="150" height="44" rx="9" fill="#eef3fd" stroke="#bcd0f5"/><text x="435" y="231" fill="#3a6fd6" font-weight="700">엣지 · 싱가포르</text>
+  </g>
+  <text x="435" y="270" font-size="10.5" fill="#6b6b6b" text-anchor="middle">CDN: 전 세계 캐시 서버에 복제</text>
+
+  <line x1="240" y1="170" x2="356" y2="130" stroke="#9aa0a6" stroke-width="1.6" stroke-dasharray="5 3" marker-end="url(#cd)"/>
+  <line x1="240" y1="185" x2="356" y2="172" stroke="#9aa0a6" stroke-width="1.6" stroke-dasharray="5 3" marker-end="url(#cd)"/>
+  <line x1="240" y1="200" x2="356" y2="222" stroke="#9aa0a6" stroke-width="1.6" stroke-dasharray="5 3" marker-end="url(#cd)"/>
+  <text x="300" y="120" font-size="9.5" fill="#9aa0a6" text-anchor="middle">복제</text>
+
+  <!-- 사용자 -->
+  <rect x="640" y="150" width="180" height="70" rx="12" fill="#eaf6ee" stroke="#bfe3cb"/>
+  <text x="730" y="180" font-size="13" font-weight="700" fill="#1a7f37" text-anchor="middle">사용자 (서울)</text>
+  <text x="730" y="200" font-size="10.5" fill="#6b6b6b" text-anchor="middle">가까운 엣지에서 수신</text>
+  <line x1="510" y1="172" x2="638" y2="180" stroke="#1a7f37" stroke-width="1.8" marker-end="url(#cd)"/><text x="574" y="164" font-size="10" fill="#1a7f37" text-anchor="middle">빠름(수 ms)</text>
+
+  <rect x="40" y="288" width="808" height="38" rx="8" fill="#fff5f6" stroke="#f3c9cf"/>
+  <text x="56" y="312" font-size="11.5" fill="#1a1a1a">권한: <tspan font-weight="700">퍼블릭</tspan>(포스터=CDN 공개) · <tspan font-weight="700">프라이빗</tspan>(개인 PDF=로그인 필요) · <tspan font-weight="700">서명된 URL</tspan>(제한 시간만 유효한 일회성 링크)</text>
+</svg>

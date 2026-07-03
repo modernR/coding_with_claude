@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="400" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">커맨드 + MCP 조합 — 지시서가 외부 데이터를 부른다</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">본문에 "어느 MCP로 무엇을 하라"고 명시하면, 에이전트가 외부 도구를 자동 호출해 데이터를 가져옵니다.</text>
+
+  <defs><marker id="cm" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/></marker></defs>
+
+  <!-- command / skill -->
+  <rect x="40" y="105" width="230" height="150" rx="10" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="60" y="130" font-size="13" font-weight="700" fill="#b8860b">/rsvp-summary 스킬</text>
+  <text x="60" y="152" font-size="10" fill="#444">단계마다 쓸 MCP를 지목</text>
+  <text x="60" y="176" font-size="10" fill="#444">1. Sheets로 등록자 조회</text>
+  <text x="60" y="194" font-size="10" fill="#444">2. Gmail로 확인 메일 추적</text>
+  <text x="60" y="212" font-size="10" fill="#444">3. 통계 마크다운 생성</text>
+  <text x="60" y="234" font-size="10" fill="#444">4. Notion에 발행</text>
+
+  <line x1="270" y1="180" x2="322" y2="180" stroke="#9aa0a6" stroke-width="1.8" marker-end="url(#cm)"/>
+
+  <!-- agent core -->
+  <rect x="326" y="130" width="150" height="100" rx="10" fill="#1a1a1a"/>
+  <text x="401" y="172" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">에이전트</text>
+  <text x="401" y="192" font-size="9.5" fill="#cfcfcf" text-anchor="middle">MCP 자동 호출</text>
+
+  <!-- MCP fan-out -->
+  <line x1="476" y1="150" x2="620" y2="122" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#cm)"/>
+  <line x1="476" y1="170" x2="620" y2="170" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#cm)"/>
+  <line x1="476" y1="190" x2="620" y2="218" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#cm)"/>
+  <line x1="476" y1="210" x2="620" y2="266" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#cm)"/>
+
+  <g font-size="10.5" font-weight="700" text-anchor="middle">
+    <rect x="622" y="105" width="238" height="34" rx="7" fill="#f1faf3" stroke="#cfe9d7"/><text x="741" y="126" fill="#1a7f37">Google Sheets MCP — 등록 시트</text>
+    <rect x="622" y="153" width="238" height="34" rx="7" fill="#f1faf3" stroke="#cfe9d7"/><text x="741" y="174" fill="#1a7f37">Gmail MCP — 확인 메일 이력</text>
+    <rect x="622" y="201" width="238" height="34" rx="7" fill="#f1faf3" stroke="#cfe9d7"/><text x="741" y="222" fill="#1a7f37">Notion MCP — 리포트 발행</text>
+    <rect x="622" y="249" width="238" height="34" rx="7" fill="#eef3fd" stroke="#bcd0f5"/><text x="741" y="270" fill="#3a6fd6">Slack MCP — 담당자 알림</text>
+  </g>
+
+  <!-- caution -->
+  <rect x="40" y="300" width="820" height="80" rx="10" fill="#fff5f6" stroke="#f3c9cf"/>
+  <text x="60" y="326" font-size="12" font-weight="700" fill="#b00020">주의 — MCP 권한은 최소한으로</text>
+  <text x="60" y="348" font-size="10.5" fill="#444">Gmail을 "모든 메일 읽기·쓰기"로 열면 위험합니다. 가능하면 라벨·검색 결과 범위로 제한하고, 권한 다이얼로그의 세부 옵션을 확인합니다.</text>
+  <text x="60" y="368" font-size="10.5" fill="#444">스킬은 "어디서 어떤 데이터를 가져올지"만 적고, 실제 접근·인증은 각 MCP의 OAuth 권한 안에서 이뤄집니다.</text>
+</svg>

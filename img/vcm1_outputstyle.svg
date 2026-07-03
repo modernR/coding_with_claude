@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="380" fill="#ffffff"/>
+  <defs><marker id="mos" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/></marker></defs>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">출력 스타일 — 응답의 톤·언어·형식을 고정</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">기본 스타일을 고르거나, 본인 도메인에 맞춘 스타일 파일을 만들어 세션에 입힙니다.</text>
+
+  <rect x="40" y="95" width="250" height="120" rx="10" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="56" y="119" font-size="12.5" font-weight="700" fill="#1a1a1a">기본 제공 스타일</text>
+  <g font-size="11" fill="#444">
+    <text x="56" y="143">default — 표준</text>
+    <text x="56" y="163">concise — 매우 간결</text>
+    <text x="56" y="183">detailed — 단계별 상세</text>
+    <text x="56" y="203">technical / friendly</text>
+  </g>
+
+  <rect x="325" y="95" width="255" height="120" rx="10" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="341" y="119" font-size="12.5" font-weight="700" fill="#7c3aed">본인 스타일 파일</text>
+  <text x="341" y="141" font-size="10.5" fill="#6b6b6b">~/.claude/output-styles/&lt;name&gt;.md</text>
+  <g font-size="11" fill="#444">
+    <text x="341" y="165">프론트매터: name · description</text>
+    <text x="341" y="185">본문: 톤 · 구조 · 금지 사항</text>
+    <text x="341" y="205">예) it-planner-ko</text>
+  </g>
+
+  <rect x="615" y="95" width="245" height="120" rx="10" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="631" y="119" font-size="12.5" font-weight="700" fill="#3a6fd6">적용 범위</text>
+  <g font-size="11" fill="#444">
+    <text x="631" y="145">/output-style &lt;name&gt;</text>
+    <text x="631" y="163" font-size="10.5" fill="#6b6b6b">→ 이 세션에만</text>
+    <text x="631" y="187">CLAUDE.md: output_style:</text>
+    <text x="631" y="205" font-size="10.5" fill="#6b6b6b">→ 모든 세션 영구 적용</text>
+  </g>
+
+  <line x1="290" y1="155" x2="325" y2="155" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#mos)"/>
+  <line x1="580" y1="155" x2="615" y2="155" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#mos)"/>
+
+  <rect x="40" y="240" width="820" height="110" rx="10" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="56" y="264" font-size="12.5" font-weight="700" fill="#1a7f37">it-planner-ko 스타일의 뼈대 (예시)</text>
+  <g font-size="11" fill="#444">
+    <text x="56" y="288">응답 톤 — 한국어 우선, 비유·쉬운 예시, 기술 용어는 풀어 설명 후 사용</text>
+    <text x="56" y="310">응답 구조 — ① 핵심 결론 한 문장 ② 단계별 설명 ③ 코드는 꼭 필요한 곳만 ④ 다음 액션 제안</text>
+    <text x="56" y="332">금지 — 영어로 응답 시작 · 코드 100줄 이상 한 번에 · 의미 없는 추임새</text>
+  </g>
+</svg>

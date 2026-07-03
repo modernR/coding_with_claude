@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="400" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">실패 복구 메커니즘 — 재시도·우회·부분 결과·에스컬레이션</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">전문가가 실패하면 코디네이터가 단계적으로 복구를 시도하고, 한도를 넘기면 사람에게 넘깁니다.</text>
+
+  <defs>
+    <marker id="fr_a" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/>
+    </marker>
+    <marker id="fr_r" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#E8344E"/>
+    </marker>
+  </defs>
+
+  <rect x="360" y="90" width="180" height="46" rx="10" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="450" y="112" font-size="12" font-weight="700" fill="#b8860b" text-anchor="middle">전문가 호출</text>
+  <text x="450" y="128" font-size="9.5" fill="#444" text-anchor="middle">architect</text>
+
+  <rect x="360" y="165" width="180" height="42" rx="10" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="450" y="191" font-size="11" font-weight="700" fill="#1a7f37" text-anchor="middle">성공 → 다음 단계</text>
+  <line x1="450" y1="136" x2="450" y2="161" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#fr_a)"/>
+
+  <rect x="60" y="235" width="180" height="56" rx="10" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="150" y="258" font-size="10.5" font-weight="700" fill="#3a6fd6" text-anchor="middle">① 자동 재시도</text>
+  <text x="150" y="277" font-size="9" fill="#444" text-anchor="middle">같은 입력 → 입력 보강</text>
+
+  <rect x="260" y="235" width="180" height="56" rx="10" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="350" y="258" font-size="10.5" font-weight="700" fill="#7c3aed" text-anchor="middle">② 우회 경로</text>
+  <text x="350" y="277" font-size="9" fill="#444" text-anchor="middle">대체 전문가(backup)</text>
+
+  <rect x="460" y="235" width="180" height="56" rx="10" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="550" y="258" font-size="10.5" font-weight="700" fill="#b8860b" text-anchor="middle">③ 부분 결과 보존</text>
+  <text x="550" y="277" font-size="9" fill="#444" text-anchor="middle">그 시점까지 보존·제시</text>
+
+  <rect x="660" y="235" width="180" height="56" rx="10" fill="#fdecef" stroke="#E8344E"/>
+  <text x="750" y="258" font-size="10.5" font-weight="700" fill="#b00020" text-anchor="middle">④ 에스컬레이션</text>
+  <text x="750" y="277" font-size="9" fill="#444" text-anchor="middle">3회 실패 → 사람에게</text>
+
+  <path d="M400 207 L150 231" fill="none" stroke="#E8344E" stroke-width="1.4" marker-end="url(#fr_r)"/>
+  <text x="255" y="222" font-size="9" fill="#b00020" text-anchor="middle">실패</text>
+  <line x1="240" y1="263" x2="256" y2="263" stroke="#9aa0a6" stroke-width="1.4" marker-end="url(#fr_a)"/>
+  <line x1="440" y1="263" x2="456" y2="263" stroke="#9aa0a6" stroke-width="1.4" marker-end="url(#fr_a)"/>
+  <line x1="640" y1="263" x2="656" y2="263" stroke="#9aa0a6" stroke-width="1.4" marker-end="url(#fr_a)"/>
+
+  <rect x="60" y="320" width="780" height="66" rx="10" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="75" y="342" font-size="10.5" fill="#444">부분 결과 예시 — PRD 완료 ✓ · 시장 조사 완료 ✓ · 아키텍처 완료 ✓ · UI 시안 실패 ✕</text>
+  <text x="75" y="362" font-size="10.5" fill="#444">사용자 결정: (1) UI만 다시 · (2) UI 건너뛰고 진행 · (3) 처음부터 · (4) 종료</text>
+  <text x="75" y="380" font-size="10" fill="#6b6b6b">모든 실패는 감사 로그(Sentry·사내 로그)에 기록해 원인 추적·개선에 활용합니다.</text>
+</svg>

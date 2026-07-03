@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="300" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">Virtual DOM — 바뀐 부분만 골라 고친다</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">메모리에서 이전·이후를 비교(diff)해, 실제 화면은 달라진 곳만 갱신합니다.</text>
+  <defs><marker id="vd" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/></marker></defs>
+  <rect x="40" y="96" width="180" height="150" rx="10" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="130" y="120" font-size="12" font-weight="700" fill="#6b6b6b" text-anchor="middle">이전 가상 DOM</text>
+  <rect x="60" y="134" width="140" height="26" rx="5" fill="#ffffff" stroke="#e3e6ea"/><text x="130" y="152" font-size="10.5" fill="#444" text-anchor="middle">제목</text>
+  <rect x="60" y="166" width="140" height="26" rx="5" fill="#ffffff" stroke="#e3e6ea"/><text x="130" y="184" font-size="10.5" fill="#444" text-anchor="middle">참여자 44명</text>
+  <rect x="60" y="198" width="140" height="26" rx="5" fill="#ffffff" stroke="#e3e6ea"/><text x="130" y="216" font-size="10.5" fill="#444" text-anchor="middle">신청 버튼</text>
+  <rect x="270" y="96" width="180" height="150" rx="10" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="360" y="120" font-size="12" font-weight="700" fill="#6b6b6b" text-anchor="middle">이후 가상 DOM</text>
+  <rect x="290" y="134" width="140" height="26" rx="5" fill="#ffffff" stroke="#e3e6ea"/><text x="360" y="152" font-size="10.5" fill="#444" text-anchor="middle">제목</text>
+  <rect x="290" y="166" width="140" height="26" rx="5" fill="#fdeef1" stroke="#f7c0c8"/><text x="360" y="184" font-size="10.5" fill="#E8344E" text-anchor="middle">참여자 45명</text>
+  <rect x="290" y="198" width="140" height="26" rx="5" fill="#ffffff" stroke="#e3e6ea"/><text x="360" y="216" font-size="10.5" fill="#444" text-anchor="middle">신청 버튼</text>
+  <line x1="220" y1="171" x2="268" y2="171" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#vd)"/><text x="244" y="163" font-size="9.5" fill="#6b6b6b" text-anchor="middle">비교</text>
+  <rect x="500" y="132" width="150" height="78" rx="10" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="575" y="158" font-size="12" font-weight="700" fill="#b8860b" text-anchor="middle">차이(diff)</text>
+  <text x="575" y="182" font-size="11" fill="#444" text-anchor="middle">'참여자' 줄만</text>
+  <text x="575" y="199" font-size="11" fill="#444" text-anchor="middle">바뀜</text>
+  <line x1="450" y1="171" x2="498" y2="171" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#vd)"/>
+  <rect x="700" y="132" width="160" height="78" rx="10" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="780" y="158" font-size="12" font-weight="700" fill="#3a6fd6" text-anchor="middle">실제 화면</text>
+  <text x="780" y="182" font-size="11" fill="#1a7f37" text-anchor="middle">그 한 줄만</text>
+  <text x="780" y="199" font-size="11" fill="#1a7f37" text-anchor="middle">다시 그림 (빠름)</text>
+  <line x1="650" y1="171" x2="698" y2="171" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#vd)"/>
+  <text x="40" y="278" font-size="12" fill="#6b6b6b">※ 화면 전체를 새로 그리면 느립니다. 가상 DOM은 '무엇이 달라졌나'만 찾아 최소한만 손대게 합니다.</text>
+</svg>

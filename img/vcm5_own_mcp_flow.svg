@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="360" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">자체 MCP 사용 흐름 — 사내 시스템을 자연어로 부른다</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">서버를 만드는 것은 고급 과정의 몫이고, 중급에서는 이미 만들어진 자체 MCP를 쓰는 법을 익힙니다.</text>
+  <defs>
+    <marker id="vcm5own_arr" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/>
+    </marker>
+  </defs>
+
+  <rect x="40" y="100" width="150" height="110" rx="11" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="115" y="128" font-size="12" font-weight="700" fill="#1a1a1a" text-anchor="middle">① 사내 래핑</text>
+  <text x="115" y="152" font-size="10" fill="#444" text-anchor="middle">IT팀이 ERP·DB를</text>
+  <text x="115" y="168" font-size="10" fill="#444" text-anchor="middle">MCP 서버로 감쌈</text>
+  <text x="115" y="192" font-size="9.5" fill="#9aa0a6" text-anchor="middle">고급 과정 범위</text>
+
+  <rect x="220" y="100" width="150" height="110" rx="11" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="295" y="128" font-size="12" font-weight="700" fill="#3a6fd6" text-anchor="middle">② 배포·가이드</text>
+  <text x="295" y="152" font-size="10" fill="#444" text-anchor="middle">사내 git에 서버</text>
+  <text x="295" y="168" font-size="10" fill="#444" text-anchor="middle">코드 + 사용 문서</text>
+  <text x="295" y="192" font-size="9.5" fill="#9aa0a6" text-anchor="middle">직원이 내려받음</text>
+
+  <rect x="400" y="100" width="150" height="110" rx="11" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="475" y="128" font-size="12" font-weight="700" fill="#b8860b" text-anchor="middle">③ 등록</text>
+  <text x="475" y="152" font-size="10" fill="#444" text-anchor="middle">settings.json 또는</text>
+  <text x="475" y="168" font-size="10" fill="#444" text-anchor="middle">mcp.json에 추가</text>
+  <text x="475" y="192" font-size="9.5" fill="#9aa0a6" text-anchor="middle">command·args·env</text>
+
+  <rect x="580" y="100" width="150" height="110" rx="11" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="655" y="128" font-size="12" font-weight="700" fill="#7c3aed" text-anchor="middle">④ 인증</text>
+  <text x="655" y="152" font-size="10" fill="#444" text-anchor="middle">사내 SSO 또는</text>
+  <text x="655" y="168" font-size="10" fill="#444" text-anchor="middle">API 키 연결</text>
+  <text x="655" y="192" font-size="9.5" fill="#9aa0a6" text-anchor="middle">env 변수로 참조</text>
+
+  <rect x="740" y="100" width="150" height="110" rx="11" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="815" y="128" font-size="12" font-weight="700" fill="#1a7f37" text-anchor="middle">⑤ 자연어 사용</text>
+  <text x="815" y="152" font-size="10" fill="#444" text-anchor="middle">"예산 집행률을</text>
+  <text x="815" y="168" font-size="10" fill="#444" text-anchor="middle">노션 보고서로"</text>
+  <text x="815" y="192" font-size="9.5" fill="#1a7f37" text-anchor="middle">로그인 불필요</text>
+
+  <line x1="190" y1="155" x2="219" y2="155" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#vcm5own_arr)"/>
+  <line x1="370" y1="155" x2="399" y2="155" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#vcm5own_arr)"/>
+  <line x1="550" y1="155" x2="579" y2="155" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#vcm5own_arr)"/>
+  <line x1="730" y1="155" x2="739" y2="155" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#vcm5own_arr)"/>
+
+  <rect x="40" y="245" width="850" height="90" rx="10" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="60" y="272" font-size="13" font-weight="700" fill="#1a1a1a">기획자가 실제로 하는 일 (③~⑤)</text>
+  <text x="60" y="297" font-size="11.5" fill="#444">서버 제작(①②)은 IT팀 몫이고, 기획자는 등록·인증·사용만 합니다. ERP MCP로 데이터를 조회하고 Notion MCP로 발행하면,</text>
+  <text x="60" y="319" font-size="11.5" fill="#444">사람이 ERP에 직접 로그인해 화면을 뒤질 일이 사라집니다. 여러 자체 MCP를 조합하면 부서 내부 워크플로우가 자동화됩니다.</text>
+</svg>

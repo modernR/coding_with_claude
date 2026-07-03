@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="300" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">업무를 자동화로 옮기는 5단계 설계</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">도구를 먼저 배우면 쓸 곳이 없습니다. 자기 업무를 먼저 분해·매핑해야 도구가 손에 들어옵니다.</text>
+
+  <defs><marker id="wf" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/></marker></defs>
+
+  <g>
+    <rect x="40" y="100" width="150" height="110" rx="10" fill="#eef3fd" stroke="#bcd0f5"/>
+    <text x="115" y="126" font-size="12.5" font-weight="700" fill="#3a6fd6" text-anchor="middle">1. 정의</text>
+    <text x="115" y="148" font-size="9.5" fill="#6b6b6b" text-anchor="middle">Define</text>
+    <text x="115" y="172" font-size="9.5" fill="#444" text-anchor="middle">대상 업무를 한 줄로</text>
+    <text x="115" y="188" font-size="9.5" fill="#444" text-anchor="middle">+ 주당 소요 시간</text>
+
+    <rect x="210" y="100" width="150" height="110" rx="10" fill="#eef3fd" stroke="#bcd0f5"/>
+    <text x="285" y="126" font-size="12.5" font-weight="700" fill="#3a6fd6" text-anchor="middle">2. 분해</text>
+    <text x="285" y="148" font-size="9.5" fill="#6b6b6b" text-anchor="middle">Decompose</text>
+    <text x="285" y="172" font-size="9.5" fill="#444" text-anchor="middle">4축으로 쪼개고</text>
+    <text x="285" y="188" font-size="9.5" fill="#444" text-anchor="middle">적합도 평가</text>
+
+    <rect x="380" y="100" width="150" height="110" rx="10" fill="#eef3fd" stroke="#bcd0f5"/>
+    <text x="455" y="126" font-size="12.5" font-weight="700" fill="#3a6fd6" text-anchor="middle">3. 도구 매핑</text>
+    <text x="455" y="148" font-size="9.5" fill="#6b6b6b" text-anchor="middle">Map</text>
+    <text x="455" y="172" font-size="9.5" fill="#444" text-anchor="middle">MCP·스킬·커맨드·</text>
+    <text x="455" y="188" font-size="9.5" fill="#444" text-anchor="middle">서브에이전트에 짝지음</text>
+
+    <rect x="550" y="100" width="150" height="110" rx="10" fill="#fff7e6" stroke="#f3d488"/>
+    <text x="625" y="126" font-size="12.5" font-weight="700" fill="#b8860b" text-anchor="middle">4. 시범 운영</text>
+    <text x="625" y="148" font-size="9.5" fill="#6b6b6b" text-anchor="middle">Pilot</text>
+    <text x="625" y="172" font-size="9.5" fill="#444" text-anchor="middle">한 사이클 돌려</text>
+    <text x="625" y="188" font-size="9.5" fill="#444" text-anchor="middle">시간·품질 측정·보강</text>
+
+    <rect x="720" y="100" width="150" height="110" rx="10" fill="#f1faf3" stroke="#cfe9d7"/>
+    <text x="795" y="126" font-size="12.5" font-weight="700" fill="#1a7f37" text-anchor="middle">5. 정착</text>
+    <text x="795" y="148" font-size="9.5" fill="#6b6b6b" text-anchor="middle">Operate</text>
+    <text x="795" y="172" font-size="9.5" fill="#444" text-anchor="middle">정기 자동 실행,</text>
+    <text x="795" y="188" font-size="9.5" fill="#444" text-anchor="middle">사람은 검수·예외만</text>
+  </g>
+  <line x1="190" y1="155" x2="208" y2="155" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#wf)"/>
+  <line x1="360" y1="155" x2="378" y2="155" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#wf)"/>
+  <line x1="530" y1="155" x2="548" y2="155" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#wf)"/>
+  <line x1="700" y1="155" x2="718" y2="155" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#wf)"/>
+
+  <rect x="40" y="234" width="830" height="48" rx="9" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="56" y="256" font-size="11.5" font-weight="700" fill="#1a1a1a">Before / After 로 가치 확인</text>
+  <text x="56" y="275" font-size="11" fill="#444">예: 주간 KPI 보고 — 매주 4시간 → 30분(검수만), 품질 일관, 즉시 공유, 연 약 200시간 절감. 조직 도입 설득의 핵심.</text>
+</svg>

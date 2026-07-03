@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="380" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">조직 품질 게이트 5종 — 트리거와 검사 항목</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">모든 작업이 통과해야 하는 자동 검증. 품질이 성실함이 아니라 시스템에 의존합니다.</text>
+
+  <!-- gate 1 -->
+  <rect x="40" y="95" width="160" height="130" rx="11" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="120" y="120" font-size="12.5" font-weight="700" fill="#1a7f37" text-anchor="middle">Lint·Format</text>
+  <rect x="56" y="134" width="128" height="24" rx="6" fill="#ffffff" stroke="#cfe9d7"/>
+  <text x="120" y="151" font-size="9" fill="#6b6b6b" text-anchor="middle">트리거: 파일 저장</text>
+  <text x="120" y="180" font-size="10" fill="#444" text-anchor="middle">코드 스타일</text>
+  <text x="120" y="197" font-size="10" fill="#444" text-anchor="middle">일관성 검사</text>
+
+  <!-- gate 2 -->
+  <rect x="215" y="95" width="160" height="130" rx="11" fill="#fff5f6" stroke="#f3c9cf"/>
+  <text x="295" y="120" font-size="12.5" font-weight="700" fill="#b00020" text-anchor="middle">Secret Scan</text>
+  <rect x="231" y="134" width="128" height="24" rx="6" fill="#ffffff" stroke="#f3c9cf"/>
+  <text x="295" y="151" font-size="9" fill="#6b6b6b" text-anchor="middle">트리거: commit·push</text>
+  <text x="295" y="180" font-size="10" fill="#444" text-anchor="middle">비밀 키</text>
+  <text x="295" y="197" font-size="10" fill="#444" text-anchor="middle">누출 탐지</text>
+
+  <!-- gate 3 -->
+  <rect x="390" y="95" width="160" height="130" rx="11" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="470" y="120" font-size="12.5" font-weight="700" fill="#3a6fd6" text-anchor="middle">Test 통과</text>
+  <rect x="406" y="134" width="128" height="24" rx="6" fill="#ffffff" stroke="#bcd0f5"/>
+  <text x="470" y="151" font-size="9" fill="#6b6b6b" text-anchor="middle">트리거: 파일 저장·PR</text>
+  <text x="470" y="180" font-size="10" fill="#444" text-anchor="middle">단위·통합</text>
+  <text x="470" y="197" font-size="10" fill="#444" text-anchor="middle">테스트 실행</text>
+
+  <!-- gate 4 -->
+  <rect x="565" y="95" width="160" height="130" rx="11" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="645" y="120" font-size="12.5" font-weight="700" fill="#b8860b" text-anchor="middle">License 감사</text>
+  <rect x="581" y="134" width="128" height="24" rx="6" fill="#ffffff" stroke="#f3d488"/>
+  <text x="645" y="151" font-size="9" fill="#6b6b6b" text-anchor="middle">트리거: package 변경</text>
+  <text x="645" y="180" font-size="10" fill="#444" text-anchor="middle">허용 오픈소스</text>
+  <text x="645" y="197" font-size="10" fill="#444" text-anchor="middle">라이선스만</text>
+
+  <!-- gate 5 -->
+  <rect x="740" y="95" width="120" height="130" rx="11" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="800" y="120" font-size="12.5" font-weight="700" fill="#7c3aed" text-anchor="middle">Type Check</text>
+  <rect x="756" y="134" width="88" height="24" rx="6" fill="#ffffff" stroke="#a78bda"/>
+  <text x="800" y="151" font-size="8.5" fill="#6b6b6b" text-anchor="middle">저장·PR</text>
+  <text x="800" y="180" font-size="10" fill="#444" text-anchor="middle">TS strict</text>
+  <text x="800" y="197" font-size="10" fill="#444" text-anchor="middle">통과</text>
+
+  <!-- deploy bar -->
+  <rect x="40" y="248" width="820" height="46" rx="9" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="450" y="276" font-size="12" font-weight="700" fill="#1a1a1a" text-anchor="middle">5종 모두 통과해야 진행 — 전사 게이트는 managed-settings(1순위) + 거버넌스로 강제</text>
+
+  <text x="450" y="330" font-size="11" fill="#6b6b6b" text-anchor="middle">RSVP 예 — 참석자 개인정보를 다루므로 Secret Scan 필수, 정원 로직 회귀 방지에 Test, 안정성에 Type Check</text>
+</svg>

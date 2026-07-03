@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="400" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">브랜치 전략 — main 단일 vs feature 분리 + PR 머지</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">운영 단계에서는 작업을 feature 브랜치로 떼어내고, PR을 거쳐 main으로 되돌립니다.</text>
+
+  <defs>
+    <marker id="vcm6b_arr" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/>
+    </marker>
+  </defs>
+
+  <!-- top: main-only -->
+  <text x="40" y="108" font-size="13" font-weight="700" fill="#b00020">① main 단일 (입문 · 혼자 작업)</text>
+  <line x1="60" y1="140" x2="820" y2="140" stroke="#e3e6ea" stroke-width="2"/>
+  <circle cx="120" cy="140" r="9" fill="#3a6fd6"/>
+  <circle cx="300" cy="140" r="9" fill="#3a6fd6"/>
+  <circle cx="480" cy="140" r="9" fill="#3a6fd6"/>
+  <circle cx="660" cy="140" r="9" fill="#3a6fd6"/>
+  <circle cx="800" cy="140" r="9" fill="#3a6fd6"/>
+  <text x="120" y="168" font-size="10" fill="#6b6b6b" text-anchor="middle">v1</text>
+  <text x="300" y="168" font-size="10" fill="#6b6b6b" text-anchor="middle">기능 A</text>
+  <text x="480" y="168" font-size="10" fill="#6b6b6b" text-anchor="middle">기능 B</text>
+  <text x="660" y="168" font-size="10" fill="#6b6b6b" text-anchor="middle">버그 수정</text>
+  <text x="800" y="168" font-size="10" fill="#6b6b6b" text-anchor="middle">HEAD</text>
+  <text x="440" y="192" font-size="10.5" fill="#b00020" text-anchor="middle">모든 변경이 main에 직접 쌓임 — 검토·롤백 지점이 없습니다</text>
+
+  <!-- bottom: feature + PR -->
+  <text x="40" y="238" font-size="13" font-weight="700" fill="#1a7f37">② feature 분리 + PR (운영 · 협업)</text>
+
+  <!-- main line -->
+  <line x1="60" y1="290" x2="820" y2="290" stroke="#1a7f37" stroke-width="2.5"/>
+  <circle cx="120" cy="290" r="9" fill="#1a7f37"/>
+  <circle cx="500" cy="290" r="9" fill="#1a7f37"/>
+  <circle cx="800" cy="290" r="9" fill="#1a7f37"/>
+  <text x="120" y="315" font-size="10" fill="#6b6b6b" text-anchor="middle">main v1</text>
+  <text x="500" y="315" font-size="10" fill="#1a7f37" text-anchor="middle" font-weight="700">PR #42 머지</text>
+  <text x="800" y="315" font-size="10" fill="#6b6b6b" text-anchor="middle">main</text>
+
+  <!-- feature branch -->
+  <path d="M120,290 Q200,240 260,240 L420,240 Q490,240 500,290" fill="none" stroke="#3a6fd6" stroke-width="2.5" marker-end="url(#vcm6b_arr)"/>
+  <circle cx="300" cy="240" r="8" fill="#3a6fd6"/>
+  <circle cx="400" cy="240" r="8" fill="#3a6fd6"/>
+  <text x="350" y="228" font-size="10.5" fill="#3a6fd6" text-anchor="middle" font-weight="700">feature/rsvp-cancel</text>
+  <text x="300" y="262" font-size="9.5" fill="#6b6b6b" text-anchor="middle">취소 버튼</text>
+  <text x="400" y="262" font-size="9.5" fill="#6b6b6b" text-anchor="middle">테스트</text>
+
+  <!-- second feature -->
+  <path d="M500,290 Q580,340 640,340 L700,340 Q790,340 800,290" fill="none" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#vcm6b_arr)"/>
+  <circle cx="670" cy="340" r="8" fill="#7c3aed"/>
+  <text x="670" y="363" font-size="10.5" fill="#7c3aed" text-anchor="middle" font-weight="700">fix/validation → PR #43</text>
+
+  <text x="440" y="388" font-size="10" fill="#1a7f37" text-anchor="middle">main은 항상 배포 가능 상태 · 각 작업은 격리 · PR이 검토·CI·되돌리기 단위</text>
+</svg>

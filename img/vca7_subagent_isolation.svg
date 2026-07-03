@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="400" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">서브에이전트 컨텍스트 격리 — 결과 요약 강제</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">메인은 큰 그림만 들고, 디테일은 sub가 처리한 뒤 200자 요약만 돌려줍니다.</text>
+
+  <defs>
+    <marker id="si_a" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/>
+    </marker>
+  </defs>
+
+  <rect x="40" y="100" width="300" height="230" rx="12" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="60" y="127" font-size="13" font-weight="700" fill="#7c3aed">메인 컨텍스트</text>
+  <text x="60" y="152" font-size="10" fill="#444">· 프로젝트 한 줄 정의</text>
+  <text x="60" y="174" font-size="10" fill="#444">· 사용자 요청</text>
+  <text x="60" y="196" font-size="10" fill="#444">· 진행 상태 (어느 단계)</text>
+  <text x="60" y="218" font-size="10" fill="#444">· 각 sub 결과 요약 (200자 이내)</text>
+  <rect x="60" y="236" width="260" height="72" rx="9" fill="#ffffff" stroke="#a78bda"/>
+  <text x="76" y="258" font-size="9.5" fill="#1a7f37">통과/거부</text>
+  <text x="76" y="276" font-size="9.5" fill="#444">핵심 발견 3개 (1줄씩)</text>
+  <text x="76" y="294" font-size="9.5" fill="#444">후속 액션 (있으면)</text>
+
+  <rect x="560" y="95" width="300" height="66" rx="11" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="580" y="120" font-size="11.5" font-weight="700" fill="#3a6fd6">sub · code-reviewer</text>
+  <text x="580" y="140" font-size="9.5" fill="#444">자기 도메인 룰 + 입력 + 결과</text>
+  <text x="580" y="155" font-size="9" fill="#6b6b6b">(메인 컨텍스트는 보지 않음)</text>
+
+  <rect x="560" y="171" width="300" height="66" rx="11" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="580" y="196" font-size="11.5" font-weight="700" fill="#b8860b">sub · security-reviewer</text>
+  <text x="580" y="216" font-size="9.5" fill="#444">보안 위험만 깊게 분석</text>
+  <text x="580" y="231" font-size="9" fill="#6b6b6b">상세 3000자는 사용자에게만</text>
+
+  <rect x="560" y="247" width="300" height="66" rx="11" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="580" y="272" font-size="11.5" font-weight="700" fill="#1a7f37">sub · test-writer</text>
+  <text x="580" y="292" font-size="9.5" fill="#444">누락된 테스트 식별</text>
+  <text x="580" y="307" font-size="9" fill="#6b6b6b">메인엔 200자 결론만 반환</text>
+
+  <line x1="340" y1="160" x2="556" y2="128" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#si_a)"/>
+  <line x1="340" y1="205" x2="556" y2="204" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#si_a)"/>
+  <line x1="340" y1="250" x2="556" y2="280" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#si_a)"/>
+
+  <text x="450" y="360" font-size="10.5" fill="#b8860b" text-anchor="middle">sub 1명당 오버헤드 2~6K — 작은 작업(30초 미만)은 메인 단독이 더 저렴합니다</text>
+  <text x="450" y="382" font-size="10.5" fill="#6b6b6b" text-anchor="middle">sub 결과가 5000자라도 메인에는 200자 요약만 올라가는 것이 절감의 핵심</text>
+</svg>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="300" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">훅 실행 방식 4가지 — command · http · prompt · agent</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">같은 이벤트라도 무엇으로 실행할지 고를 수 있습니다. 속도·비용·유연성이 다릅니다.</text>
+
+  <rect x="40" y="95" width="196" height="175" rx="10" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="138" y="120" font-size="13" font-weight="700" fill="#1a7f37" text-anchor="middle">command</text>
+  <text x="138" y="142" font-size="10.5" fill="#6b6b6b" text-anchor="middle">셸 명령 실행</text>
+  <text x="138" y="178" font-size="10.5" fill="#444" text-anchor="middle">가장 빠르고</text>
+  <text x="138" y="194" font-size="10.5" fill="#444" text-anchor="middle">결정적</text>
+  <rect x="60" y="220" width="152" height="34" rx="7" fill="#ffffff" stroke="#cfe9d7"/>
+  <text x="138" y="242" font-size="9.5" fill="#1a7f37" text-anchor="middle">빈번한 검사에 적합</text>
+
+  <rect x="248" y="95" width="196" height="175" rx="10" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="346" y="120" font-size="13" font-weight="700" fill="#3a6fd6" text-anchor="middle">http</text>
+  <text x="346" y="142" font-size="10.5" fill="#6b6b6b" text-anchor="middle">HTTP POST</text>
+  <text x="346" y="178" font-size="10.5" fill="#444" text-anchor="middle">슬랙 webhook 등</text>
+  <text x="346" y="194" font-size="10.5" fill="#444" text-anchor="middle">외부 서비스 연동</text>
+  <rect x="268" y="220" width="152" height="34" rx="7" fill="#ffffff" stroke="#bcd0f5"/>
+  <text x="346" y="242" font-size="9.5" fill="#3a6fd6" text-anchor="middle">알림·연동에 적합</text>
+
+  <rect x="456" y="95" width="196" height="175" rx="10" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="554" y="120" font-size="13" font-weight="700" fill="#b8860b" text-anchor="middle">prompt</text>
+  <text x="554" y="142" font-size="10.5" fill="#6b6b6b" text-anchor="middle">LLM 프롬프트</text>
+  <text x="554" y="178" font-size="10.5" fill="#444" text-anchor="middle">유연하지만</text>
+  <text x="554" y="194" font-size="10.5" fill="#444" text-anchor="middle">토큰 소모·느림</text>
+  <rect x="476" y="220" width="152" height="34" rx="7" fill="#ffffff" stroke="#f0d6b8"/>
+  <text x="554" y="242" font-size="9.5" fill="#b8860b" text-anchor="middle">유연한 판단에 적합</text>
+
+  <rect x="664" y="95" width="196" height="175" rx="10" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="762" y="120" font-size="13" font-weight="700" fill="#7c3aed" text-anchor="middle">agent</text>
+  <text x="762" y="142" font-size="10.5" fill="#6b6b6b" text-anchor="middle">서브에이전트 위임</text>
+  <text x="762" y="178" font-size="10.5" fill="#444" text-anchor="middle">복잡한 후처리</text>
+  <text x="762" y="194" font-size="10.5" fill="#444" text-anchor="middle">(실패 분석 등)</text>
+  <rect x="684" y="220" width="152" height="34" rx="7" fill="#ffffff" stroke="#a78bda"/>
+  <text x="762" y="242" font-size="9.5" fill="#7c3aed" text-anchor="middle">깊은 분석에 적합</text>
+</svg>

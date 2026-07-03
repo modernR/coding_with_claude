@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 310" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="310" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">운영을 떠받치는 개발 도구 — 무엇을 지키나</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">공통 목적은 하나 — 사람의 주의력에 의존하던 품질 관리를 자동화로 옮기는 것.</text>
+
+  <rect x="40" y="95" width="400" height="95" rx="10" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="60" y="120" font-size="12.5" font-weight="700" fill="#3a6fd6">ESLint / Prettier</text>
+  <text x="60" y="145" font-size="10.5" fill="#444">ESLint: 코드 품질·명백한 버그</text>
+  <text x="60" y="165" font-size="10.5" fill="#444">Prettier: 포맷(들여쓰기·따옴표) 통일</text>
+  <text x="60" y="183" font-size="9.5" fill="#6b6b6b">Hooks로 저장 시 자동 실행</text>
+
+  <rect x="460" y="95" width="400" height="95" rx="10" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="480" y="120" font-size="12.5" font-weight="700" fill="#1a7f37">TypeScript strict</text>
+  <text x="480" y="145" font-size="10.5" fill="#444">null·undefined 자동 검사, any 차단</text>
+  <text x="480" y="165" font-size="10.5" fill="#444">런타임 오류를 컴파일 시점으로 당김</text>
+  <text x="480" y="183" font-size="9.5" fill="#6b6b6b">noImplicitAny부터 점진 도입</text>
+
+  <rect x="40" y="200" width="400" height="95" rx="10" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="60" y="225" font-size="12.5" font-weight="700" fill="#b8860b">Husky + lint-staged</text>
+  <text x="60" y="250" font-size="10.5" fill="#444">커밋 직전 변경 파일만 lint·format 강제</text>
+  <text x="60" y="270" font-size="10.5" fill="#444">저장소에 함께 커밋 → 팀 전원 동일 적용</text>
+  <text x="60" y="288" font-size="9.5" fill="#6b6b6b">Hooks와 조합 시 이중 방어</text>
+
+  <rect x="460" y="200" width="400" height="95" rx="10" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="480" y="225" font-size="12.5" font-weight="700" fill="#7c3aed">Supabase CLI</text>
+  <text x="480" y="250" font-size="10.5" fill="#444">스키마 변경을 SQL 마이그레이션으로 관리</text>
+  <text x="480" y="270" font-size="10.5" fill="#444">DB 스키마로부터 TypeScript 타입 자동 생성</text>
+  <text x="480" y="288" font-size="9.5" fill="#6b6b6b">supabase.from() 호출까지 타입 안전</text>
+</svg>

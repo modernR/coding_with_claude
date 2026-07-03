@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 290" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="290" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">조직에 도입하는 4단계</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">본인 검증 → 정책 협의 → 파일럿 → 전사 확산. 검증된 표준 도입 패턴입니다.</text>
+
+  <defs><marker id="or" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/></marker></defs>
+
+  <rect x="40" y="100" width="190" height="130" rx="11" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="135" y="126" font-size="13" font-weight="700" fill="#3a6fd6" text-anchor="middle">① 본인 사용</text>
+  <text x="135" y="148" font-size="9.5" fill="#6b6b6b" text-anchor="middle">1개월 · Pro/Max</text>
+  <text x="135" y="172" font-size="9.5" fill="#444" text-anchor="middle">시간 절감·품질·</text>
+  <text x="135" y="188" font-size="9.5" fill="#444" text-anchor="middle">리스크 측정</text>
+
+  <rect x="250" y="100" width="190" height="130" rx="11" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="345" y="126" font-size="13" font-weight="700" fill="#b8860b" text-anchor="middle">② 정책 협의</text>
+  <text x="345" y="148" font-size="9.5" fill="#6b6b6b" text-anchor="middle">IT·보안팀</text>
+  <text x="345" y="172" font-size="9.5" fill="#444" text-anchor="middle">데이터 처리 정책,</text>
+  <text x="345" y="188" font-size="9.5" fill="#444" text-anchor="middle">격리 vs Plan/Accept</text>
+
+  <rect x="460" y="100" width="190" height="130" rx="11" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="555" y="126" font-size="13" font-weight="700" fill="#7c3aed" text-anchor="middle">③ 파일럿</text>
+  <text x="555" y="148" font-size="9.5" fill="#6b6b6b" text-anchor="middle">3~5명 · 3개월</text>
+  <text x="555" y="172" font-size="9.5" fill="#444" text-anchor="middle">Max·Team 운영 후</text>
+  <text x="555" y="188" font-size="9.5" fill="#444" text-anchor="middle">ROI 측정</text>
+
+  <rect x="670" y="100" width="190" height="130" rx="11" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="765" y="126" font-size="13" font-weight="700" fill="#1a7f37" text-anchor="middle">④ 전사 확산</text>
+  <text x="765" y="148" font-size="9.5" fill="#6b6b6b" text-anchor="middle">Team·Enterprise</text>
+  <text x="765" y="172" font-size="9.5" fill="#444" text-anchor="middle">사내 스킬·플러그인</text>
+  <text x="765" y="188" font-size="9.5" fill="#444" text-anchor="middle">마켓플레이스 구축</text>
+
+  <line x1="230" y1="165" x2="248" y2="165" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#or)"/>
+  <line x1="440" y1="165" x2="458" y2="165" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#or)"/>
+  <line x1="650" y1="165" x2="668" y2="165" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#or)"/>
+
+  <text x="40" y="262" font-size="11" fill="#6b6b6b">본인 회사의 IT·HR·임원 설득에 그대로 쓸 수 있는 흐름입니다. 각 단계의 측정 지표를 문서로 남기는 것이 핵심.</text>
+</svg>

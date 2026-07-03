@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="360" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">서브에이전트(중급) vs Agent Teams(고급)</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">한 작업의 분업에서, 여러 단계를 통신·병렬로 조율하는 팀 워크플로우로.</text>
+
+  <defs>
+    <marker id="svt_a" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/>
+    </marker>
+  </defs>
+
+  <rect x="40" y="95" width="390" height="230" rx="12" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="60" y="122" font-size="14" font-weight="700" fill="#6b6b6b">중급 서브에이전트 — 1~3명</text>
+
+  <rect x="66" y="140" width="120" height="44" rx="9" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="126" y="167" font-size="11" fill="#3a6fd6" text-anchor="middle">메인</text>
+  <line x1="186" y1="162" x2="234" y2="162" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#svt_a)"/>
+  <rect x="238" y="140" width="150" height="44" rx="9" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="313" y="167" font-size="11" fill="#1a7f37" text-anchor="middle">전문가 1~2명</text>
+
+  <text x="235" y="212" font-size="10.5" fill="#444" text-anchor="middle">한 작업의 분업 · 통신 거의 없음</text>
+  <text x="235" y="234" font-size="10.5" fill="#444" text-anchor="middle">병렬·순차 단순 · 비용 최적화 부분적</text>
+  <text x="235" y="256" font-size="10.5" fill="#444" text-anchor="middle">실패는 사람이 복구 · 평가 루프 간단</text>
+  <text x="235" y="292" font-size="10.5" fill="#6b6b6b" text-anchor="middle">"코드 리뷰 하나를 서브에게 맡긴다" 수준</text>
+
+  <rect x="470" y="95" width="390" height="230" rx="12" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="490" y="122" font-size="14" font-weight="700" fill="#7c3aed">고급 Agent Teams — 5~10+명</text>
+
+  <rect x="600" y="138" width="120" height="40" rx="9" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="660" y="163" font-size="10.5" fill="#b8860b" text-anchor="middle">코디네이터</text>
+  <rect x="496" y="196" width="86" height="34" rx="8" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="539" y="217" font-size="9.5" fill="#3a6fd6" text-anchor="middle">전문가 A</text>
+  <rect x="592" y="196" width="86" height="34" rx="8" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="635" y="217" font-size="9.5" fill="#3a6fd6" text-anchor="middle">전문가 B</text>
+  <rect x="688" y="196" width="86" height="34" rx="8" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="731" y="217" font-size="9.5" fill="#3a6fd6" text-anchor="middle">전문가 C</text>
+  <line x1="640" y1="178" x2="560" y2="194" stroke="#9aa0a6" stroke-width="1.4" marker-end="url(#svt_a)"/>
+  <line x1="660" y1="178" x2="655" y2="194" stroke="#9aa0a6" stroke-width="1.4" marker-end="url(#svt_a)"/>
+  <line x1="680" y1="178" x2="742" y2="194" stroke="#9aa0a6" stroke-width="1.4" marker-end="url(#svt_a)"/>
+
+  <text x="665" y="256" font-size="10.5" fill="#444" text-anchor="middle">여러 단계 워크플로우 · 본격 통신(메시지·상태)</text>
+  <text x="665" y="278" font-size="10.5" fill="#444" text-anchor="middle">복합 병렬·순차(DAG) · 모델 분배로 비용 절감</text>
+  <text x="665" y="300" font-size="10.5" fill="#6b6b6b" text-anchor="middle">자동 복구 시도 · 성능 측정·개선 루프</text>
+</svg>

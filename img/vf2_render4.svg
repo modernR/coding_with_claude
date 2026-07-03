@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 380" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="880" height="380" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">렌더링 4모드 — 화면을 '언제·어디서' 그리나</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">그리는 시점이 초기 로드·SEO·서버 비용·동적성의 트레이드오프를 가릅니다.</text>
+
+  <g font-size="11">
+    <!-- CSR -->
+    <rect x="36" y="92" width="196" height="150" rx="10" fill="#fdeef1" stroke="#f7c0c8"/>
+    <text x="134" y="116" font-size="14" font-weight="700" fill="#E8344E" text-anchor="middle">CSR</text>
+    <text x="134" y="134" font-size="10.5" fill="#6b6b6b" text-anchor="middle">브라우저가 그림</text>
+    <text x="50" y="160" fill="#1a1a1a">서버는 빈 껍데기 →</text>
+    <text x="50" y="178" fill="#1a1a1a">JS가 데이터 받아 렌더</text>
+    <text x="50" y="206" fill="#1a7f37">+ 전환 빠름·서버 부하↓</text>
+    <text x="50" y="224" fill="#b00020">− 초기 느림·SEO 약함</text>
+    <!-- SSR -->
+    <rect x="244" y="92" width="196" height="150" rx="10" fill="#fff7e6" stroke="#f3d488"/>
+    <text x="342" y="116" font-size="14" font-weight="700" fill="#b8860b" text-anchor="middle">SSR</text>
+    <text x="342" y="134" font-size="10.5" fill="#6b6b6b" text-anchor="middle">요청 시 서버가 그림</text>
+    <text x="258" y="160" fill="#1a1a1a">매 요청마다 완성 HTML</text>
+    <text x="258" y="178" fill="#1a1a1a">→ 즉시 표시 후 하이드레이션</text>
+    <text x="258" y="206" fill="#1a7f37">+ 초기 빠름·SEO 우수</text>
+    <text x="258" y="224" fill="#b00020">− 서버 비용·부하↑</text>
+    <!-- SSG -->
+    <rect x="452" y="92" width="196" height="150" rx="10" fill="#eef3fd" stroke="#bcd0f5"/>
+    <text x="550" y="116" font-size="14" font-weight="700" fill="#3a6fd6" text-anchor="middle">SSG</text>
+    <text x="550" y="134" font-size="10.5" fill="#6b6b6b" text-anchor="middle">빌드 때 미리 그림</text>
+    <text x="466" y="160" fill="#1a1a1a">빌드 시 HTML 생성 →</text>
+    <text x="466" y="178" fill="#1a1a1a">CDN이 그대로 서빙</text>
+    <text x="466" y="206" fill="#1a7f37">+ 가장 빠름·저렴·SEO 최고</text>
+    <text x="466" y="224" fill="#b00020">− 변경 시 재빌드·동적 불가</text>
+    <!-- ISR -->
+    <rect x="660" y="92" width="184" height="150" rx="10" fill="#eaf6ee" stroke="#bfe3cb"/>
+    <text x="752" y="116" font-size="14" font-weight="700" fill="#1a7f37" text-anchor="middle">ISR</text>
+    <text x="752" y="134" font-size="10.5" fill="#6b6b6b" text-anchor="middle">SSG + 주기 갱신</text>
+    <text x="674" y="160" fill="#1a1a1a">정적 서빙 + 백그라운드</text>
+    <text x="674" y="178" fill="#1a1a1a">재생성(TTL·요청 기준)</text>
+    <text x="674" y="206" fill="#1a7f37">+ 빠름 + 자동 갱신</text>
+    <text x="674" y="224" fill="#b00020">− 설정 복잡·갱신 지연</text>
+  </g>
+
+  <!-- 비교표 -->
+  <g font-size="11.5" text-anchor="middle">
+    <rect x="36" y="258" width="808" height="96" rx="8" fill="#fafbfc" stroke="#e3e6ea"/>
+    <text x="120" y="280" font-weight="700" fill="#1a1a1a">모드</text><text x="300" y="280" font-weight="700" fill="#1a1a1a">초기로드</text><text x="440" y="280" font-weight="700" fill="#1a1a1a">SEO</text><text x="580" y="280" font-weight="700" fill="#1a1a1a">서버비용</text><text x="740" y="280" font-weight="700" fill="#1a1a1a">동적성</text>
+    <text x="120" y="302" fill="#E8344E">CSR</text><text x="300" y="302">느림</text><text x="440" y="302">약함</text><text x="580" y="302">낮음</text><text x="740" y="302">최고</text>
+    <text x="120" y="322" fill="#b8860b">SSR</text><text x="300" y="322">빠름</text><text x="440" y="322">우수</text><text x="580" y="322">높음</text><text x="740" y="322">높음</text>
+    <text x="120" y="342" fill="#3a6fd6">SSG</text><text x="300" y="342">최고</text><text x="440" y="342">최고</text><text x="580" y="342">최저</text><text x="740" y="342">없음</text>
+  </g>
+</svg>

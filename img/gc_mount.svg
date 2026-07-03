@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="320" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">폴더 마운트 — "이 캐비닛만 봐도 된다"는 키</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">Cowork은 사용자가 명시적으로 허락한 폴더만 봅니다. 키를 못 받은 폴더는 옆을 지나가도 못 엽니다.</text>
+
+  <!-- 호스트 컴퓨터 -->
+  <rect x="40" y="92" width="360" height="200" rx="12" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="60" y="116" font-size="12" font-weight="700" fill="#1a1a1a">내 컴퓨터 (호스트)</text>
+
+  <rect x="60" y="130" width="150" height="60" rx="8" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="135" y="156" font-size="11" font-weight="700" fill="#1a7f37" text-anchor="middle">rsvp-project/</text>
+  <text x="135" y="176" font-size="10" fill="#1a7f37" text-anchor="middle">✓ 마운트함</text>
+
+  <rect x="230" y="130" width="150" height="60" rx="8" fill="#fff5f6" stroke="#f3c9cf"/>
+  <text x="305" y="156" font-size="11" fill="#b00020" text-anchor="middle">개인 사진/</text>
+  <text x="305" y="176" font-size="10" fill="#b00020" text-anchor="middle">✕ 안 보임</text>
+
+  <rect x="60" y="204" width="150" height="60" rx="8" fill="#fff5f6" stroke="#f3c9cf"/>
+  <text x="135" y="230" font-size="11" fill="#b00020" text-anchor="middle">회사 기밀/</text>
+  <text x="135" y="250" font-size="10" fill="#b00020" text-anchor="middle">✕ 안 보임</text>
+
+  <rect x="230" y="204" width="150" height="60" rx="8" fill="#fff5f6" stroke="#f3c9cf"/>
+  <text x="305" y="230" font-size="11" fill="#b00020" text-anchor="middle">시스템 파일/</text>
+  <text x="305" y="250" font-size="10" fill="#b00020" text-anchor="middle">✕ 안 보임</text>
+
+  <defs><marker id="mn" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#1a7f37"/></marker></defs>
+  <line x1="212" y1="160" x2="458" y2="185" stroke="#1a7f37" stroke-width="1.8" marker-end="url(#mn)"/>
+  <text x="330" y="168" font-size="9.5" fill="#1a7f37">마운트한 폴더만 연결</text>
+
+  <!-- VM -->
+  <rect x="460" y="130" width="400" height="120" rx="12" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="480" y="156" font-size="13" font-weight="700" fill="#3a6fd6">Cowork 격리 VM (에이전트)</text>
+  <text x="480" y="182" font-size="10.5" fill="#444">에이전트는 이 안에서 작동하며,</text>
+  <text x="480" y="200" font-size="10.5" fill="#444">키를 받은 rsvp-project/ 폴더만 읽고 씁니다.</text>
+  <text x="480" y="224" font-size="10.5" fill="#1a7f37">"이 폴더 비워줘"라고 잘못 말해도</text>
+  <text x="480" y="240" font-size="10.5" fill="#1a7f37">마운트한 폴더 밖은 절대 닿지 않습니다.</text>
+
+  <rect x="40" y="270" width="820" height="34" rx="8" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="56" y="292" font-size="10.8" fill="#1a1a1a">참고 — Code는 마운트 개념이 없고, claude를 실행한 폴더(cwd)가 자동 작업 영역이 됩니다. 밖으로 나가면 권한 프롬프트가 뜹니다.</text>
+</svg>

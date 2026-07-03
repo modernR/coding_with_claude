@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="400" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">복합 워크플로우 파이프라인 — 출력이 다음 입력</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">한 단계의 결과물이 다음 단계의 재료가 되고, 각 단계 사이에서 검토·재실행할 수 있습니다.</text>
+
+  <defs><marker id="pl" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/></marker></defs>
+
+  <!-- stage 1 -->
+  <rect x="40" y="110" width="185" height="96" rx="10" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="58" y="134" font-size="12" font-weight="700" fill="#3a6fd6">단계 1 — 수집</text>
+  <text x="58" y="156" font-size="10" fill="#444">RSVP 원본 신청 로그</text>
+  <text x="58" y="173" font-size="10" fill="#444">Supabase에서 조회</text>
+  <text x="58" y="196" font-size="10" fill="#6b6b6b">출력: rsvp_raw.md</text>
+
+  <!-- stage 2 -->
+  <rect x="262" y="110" width="185" height="96" rx="10" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="280" y="134" font-size="12" font-weight="700" fill="#3a6fd6">단계 2 — 정리</text>
+  <text x="280" y="156" font-size="10" fill="#444">참석·취소·대기 분류</text>
+  <text x="280" y="173" font-size="10" fill="#444">단계 1 출력을 입력으로</text>
+  <text x="280" y="196" font-size="10" fill="#6b6b6b">출력: rsvp_clean.md</text>
+
+  <!-- stage 3 -->
+  <rect x="484" y="110" width="185" height="96" rx="10" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="502" y="134" font-size="12" font-weight="700" fill="#3a6fd6">단계 3 — 분석</text>
+  <text x="502" y="156" font-size="10" fill="#444">참석률·시간대 추이</text>
+  <text x="502" y="173" font-size="10" fill="#444">단계 2 출력을 입력으로</text>
+  <text x="502" y="196" font-size="10" fill="#6b6b6b">출력: rsvp_stats.md</text>
+
+  <!-- stage 4 -->
+  <rect x="706" y="110" width="154" height="96" rx="10" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="724" y="134" font-size="12" font-weight="700" fill="#1a7f37">단계 4 — 발행</text>
+  <text x="724" y="156" font-size="10" fill="#444">Notion 페이지 생성</text>
+  <text x="724" y="173" font-size="10" fill="#444">단계 3 결과 게시</text>
+  <text x="724" y="196" font-size="10" fill="#6b6b6b">출력: 공유 링크</text>
+
+  <line x1="225" y1="158" x2="260" y2="158" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#pl)"/>
+  <line x1="447" y1="158" x2="482" y2="158" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#pl)"/>
+  <line x1="669" y1="158" x2="704" y2="158" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#pl)"/>
+
+  <!-- checkpoint row -->
+  <g font-size="9.5" fill="#b8860b" text-anchor="middle">
+    <text x="132" y="230">▲ 검토·승인</text>
+    <text x="354" y="230">▲ 검토·승인</text>
+    <text x="576" y="230">▲ 검토·승인</text>
+  </g>
+
+  <!-- rerun note -->
+  <rect x="40" y="256" width="820" height="60" rx="10" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="60" y="282" font-size="12" font-weight="700" fill="#b8860b">단계 사이 검증·재실행</text>
+  <text x="60" y="303" font-size="10.5" fill="#444">단계 2 결과가 마음에 안 들면 단계 2만 다시 실행합니다. 앞 단계 출력은 그대로 남아 있어 처음부터 다시 할 필요가 없습니다.</text>
+
+  <!-- principles -->
+  <rect x="40" y="330" width="820" height="52" rx="10" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="60" y="354" font-size="11" fill="#444">진행 원칙: 각 단계 전 plan 표시 → 승인, 단계 사이에 결과를 보여주고 "다음 단계로?" 확인, 막히면 추측 대신 사용자에게 질문.</text>
+  <text x="60" y="372" font-size="10" fill="#6b6b6b">단순 명령(/요약, /번역)과 달리, 복합 워크플로우는 단계·입출력·검토 지점을 본문에 명시적으로 적어야 합니다.</text>
+</svg>

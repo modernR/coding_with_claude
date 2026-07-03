@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="320" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">메시지 큐 — 무거운 일은 줄에 넣고 나중에 처리</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">사용자는 기다리지 않고 즉시 응답받고, 이메일 발송 같은 일은 뒤에서 처리됩니다.</text>
+  <defs><marker id="qu" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/></marker></defs>
+  <rect x="50" y="120" width="130" height="80" rx="12" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="115" y="152" font-size="13" font-weight="700" fill="#3a6fd6" text-anchor="middle">신청 요청</text>
+  <text x="115" y="174" font-size="10.5" fill="#6b6b6b" text-anchor="middle">200명 동시</text>
+  <rect x="230" y="120" width="130" height="80" rx="12" fill="#1a1a1a"/>
+  <text x="295" y="150" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">API 서버</text>
+  <text x="295" y="172" font-size="10" fill="#cfcfcf" text-anchor="middle">저장 후 즉시 응답</text>
+  <text x="295" y="188" font-size="10" fill="#8fd8a5" text-anchor="middle">"완료!"</text>
+  <rect x="410" y="126" width="200" height="68" rx="10" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="510" y="150" font-size="12" font-weight="700" fill="#b8860b" text-anchor="middle">큐(대기 줄)</text>
+  <g>
+    <rect x="424" y="160" width="26" height="22" rx="3" fill="#ffffff" stroke="#f3d488"/>
+    <rect x="456" y="160" width="26" height="22" rx="3" fill="#ffffff" stroke="#f3d488"/>
+    <rect x="488" y="160" width="26" height="22" rx="3" fill="#ffffff" stroke="#f3d488"/>
+    <rect x="520" y="160" width="26" height="22" rx="3" fill="#ffffff" stroke="#f3d488"/>
+    <rect x="552" y="160" width="26" height="22" rx="3" fill="#ffffff" stroke="#f3d488"/>
+  </g>
+  <text x="510" y="176" font-size="9" fill="#b8860b" text-anchor="middle">이메일 작업들</text>
+  <rect x="660" y="120" width="180" height="80" rx="12" fill="#eaf6ee" stroke="#bfe3cb"/>
+  <text x="750" y="150" font-size="13" font-weight="700" fill="#1a7f37" text-anchor="middle">워커</text>
+  <text x="750" y="172" font-size="10.5" fill="#6b6b6b" text-anchor="middle">뒤에서 하나씩</text>
+  <text x="750" y="188" font-size="10.5" fill="#6b6b6b" text-anchor="middle">이메일 발송</text>
+  <line x1="180" y1="160" x2="228" y2="160" stroke="#9aa0a6" stroke-width="1.8" marker-end="url(#qu)"/>
+  <line x1="360" y1="160" x2="408" y2="160" stroke="#9aa0a6" stroke-width="1.8" marker-end="url(#qu)"/>
+  <line x1="610" y1="160" x2="658" y2="160" stroke="#9aa0a6" stroke-width="1.8" marker-end="url(#qu)"/>
+  <text x="295" y="230" font-size="11" fill="#1a7f37" text-anchor="middle">사용자는 즉시 "완료" 응답 받음</text>
+  <text x="40" y="288" font-size="12" fill="#6b6b6b">※ 큐에 작업을 쌓아 두고 워커가 순서대로 처리(비동기). 갑자기 몰려도 서버가 밀리지 않습니다(RabbitMQ·Kafka 등).</text>
+</svg>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="420" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">커맨드에서 스킬로의 진화 — 언제 업그레이드하나</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">단순 지시는 커맨드로 충분하고, 규모·공유·세부 제어가 필요해지면 스킬로 옮깁니다.</text>
+
+  <defs><marker id="cs" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/></marker></defs>
+
+  <!-- command side -->
+  <rect x="40" y="95" width="360" height="150" rx="10" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="60" y="120" font-size="13" font-weight="700" fill="#b8860b">커맨드 — 마크다운 1개 = 명령어 1개</text>
+  <text x="60" y="142" font-size="10.5" fill="#444">.claude/commands/rsvp-report.md</text>
+  <text x="60" y="162" font-size="10.5" fill="#444">간단한 단계별 지시만 담음</text>
+  <text x="60" y="182" font-size="10.5" fill="#444">빠른 프로토타이핑에 최적</text>
+  <text x="60" y="202" font-size="10.5" fill="#444">명시 슬래시 호출 (/rsvp-report)</text>
+  <text x="60" y="228" font-size="10" fill="#6b6b6b">지원 파일·자동 감지·모델 지정 불가</text>
+
+  <line x1="400" y1="170" x2="452" y2="170" stroke="#9aa0a6" stroke-width="1.8" marker-end="url(#cs)"/>
+  <text x="405" y="160" font-size="10.5" fill="#6b6b6b">진화</text>
+
+  <!-- skill side -->
+  <rect x="456" y="95" width="404" height="150" rx="10" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="476" y="120" font-size="13" font-weight="700" fill="#3a6fd6">스킬 — 디렉토리 단위 자산</text>
+  <text x="476" y="142" font-size="10.5" fill="#444">.claude/skills/rsvp-summary/SKILL.md (+ 템플릿·예시)</text>
+  <text x="476" y="162" font-size="10.5" fill="#444">YAML 프론트매터로 호출 권한·모델·인수 힌트 지정</text>
+  <text x="476" y="182" font-size="10.5" fill="#444">자연어에서 Claude가 자동 감지 호출 가능</text>
+  <text x="476" y="202" font-size="10.5" fill="#444">팀 공유·세부 제어에 유리</text>
+  <text x="476" y="228" font-size="10" fill="#6b6b6b">규모가 커질수록 스킬이 관리하기 쉬움</text>
+
+  <!-- decision checklist -->
+  <rect x="40" y="270" width="820" height="128" rx="10" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="60" y="296" font-size="13" font-weight="700" fill="#1a1a1a">업그레이드 판단 — 아래가 늘어나면 스킬로</text>
+  <g font-size="10.5" fill="#444">
+    <text x="60" y="322">✓ 한두 단계로 안 끝나고 지원 문서·템플릿이 딸린다</text>
+    <text x="60" y="344">✓ 여러 팀원과 공유하며 버전 관리해야 한다</text>
+    <text x="60" y="366">✓ "행사 신청자 분석해줘" 같은 자연어에서 자동으로 불려야 한다</text>
+    <text x="470" y="322">✓ 이 작업만 특정 모델(예: sonnet)로 돌리고 싶다</text>
+    <text x="470" y="344">✓ 사용자 수동 호출만 / Claude 자동 호출만 구분하고 싶다</text>
+    <text x="470" y="366" fill="#b00020">✕ 하나도 해당 없으면 — 커맨드로 남겨두는 편이 가볍다</text>
+  </g>
+</svg>

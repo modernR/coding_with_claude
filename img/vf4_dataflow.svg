@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 300" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="880" height="300" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">데이터의 흐름 — '신청' 한 번이 거치는 곳</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">화면의 값이 서버·DB를 거쳐 영구 저장되고 다시 화면으로 돌아옵니다.</text>
+
+  <defs><marker id="fl" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/></marker></defs>
+
+  <g text-anchor="middle" font-size="11">
+    <rect x="30" y="120" width="120" height="60" rx="10" fill="#eef3fd" stroke="#bcd0f5"/><text x="90" y="146" font-weight="700" fill="#3a6fd6">① 화면</text><text x="90" y="164" font-size="9.5" fill="#6b6b6b">신청 클릭</text>
+    <rect x="176" y="120" width="150" height="60" rx="10" fill="#1a1a1a"/><text x="251" y="144" font-weight="700" fill="#fff">② API 검증</text><text x="251" y="162" font-size="9" fill="#cfcfcf">토큰·존재·중복 확인</text>
+    <rect x="352" y="120" width="140" height="60" rx="10" fill="#eaf6ee" stroke="#bfe3cb"/><text x="422" y="144" font-weight="700" fill="#1a7f37">③ DB INSERT</text><text x="422" y="162" font-size="9" fill="#6b6b6b">rsvps에 기록</text>
+    <rect x="518" y="120" width="130" height="60" rx="10" fill="#fff7e6" stroke="#f3d488"/><text x="583" y="144" font-weight="700" fill="#b8860b">④ RLS 확인</text><text x="583" y="162" font-size="9" fill="#6b6b6b">권한 자동 강제</text>
+    <rect x="674" y="120" width="176" height="60" rx="10" fill="#fdeef1" stroke="#f7c0c8"/><text x="762" y="144" font-weight="700" fill="#E8344E">⑤ 응답 → 화면</text><text x="762" y="162" font-size="9" fill="#6b6b6b">"완료", 버튼 '취소'로</text>
+  </g>
+  <g stroke="#9aa0a6" stroke-width="1.8">
+    <line x1="150" y1="150" x2="174" y2="150" marker-end="url(#fl)"/>
+    <line x1="326" y1="150" x2="350" y2="150" marker-end="url(#fl)"/>
+    <line x1="492" y1="150" x2="516" y2="150" marker-end="url(#fl)"/>
+    <line x1="648" y1="150" x2="672" y2="150" marker-end="url(#fl)"/>
+  </g>
+
+  <text x="40" y="232" font-size="12.5" fill="#1a1a1a">거쳐가는 곳: 프론트 메모리(휘발) → HTTP(HTTPS 암호화) → API 서버(임시) → <tspan font-weight="700" fill="#1a7f37">DB(영구·백업)</tspan> → 응답(캐싱 가능)</text>
+  <text x="40" y="258" font-size="11.5" fill="#9aa0a6">※ '영구 보관'은 DB 단계뿐 — 나머지는 스쳐 지나갑니다.</text>
+</svg>

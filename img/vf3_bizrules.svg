@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 300" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="880" height="300" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">비즈니스 로직 — '참석' 한 번이 통과해야 할 관문들</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">서비스의 규칙은 백엔드가 강제합니다(프론트에만 두면 조작 가능).</text>
+
+  <defs>
+    <marker id="br" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#7a8088"/></marker>
+    <marker id="brx" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#b00020"/></marker>
+  </defs>
+
+  <rect x="36" y="128" width="96" height="48" rx="10" fill="#eef3fd" stroke="#bcd0f5"/><text x="84" y="157" font-size="12" font-weight="700" fill="#3a6fd6" text-anchor="middle">참석 클릭</text>
+
+  <g text-anchor="middle" font-size="11">
+    <polygon points="176,152 232,124 288,152 232,180" fill="#fff7e6" stroke="#f3d488"/><text x="232" y="149" fill="#b8860b">마감?</text><text x="232" y="164" font-size="9" fill="#b8860b">시간 지남</text>
+    <polygon points="330,152 386,124 442,152 386,180" fill="#fff7e6" stroke="#f3d488"/><text x="386" y="149" fill="#b8860b">정원?</text><text x="386" y="164" font-size="9" fill="#b8860b">가득 참</text>
+    <polygon points="484,152 540,124 596,152 540,180" fill="#fff7e6" stroke="#f3d488"/><text x="540" y="149" fill="#b8860b">중복?</text><text x="540" y="164" font-size="9" fill="#b8860b">이미 신청</text>
+    <polygon points="638,152 694,124 750,152 694,180" fill="#fff7e6" stroke="#f3d488"/><text x="694" y="149" fill="#b8860b">종료?</text><text x="694" y="164" font-size="9" fill="#b8860b">이벤트 끝</text>
+  </g>
+  <rect x="784" y="128" width="80" height="48" rx="10" fill="#E8344E"/><text x="824" y="150" font-size="11.5" font-weight="700" fill="#fff" text-anchor="middle">신청</text><text x="824" y="166" font-size="10" fill="#ffe3e8" text-anchor="middle">기록 생성</text>
+
+  <g stroke="#7a8088" stroke-width="1.8">
+    <line x1="132" y1="152" x2="174" y2="152" marker-end="url(#br)"/>
+    <line x1="288" y1="152" x2="328" y2="152" marker-end="url(#br)"/>
+    <line x1="442" y1="152" x2="482" y2="152" marker-end="url(#br)"/>
+    <line x1="596" y1="152" x2="636" y2="152" marker-end="url(#br)"/>
+    <line x1="750" y1="152" x2="782" y2="152" marker-end="url(#br)"/>
+  </g>
+  <g font-size="9.5" fill="#1a7f37" text-anchor="middle"><text x="153" y="145">No</text><text x="309" y="145">No</text><text x="463" y="145">No</text><text x="617" y="145">No</text></g>
+
+  <!-- 거부 -->
+  <g stroke="#b00020" stroke-width="1.6" stroke-dasharray="5 3">
+    <line x1="232" y1="180" x2="232" y2="228" marker-end="url(#brx)"/>
+    <line x1="386" y1="180" x2="386" y2="228" marker-end="url(#brx)"/>
+    <line x1="540" y1="180" x2="540" y2="228" marker-end="url(#brx)"/>
+    <line x1="694" y1="180" x2="694" y2="228" marker-end="url(#brx)"/>
+  </g>
+  <g font-size="9.5" fill="#b00020" text-anchor="middle">
+    <text x="232" y="244">400 마감</text><text x="386" y="244">409 정원초과</text><text x="540" y="244">409 중복</text><text x="694" y="244">조회만 허용</text>
+  </g>
+  <text x="232" y="200" font-size="9" fill="#b00020" text-anchor="middle">Yes ↓</text>
+
+  <text x="40" y="286" font-size="12" fill="#6b6b6b">각 관문에서 걸리면 해당 에러로 거부, 모두 통과하면 신청이 기록됩니다.</text>
+</svg>

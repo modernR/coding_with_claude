@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 330" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="330" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">컨텍스트 윈도우 — 한 번에 담을 수 있는 정보의 그릇</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">대화·파일·도구 결과가 이 그릇에 쌓입니다. 넘치면 앞부분을 잊거나 오류가 납니다.</text>
+
+  <!-- 그릇 게이지 -->
+  <text x="40" y="102" font-size="12" font-weight="700" fill="#1a1a1a">그릇에 쌓이는 것 (누적)</text>
+  <rect x="40" y="112" width="500" height="70" rx="9" fill="#fafbfc" stroke="#e3e6ea"/>
+  <rect x="46" y="118" width="120" height="58" rx="6" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="106" y="151" font-size="10" fill="#3a6fd6" text-anchor="middle">시스템</text>
+  <text x="106" y="165" font-size="10" fill="#3a6fd6" text-anchor="middle">프롬프트</text>
+  <rect x="170" y="118" width="130" height="58" rx="6" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="235" y="151" font-size="10" fill="#b8860b" text-anchor="middle">대화 히스토리</text>
+  <text x="235" y="165" font-size="10" fill="#b8860b" text-anchor="middle">(사용자+AI)</text>
+  <rect x="304" y="118" width="110" height="58" rx="6" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="359" y="151" font-size="10" fill="#1a7f37" text-anchor="middle">읽은 파일</text>
+  <text x="359" y="165" font-size="10" fill="#1a7f37" text-anchor="middle">내용</text>
+  <rect x="418" y="118" width="116" height="58" rx="6" fill="#fff5f6" stroke="#f3c9cf"/>
+  <text x="476" y="151" font-size="10" fill="#b00020" text-anchor="middle">도구 호출</text>
+  <text x="476" y="165" font-size="10" fill="#b00020" text-anchor="middle">결과</text>
+
+  <!-- 모델별 한계 -->
+  <rect x="560" y="112" width="300" height="70" rx="9" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="576" y="133" font-size="11" font-weight="700" fill="#1a1a1a">모델별 한계</text>
+  <text x="576" y="153" font-size="10.5" fill="#444">Opus·Sonnet: 1M 토큰 (A4 약 5,000장)</text>
+  <text x="576" y="171" font-size="10.5" fill="#444">Haiku: 200K 토큰 (A4 약 1,000장)</text>
+
+  <!-- 넘치면 -->
+  <rect x="40" y="196" width="820" height="34" rx="8" fill="#fff5f6" stroke="#f3c9cf"/>
+  <text x="56" y="218" font-size="11" fill="#b00020">넘치면 — 앞 내용을 잊음 · 응답이 짧아짐 · "컨텍스트 초과" 오류. 토큰이 다 차지 않아도 길면 품질이 흐려집니다.</text>
+
+  <!-- 3 해결책 -->
+  <rect x="40" y="244" width="260" height="70" rx="10" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="60" y="268" font-size="12" font-weight="700" fill="#1a7f37">① 체크포인트</text>
+  <text x="60" y="290" font-size="10" fill="#444">주요 작업 끝나면 상태를 저장,</text>
+  <text x="60" y="304" font-size="10" fill="#444">다음은 새 세션에서 시작</text>
+  <rect x="320" y="244" width="260" height="70" rx="10" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="340" y="268" font-size="12" font-weight="700" fill="#1a7f37">② 세션 분리</text>
+  <text x="340" y="290" font-size="10" fill="#444">작업을 나눠 각 세션이</text>
+  <text x="340" y="304" font-size="10" fill="#444">신선한 컨텍스트를 유지</text>
+  <rect x="600" y="244" width="260" height="70" rx="10" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="620" y="268" font-size="12" font-weight="700" fill="#1a7f37">③ 자동 압축</text>
+  <text x="620" y="290" font-size="10" fill="#444">오래된 대화를 자동 요약,</text>
+  <text x="620" y="304" font-size="10" fill="#444">최근 정보만 유지</text>
+</svg>

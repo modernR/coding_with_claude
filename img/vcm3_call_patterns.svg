@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="420" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">호출 패턴 — 명시·자동 · 병렬·순차</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">누가 부르는가(명시/자동)와 어떻게 도는가(병렬/순차)의 두 축입니다.</text>
+
+  <defs><marker id="m3p_ar" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/></marker></defs>
+
+  <!-- 명시 -->
+  <rect x="40" y="90" width="400" height="140" rx="11" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="60" y="115" font-size="13" font-weight="700" fill="#3a6fd6">명시 호출 — 사용자가 직접 지목</text>
+  <rect x="60" y="128" width="360" height="30" rx="6" fill="#ffffff" stroke="#bcd0f5"/>
+  <text x="72" y="148" font-size="10.5" fill="#444">/agents security-reviewer → "이 .env 변경 보안 OK?"</text>
+  <text x="60" y="180" font-size="10.5" fill="#444">확실히 그 에이전트를 부를 때,</text>
+  <text x="60" y="197" font-size="10.5" fill="#444">또는 여러 에이전트 중 특정 하나만 부를 때.</text>
+  <text x="60" y="218" font-size="9.5" fill="#9aa0a6">사용자가 호출 주체</text>
+
+  <!-- 자동 -->
+  <rect x="460" y="90" width="400" height="140" rx="11" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="480" y="115" font-size="13" font-weight="700" fill="#1a7f37">자동 분배 — 메인이 description 보고 결정</text>
+  <rect x="480" y="128" width="360" height="30" rx="6" fill="#ffffff" stroke="#cfe9d7"/>
+  <text x="492" y="148" font-size="10.5" fill="#444">"이 PR 종합 리뷰해줘" → 메인이 적합한 서브 자동 호출</text>
+  <text x="480" y="180" font-size="10.5" fill="#444">자연어 지시만 하면 메인이 각 서브의</text>
+  <text x="480" y="197" font-size="10.5" fill="#444">description을 읽고 알맞은 서브를 고릅니다.</text>
+  <text x="480" y="218" font-size="9.5" fill="#9aa0a6">description이 명확해야 정확</text>
+
+  <!-- 병렬 -->
+  <rect x="40" y="252" width="400" height="140" rx="11" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="60" y="277" font-size="13" font-weight="700" fill="#b8860b">병렬 — 속도 (동시에 다른 관점)</text>
+  <rect x="70" y="292" width="88" height="34" rx="6" fill="#ffffff" stroke="#f3d488"/>
+  <text x="114" y="313" font-size="9.5" fill="#444" text-anchor="middle">code</text>
+  <rect x="166" y="292" width="88" height="34" rx="6" fill="#ffffff" stroke="#f3d488"/>
+  <text x="210" y="313" font-size="9.5" fill="#444" text-anchor="middle">security</text>
+  <rect x="262" y="292" width="88" height="34" rx="6" fill="#ffffff" stroke="#f3d488"/>
+  <text x="306" y="313" font-size="9.5" fill="#444" text-anchor="middle">ui</text>
+  <text x="380" y="313" font-size="10" fill="#6b6b6b" text-anchor="middle">→ 메인 통합</text>
+  <text x="60" y="352" font-size="10.5" fill="#444">셋이 동시에 검토, 결과를 메인이 합칩니다. 빠름.</text>
+  <text x="60" y="372" font-size="9.5" fill="#9aa0a6">도메인이 명확히 분리될 때만 (3개 이상은 순차 검토)</text>
+
+  <!-- 순차 -->
+  <rect x="460" y="252" width="400" height="140" rx="11" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="480" y="277" font-size="13" font-weight="700" fill="#7c3aed">순차 — 의존 (앞 결과가 뒤 입력)</text>
+  <rect x="480" y="292" width="150" height="34" rx="6" fill="#ffffff" stroke="#a78bda"/>
+  <text x="555" y="313" font-size="9.5" fill="#444" text-anchor="middle">code-reviewer</text>
+  <line x1="632" y1="309" x2="660" y2="309" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#m3p_ar)"/>
+  <rect x="664" y="292" width="150" height="34" rx="6" fill="#ffffff" stroke="#a78bda"/>
+  <text x="739" y="313" font-size="9.5" fill="#444" text-anchor="middle">docs-updater</text>
+  <text x="480" y="352" font-size="10.5" fill="#444">리뷰 결과를 보고 README를 갱신. 순서가 중요.</text>
+  <text x="480" y="372" font-size="9.5" fill="#9aa0a6">서브 간 정보 전달이 필요할 때</text>
+</svg>

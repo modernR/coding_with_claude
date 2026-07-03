@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="300" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">관계형 DB vs NoSQL — 무엇을 우선하나</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">정확성·관계를 최우선하느냐, 속도·확장·유연성을 우선하느냐의 선택.</text>
+  <rect x="36" y="92" width="392" height="180" rx="12" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="56" y="118" font-size="15" font-weight="700" fill="#3a6fd6">관계형 DB (RDB)</text>
+  <text x="56" y="140" font-size="11" fill="#6b6b6b">정해진 표 구조 · 관계를 안전하게</text>
+  <text x="56" y="166" font-size="11.5" fill="#1a7f37">✓ 정확성(ACID) · 복잡한 관계 · JOIN</text>
+  <text x="56" y="188" font-size="11.5" fill="#1a7f37">✓ 구조가 명확할 때(회원·주문·결제)</text>
+  <text x="56" y="214" font-size="11.5" fill="#b00020">✕ 대규모 확장 시 비용·복잡도↑</text>
+  <text x="56" y="248" font-size="11" fill="#6b6b6b">PostgreSQL · MySQL · SQLite</text>
+  <rect x="472" y="92" width="392" height="180" rx="12" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="492" y="118" font-size="15" font-weight="700" fill="#1a7f37">NoSQL</text>
+  <text x="492" y="140" font-size="11" fill="#6b6b6b">유연한 저장 · 큰 규모에 강함</text>
+  <text x="492" y="166" font-size="11.5" fill="#1a7f37">✓ 속도·확장·유연성 · 필드 자주 바뀜</text>
+  <text x="492" y="188" font-size="11.5" fill="#1a7f37">✓ 실시간 순위·세션·캐시·초대형 분산</text>
+  <text x="492" y="214" font-size="11.5" fill="#b00020">✕ 일관성 관리는 개발자 책임</text>
+  <text x="492" y="248" font-size="11" fill="#6b6b6b">MongoDB(문서) · Redis(키-값) · DynamoDB(분산)</text>
+  <text x="40" y="292" font-size="12" fill="#6b6b6b">※ 헷갈리면 RDB로 시작하고, 필요할 때 캐시·문서·분산형 NoSQL을 곁들이는 것이 무난합니다.</text>
+</svg>

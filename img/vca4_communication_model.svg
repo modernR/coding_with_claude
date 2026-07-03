@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="380" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">에이전트 간 통신 모델 — 메시지 허브 vs 공유 컨텍스트</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">표준은 메인=메시지 허브. 결과를 받아 다른 전문가에게 패스하고 충돌을 조정합니다.</text>
+
+  <defs>
+    <marker id="cm_a" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/>
+    </marker>
+  </defs>
+
+  <rect x="40" y="95" width="410" height="255" rx="12" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="60" y="122" font-size="13.5" font-weight="700" fill="#b8860b">메시지 패스 (표준 · 메인 허브)</text>
+
+  <rect x="180" y="140" width="120" height="42" rx="9" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="240" y="166" font-size="11" fill="#b8860b" text-anchor="middle">메인 (허브)</text>
+  <rect x="60" y="230" width="100" height="38" rx="8" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="110" y="254" font-size="9.5" fill="#3a6fd6" text-anchor="middle">전문가 A</text>
+  <rect x="190" y="230" width="100" height="38" rx="8" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="240" y="254" font-size="9.5" fill="#3a6fd6" text-anchor="middle">전문가 B</text>
+  <rect x="320" y="230" width="100" height="38" rx="8" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="370" y="254" font-size="9.5" fill="#3a6fd6" text-anchor="middle">전문가 C</text>
+  <line x1="215" y1="182" x2="120" y2="226" stroke="#9aa0a6" stroke-width="1.4" marker-end="url(#cm_a)"/>
+  <line x1="240" y1="182" x2="240" y2="226" stroke="#9aa0a6" stroke-width="1.4" marker-end="url(#cm_a)"/>
+  <line x1="265" y1="182" x2="360" y2="226" stroke="#9aa0a6" stroke-width="1.4" marker-end="url(#cm_a)"/>
+  <text x="245" y="298" font-size="9.5" fill="#444" text-anchor="middle">각 전문가는 자기 입력만 봄 · 결과는 메인에 반환</text>
+  <text x="245" y="318" font-size="9.5" fill="#444" text-anchor="middle">머지 4패턴: 연결·선택·병합·재요약</text>
+  <text x="245" y="338" font-size="9.5" fill="#6b6b6b" text-anchor="middle">격리로 안전 · 다른 전문가 컨텍스트 미공유</text>
+
+  <rect x="470" y="95" width="390" height="255" rx="12" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="490" y="122" font-size="13.5" font-weight="700" fill="#7c3aed">공유 컨텍스트 (노션·git 저장소)</text>
+
+  <rect x="600" y="145" width="130" height="42" rx="9" fill="#ffffff" stroke="#a78bda"/>
+  <text x="665" y="171" font-size="10.5" fill="#7c3aed" text-anchor="middle">공통 저장소</text>
+  <rect x="500" y="240" width="90" height="36" rx="8" fill="#ffffff" stroke="#bcd0f5"/>
+  <text x="545" y="263" font-size="9.5" fill="#3a6fd6" text-anchor="middle">에이전트</text>
+  <rect x="620" y="240" width="90" height="36" rx="8" fill="#ffffff" stroke="#bcd0f5"/>
+  <text x="665" y="263" font-size="9.5" fill="#3a6fd6" text-anchor="middle">에이전트</text>
+  <rect x="740" y="240" width="90" height="36" rx="8" fill="#ffffff" stroke="#bcd0f5"/>
+  <text x="785" y="263" font-size="9.5" fill="#3a6fd6" text-anchor="middle">에이전트</text>
+  <line x1="545" y1="240" x2="640" y2="189" stroke="#9aa0a6" stroke-width="1.3" marker-end="url(#cm_a)"/>
+  <line x1="665" y1="240" x2="665" y2="189" stroke="#9aa0a6" stroke-width="1.3" marker-end="url(#cm_a)"/>
+  <line x1="785" y1="240" x2="690" y2="189" stroke="#9aa0a6" stroke-width="1.3" marker-end="url(#cm_a)"/>
+  <text x="665" y="302" font-size="9.5" fill="#444" text-anchor="middle">쓴 결과를 다른 에이전트가 직접 읽음</text>
+  <text x="665" y="322" font-size="9.5" fill="#444" text-anchor="middle">비동기 협업 가능 · 충돌 조정 필요</text>
+  <text x="665" y="342" font-size="9.5" fill="#6b6b6b" text-anchor="middle">충돌 해결: 사용자 질의 · 결정자 · 우선순위</text>
+</svg>

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="300" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">모델 선택 가이드 — 작업에 맞춰 고른다</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">처음엔 Sonnet으로 시작해, 부족하면 Opus로 올리고 단순 반복은 Haiku로 내립니다.</text>
+
+  <!-- Haiku -->
+  <rect x="40" y="92" width="260" height="150" rx="12" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="60" y="118" font-size="14" font-weight="700" fill="#1a7f37">Haiku 4.5</text>
+  <text x="60" y="138" font-size="10.5" fill="#6b6b6b">$1 / $5 · 가장 빠름</text>
+  <rect x="60" y="150" width="220" height="76" rx="8" fill="#ffffff" stroke="#cfe9d7"/>
+  <text x="72" y="172" font-size="10.5" fill="#1a1a1a">간단한 분류·요약·번역</text>
+  <text x="72" y="192" font-size="10.5" fill="#1a1a1a">이메일 초안·실시간 처리</text>
+  <text x="72" y="214" font-size="10" fill="#1a7f37">가장 저렴 · 단순 반복에</text>
+
+  <!-- Sonnet -->
+  <rect x="320" y="92" width="260" height="150" rx="12" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="340" y="118" font-size="14" font-weight="700" fill="#3a6fd6">Sonnet 4.6</text>
+  <text x="340" y="138" font-size="10.5" fill="#6b6b6b">$3 / $15 · 빠름</text>
+  <rect x="340" y="150" width="220" height="76" rx="8" fill="#ffffff" stroke="#bcd0f5"/>
+  <text x="352" y="172" font-size="10.5" fill="#1a1a1a">PRD·보고서·데이터 분석</text>
+  <text x="352" y="192" font-size="10.5" fill="#1a1a1a">코드 1~2개 파일 수정</text>
+  <text x="352" y="214" font-size="10" font-weight="700" fill="#3a6fd6">기본 추천 · 대부분의 실무</text>
+
+  <!-- Opus -->
+  <rect x="600" y="92" width="260" height="150" rx="12" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="620" y="118" font-size="14" font-weight="700" fill="#b8860b">Opus 4.8</text>
+  <text x="620" y="138" font-size="10.5" fill="#6b6b6b">$5 / $25 · 가장 지능적</text>
+  <rect x="620" y="150" width="220" height="76" rx="8" fill="#ffffff" stroke="#f0d6b8"/>
+  <text x="632" y="172" font-size="10.5" fill="#1a1a1a">복잡한 멀티스텝 자동화</text>
+  <text x="632" y="192" font-size="10.5" fill="#1a1a1a">전체 리팩토링·까다로운 추론</text>
+  <text x="632" y="214" font-size="10" fill="#b8860b">비용 높음 · 필요할 때만</text>
+
+  <text x="40" y="270" font-size="11" fill="#b00020">주의 — "항상 Opus"는 비용이 몇 배로 뛰고 주간 한도가 빠르게 소진되는 가장 흔한 입문자 실수입니다.</text>
+</svg>

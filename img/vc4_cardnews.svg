@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="380" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">카드뉴스 자동화 — 파이프라인과 외부 API 일반 패턴</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">4단계 Stepper로 사람이 매 단계 검수하며 진행합니다. 이 골격이 모든 SNS·발행 자동화의 기본형입니다.</text>
+
+  <defs><marker id="cn" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/></marker></defs>
+
+  <!-- stepper -->
+  <g>
+    <rect x="40" y="100" width="185" height="72" rx="10" fill="#eef3fd" stroke="#bcd0f5"/><text x="132" y="126" font-size="12" font-weight="700" fill="#3a6fd6" text-anchor="middle">Step 1 · 검색·요약</text><text x="132" y="147" font-size="9.5" fill="#6b6b6b" text-anchor="middle">키워드 입력 →</text><text x="132" y="161" font-size="9.5" fill="#6b6b6b" text-anchor="middle">핵심 포인트 5~7개</text>
+    <rect x="245" y="100" width="185" height="72" rx="10" fill="#eef3fd" stroke="#bcd0f5"/><text x="337" y="126" font-size="12" font-weight="700" fill="#3a6fd6" text-anchor="middle">Step 2 · 대본·레이아웃</text><text x="337" y="147" font-size="9.5" fill="#6b6b6b" text-anchor="middle">6장 카드 구성</text><text x="337" y="161" font-size="9.5" fill="#6b6b6b" text-anchor="middle">타이틀·본문·테마</text>
+    <rect x="450" y="100" width="185" height="72" rx="10" fill="#eef3fd" stroke="#bcd0f5"/><text x="542" y="126" font-size="12" font-weight="700" fill="#3a6fd6" text-anchor="middle">Step 3 · 카드 렌더</text><text x="542" y="147" font-size="9.5" fill="#6b6b6b" text-anchor="middle">HTML/Canvas +</text><text x="542" y="161" font-size="9.5" fill="#6b6b6b" text-anchor="middle">이미지 생성 모델</text>
+    <rect x="655" y="100" width="205" height="72" rx="10" fill="#f1faf3" stroke="#cfe9d7"/><text x="757" y="126" font-size="12" font-weight="700" fill="#1a7f37" text-anchor="middle">Step 4 · 발행</text><text x="757" y="147" font-size="9.5" fill="#6b6b6b" text-anchor="middle">PNG → Storage 공개 URL</text><text x="757" y="161" font-size="9.5" fill="#6b6b6b" text-anchor="middle">→ Instagram 발행</text>
+  </g>
+  <line x1="225" y1="136" x2="243" y2="136" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#cn)"/>
+  <line x1="430" y1="136" x2="448" y2="136" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#cn)"/>
+  <line x1="635" y1="136" x2="653" y2="136" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#cn)"/>
+  <text x="450" y="192" font-size="10" fill="#b8860b" text-anchor="middle">각 단계마다 "다시 만들기" 가능 — 사람이 검수 후 다음으로</text>
+
+  <!-- general pattern -->
+  <rect x="40" y="214" width="820" height="70" rx="9" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="56" y="238" font-size="12" font-weight="700" fill="#b8860b">외부 API 자동화의 일반 패턴</text>
+  <text x="56" y="264" font-size="11.5" fill="#1a1a1a">사용자 입력 → LLM으로 콘텐츠 생성·구조화 → 이미지·시각 자료 생성 → 이미지 호스팅(공개 URL) → 외부 SaaS API 발행</text>
+  <text x="56" y="279" font-size="10" fill="#6b6b6b">이 변주만으로: 보고서(Notion) · 뉴스레터(Mailchimp) · 이메일 캠페인 · 블로그 포스트 자동 발행이 모두 만들어짐</text>
+
+  <!-- 검수 강조 + 비용 -->
+  <rect x="40" y="296" width="405" height="70" rx="9" fill="#fff5f6" stroke="#f3c9cf"/>
+  <text x="56" y="320" font-size="11.5" font-weight="700" fill="#b00020">왜 Stepper(사람 검수) 구조인가</text>
+  <text x="56" y="341" font-size="10.5" fill="#444">자동 100% 발행은 사람 눈을 안 거쳐 사고 위험이 큼.</text>
+  <text x="56" y="358" font-size="10.5" fill="#444">검수 단계가 들어간 자동화가 안전한 표준.</text>
+
+  <rect x="455" y="296" width="405" height="70" rx="9" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="471" y="320" font-size="11.5" font-weight="700" fill="#1a1a1a">비용 감각 (월 100포스트 기준)</text>
+  <text x="471" y="341" font-size="10.5" fill="#444">콘텐츠 생성 + 이미지 생성 ≈ 월 $17 수준,</text>
+  <text x="471" y="358" font-size="10.5" fill="#444">Storage·발행 API·호스팅은 무료 tier로 충분.</text>
+</svg>

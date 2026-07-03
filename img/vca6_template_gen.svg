@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 340" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="340" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">PRD 템플릿 자동 생성 — 우리 PRD를 학습해 표준을 만든다</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">지난 산출물을 재료로 공통 섹션·특화 영역·표준 분량을 뽑아 한 파일로 굳힙니다.</text>
+
+  <defs><marker id="vca6tg_ar" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/></marker></defs>
+
+  <!-- 입력 재료 -->
+  <text x="60" y="106" font-size="12" font-weight="700" fill="#3a6fd6">학습 재료</text>
+  <rect x="40" y="118" width="200" height="42" rx="9" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="140" y="144" font-size="10.5" fill="#444" text-anchor="middle">지난 PRD 5개</text>
+  <rect x="40" y="168" width="200" height="42" rx="9" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="140" y="194" font-size="10.5" fill="#444" text-anchor="middle">비즈니스 모델 문서</text>
+  <rect x="40" y="218" width="200" height="42" rx="9" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="140" y="244" font-size="10.5" fill="#444" text-anchor="middle">디자인 시스템 가이드</text>
+
+  <!-- 분석 -->
+  <rect x="320" y="118" width="260" height="142" rx="11" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="340" y="142" font-size="12" font-weight="700" fill="#b8860b">분석 3단계</text>
+  <text x="340" y="167" font-size="10.5" fill="#444">① 공통 섹션 추출</text>
+  <text x="340" y="192" font-size="10.5" fill="#444">② 도메인 특화 영역 강조</text>
+  <text x="340" y="217" font-size="10.5" fill="#444">③ 섹션별 표준 길이·필수 항목</text>
+  <text x="340" y="245" font-size="9.5" fill="#6b6b6b">RSVP라면 정원·권한·알림 연동 강조</text>
+
+  <line x1="240" y1="139" x2="318" y2="160" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#vca6tg_ar)"/>
+  <line x1="240" y1="189" x2="318" y2="189" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#vca6tg_ar)"/>
+  <line x1="240" y1="239" x2="318" y2="218" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#vca6tg_ar)"/>
+
+  <!-- 결과 -->
+  <rect x="640" y="150" width="220" height="80" rx="11" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="750" y="180" font-size="12" font-weight="700" fill="#1a7f37" text-anchor="middle">templates/prd-template.md</text>
+  <text x="750" y="203" font-size="10" fill="#444" text-anchor="middle">12개 섹션 + 섹션별 작성 가이드</text>
+  <text x="750" y="220" font-size="9.5" fill="#6b6b6b" text-anchor="middle">이후 모든 PRD가 같은 구조</text>
+  <line x1="580" y1="189" x2="638" y2="189" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#vca6tg_ar)"/>
+
+  <text x="40" y="312" font-size="10" fill="#6b6b6b">한 번 굳혀 두고 분기마다 갱신 — 방치하면 템플릿이 낡습니다.</text>
+</svg>

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="360" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">Live Artifact — 열 때마다 오늘의 데이터로 다시 그린다</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">사이드바에 핀처럼 꽂아두는, 데이터가 살아 있는 대시보드입니다.</text>
+
+  <defs><marker id="la" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/></marker></defs>
+
+  <!-- flow -->
+  <rect x="40" y="110" width="150" height="66" rx="9" fill="#1a1a1a"/><text x="115" y="138" font-size="11.5" font-weight="700" fill="#fff" text-anchor="middle">사용자</text><text x="115" y="157" font-size="9.5" fill="#cfcfcf" text-anchor="middle">사이드바에서 클릭</text>
+  <line x1="190" y1="143" x2="220" y2="143" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#la)"/>
+  <rect x="224" y="110" width="170" height="66" rx="9" fill="#fff7ef" stroke="#f0d6b8"/><text x="309" y="134" font-size="11.5" font-weight="700" fill="#b8860b" text-anchor="middle">Live Artifact</text><text x="309" y="152" font-size="9.5" fill="#8a6d1a" text-anchor="middle">캐시된 첫 화면 즉시</text><text x="309" y="167" font-size="9.5" fill="#8a6d1a" text-anchor="middle">(브라우저 샌드박스)</text>
+  <line x1="394" y1="143" x2="424" y2="143" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#la)"/>
+  <rect x="428" y="110" width="150" height="66" rx="9" fill="#eef3fd" stroke="#bcd0f5"/><text x="503" y="134" font-size="11.5" font-weight="700" fill="#3a6fd6" text-anchor="middle">claude.ai 릴레이</text><text x="503" y="152" font-size="9.5" fill="#6b6b6b" text-anchor="middle">callMcpTool()</text><text x="503" y="167" font-size="9.5" fill="#6b6b6b" text-anchor="middle">사용자 권한으로</text>
+  <line x1="578" y1="143" x2="608" y2="143" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#la)"/>
+  <rect x="612" y="110" width="248" height="66" rx="9" fill="#f1faf3" stroke="#cfe9d7"/><text x="736" y="134" font-size="11.5" font-weight="700" fill="#1a7f37" text-anchor="middle">MCP 커넥터</text><text x="736" y="152" font-size="9.5" fill="#6b6b6b" text-anchor="middle">Asana·Slack·Gmail·Notion·</text><text x="736" y="167" font-size="9.5" fill="#6b6b6b" text-anchor="middle">Supabase → 최신 데이터</text>
+
+  <path d="M736 176 L736 210 L309 210 L309 178" fill="none" stroke="#1a7f37" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#la)"/>
+  <text x="520" y="204" font-size="10.5" fill="#1a7f37" text-anchor="middle">신선한 값으로 화면 다시 렌더 → 오늘의 대시보드</text>
+
+  <!-- 특징 vs 한계 -->
+  <rect x="40" y="234" width="400" height="110" rx="10" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="56" y="258" font-size="12" font-weight="700" fill="#1a7f37">기존 Artifact와 다른 점</text>
+  <text x="56" y="280" font-size="10.5" fill="#444">· 대화 밖 사이드바에 저장, 한 번 클릭 재호출</text>
+  <text x="56" y="300" font-size="10.5" fill="#444">· 만든 시점 박제 → 열 때마다 신선한 데이터</text>
+  <text x="56" y="320" font-size="10.5" fill="#444">· 매 업데이트 버전 자동 저장·복원</text>
+  <text x="56" y="338" font-size="10.5" fill="#444">· 인페이지 LLM 호출로 요약·분류도 가능</text>
+
+  <rect x="460" y="234" width="400" height="110" rx="10" fill="#fff5f6" stroke="#f3c9cf"/>
+  <text x="476" y="258" font-size="12" font-weight="700" fill="#b00020">한계·주의</text>
+  <text x="476" y="280" font-size="10.5" fill="#444">· 유료 플랜 + 데스크톱 앱 전용 (웹 불가)</text>
+  <text x="476" y="300" font-size="10.5" fill="#444">· 로컬 저장 → 기기 바꾸면 사라짐(공유는 게시)</text>
+  <text x="476" y="320" font-size="10.5" fill="#444">· 외부 데이터는 반드시 MCP 커넥터 경유</text>
+  <text x="476" y="338" font-size="10.5" fill="#444">· 중요한 의사결정 전엔 새로고침으로 갱신</text>
+</svg>

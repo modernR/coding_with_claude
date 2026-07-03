@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 340" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="340" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">멀티스텝 체인의 6가지 표준 패턴</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">검증 뒤에 무엇을 하느냐로 갈립니다. 모두 "검증 다음 동작" 형태입니다.</text>
+  <defs>
+    <marker id="cp_a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#9aa0a6"/></marker>
+  </defs>
+  <g font-size="11">
+    <rect x="40" y="95" width="270" height="66" rx="10" fill="#fdecef" stroke="#f3b8c4"/>
+    <text x="55" y="120" font-weight="700" fill="#b00020">검증 → 차단</text>
+    <text x="55" y="142" font-size="10" fill="#444">위반 시 작업 중단 (보안·라이선스)</text>
+    <rect x="330" y="95" width="270" height="66" rx="10" fill="#f1faf3" stroke="#cfe9d7"/>
+    <text x="345" y="120" font-weight="700" fill="#1a7f37">검증 → 변형</text>
+    <text x="345" y="142" font-size="10" fill="#444">자동 정리 후 통과 (lint·format)</text>
+    <rect x="620" y="95" width="240" height="66" rx="10" fill="#fff7e6" stroke="#f3d488"/>
+    <text x="635" y="120" font-weight="700" fill="#b8860b">검증 → 재시도</text>
+    <text x="635" y="142" font-size="10" fill="#444">실패 시 fix 후 재검증 (테스트)</text>
+    <rect x="40" y="175" width="270" height="66" rx="10" fill="#ede9fe" stroke="#a78bda"/>
+    <text x="55" y="200" font-weight="700" fill="#7c3aed">검증 → 에스컬레이션</text>
+    <text x="55" y="222" font-size="10" fill="#444">한도 초과 시 사람에게 (복잡한 충돌)</text>
+    <rect x="330" y="175" width="270" height="66" rx="10" fill="#eef3fd" stroke="#bcd0f5"/>
+    <text x="345" y="200" font-weight="700" fill="#3a6fd6">검증 → 분기</text>
+    <text x="345" y="222" font-size="10" fill="#444">결과에 따라 다른 훅 호출 (PR 분류)</text>
+    <rect x="620" y="175" width="240" height="66" rx="10" fill="#fafbfc" stroke="#e3e6ea"/>
+    <text x="635" y="200" font-weight="700" fill="#1a1a1a">검증 → 알림</text>
+    <text x="635" y="222" font-size="10" fill="#444">통과·실패 모두 외부로 (Slack·Sentry)</text>
+  </g>
+  <rect x="40" y="266" width="820" height="52" rx="10" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="60" y="288" font-size="11.5" font-weight="700" fill="#b8860b">공통 안전장치 — MAX_RETRY</text>
+  <text x="60" y="307" font-size="10.5" fill="#444">재시도·자가 수정 패턴은 상한(보통 2~3회)을 반드시 두어 무한 루프를 막고, 넘기면 사람에게 넘깁니다.</text>
+</svg>

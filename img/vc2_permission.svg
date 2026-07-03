@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="360" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">권한 모델 — 위험한 작업을 어떻게 묻나</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">Plan/Accept가 공통 안전장치이고, Cowork은 그 위에 앱별 권한 티어를 더합니다.</text>
+
+  <defs><marker id="pm" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/></marker></defs>
+
+  <!-- Plan/Accept flow -->
+  <text x="40" y="100" font-size="13" font-weight="700" fill="#1a1a1a">① Plan / Accept (양쪽 공통)</text>
+  <rect x="40" y="112" width="150" height="52" rx="9" fill="#fafbfc" stroke="#e3e6ea"/><text x="115" y="135" font-size="11" fill="#1a1a1a" text-anchor="middle">에이전트가</text><text x="115" y="151" font-size="11" fill="#1a1a1a" text-anchor="middle">계획(Plan) 제시</text>
+  <line x1="190" y1="138" x2="216" y2="138" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#pm)"/>
+  <rect x="220" y="112" width="150" height="52" rx="9" fill="#eef3fd" stroke="#bcd0f5"/><text x="295" y="135" font-size="11" fill="#1a1a1a" text-anchor="middle">사용자 검토</text><text x="295" y="151" font-size="10" fill="#6b6b6b" text-anchor="middle">무엇을·어디에·diff</text>
+  <line x1="370" y1="138" x2="396" y2="138" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#pm)"/>
+  <rect x="400" y="104" width="150" height="30" rx="7" fill="#f1faf3" stroke="#cfe9d7"/><text x="475" y="124" font-size="10.5" fill="#1a7f37" text-anchor="middle">accept → 실행</text>
+  <rect x="400" y="140" width="150" height="30" rx="7" fill="#fff5f6" stroke="#f3c9cf"/><text x="475" y="160" font-size="10.5" fill="#b00020" text-anchor="middle">reject / modify → 재계획</text>
+
+  <rect x="580" y="104" width="280" height="66" rx="9" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="596" y="126" font-size="11" font-weight="700" fill="#1a1a1a">사람의 두뇌가 끼어드는 마지막 지점</text>
+  <text x="596" y="148" font-size="10" fill="#b00020">함정: 빠르게 accept, "Allow always" 남발,</text>
+  <text x="596" y="163" font-size="10" fill="#b00020">--dangerously-skip-permissions</text>
+
+  <!-- Cowork tiers -->
+  <text x="40" y="210" font-size="13" font-weight="700" fill="#b8860b">② Cowork 권한 티어 (앱별로 추가)</text>
+  <rect x="40" y="224" width="266" height="110" rx="10" fill="#fff5f6" stroke="#f3c9cf"/>
+  <text x="60" y="250" font-size="13" font-weight="700" fill="#b00020">read</text>
+  <text x="60" y="272" font-size="10.5" fill="#444">화면·텍스트는 읽되</text>
+  <text x="60" y="290" font-size="10.5" fill="#444">클릭·타이핑 불가</text>
+  <text x="60" y="316" font-size="10" fill="#6b6b6b">브라우저 (웹은 Chrome MCP로)</text>
+
+  <rect x="317" y="224" width="266" height="110" rx="10" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="337" y="250" font-size="13" font-weight="700" fill="#b8860b">click</text>
+  <text x="337" y="272" font-size="10.5" fill="#444">클릭은 되지만</text>
+  <text x="337" y="290" font-size="10.5" fill="#444">타이핑·우클릭·드래그 불가</text>
+  <text x="337" y="316" font-size="10" fill="#6b6b6b">터미널·IDE(VS Code 등)</text>
+
+  <rect x="594" y="224" width="266" height="110" rx="10" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="614" y="250" font-size="13" font-weight="700" fill="#1a7f37">full</text>
+  <text x="614" y="272" font-size="10.5" fill="#444">클릭·타이핑·우클릭·</text>
+  <text x="614" y="290" font-size="10.5" fill="#444">드래그 전부 가능</text>
+  <text x="614" y="316" font-size="10" fill="#6b6b6b">Notes·Finder·설정·Office</text>
+</svg>

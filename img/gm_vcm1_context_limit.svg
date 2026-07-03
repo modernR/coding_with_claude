@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="300" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">컨텍스트 한도 도달 시 대응 — 우선순위 4단계</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">가벼운 대응부터 시도하고, 안 되면 점점 강한 수단으로 내려갑니다.</text>
+
+  <defs><marker id="gm1cl" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/></marker></defs>
+
+  <rect x="40" y="95" width="185" height="150" rx="10" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="132" y="120" font-size="12" font-weight="700" fill="#1a7f37" text-anchor="middle">1순위</text>
+  <text x="132" y="142" font-size="13" font-weight="700" fill="#1a1a1a" text-anchor="middle">/compact</text>
+  <text x="132" y="168" font-size="10.5" fill="#444" text-anchor="middle">대화를 요약해</text>
+  <text x="132" y="184" font-size="10.5" fill="#444" text-anchor="middle">압축</text>
+  <text x="132" y="212" font-size="10" fill="#6b6b6b" text-anchor="middle">절반쯤 절감</text>
+  <text x="132" y="228" font-size="10" fill="#6b6b6b" text-anchor="middle">일부 디테일 소실</text>
+
+  <rect x="245" y="95" width="185" height="150" rx="10" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="337" y="120" font-size="12" font-weight="700" fill="#3a6fd6" text-anchor="middle">2순위</text>
+  <text x="337" y="142" font-size="13" font-weight="700" fill="#1a1a1a" text-anchor="middle">/clear</text>
+  <text x="337" y="168" font-size="10.5" fill="#444" text-anchor="middle">대화를 모두 지우고</text>
+  <text x="337" y="184" font-size="10.5" fill="#444" text-anchor="middle">새 세션</text>
+  <text x="337" y="212" font-size="10" fill="#6b6b6b" text-anchor="middle">CLAUDE.md만 남음</text>
+  <text x="337" y="228" font-size="10" fill="#6b6b6b" text-anchor="middle">가장 깔끔</text>
+
+  <rect x="450" y="95" width="185" height="150" rx="10" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="542" y="120" font-size="12" font-weight="700" fill="#b8860b" text-anchor="middle">3순위</text>
+  <text x="542" y="142" font-size="13" font-weight="700" fill="#1a1a1a" text-anchor="middle">세션 분할</text>
+  <text x="542" y="168" font-size="10.5" fill="#444" text-anchor="middle">큰 작업을 쪼개</text>
+  <text x="542" y="184" font-size="10.5" fill="#444" text-anchor="middle">여러 세션으로</text>
+  <text x="542" y="212" font-size="10" fill="#6b6b6b" text-anchor="middle">결과를 파일로 저장</text>
+  <text x="542" y="228" font-size="10" fill="#6b6b6b" text-anchor="middle">다음 세션에서 로드</text>
+
+  <rect x="655" y="95" width="185" height="150" rx="10" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="747" y="120" font-size="12" font-weight="700" fill="#7c3aed" text-anchor="middle">4순위</text>
+  <text x="747" y="142" font-size="13" font-weight="700" fill="#1a1a1a" text-anchor="middle">서브 위임</text>
+  <text x="747" y="168" font-size="10.5" fill="#444" text-anchor="middle">디테일을</text>
+  <text x="747" y="184" font-size="10.5" fill="#444" text-anchor="middle">서브에이전트로</text>
+  <text x="747" y="212" font-size="10" fill="#6b6b6b" text-anchor="middle">메인은 큰 그림만</text>
+
+  <line x1="225" y1="170" x2="243" y2="170" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#gm1cl)"/>
+  <line x1="430" y1="170" x2="448" y2="170" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#gm1cl)"/>
+  <line x1="635" y1="170" x2="653" y2="170" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#gm1cl)"/>
+  <text x="450" y="285" font-size="10.5" fill="#6b6b6b" text-anchor="middle">가벼운 대응 → 강한 대응 순으로 내려갑니다</text>
+</svg>

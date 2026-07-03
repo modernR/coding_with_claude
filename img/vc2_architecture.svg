@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 440" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="440" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">Claude Code/Cowork 아키텍처 — 7개 레이어와 심장</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">사용자 의도가 들어와 '인지→행동→관찰' 사이클을 돌며 결과가 나옵니다.</text>
+
+  <defs><marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/></marker></defs>
+
+  <!-- flow left to right -->
+  <rect x="36" y="150" width="120" height="90" rx="10" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="96" y="178" font-size="12" font-weight="700" fill="#1a1a1a" text-anchor="middle">① 입력</text>
+  <text x="96" y="198" font-size="9.5" fill="#6b6b6b" text-anchor="middle">자연어 지시</text>
+  <text x="96" y="213" font-size="9.5" fill="#6b6b6b" text-anchor="middle">세션 관리</text>
+
+  <rect x="176" y="150" width="120" height="90" rx="10" fill="#fff5f6" stroke="#f3c9cf"/>
+  <text x="236" y="178" font-size="12" font-weight="700" fill="#b00020" text-anchor="middle">권한 게이트</text>
+  <text x="236" y="198" font-size="9.5" fill="#6b6b6b" text-anchor="middle">Deny/Allow/</text>
+  <text x="236" y="213" font-size="9.5" fill="#6b6b6b" text-anchor="middle">Approve</text>
+
+  <!-- center loop -->
+  <rect x="316" y="130" width="268" height="130" rx="12" fill="#1a1a1a"/>
+  <text x="450" y="158" font-size="13.5" font-weight="700" fill="#fff" text-anchor="middle">④ 마스터 에이전트 루프 (심장)</text>
+  <text x="450" y="182" font-size="11" fill="#8ec7ff" text-anchor="middle">인지 → 행동 → 관찰</text>
+  <text x="450" y="204" font-size="9.5" fill="#cfcfcf" text-anchor="middle">사용자 의도+컨텍스트+도구를 보고</text>
+  <text x="450" y="220" font-size="9.5" fill="#cfcfcf" text-anchor="middle">다음 행동을 결정, 결과를 관찰해 반복</text>
+  <text x="450" y="242" font-size="9.5" fill="#8ec7ff" text-anchor="middle">한 번에 답하지 않고 작은 결정을 수십 번</text>
+
+  <rect x="604" y="150" width="120" height="90" rx="10" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="664" y="178" font-size="12" font-weight="700" fill="#1a7f37" text-anchor="middle">⑤ 실행</text>
+  <text x="664" y="198" font-size="9.5" fill="#6b6b6b" text-anchor="middle">도구 호출·병렬</text>
+  <text x="664" y="213" font-size="9.5" fill="#6b6b6b" text-anchor="middle">프롬프트 캐시</text>
+
+  <rect x="744" y="150" width="120" height="90" rx="10" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="804" y="178" font-size="12" font-weight="700" fill="#1a1a1a" text-anchor="middle">⑥ 출력</text>
+  <text x="804" y="198" font-size="9.5" fill="#6b6b6b" text-anchor="middle">검증된 결과</text>
+  <text x="804" y="213" font-size="9.5" fill="#6b6b6b" text-anchor="middle">메모리 갱신</text>
+
+  <line x1="156" y1="195" x2="174" y2="195" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#ar)"/>
+  <line x1="296" y1="195" x2="314" y2="195" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#ar)"/>
+  <line x1="584" y1="195" x2="602" y2="195" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#ar)"/>
+  <line x1="724" y1="195" x2="742" y2="195" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#ar)"/>
+
+  <!-- knowledge / integration below -->
+  <rect x="316" y="284" width="130" height="58" rx="9" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="381" y="308" font-size="11.5" font-weight="700" fill="#3a6fd6" text-anchor="middle">② 지식</text>
+  <text x="381" y="326" font-size="9" fill="#6b6b6b" text-anchor="middle">스킬·메모리·압축기</text>
+  <rect x="454" y="284" width="130" height="58" rx="9" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="519" y="308" font-size="11.5" font-weight="700" fill="#3a6fd6" text-anchor="middle">③ 통합</text>
+  <text x="519" y="326" font-size="9" fill="#6b6b6b" text-anchor="middle">MCP → 외부 서버</text>
+  <line x1="400" y1="284" x2="420" y2="262" stroke="#bcd0f5" stroke-width="1.4"/>
+  <line x1="500" y1="284" x2="480" y2="262" stroke="#bcd0f5" stroke-width="1.4"/>
+
+  <!-- observability -->
+  <rect x="36" y="284" width="256" height="58" rx="9" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="164" y="306" font-size="11.5" font-weight="700" fill="#b8860b" text-anchor="middle">⑦ 관찰·다중 에이전트</text>
+  <text x="164" y="324" font-size="9" fill="#6b6b6b" text-anchor="middle">hooks(이벤트 버스) · 서브에이전트 · 워크트리</text>
+
+  <rect x="608" y="284" width="256" height="58" rx="9" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="736" y="306" font-size="10.5" fill="#1a1a1a" text-anchor="middle">규칙(hooks)과 분업(서브에이전트)이</text>
+  <text x="736" y="324" font-size="10.5" fill="#1a1a1a" text-anchor="middle">이 레이어에 속합니다</text>
+
+  <rect x="36" y="366" width="828" height="52" rx="9" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="52" y="388" font-size="11.5" font-weight="700" fill="#1a1a1a">핵심은 ④ 마스터 루프</text>
+  <text x="52" y="408" font-size="11" fill="#444">"AI가 한 번에 답을 만든다"는 인식은 여기서 깨집니다. 실제로는 작은 결정을 30번, 100번 반복합니다. 그래서 Plan 모드로 계획을 미리 잡는 것이 의미가 있습니다.</text>
+</svg>

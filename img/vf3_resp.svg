@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 300" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="880" height="300" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">백엔드가 하는 다섯 가지 일</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">화면 뒤에서 데이터를 지키고 규칙을 강제하며 서비스가 끊기지 않게 합니다.</text>
+
+  <g text-anchor="middle">
+    <rect x="36" y="100" width="156" height="150" rx="12" fill="#eef3fd" stroke="#bcd0f5"/><text x="114" y="128" font-size="13" font-weight="700" fill="#3a6fd6">① 데이터 저장·조회</text><text x="114" y="152" font-size="10.5" fill="#444">영구 보관(DB)</text><text x="114" y="170" font-size="10.5" fill="#444">CRUD</text>
+    <rect x="204" y="100" width="156" height="150" rx="12" fill="#eef3fd" stroke="#bcd0f5"/><text x="282" y="128" font-size="13" font-weight="700" fill="#3a6fd6">② 인증·권한</text><text x="282" y="152" font-size="10.5" fill="#444">누가 무엇을</text><text x="282" y="170" font-size="10.5" fill="#444">할 수 있나</text>
+    <rect x="372" y="100" width="156" height="150" rx="12" fill="#1a1a1a"/><text x="450" y="128" font-size="13" font-weight="700" fill="#fff">③ 비즈니스 로직</text><text x="450" y="152" font-size="10.5" fill="#cfcfcf">서비스의 규칙</text><text x="450" y="170" font-size="10.5" fill="#cfcfcf">(정원·마감·중복)</text>
+    <rect x="540" y="100" width="156" height="150" rx="12" fill="#fff7e6" stroke="#f3d488"/><text x="618" y="128" font-size="13" font-weight="700" fill="#b8860b">④ 외부 통합</text><text x="618" y="152" font-size="10.5" fill="#444">결제·이메일</text><text x="618" y="170" font-size="10.5" fill="#444">SMS·푸시</text>
+    <rect x="708" y="100" width="156" height="150" rx="12" fill="#fdeef1" stroke="#f7c0c8"/><text x="786" y="128" font-size="13" font-weight="700" fill="#E8344E">⑤ 안정성·관측</text><text x="786" y="152" font-size="10.5" fill="#444">캐싱·부하분산</text><text x="786" y="170" font-size="10.5" fill="#444">모니터링·로깅</text>
+  </g>
+  <text x="114" y="212" font-size="10" fill="#9aa0a6" text-anchor="middle">새로고침해도 유지</text>
+  <text x="282" y="212" font-size="10" fill="#9aa0a6" text-anchor="middle">내 기록은 나만</text>
+  <text x="450" y="212" font-size="10" fill="#cfcfcf" text-anchor="middle">프론트로는 불가</text>
+  <text x="618" y="212" font-size="10" fill="#9aa0a6" text-anchor="middle">비밀 API 키</text>
+  <text x="786" y="212" font-size="10" fill="#9aa0a6" text-anchor="middle">장애 없이</text>
+
+  <text x="40" y="284" font-size="12.5" fill="#6b6b6b">이 다섯이 없으면 프로토타입처럼 보여도 '실제 서비스'가 되지 못합니다.</text>
+</svg>

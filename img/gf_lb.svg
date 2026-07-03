@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="320" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">로드 밸런싱 — 요청을 여러 서버에 고르게 나눈다</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">한 대로는 벅찬 트래픽을 여러 대가 나눠 받고, 한 대가 죽어도 나머지가 계속 처리합니다.</text>
+  <defs><marker id="lb" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/></marker></defs>
+  <rect x="50" y="130" width="140" height="70" rx="12" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="120" y="162" font-size="13" font-weight="700" fill="#3a6fd6" text-anchor="middle">사용자 요청</text>
+  <text x="120" y="182" font-size="10.5" fill="#6b6b6b" text-anchor="middle">다수</text>
+  <rect x="330" y="128" width="170" height="74" rx="12" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="415" y="158" font-size="13" font-weight="700" fill="#7c3aed" text-anchor="middle">로드 밸런서</text>
+  <text x="415" y="180" font-size="10.5" fill="#6b6b6b" text-anchor="middle">골고루 분배</text>
+  <line x1="190" y1="165" x2="328" y2="165" stroke="#9aa0a6" stroke-width="1.8" marker-end="url(#lb)"/>
+  <rect x="660" y="96" width="180" height="46" rx="10" fill="#eaf6ee" stroke="#bfe3cb"/><text x="750" y="124" font-size="12" fill="#1a7f37" text-anchor="middle">서버 A</text>
+  <rect x="660" y="150" width="180" height="46" rx="10" fill="#eaf6ee" stroke="#bfe3cb"/><text x="750" y="178" font-size="12" fill="#1a7f37" text-anchor="middle">서버 B</text>
+  <rect x="660" y="204" width="180" height="46" rx="10" fill="#fafbfc" stroke="#e3e6ea"/><text x="750" y="228" font-size="12" fill="#b00020" text-anchor="middle">서버 C (다운)</text>
+  <line x1="500" y1="158" x2="658" y2="120" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#lb)"/>
+  <line x1="500" y1="165" x2="658" y2="173" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#lb)"/>
+  <line x1="500" y1="175" x2="658" y2="222" stroke="#d0d3d7" stroke-width="1.6" stroke-dasharray="4 3"/>
+  <text x="580" y="252" font-size="10.5" fill="#b00020" text-anchor="middle">C가 죽으면 A·B로만 보냄</text>
+  <text x="40" y="290" font-size="12" fill="#6b6b6b">※ 서버를 늘려(수평 확장) 트래픽을 견디고, 장애 서버를 자동으로 빼내 서비스가 계속 돌게 합니다.</text>
+</svg>

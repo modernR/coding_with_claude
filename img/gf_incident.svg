@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 280" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="280" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">장애 대응 — 탐지에서 재발 방지까지</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">문제가 터졌을 때 서두르지 않고 순서대로 다룹니다.</text>
+  <defs><marker id="in" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/></marker></defs>
+  <g>
+    <rect x="40" y="110" width="150" height="72" rx="10" fill="#fdeef1" stroke="#f7c0c8"/>
+    <text x="115" y="140" font-size="13" font-weight="700" fill="#E8344E" text-anchor="middle">① 탐지</text>
+    <text x="115" y="162" font-size="10" fill="#6b6b6b" text-anchor="middle">모니터링·알림</text>
+    <rect x="210" y="110" width="150" height="72" rx="10" fill="#fff7e6" stroke="#f3d488"/>
+    <text x="285" y="140" font-size="13" font-weight="700" fill="#b8860b" text-anchor="middle">② 격리</text>
+    <text x="285" y="162" font-size="10" fill="#6b6b6b" text-anchor="middle">문제 부분 오프라인</text>
+    <rect x="380" y="110" width="150" height="72" rx="10" fill="#eef3fd" stroke="#bcd0f5"/>
+    <text x="455" y="140" font-size="13" font-weight="700" fill="#3a6fd6" text-anchor="middle">③ 복구</text>
+    <text x="455" y="162" font-size="10" fill="#6b6b6b" text-anchor="middle">백업에서 복원</text>
+    <rect x="550" y="110" width="150" height="72" rx="10" fill="#ede9fe" stroke="#a78bda"/>
+    <text x="625" y="140" font-size="13" font-weight="700" fill="#7c3aed" text-anchor="middle">④ 회고</text>
+    <text x="625" y="162" font-size="10" fill="#6b6b6b" text-anchor="middle">원인 분석</text>
+    <rect x="720" y="110" width="150" height="72" rx="10" fill="#f1faf3" stroke="#cfe9d7"/>
+    <text x="795" y="140" font-size="13" font-weight="700" fill="#1a7f37" text-anchor="middle">⑤ 재발 방지</text>
+    <text x="795" y="162" font-size="10" fill="#6b6b6b" text-anchor="middle">정책·교육</text>
+  </g>
+  <line x1="190" y1="146" x2="208" y2="146" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#in)"/>
+  <line x1="360" y1="146" x2="378" y2="146" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#in)"/>
+  <line x1="530" y1="146" x2="548" y2="146" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#in)"/>
+  <line x1="700" y1="146" x2="718" y2="146" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#in)"/>
+  <text x="40" y="228" font-size="12" fill="#6b6b6b">※ 미리 정해 두는 지표 — RTO(복구 목표 시간) · RPO(허용 데이터 손실) · SLA(가용성 약정, 예 99.9% = 월 43분 용인).</text>
+</svg>

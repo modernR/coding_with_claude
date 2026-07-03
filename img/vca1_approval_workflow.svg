@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 410" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="410" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">권한·승인 워크플로우 — PR에서 마켓플레이스 게시까지</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">자동 검토(서브에이전트) 4관점 통과 후 사람 검토까지 모두 승인돼야 머지·게시됩니다.</text>
+
+  <defs><marker id="vca1aw_ar" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/></marker></defs>
+
+  <!-- step 1 author -->
+  <rect x="40" y="95" width="180" height="60" rx="10" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="130" y="119" font-size="12" font-weight="700" fill="#3a6fd6" text-anchor="middle">① 작성·검증</text>
+  <text x="130" y="139" font-size="9.5" fill="#444" text-anchor="middle">본인 git 작성</text>
+  <text x="130" y="152" font-size="9" fill="#6b6b6b" text-anchor="middle">1~2주 사용</text>
+
+  <!-- step 2 PR -->
+  <rect x="260" y="95" width="180" height="60" rx="10" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="350" y="119" font-size="12" font-weight="700" fill="#3a6fd6" text-anchor="middle">② PR 제출</text>
+  <text x="350" y="139" font-size="9.5" fill="#444" text-anchor="middle">마켓플레이스 저장소</text>
+  <text x="350" y="152" font-size="9" fill="#6b6b6b" text-anchor="middle">GitHub Actions 발동</text>
+
+  <line x1="220" y1="125" x2="258" y2="125" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#vca1aw_ar)"/>
+
+  <!-- auto review 4 -->
+  <rect x="480" y="82" width="380" height="86" rx="11" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="500" y="104" font-size="12" font-weight="700" fill="#b8860b">③ 자동 검토 — 서브에이전트 4관점</text>
+  <text x="500" y="126" font-size="10" fill="#444">code-reviewer 코드 품질   ·   security-reviewer 보안</text>
+  <text x="500" y="143" font-size="10" fill="#444">license-auditor 라이선스   ·   도메인 정확성 검토</text>
+  <text x="500" y="160" font-size="9.5" fill="#6b6b6b">격리된 컨텍스트에서 병렬 검토, 결과만 PR에 코멘트</text>
+
+  <line x1="440" y1="125" x2="478" y2="125" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#vca1aw_ar)"/>
+
+  <!-- human review 3 -->
+  <rect x="480" y="200" width="380" height="86" rx="11" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="500" y="222" font-size="12" font-weight="700" fill="#7c3aed">④ 사람 검토</text>
+  <text x="500" y="244" font-size="10" fill="#444">보안팀 — 보안 위험   ·   법무팀 — 법적 위험(민감 도메인)</text>
+  <text x="500" y="261" font-size="10" fill="#444">도메인 리드 — 정확성</text>
+  <text x="500" y="278" font-size="9.5" fill="#6b6b6b">자동 검토가 통과해도 사람 승인 없이는 게시 불가</text>
+
+  <line x1="670" y1="168" x2="670" y2="198" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#vca1aw_ar)"/>
+
+  <!-- merge -->
+  <rect x="330" y="318" width="240" height="60" rx="11" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="450" y="342" font-size="12" font-weight="700" fill="#1a7f37" text-anchor="middle">⑤ 모두 승인 → 머지</text>
+  <text x="450" y="362" font-size="9.5" fill="#6b6b6b" text-anchor="middle">index.json 자동 갱신 → 전 직원 설치 가능</text>
+  <line x1="480" y1="286" x2="460" y2="316" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#vca1aw_ar)"/>
+
+  <!-- reject side note -->
+  <rect x="40" y="200" width="410" height="130" rx="11" fill="#fff5f6" stroke="#f3c9cf"/>
+  <text x="60" y="224" font-size="12" font-weight="700" fill="#b00020">자주 막히는 거부 패턴 5</text>
+  <text x="60" y="248" font-size="10" fill="#444">✕ 외부 데이터 라이선스 누락</text>
+  <text x="60" y="266" font-size="10" fill="#444">✕ API 키 코드에 하드코딩</text>
+  <text x="60" y="284" font-size="10" fill="#444">✕ 도메인 부정확 (법률·세무 사실 오류)</text>
+  <text x="60" y="302" font-size="10" fill="#444">✕ 권한 없는 사용자 데이터 수집</text>
+  <text x="60" y="320" font-size="10" fill="#444">✕ 다른 플러그인과 이름 충돌</text>
+</svg>

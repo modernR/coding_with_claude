@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="380" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">컨텍스트 노화(Context Rot) — 길어질수록 답이 나빠진다</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">토큰이 다 안 차도, 세션이 길어지면 품질이 조용히 떨어집니다. 비용보다 무섭습니다.</text>
+
+  <!-- 증상 -->
+  <rect x="40" y="92" width="400" height="180" rx="12" fill="#fff5f6" stroke="#f3c9cf"/>
+  <text x="60" y="120" font-size="14" font-weight="700" fill="#b00020">증상 — "점점 멍청해지는 느낌"</text>
+  <text x="60" y="148" font-size="11" fill="#444">· 앞에서 합의한 결정을 잊고 다른 답</text>
+  <text x="60" y="172" font-size="11" fill="#444">· 같은 파일을 또 읽으려 함</text>
+  <text x="60" y="196" font-size="11" fill="#444">· 사용자 의도와 다른 방향으로 작업</text>
+  <text x="60" y="220" font-size="11" fill="#444">· 전에 고친 버그를 또 만듦</text>
+  <text x="60" y="252" font-size="10.5" fill="#6b6b6b">원인: 모델은 모든 토큰을 동등한 무게로 보지</text>
+  <text x="60" y="268" font-size="10.5" fill="#6b6b6b">않음. 길수록 흐려지는 정보가 누적.</text>
+
+  <!-- 처방 -->
+  <rect x="460" y="92" width="400" height="248" rx="12" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="480" y="120" font-size="14" font-weight="700" fill="#1a7f37">처방 — 4가지 습관</text>
+  <text x="480" y="150" font-size="11.5" font-weight="700" fill="#1a1a1a">① 새 작업 = 새 세션</text>
+  <text x="480" y="168" font-size="10.5" fill="#444">모듈·기능 바뀌면 /clear → 앞 작업 잔재 0</text>
+  <text x="480" y="196" font-size="11.5" font-weight="700" fill="#1a1a1a">② /compact 정기 호출</text>
+  <text x="480" y="214" font-size="10.5" fill="#444">대화 30턴 이상이면 요약 → 토큰 50%↓</text>
+  <text x="480" y="242" font-size="11.5" font-weight="700" fill="#1a1a1a">③ 잘 쓴 CLAUDE.md</text>
+  <text x="480" y="260" font-size="10.5" fill="#444">매번 같은 설명을 다시 안 해도 됨</text>
+  <text x="480" y="288" font-size="11.5" font-weight="700" fill="#1a1a1a">④ 서브에이전트로 세션 분리</text>
+  <text x="480" y="306" font-size="10.5" fill="#444">큰 검색·분석은 별도 컨텍스트에 위임</text>
+  <text x="480" y="330" font-size="10.5" fill="#1a7f37">→ 비용 + 답 품질 + 안정성을 동시 해결</text>
+
+  <rect x="40" y="292" width="400" height="48" rx="9" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="56" y="314" font-size="10.8" fill="#1a1a1a">30분 이상 갔거나 답이 점점 이상하면 —</text>
+  <text x="56" y="332" font-size="10.8" fill="#b00020">묻지 말고 /clear 후 다시 시작하세요.</text>
+</svg>

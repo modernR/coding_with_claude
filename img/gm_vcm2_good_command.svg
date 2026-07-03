@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="320" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">좋은 커맨드의 7가지 요소</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">안정된 커맨드에는 이 일곱 가지가 모두 들어 있습니다.</text>
+
+  <rect x="40" y="95" width="265" height="66" rx="9" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="58" y="120" font-size="12.5" font-weight="700" fill="#3a6fd6">① 이름</text>
+  <text x="58" y="142" font-size="10.5" fill="#444">짧고 의도가 명확한 명령어</text>
+
+  <rect x="317" y="95" width="265" height="66" rx="9" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="335" y="120" font-size="12.5" font-weight="700" fill="#3a6fd6">② 역할 정의</text>
+  <text x="335" y="142" font-size="10.5" fill="#444">첫 줄 "당신은 X"</text>
+
+  <rect x="594" y="95" width="266" height="66" rx="9" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="612" y="120" font-size="12.5" font-weight="700" fill="#3a6fd6">③ 입력</text>
+  <text x="612" y="142" font-size="10.5" fill="#444">어떤 변수·맥락을 받는가</text>
+
+  <rect x="40" y="171" width="265" height="66" rx="9" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="58" y="196" font-size="12.5" font-weight="700" fill="#1a7f37">④ 단계</text>
+  <text x="58" y="218" font-size="10.5" fill="#444">순차로 무엇을 할지</text>
+
+  <rect x="317" y="171" width="265" height="66" rx="9" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="335" y="196" font-size="12.5" font-weight="700" fill="#1a7f37">⑤ 출력 형식</text>
+  <text x="335" y="218" font-size="10.5" fill="#444">정확한 H1·H2 구조</text>
+
+  <rect x="594" y="171" width="266" height="66" rx="9" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="612" y="196" font-size="12.5" font-weight="700" fill="#1a7f37">⑥ 진행 원칙</text>
+  <text x="612" y="218" font-size="10.5" fill="#444">plan·검증·재실행</text>
+
+  <rect x="40" y="247" width="542" height="52" rx="9" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="58" y="272" font-size="12.5" font-weight="700" fill="#b8860b">⑦ 호출 예시</text>
+  <text x="58" y="291" font-size="10.5" fill="#444">처음 보는 사람도 이해할 수 있는 사용 예</text>
+
+  <rect x="594" y="247" width="266" height="52" rx="9" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="727" y="270" font-size="10.5" fill="#6b6b6b" text-anchor="middle">일곱 요소가 모두 갖춰지면</text>
+  <text x="727" y="288" font-size="10.5" fill="#6b6b6b" text-anchor="middle">매일 가치를 내는 자산</text>
+</svg>

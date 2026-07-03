@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="400" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">6개 핵심 MCP 지도 — 무엇을 어디에 쓰나</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">RSVP 서비스를 운영한다고 상상하면 각 MCP의 자리를 잡기 쉽습니다.</text>
+
+  <rect x="40" y="95" width="265" height="130" rx="11" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="58" y="120" font-size="13" font-weight="700" fill="#7c3aed">Notion</text>
+  <text x="58" y="142" font-size="10.5" fill="#444">페이지 생성·DB 쿼리·블록</text>
+  <text x="58" y="158" font-size="10.5" fill="#444">편집·공유 권한 자동화</text>
+  <text x="58" y="184" font-size="10" fill="#6b6b6b">RSVP: 참석 현황을 표로 정리해</text>
+  <text x="58" y="200" font-size="10" fill="#6b6b6b">기획 페이지에 자동 발행</text>
+  <text x="58" y="216" font-size="9.5" fill="#9aa0a6">문서·노트 카테고리</text>
+
+  <rect x="318" y="95" width="265" height="130" rx="11" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="336" y="120" font-size="13" font-weight="700" fill="#b8860b">Playwright</text>
+  <text x="336" y="142" font-size="10.5" fill="#444">E2E 테스트·스크래핑·스크린샷</text>
+  <text x="336" y="158" font-size="10.5" fill="#444">·폼 자동 입력 (실제 브라우저)</text>
+  <text x="336" y="184" font-size="10" fill="#6b6b6b">RSVP: 신청→취소 플로우를</text>
+  <text x="336" y="200" font-size="10" fill="#6b6b6b">자동 클릭·검증하고 보고</text>
+  <text x="336" y="216" font-size="9.5" fill="#9aa0a6">느림·인증 주의</text>
+
+  <rect x="596" y="95" width="265" height="130" rx="11" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="614" y="120" font-size="13" font-weight="700" fill="#3a6fd6">GitHub</text>
+  <text x="614" y="142" font-size="10.5" fill="#444">PR·이슈·commit·릴리스·</text>
+  <text x="614" y="158" font-size="10.5" fill="#444">CI/CD 트리거</text>
+  <text x="614" y="184" font-size="10" fill="#6b6b6b">RSVP: 정원 로직 PR을</text>
+  <text x="614" y="200" font-size="10" fill="#6b6b6b">서브에이전트로 자가 리뷰</text>
+  <text x="614" y="216" font-size="9.5" fill="#9aa0a6">서브에이전트와 조합</text>
+
+  <rect x="40" y="240" width="265" height="130" rx="11" fill="#fff5f6" stroke="#f3c9cf"/>
+  <text x="58" y="265" font-size="13" font-weight="700" fill="#b00020">Sentry</text>
+  <text x="58" y="287" font-size="10.5" fill="#444">에러 모니터링·분류·수정 후</text>
+  <text x="58" y="303" font-size="10.5" fill="#444">검증 (빈도·영향 사용자)</text>
+  <text x="58" y="329" font-size="10" fill="#6b6b6b">RSVP: 신청 API 500 에러를</text>
+  <text x="58" y="345" font-size="10" fill="#6b6b6b">Linear 이슈로 자동 등록</text>
+  <text x="58" y="361" font-size="9.5" fill="#9aa0a6">모니터링 카테고리</text>
+
+  <rect x="318" y="240" width="265" height="130" rx="11" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="336" y="265" font-size="13" font-weight="700" fill="#1a7f37">Stripe·Toss</text>
+  <text x="336" y="287" font-size="10.5" fill="#444">결제 조회·환불·구독·매출</text>
+  <text x="336" y="303" font-size="10.5" fill="#444">리포트 (결제)</text>
+  <text x="336" y="329" font-size="10" fill="#6b6b6b">RSVP: 유료 이벤트 환불</text>
+  <text x="336" y="345" font-size="10" fill="#6b6b6b">사유를 분석해 보고서화</text>
+  <text x="336" y="361" font-size="9.5" fill="#b00020">읽기 전용으로 시작</text>
+
+  <rect x="596" y="240" width="265" height="130" rx="11" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="614" y="265" font-size="13" font-weight="700" fill="#1a1a1a">Supabase</text>
+  <text x="614" y="287" font-size="10.5" fill="#444">마이그레이션·RLS 검토·성능</text>
+  <text x="614" y="303" font-size="10.5" fill="#444">진단·타입 자동 생성</text>
+  <text x="614" y="329" font-size="10" fill="#6b6b6b">RSVP: events 테이블에 capacity</text>
+  <text x="614" y="345" font-size="10" fill="#6b6b6b">컬럼 추가+RLS+타입 한 번에</text>
+  <text x="614" y="361" font-size="9.5" fill="#9aa0a6">DB·데이터 카테고리</text>
+</svg>

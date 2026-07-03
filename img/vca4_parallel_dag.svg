@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="400" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">병렬·순차 처리 설계 — 의존 관계 DAG</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">작업=노드, 의존=화살표. 독립 노드는 병렬로, 의존 노드는 순차로 실행합니다.</text>
+
+  <defs>
+    <marker id="pd_a" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/>
+    </marker>
+  </defs>
+
+  <text x="120" y="105" font-size="11" font-weight="700" fill="#7c3aed" text-anchor="middle">1차 병렬 (독립)</text>
+  <rect x="50" y="120" width="140" height="44" rx="9" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="120" y="147" font-size="10" fill="#7c3aed" text-anchor="middle">prd-writer</text>
+  <rect x="50" y="180" width="140" height="44" rx="9" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="120" y="207" font-size="10" fill="#7c3aed" text-anchor="middle">market-researcher</text>
+  <rect x="50" y="240" width="140" height="44" rx="9" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="120" y="267" font-size="10" fill="#7c3aed" text-anchor="middle">ui-designer</text>
+
+  <text x="390" y="105" font-size="11" font-weight="700" fill="#3a6fd6" text-anchor="middle">2차 (앞 결과 사용)</text>
+  <rect x="320" y="150" width="140" height="44" rx="9" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="390" y="177" font-size="10" fill="#3a6fd6" text-anchor="middle">architect</text>
+  <rect x="320" y="240" width="140" height="44" rx="9" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="390" y="267" font-size="10" fill="#3a6fd6" text-anchor="middle">code-implementer</text>
+
+  <text x="650" y="105" font-size="11" font-weight="700" fill="#b8860b" text-anchor="middle">3차 순차</text>
+  <rect x="580" y="195" width="140" height="44" rx="9" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="650" y="222" font-size="10" fill="#b8860b" text-anchor="middle">test-writer</text>
+  <rect x="580" y="280" width="140" height="44" rx="9" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="650" y="307" font-size="10" fill="#b8860b" text-anchor="middle">deployer</text>
+
+  <rect x="760" y="195" width="110" height="44" rx="9" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="815" y="222" font-size="10" fill="#1a7f37" text-anchor="middle">완료</text>
+
+  <line x1="190" y1="142" x2="316" y2="168" stroke="#9aa0a6" stroke-width="1.4" marker-end="url(#pd_a)"/>
+  <line x1="190" y1="202" x2="316" y2="176" stroke="#9aa0a6" stroke-width="1.4" marker-end="url(#pd_a)"/>
+  <line x1="190" y1="262" x2="316" y2="262" stroke="#9aa0a6" stroke-width="1.4" marker-end="url(#pd_a)"/>
+  <line x1="460" y1="172" x2="576" y2="212" stroke="#9aa0a6" stroke-width="1.4" marker-end="url(#pd_a)"/>
+  <line x1="460" y1="262" x2="576" y2="222" stroke="#9aa0a6" stroke-width="1.4" marker-end="url(#pd_a)"/>
+  <line x1="650" y1="239" x2="650" y2="276" stroke="#9aa0a6" stroke-width="1.4" marker-end="url(#pd_a)"/>
+  <line x1="720" y1="217" x2="756" y2="217" stroke="#9aa0a6" stroke-width="1.4" marker-end="url(#pd_a)"/>
+
+  <rect x="50" y="335" width="820" height="46" rx="10" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="60" y="356" font-size="10.5" fill="#444">순차(모두 한 명씩) 7명×5분 = 35분 → 병렬(가능한 만큼) 가장 긴 경로 ≈ 18분</text>
+  <text x="60" y="373" font-size="10.5" font-weight="700" fill="#1a7f37">약 51% 단축 — 병렬 가능한 단계가 많을수록 절감 폭이 큽니다.</text>
+</svg>

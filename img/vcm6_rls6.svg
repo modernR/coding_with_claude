@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="420" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">RLS 6패턴 — 행 단위 접근을 SQL 조건으로 표현하기</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">"이 행을 이 역할이 볼/바꿀 수 있는가"를 정책 조건식으로 정의합니다. 넓은 것부터 좁은 순서입니다.</text>
+
+  <!-- 6 cards, 3 x 2 -->
+  <!-- 1 public -->
+  <rect x="40" y="95" width="265" height="140" rx="11" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="58" y="120" font-size="13" font-weight="700" fill="#1a7f37">① 모두 공개</text>
+  <rect x="58" y="132" width="229" height="26" rx="6" fill="#ffffff" stroke="#cfe9d7"/>
+  <text x="68" y="150" font-size="10" fill="#444" font-family="monospace">using ( true )</text>
+  <text x="58" y="180" font-size="10" fill="#6b6b6b">누구나 접근. 공개 게시판·이벤트 상세</text>
+  <text x="58" y="200" font-size="10" fill="#6b6b6b">RSVP: events 테이블 SELECT</text>
+  <text x="58" y="222" font-size="9.5" fill="#1a7f37">가장 넓음</text>
+
+  <!-- 2 authenticated -->
+  <rect x="320" y="95" width="265" height="140" rx="11" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="338" y="120" font-size="13" font-weight="700" fill="#3a6fd6">② 인증 사용자만</text>
+  <rect x="338" y="132" width="229" height="26" rx="6" fill="#ffffff" stroke="#bcd0f5"/>
+  <text x="348" y="150" font-size="9" fill="#444" font-family="monospace">auth.uid() IS NOT NULL</text>
+  <text x="338" y="180" font-size="10" fill="#6b6b6b">로그인한 회원 전용 영역</text>
+  <text x="338" y="200" font-size="10" fill="#6b6b6b">RSVP: 신청 폼 제출(INSERT)</text>
+
+  <!-- 3 own data -->
+  <rect x="600" y="95" width="260" height="140" rx="11" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="618" y="120" font-size="13" font-weight="700" fill="#7c3aed">③ 본인 데이터만</text>
+  <rect x="618" y="132" width="224" height="26" rx="6" fill="#ffffff" stroke="#a78bda"/>
+  <text x="628" y="150" font-size="9" fill="#444" font-family="monospace">auth.uid() = user_id</text>
+  <text x="618" y="180" font-size="10" fill="#6b6b6b">개인 프로필·내 신청 취소</text>
+  <text x="618" y="200" font-size="10" fill="#6b6b6b">RSVP: 본인 rsvp UPDATE/DELETE</text>
+
+  <!-- 4 role -->
+  <rect x="40" y="248" width="265" height="140" rx="11" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="58" y="273" font-size="13" font-weight="700" fill="#b8860b">④ 역할 기반</text>
+  <rect x="58" y="285" width="229" height="26" rx="6" fill="#ffffff" stroke="#f0d6b8"/>
+  <text x="68" y="303" font-size="8.5" fill="#444" font-family="monospace">auth.jwt()->>'role' = 'admin'</text>
+  <text x="58" y="333" font-size="10" fill="#6b6b6b">관리자 전용 작업</text>
+  <text x="58" y="353" font-size="10" fill="#6b6b6b">RSVP: 이벤트 생성·정원 변경</text>
+
+  <!-- 5 group -->
+  <rect x="320" y="248" width="265" height="140" rx="11" fill="#fff5f6" stroke="#f3c9cf"/>
+  <text x="338" y="273" font-size="13" font-weight="700" fill="#b00020">⑤ 소속 그룹</text>
+  <rect x="338" y="285" width="229" height="26" rx="6" fill="#ffffff" stroke="#f3c9cf"/>
+  <text x="348" y="303" font-size="8" fill="#444" font-family="monospace">EXISTS(... members ...)</text>
+  <text x="338" y="333" font-size="10" fill="#6b6b6b">팀·이벤트 담당자 데이터</text>
+  <text x="338" y="353" font-size="10" fill="#6b6b6b">RSVP: 호스트가 담당 명단 조회</text>
+
+  <!-- 6 time -->
+  <rect x="600" y="248" width="260" height="140" rx="11" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="618" y="273" font-size="13" font-weight="700" fill="#1a1a1a">⑥ 시간 기반</text>
+  <rect x="618" y="285" width="224" height="26" rx="6" fill="#ffffff" stroke="#e3e6ea"/>
+  <text x="628" y="303" font-size="7.5" fill="#444" font-family="monospace">created_at > now()-interval '24h'</text>
+  <text x="618" y="333" font-size="10" fill="#6b6b6b">최근 데이터만 노출</text>
+  <text x="618" y="353" font-size="10" fill="#6b6b6b">RSVP: 마감 후 조회만 허용 등</text>
+
+  <text x="450" y="410" font-size="9.5" fill="#6b6b6b" text-anchor="middle">조합 가능: 한 테이블에 SELECT·INSERT·UPDATE·DELETE별로 서로 다른 패턴을 붙입니다.</text>
+</svg>

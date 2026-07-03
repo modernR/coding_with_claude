@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="300" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">구독 플랜 사다리 — 사용량이 늘수록 위로</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">체험은 Free·Pro, 본격 실무는 Max, 조직 공유는 Team·Enterprise로 올라갑니다.</text>
+
+  <defs><marker id="pl" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/></marker></defs>
+
+  <!-- ladder cards -->
+  <rect x="40" y="150" width="150" height="90" rx="10" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="115" y="176" font-size="13" font-weight="700" fill="#1a1a1a" text-anchor="middle">Free</text>
+  <text x="115" y="196" font-size="11" fill="#6b6b6b" text-anchor="middle">$0</text>
+  <text x="115" y="222" font-size="9.5" fill="#444" text-anchor="middle">처음 체험</text>
+
+  <rect x="200" y="130" width="150" height="110" rx="10" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="275" y="156" font-size="13" font-weight="700" fill="#3a6fd6" text-anchor="middle">Pro</text>
+  <text x="275" y="176" font-size="11" fill="#6b6b6b" text-anchor="middle">$20 / 월</text>
+  <text x="275" y="202" font-size="9.5" fill="#444" text-anchor="middle">개인 전문가</text>
+  <text x="275" y="218" font-size="9.5" fill="#444" text-anchor="middle">가볍게 배우기</text>
+
+  <rect x="360" y="106" width="150" height="134" rx="10" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="435" y="132" font-size="13" font-weight="700" fill="#b8860b" text-anchor="middle">Max</text>
+  <text x="435" y="152" font-size="11" fill="#6b6b6b" text-anchor="middle">$100~200 / 월</text>
+  <text x="435" y="178" font-size="9.5" fill="#444" text-anchor="middle">헤비 사용자</text>
+  <text x="435" y="194" font-size="9.5" fill="#444" text-anchor="middle">여러 작업 동시</text>
+  <text x="435" y="216" font-size="9.5" font-weight="700" fill="#b8860b" text-anchor="middle">실무 권장</text>
+
+  <rect x="520" y="130" width="150" height="110" rx="10" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="595" y="156" font-size="13" font-weight="700" fill="#7c3aed" text-anchor="middle">Team</text>
+  <text x="595" y="176" font-size="11" fill="#6b6b6b" text-anchor="middle">1인당 / 월</text>
+  <text x="595" y="202" font-size="9.5" fill="#444" text-anchor="middle">소규모 팀</text>
+  <text x="595" y="218" font-size="9.5" fill="#444" text-anchor="middle">조직 내 공유</text>
+
+  <rect x="680" y="150" width="180" height="90" rx="10" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="770" y="176" font-size="13" font-weight="700" fill="#1a7f37" text-anchor="middle">Enterprise</text>
+  <text x="770" y="196" font-size="11" fill="#6b6b6b" text-anchor="middle">협상</text>
+  <text x="770" y="222" font-size="9.5" fill="#444" text-anchor="middle">100명+ 조직 · 정책 통합</text>
+
+  <line x1="190" y1="195" x2="198" y2="195" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#pl)"/>
+  <line x1="350" y1="185" x2="358" y2="185" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#pl)"/>
+  <line x1="510" y1="185" x2="518" y2="185" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#pl)"/>
+  <line x1="670" y1="195" x2="678" y2="195" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#pl)"/>
+
+  <text x="40" y="278" font-size="11" fill="#6b6b6b">Pro·Max 구독 하나로 Claude Code와 Cowork을 모두 씁니다. 도입 1차 추정: (헤비×$100) + (라이트×$20) + 마진 20%.</text>
+</svg>

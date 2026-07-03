@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 300" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="880" height="300" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">빌드 — 개발 코드가 사용자 브라우저에 도착하기까지</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">개발자가 쓴 코드는 그대로 전달되지 않습니다. '공장(빌드)'을 거쳐 가볍고 안전하게.</text>
+
+  <defs><marker id="bd" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/></marker></defs>
+
+  <g text-anchor="middle">
+    <rect x="30" y="120" width="120" height="60" rx="10" fill="#eef3fd" stroke="#bcd0f5"/><text x="90" y="148" font-size="12.5" font-weight="700" fill="#3a6fd6">개발 코드</text><text x="90" y="167" font-size="10" fill="#6b6b6b">주석·디버그 포함</text>
+    <rect x="182" y="120" width="120" height="60" rx="10" fill="#fff7e6" stroke="#f3d488"/><text x="242" y="145" font-size="12" font-weight="700" fill="#b8860b">① 트랜스파일</text><text x="242" y="164" font-size="9.5" fill="#6b6b6b">최신 JS→구형 호환</text>
+    <rect x="334" y="120" width="120" height="60" rx="10" fill="#fff7e6" stroke="#f3d488"/><text x="394" y="145" font-size="12" font-weight="700" fill="#b8860b">② 번들</text><text x="394" y="164" font-size="9.5" fill="#6b6b6b">여러 파일→소수로</text>
+    <rect x="486" y="120" width="120" height="60" rx="10" fill="#fff7e6" stroke="#f3d488"/><text x="546" y="145" font-size="12" font-weight="700" fill="#b8860b">③ 최소화</text><text x="546" y="164" font-size="9.5" fill="#6b6b6b">공백·주석·변수 축약</text>
+    <rect x="638" y="120" width="120" height="60" rx="10" fill="#fff7e6" stroke="#f3d488"/><text x="698" y="145" font-size="12" font-weight="700" fill="#b8860b">④ 트리셰이킹</text><text x="698" y="164" font-size="9.5" fill="#6b6b6b">안 쓰는 코드 제거</text>
+    <rect x="790" y="120" width="90" height="60" rx="10" fill="#fdeef1" stroke="#f7c0c8"/><text x="835" y="148" font-size="12" font-weight="700" fill="#E8344E">CDN</text><text x="835" y="167" font-size="9.5" fill="#6b6b6b">→ 사용자</text>
+  </g>
+  <g stroke="#9aa0a6" stroke-width="1.8">
+    <line x1="150" y1="150" x2="180" y2="150" marker-end="url(#bd)"/>
+    <line x1="302" y1="150" x2="332" y2="150" marker-end="url(#bd)"/>
+    <line x1="454" y1="150" x2="484" y2="150" marker-end="url(#bd)"/>
+    <line x1="606" y1="150" x2="636" y2="150" marker-end="url(#bd)"/>
+    <line x1="758" y1="150" x2="788" y2="150" marker-end="url(#bd)"/>
+  </g>
+
+  <text x="40" y="230" font-size="12.5" fill="#1a1a1a">목표 3가지: <tspan font-weight="700">빠른 로드</tspan>(파일 축소) · <tspan font-weight="700">보안</tspan>(난독화) · <tspan font-weight="700">호환성</tspan>(구형 브라우저 지원)</text>
+  <text x="40" y="258" font-size="12" fill="#9aa0a6">비유 — 원고(개발 코드) → 편집·교정(최소화) → 인쇄 최적화(번들·트리셰이킹) → 서점 배포(CDN).</text>
+  <text x="40" y="282" font-size="11.5" fill="#6b6b6b">도구: 패키지 관리 npm/pnpm/yarn · 빌드 Vite/webpack/esbuild/Turbopack (현재 일반 Vite, 풀스택 Next.js).</text>
+</svg>

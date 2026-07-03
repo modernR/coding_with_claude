@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="400" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">자동화 적합도 — 4축(FROM·HOW·OUTPUT·WHO)</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">모든 일이 자동화에 적합하진 않습니다. 잘못 자동화하면 시간이 늘고 품질이 떨어집니다.</text>
+
+  <defs><marker id="fa" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/></marker></defs>
+
+  <!-- 4 axes as decision flow -->
+  <rect x="40" y="100" width="180" height="70" rx="10" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="130" y="126" font-size="12.5" font-weight="700" fill="#3a6fd6" text-anchor="middle">① FROM</text>
+  <text x="130" y="146" font-size="10" fill="#6b6b6b" text-anchor="middle">데이터 입처가</text>
+  <text x="130" y="160" font-size="10" fill="#6b6b6b" text-anchor="middle">명확한가?</text>
+
+  <rect x="250" y="100" width="180" height="70" rx="10" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="340" y="126" font-size="12.5" font-weight="700" fill="#3a6fd6" text-anchor="middle">② HOW</text>
+  <text x="340" y="146" font-size="10" fill="#6b6b6b" text-anchor="middle">처리 절차가</text>
+  <text x="340" y="160" font-size="10" fill="#6b6b6b" text-anchor="middle">룰화 가능한가?</text>
+
+  <rect x="460" y="100" width="180" height="70" rx="10" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="550" y="126" font-size="12.5" font-weight="700" fill="#3a6fd6" text-anchor="middle">③ OUTPUT</text>
+  <text x="550" y="146" font-size="10" fill="#6b6b6b" text-anchor="middle">결과물 형식이</text>
+  <text x="550" y="160" font-size="10" fill="#6b6b6b" text-anchor="middle">정해져 있는가?</text>
+
+  <rect x="670" y="100" width="180" height="70" rx="10" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="760" y="126" font-size="12.5" font-weight="700" fill="#b8860b" text-anchor="middle">④ WHO</text>
+  <text x="760" y="146" font-size="10" fill="#6b6b6b" text-anchor="middle">결과를 누가</text>
+  <text x="760" y="160" font-size="10" fill="#6b6b6b" text-anchor="middle">보고 책임지는가?</text>
+
+  <line x1="220" y1="135" x2="248" y2="135" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#fa)"/>
+  <line x1="430" y1="135" x2="458" y2="135" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#fa)"/>
+  <line x1="640" y1="135" x2="668" y2="135" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#fa)"/>
+
+  <!-- outcomes -->
+  <rect x="40" y="196" width="810" height="30" rx="7" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="52" y="216" font-size="11.5" fill="#1a7f37">4축 모두 적합 → <tspan font-weight="700">완전 자동화</tspan> (사람은 가끔 점검) · WHO가 외부·규제·임원이면 <tspan font-weight="700">완전 자동화 + 사람 검수 의무</tspan></text>
+  <rect x="40" y="230" width="810" height="30" rx="7" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="52" y="250" font-size="11.5" fill="#b8860b">일부만 적합 → <tspan font-weight="700">부분 자동화</tspan> (입력·전처리·초안만, 마감은 사람)</text>
+  <rect x="40" y="264" width="810" height="30" rx="7" fill="#fff5f6" stroke="#f3c9cf"/>
+  <text x="52" y="284" font-size="11.5" fill="#b00020">모두 부적합 → <tspan font-weight="700">수동 유지</tspan> (정책 결정·1:1 면담 등)</text>
+
+  <!-- 예시 -->
+  <rect x="40" y="310" width="810" height="76" rx="9" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="56" y="332" font-size="11.5" font-weight="700" fill="#1a1a1a">예시</text>
+  <text x="56" y="352" font-size="10.5" fill="#444">완전: 주간 KPI 보고 · 회의록 정리 · 이벤트 RSVP 처리   |   부분: 신규 PRD 초안(→임원) · 인터뷰 분석</text>
+  <text x="56" y="372" font-size="10.5" fill="#444">완전+검수: 카드뉴스 정기 발행(SNS 공개)   |   수동: 신규 기능 정책 결정(법무) · 직원 1:1 면담</text>
+</svg>

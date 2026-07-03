@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="420" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">Claude Code vs Cowork — 같은 엔진, 다른 인터페이스</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">"어느 쪽이 더 좋다"가 아니라 "누구에게 어느 쪽이 어울린다"의 문제입니다.</text>
+
+  <!-- Code -->
+  <rect x="36" y="90" width="404" height="300" rx="12" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="56" y="120" font-size="15" font-weight="700" fill="#3a6fd6">Claude Code (CLI)</text>
+  <text x="56" y="142" font-size="11" fill="#3a6fd6">평소 터미널을 쓰는 개발자의 두 번째 손</text>
+
+  <g font-size="11.5" fill="#1a1a1a">
+    <text x="56" y="176" font-weight="700" fill="#6b6b6b">대상</text><text x="150" y="176">개발자 · DevOps · 시스템 관리자</text>
+    <text x="56" y="204" font-weight="700" fill="#6b6b6b">인터페이스</text><text x="150" y="204">터미널 (텍스트, 마우스 없음)</text>
+    <text x="56" y="232" font-weight="700" fill="#6b6b6b">격리</text><text x="150" y="232">호스트 OS 직접 접근</text>
+    <text x="56" y="260" font-weight="700" fill="#6b6b6b">파일 접근</text><text x="150" y="260">사용자 권한 안이면 어디든</text>
+    <text x="56" y="288" font-weight="700" fill="#6b6b6b">권한 철학</text><text x="150" y="288">매번 묻고 승인 (Plan/Accept)</text>
+    <text x="56" y="316" font-weight="700" fill="#6b6b6b">Git·IDE</text><text x="150" y="316">매우 깊은 통합 (VS Code 등)</text>
+  </g>
+  <rect x="56" y="336" width="360" height="38" rx="8" fill="#ffffff" stroke="#bcd0f5"/>
+  <text x="72" y="359" font-size="11" fill="#3a6fd6">강점: 속도·깊이 / 한계: 터미널 진입장벽, 오피스·이미지 약함</text>
+
+  <!-- Cowork -->
+  <rect x="460" y="90" width="404" height="300" rx="12" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="480" y="120" font-size="15" font-weight="700" fill="#b8860b">Claude Cowork (Desktop)</text>
+  <text x="480" y="142" font-size="11" fill="#b8860b">비개발자의 자동화된 인턴</text>
+
+  <g font-size="11.5" fill="#1a1a1a">
+    <text x="480" y="176" font-weight="700" fill="#8a6d1a">대상</text><text x="580" y="176">기획 · 마케팅 · 운영 · 오피스</text>
+    <text x="480" y="204" font-weight="700" fill="#8a6d1a">인터페이스</text><text x="580" y="204">데스크톱 GUI (채팅 + 워크스페이스)</text>
+    <text x="480" y="232" font-weight="700" fill="#8a6d1a">격리</text><text x="580" y="232">격리된 Linux 샌드박스 VM</text>
+    <text x="480" y="260" font-weight="700" fill="#8a6d1a">파일 접근</text><text x="580" y="260">명시적으로 마운트한 폴더만</text>
+    <text x="480" y="288" font-weight="700" fill="#8a6d1a">권한 철학</text><text x="580" y="288">허락한 범위 안 (마운트 + 티어)</text>
+    <text x="480" y="316" font-weight="700" fill="#8a6d1a">Git·IDE</text><text x="580" y="316">폴더가 Git이면 가능 · IDE 통합 없음</text>
+  </g>
+  <rect x="480" y="336" width="360" height="38" rx="8" fill="#ffffff" stroke="#f0d6b8"/>
+  <text x="496" y="359" font-size="11" fill="#b8860b">강점: GUI·격리·MCP 마켓 / 한계: 깊은 코드작업은 CLI보다 느림</text>
+
+  <text x="40" y="410" font-size="11" fill="#9aa0a6">Pro·Max 구독 하나로 두 도구를 모두 사용할 수 있습니다. 개발팀엔 Code, 비개발팀엔 Cowork 배포가 가장 흔한 조합입니다.</text>
+</svg>

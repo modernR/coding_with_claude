@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 340" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="880" height="340" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">인프라 4계층 — 무엇까지 내가 관리하나</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">위로 갈수록 내 관리 책임은 작아지고, 자유도도 줄어듭니다.</text>
+
+  <g font-size="11">
+    <rect x="36" y="92" width="808" height="52" rx="8" fill="#fff5f6" stroke="#f3c9cf"/>
+    <text x="56" y="114" font-size="13" font-weight="700" fill="#b00020">IaaS</text><text x="56" y="132" font-size="10" fill="#6b6b6b">AWS EC2·GCE</text>
+    <text x="240" y="122" fill="#1a1a1a">내가 관리: 앱 · 런타임 · OS · DB (거의 전부)</text><text x="720" y="122" fill="#9aa0a6" text-anchor="end">자유도 최고 · 비용·부담 큼</text>
+
+    <rect x="36" y="152" width="808" height="52" rx="8" fill="#fff7e6" stroke="#f3d488"/>
+    <text x="56" y="174" font-size="13" font-weight="700" fill="#b8860b">PaaS</text><text x="56" y="192" font-size="10" fill="#6b6b6b">Vercel·Render</text>
+    <text x="240" y="182" fill="#1a1a1a">내가 관리: 앱 코드만 (OS·런타임은 자동)</text><text x="720" y="182" fill="#9aa0a6" text-anchor="end">초기 팀에 적합</text>
+
+    <rect x="36" y="212" width="808" height="52" rx="8" fill="#eef3fd" stroke="#bcd0f5"/>
+    <text x="56" y="234" font-size="13" font-weight="700" fill="#3a6fd6">BaaS</text><text x="56" y="252" font-size="10" fill="#6b6b6b">Supabase·Firebase</text>
+    <text x="240" y="242" fill="#1a1a1a">내가 관리: 프론트엔드만 (DB·인증·스토리지 자동)</text><text x="720" y="242" fill="#9aa0a6" text-anchor="end">가장 빠른 출시</text>
+
+    <rect x="36" y="272" width="808" height="46" rx="8" fill="#f1faf3" stroke="#cfe9d7"/>
+    <text x="56" y="292" font-size="13" font-weight="700" fill="#1a7f37">SaaS</text><text x="56" y="308" font-size="10" fill="#6b6b6b">Slack·Workspace</text>
+    <text x="240" y="299" fill="#1a1a1a">내가 관리: 없음 — 완성품을 '사용자로' 씀</text><text x="720" y="299" fill="#9aa0a6" text-anchor="end">관리 책임 최저</text>
+  </g>
+</svg>

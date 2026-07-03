@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="300" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">스킬의 두 진입로 — 명시 호출과 자동 감지</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">명시 호출의 확실성과 자동 감지의 편의성을 동시에 제공합니다.</text>
+
+  <defs><marker id="gm2se" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/></marker></defs>
+
+  <!-- path 1 -->
+  <rect x="40" y="100" width="330" height="80" rx="10" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="205" y="126" font-size="13" font-weight="700" fill="#3a6fd6" text-anchor="middle">① 명시 호출 (사용자)</text>
+  <text x="205" y="150" font-size="11" fill="#444" text-anchor="middle" font-family="monospace">/rsvp-summary 신제품발표회</text>
+  <text x="205" y="170" font-size="10" fill="#6b6b6b" text-anchor="middle">시점·대상을 사용자가 정함 → 확실</text>
+
+  <!-- path 2 -->
+  <rect x="40" y="196" width="330" height="80" rx="10" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="205" y="222" font-size="13" font-weight="700" fill="#b8860b" text-anchor="middle">② 자동 감지 (LLM 판단)</text>
+  <text x="205" y="246" font-size="10.5" fill="#444" text-anchor="middle">"다음 주 행사 참석자 현황 정리해줘"</text>
+  <text x="205" y="266" font-size="10" fill="#6b6b6b" text-anchor="middle">발화가 description과 매칭 → 편리</text>
+
+  <!-- arrows to skill -->
+  <line x1="370" y1="140" x2="560" y2="170" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#gm2se)"/>
+  <line x1="370" y1="236" x2="560" y2="200" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#gm2se)"/>
+
+  <!-- skill box -->
+  <rect x="565" y="130" width="295" height="110" rx="12" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="712" y="160" font-size="14" font-weight="700" fill="#7c3aed" text-anchor="middle">rsvp-summary 스킬</text>
+  <text x="712" y="186" font-size="10.5" fill="#444" text-anchor="middle">SKILL.md의 지시대로 실행</text>
+  <text x="712" y="212" font-size="10" fill="#6b6b6b" text-anchor="middle">좋은 description이</text>
+  <text x="712" y="228" font-size="10" fill="#6b6b6b" text-anchor="middle">자동 감지 정확도를 좌우</text>
+</svg>

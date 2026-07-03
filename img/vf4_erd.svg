@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 380" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="880" height="380" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">이벤트 RSVP의 ERD — 테이블과 외래키(관계)</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">외래키(FK)가 테이블 사이의 '연결고리'입니다. 이래서 '관계형'입니다.</text>
+
+  <defs><marker id="er" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/></marker></defs>
+
+  <!-- users -->
+  <rect x="60" y="120" width="200" height="120" rx="8" fill="#eef3fd" stroke="#bcd0f5"/>
+  <rect x="60" y="120" width="200" height="26" rx="8" fill="#3a6fd6"/><text x="160" y="138" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">users (회원)</text>
+  <text x="74" y="166" font-size="11" fill="#1a1a1a">id (PK)</text>
+  <text x="74" y="186" font-size="11" fill="#6b6b6b">email</text>
+  <text x="74" y="206" font-size="11" fill="#6b6b6b">name</text>
+  <text x="74" y="226" font-size="11" fill="#6b6b6b">created_at</text>
+
+  <!-- events -->
+  <rect x="620" y="120" width="200" height="120" rx="8" fill="#eef3fd" stroke="#bcd0f5"/>
+  <rect x="620" y="120" width="200" height="26" rx="8" fill="#3a6fd6"/><text x="720" y="138" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">events (이벤트)</text>
+  <text x="634" y="166" font-size="11" fill="#1a1a1a">id (PK)</text>
+  <text x="634" y="186" font-size="11" fill="#6b6b6b">title · capacity</text>
+  <text x="634" y="206" font-size="11" fill="#b8860b">created_by (FK→users)</text>
+  <text x="634" y="226" font-size="11" fill="#6b6b6b">scheduled_at</text>
+
+  <!-- rsvps -->
+  <rect x="340" y="250" width="200" height="110" rx="8" fill="#fdeef1" stroke="#f7c0c8"/>
+  <rect x="340" y="250" width="200" height="26" rx="8" fill="#E8344E"/><text x="440" y="268" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">rsvps (신청)</text>
+  <text x="354" y="296" font-size="11" fill="#1a1a1a">id (PK)</text>
+  <text x="354" y="316" font-size="11" fill="#b8860b">user_id (FK→users)</text>
+  <text x="354" y="336" font-size="11" fill="#b8860b">event_id (FK→events)</text>
+  <text x="354" y="352" font-size="10" fill="#6b6b6b">status · created_at</text>
+
+  <!-- admins -->
+  <rect x="340" y="96" width="200" height="86" rx="8" fill="#fff7e6" stroke="#f3d488"/>
+  <rect x="340" y="96" width="200" height="24" rx="8" fill="#b8860b"/><text x="440" y="113" font-size="12.5" font-weight="700" fill="#fff" text-anchor="middle">admins (관리자)</text>
+  <text x="354" y="140" font-size="10.5" fill="#b8860b">user_id (FK) · event_id (FK)</text>
+  <text x="354" y="160" font-size="10.5" fill="#6b6b6b">permission</text>
+
+  <!-- 관계선 -->
+  <line x1="260" y1="200" x2="336" y2="305" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#er)"/><text x="270" y="258" font-size="9.5" fill="#9aa0a6">1 : N (신청)</text>
+  <line x1="620" y1="200" x2="544" y2="320" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#er)"/><text x="580" y="258" font-size="9.5" fill="#9aa0a6" text-anchor="end">1 : N (보유)</text>
+  <line x1="260" y1="150" x2="620" y2="150" stroke="#9aa0a6" stroke-width="1.4" stroke-dasharray="4 3"/><text x="440" y="90" font-size="9.5" fill="#9aa0a6" text-anchor="middle">users ─ admins ─ events (N:M)</text>
+  <line x1="340" y1="139" x2="262" y2="150" stroke="#9aa0a6" stroke-width="1.2" stroke-dasharray="3 3"/>
+  <line x1="540" y1="139" x2="618" y2="150" stroke="#9aa0a6" stroke-width="1.2" stroke-dasharray="3 3"/>
+
+  <text x="40" y="374" font-size="12" fill="#6b6b6b">"홍길동이 신청한 이벤트"는 rsvps에서 user_id로 찾아 events를 JOIN해 얻습니다.</text>
+</svg>

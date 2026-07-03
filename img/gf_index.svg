@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="300" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">인덱스 — 책 뒤의 '찾아보기'처럼 빨리 찾는다</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">인덱스가 없으면 처음부터 전부 훑고, 있으면 해당 위치로 바로 건너뜁니다.</text>
+  <rect x="36" y="92" width="392" height="180" rx="12" fill="#fdeef1" stroke="#f7c0c8"/>
+  <text x="56" y="118" font-size="14" font-weight="700" fill="#E8344E">인덱스 없음 — 전체 스캔</text>
+  <text x="56" y="138" font-size="11" fill="#6b6b6b">10만 행을 처음부터 한 줄씩 확인</text>
+  <g font-size="10" fill="#444">
+    <rect x="56" y="150" width="352" height="20" rx="3" fill="#ffffff" stroke="#f7c0c8"/><text x="64" y="164">행 1 확인…</text>
+    <rect x="56" y="176" width="352" height="20" rx="3" fill="#ffffff" stroke="#f7c0c8"/><text x="64" y="190">행 2 확인…</text>
+    <rect x="56" y="202" width="352" height="20" rx="3" fill="#ffffff" stroke="#f7c0c8"/><text x="64" y="216">… 계속 …</text>
+    <rect x="56" y="228" width="352" height="20" rx="3" fill="#fff0f2" stroke="#f7c0c8"/><text x="64" y="242" fill="#b00020">행 87,432에서 발견 (느림)</text>
+  </g>
+  <rect x="472" y="92" width="392" height="180" rx="12" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="492" y="118" font-size="14" font-weight="700" fill="#1a7f37">인덱스 있음 — 바로 점프</text>
+  <text x="492" y="138" font-size="11" fill="#6b6b6b">색인에서 위치를 찾아 해당 행으로 직행</text>
+  <rect x="492" y="150" width="150" height="98" rx="6" fill="#ffffff" stroke="#cfe9d7"/>
+  <text x="502" y="170" font-size="10" font-weight="700" fill="#1a7f37">색인(정렬됨)</text>
+  <text x="502" y="190" font-size="10" fill="#444">…</text>
+  <text x="502" y="208" font-size="10" fill="#444">김철수 → 87432</text>
+  <text x="502" y="226" font-size="10" fill="#444">…</text>
+  <rect x="700" y="176" width="144" height="46" rx="6" fill="#eaf6ee" stroke="#bfe3cb"/>
+  <text x="772" y="204" font-size="11" fill="#1a7f37" text-anchor="middle">행 87,432 (빠름)</text>
+  <line x1="642" y1="208" x2="698" y2="200" stroke="#9aa0a6" stroke-width="1.6"/>
+  <text x="40" y="292" font-size="12" fill="#6b6b6b">※ 자주 조건으로 쓰는 컬럼(이메일·user_id 등)에 인덱스를 걸면 검색이 크게 빨라집니다. (쓰기·저장 공간은 조금 늘어남)</text>
+</svg>

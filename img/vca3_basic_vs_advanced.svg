@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 340" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="340" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">중급 훅 vs 고급 훅 — 일방향 트리거에서 양방향 체인으로</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">고급 훅은 데이터를 변형해 되돌리고, 여러 훅이 체인으로 이어집니다.</text>
+
+  <defs>
+    <marker id="bva_a" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/>
+    </marker>
+  </defs>
+
+  <!-- 중급 -->
+  <rect x="40" y="95" width="390" height="205" rx="12" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="60" y="122" font-size="14" font-weight="700" fill="#6b6b6b">중급 훅 — 일방향</text>
+
+  <rect x="66" y="145" width="110" height="46" rx="9" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="121" y="173" font-size="11" fill="#3a6fd6" text-anchor="middle">트리거</text>
+  <line x1="176" y1="168" x2="286" y2="168" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#bva_a)"/>
+  <rect x="290" y="145" width="110" height="46" rx="9" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="345" y="173" font-size="11" fill="#1a7f37" text-anchor="middle">동작 1개</text>
+
+  <text x="235" y="230" font-size="10.5" fill="#444" text-anchor="middle">파일 저장 → lint · 세션 끝 → 알림</text>
+  <text x="235" y="252" font-size="10.5" fill="#444" text-anchor="middle">결과는 로깅 또는 차단으로 종료</text>
+  <text x="235" y="278" font-size="10.5" fill="#6b6b6b" text-anchor="middle">단일 훅 · 개인 훅 수준</text>
+
+  <!-- 고급 -->
+  <rect x="470" y="95" width="390" height="205" rx="12" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="490" y="122" font-size="14" font-weight="700" fill="#b8860b">고급 훅 — 양방향 체인</text>
+
+  <rect x="496" y="145" width="96" height="46" rx="9" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="544" y="167" font-size="10.5" fill="#3a6fd6" text-anchor="middle">트리거</text>
+  <text x="544" y="182" font-size="10.5" fill="#3a6fd6" text-anchor="middle">·검증</text>
+  <line x1="592" y1="168" x2="640" y2="168" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#bva_a)"/>
+  <rect x="644" y="145" width="96" height="46" rx="9" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="692" y="167" font-size="10.5" fill="#7c3aed" text-anchor="middle">변형·</text>
+  <text x="692" y="182" font-size="10.5" fill="#7c3aed" text-anchor="middle">다음 훅</text>
+  <line x1="740" y1="168" x2="788" y2="168" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#bva_a)"/>
+  <rect x="792" y="145" width="56" height="46" rx="9" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="820" y="172" font-size="10" fill="#1a7f37" text-anchor="middle">완료</text>
+
+  <!-- 피드백 화살표 -->
+  <path d="M692 191 L692 210 L544 210 L544 193" fill="none" stroke="#E8344E" stroke-width="1.6" marker-end="url(#bva_a)"/>
+  <text x="618" y="226" font-size="9.5" fill="#b00020" text-anchor="middle">메인에 피드백 (다음 동작 지시)</text>
+
+  <text x="665" y="252" font-size="10.5" fill="#444" text-anchor="middle">검증 → 변형 → 재시도 → 에스컬레이션</text>
+  <text x="665" y="278" font-size="10.5" fill="#6b6b6b" text-anchor="middle">멀티스텝 체인 · 조직 강제 정책</text>
+</svg>

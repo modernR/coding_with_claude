@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="400" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">5단계 권한 모드와 훅 조합 매트릭스</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">권한 모드가 느슨해질수록 훅의 책임이 커집니다. 오른쪽으로 갈수록 훅이 유일한 방어선.</text>
+
+  <!-- gradient bar backdrop -->
+  <text x="40" y="100" font-size="11" fill="#6b6b6b">엄격 (사용자 확인 많음)</text>
+  <text x="860" y="100" font-size="11" fill="#b00020" text-anchor="end">느슨 (사람 개입 없음)</text>
+
+  <!-- 5 columns -->
+  <!-- default -->
+  <rect x="40" y="115" width="158" height="240" rx="11" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="119" y="140" font-size="12" font-weight="700" fill="#1a7f37" text-anchor="middle">default</text>
+  <rect x="54" y="152" width="130" height="60" rx="7" fill="#ffffff" stroke="#cfe9d7"/>
+  <text x="119" y="172" font-size="9" fill="#444" text-anchor="middle">외부 사용자·데모</text>
+  <text x="119" y="187" font-size="9" fill="#444" text-anchor="middle">모든 쓰기·삭제</text>
+  <text x="119" y="202" font-size="9" fill="#444" text-anchor="middle">전 사용자 확인</text>
+  <text x="119" y="242" font-size="10" font-weight="700" fill="#1a7f37" text-anchor="middle">훅 역할</text>
+  <text x="119" y="264" font-size="9.5" fill="#444" text-anchor="middle">불필요</text>
+  <text x="119" y="279" font-size="9" fill="#6b6b6b" text-anchor="middle">(이미 승인됨)</text>
+
+  <!-- acceptEdits -->
+  <rect x="212" y="115" width="158" height="240" rx="11" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="291" y="140" font-size="12" font-weight="700" fill="#3a6fd6" text-anchor="middle">acceptEdits</text>
+  <rect x="226" y="152" width="130" height="60" rx="7" fill="#ffffff" stroke="#bcd0f5"/>
+  <text x="291" y="172" font-size="9" fill="#444" text-anchor="middle">신뢰 환경 작은 변경</text>
+  <text x="291" y="187" font-size="9" fill="#444" text-anchor="middle">Edit·Write 자동</text>
+  <text x="291" y="202" font-size="9" fill="#444" text-anchor="middle">위험 Bash는 확인</text>
+  <text x="291" y="242" font-size="10" font-weight="700" fill="#3a6fd6" text-anchor="middle">훅 역할</text>
+  <text x="291" y="264" font-size="9.5" fill="#444" text-anchor="middle">변경 로깅</text>
+  <text x="291" y="279" font-size="9" fill="#6b6b6b" text-anchor="middle">+ Slack 알림</text>
+
+  <!-- plan -->
+  <rect x="384" y="115" width="158" height="240" rx="11" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="463" y="140" font-size="12" font-weight="700" fill="#b8860b" text-anchor="middle">plan</text>
+  <rect x="398" y="152" width="130" height="60" rx="7" fill="#ffffff" stroke="#f3d488"/>
+  <text x="463" y="172" font-size="9" fill="#444" text-anchor="middle">큰 변경 전 계획</text>
+  <text x="463" y="187" font-size="9" fill="#444" text-anchor="middle">/plan 후</text>
+  <text x="463" y="202" font-size="9" fill="#444" text-anchor="middle">사용자 확인</text>
+  <text x="463" y="242" font-size="10" font-weight="700" fill="#b8860b" text-anchor="middle">훅 역할</text>
+  <text x="463" y="264" font-size="9.5" fill="#444" text-anchor="middle">plan 없으면</text>
+  <text x="463" y="279" font-size="9" fill="#6b6b6b" text-anchor="middle">Bash 차단</text>
+
+  <!-- yolo -->
+  <rect x="556" y="115" width="158" height="240" rx="11" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="635" y="140" font-size="12" font-weight="700" fill="#b8860b" text-anchor="middle">yolo</text>
+  <rect x="570" y="152" width="130" height="60" rx="7" fill="#ffffff" stroke="#f0d6b8"/>
+  <text x="635" y="172" font-size="9" fill="#444" text-anchor="middle">신뢰·빠른 실행</text>
+  <text x="635" y="187" font-size="9" fill="#444" text-anchor="middle">모든 작업</text>
+  <text x="635" y="202" font-size="9" fill="#444" text-anchor="middle">자동 통과</text>
+  <text x="635" y="242" font-size="10" font-weight="700" fill="#b00020" text-anchor="middle">훅 역할</text>
+  <text x="635" y="264" font-size="9.5" fill="#b00020" text-anchor="middle">정책 강제의</text>
+  <text x="635" y="279" font-size="9" fill="#6b6b6b" text-anchor="middle">유일한 방어선</text>
+
+  <!-- dangerously -->
+  <rect x="728" y="115" width="132" height="240" rx="11" fill="#fff5f6" stroke="#f3c9cf"/>
+  <text x="794" y="140" font-size="11" font-weight="700" fill="#b00020" text-anchor="middle">dangerously-</text>
+  <text x="794" y="154" font-size="11" font-weight="700" fill="#b00020" text-anchor="middle">skip-perms</text>
+  <rect x="740" y="164" width="108" height="52" rx="7" fill="#ffffff" stroke="#f3c9cf"/>
+  <text x="794" y="182" font-size="8.5" fill="#444" text-anchor="middle">CI·파이프라인</text>
+  <text x="794" y="196" font-size="8.5" fill="#444" text-anchor="middle">모든 허가</text>
+  <text x="794" y="210" font-size="8.5" fill="#444" text-anchor="middle">무시</text>
+  <text x="794" y="248" font-size="10" font-weight="700" fill="#b00020" text-anchor="middle">훅 역할</text>
+  <text x="794" y="270" font-size="9" fill="#b00020" text-anchor="middle">감사 로그의</text>
+  <text x="794" y="284" font-size="9" fill="#6b6b6b" text-anchor="middle">유일한 기록</text>
+
+  <text x="450" y="385" font-size="11" fill="#6b6b6b" text-anchor="middle">운영 예 — 개발자: plan · 리뷰봇: acceptEdits · CI/CD: yolo+감사 · 야간 배포: skip-perms+전체 기록</text>
+</svg>

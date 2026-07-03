@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="420" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">rebase vs merge vs squash — 이력을 합치는 세 방식</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">같은 결과라도 남는 이력의 모양이 다릅니다. 상황에 따라 골라 씁니다.</text>
+
+  <defs>
+    <marker id="vcm6r_arr" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/>
+    </marker>
+  </defs>
+
+  <!-- Merge -->
+  <rect x="40" y="95" width="260" height="230" rx="12" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="170" y="122" font-size="14" font-weight="700" fill="#3a6fd6" text-anchor="middle">Merge</text>
+  <text x="170" y="141" font-size="10" fill="#6b6b6b" text-anchor="middle">머지 커밋 생성 · 갈래 보존</text>
+  <line x1="90" y1="300" x2="90" y2="165" stroke="#3a6fd6" stroke-width="2"/>
+  <line x1="200" y1="270" x2="200" y2="180" stroke="#7c3aed" stroke-width="2"/>
+  <circle cx="90" cy="300" r="7" fill="#3a6fd6"/>
+  <circle cx="90" cy="230" r="7" fill="#3a6fd6"/>
+  <circle cx="200" cy="270" r="7" fill="#7c3aed"/>
+  <circle cx="200" cy="215" r="7" fill="#7c3aed"/>
+  <circle cx="90" cy="165" r="8" fill="#1a7f37"/>
+  <path d="M200,180 L96,167" stroke="#1a7f37" stroke-width="2" fill="none"/>
+  <text x="115" y="234" font-size="9.5" fill="#444">main</text>
+  <text x="215" y="219" font-size="9.5" fill="#444">feature</text>
+  <text x="106" y="162" font-size="9.5" fill="#1a7f37" font-weight="700">merge</text>
+  <text x="170" y="316" font-size="9.5" fill="#3a6fd6" text-anchor="middle">이력 완전 보존 · 다소 복잡</text>
+
+  <!-- Rebase -->
+  <rect x="320" y="95" width="260" height="230" rx="12" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="450" y="122" font-size="14" font-weight="700" fill="#1a7f37" text-anchor="middle">Rebase</text>
+  <text x="450" y="141" font-size="10" fill="#6b6b6b" text-anchor="middle">선형 이력 · 갈래 없음</text>
+  <line x1="450" y1="300" x2="450" y2="170" stroke="#1a7f37" stroke-width="2"/>
+  <circle cx="450" cy="300" r="7" fill="#3a6fd6"/>
+  <circle cx="450" cy="255" r="7" fill="#7c3aed"/>
+  <circle cx="450" cy="210" r="7" fill="#7c3aed"/>
+  <circle cx="450" cy="170" r="7" fill="#7c3aed"/>
+  <text x="470" y="304" font-size="9.5" fill="#444">main</text>
+  <text x="470" y="235" font-size="9.5" fill="#444">rebased</text>
+  <text x="450" y="316" font-size="9.5" fill="#1a7f37" text-anchor="middle">깔끔·읽기 쉬움 · 히스토리 재작성</text>
+
+  <!-- Squash -->
+  <rect x="600" y="95" width="260" height="230" rx="12" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="730" y="122" font-size="14" font-weight="700" fill="#b8860b" text-anchor="middle">Squash merge</text>
+  <text x="730" y="141" font-size="10" fill="#6b6b6b" text-anchor="middle">여러 커밋 → 1개로 압축</text>
+  <line x1="730" y1="300" x2="730" y2="185" stroke="#b8860b" stroke-width="2"/>
+  <circle cx="730" cy="300" r="7" fill="#3a6fd6"/>
+  <rect x="680" y="228" width="100" height="34" rx="7" fill="#ffffff" stroke="#f0d6b8"/>
+  <text x="730" y="249" font-size="9" fill="#444" text-anchor="middle">3커밋 압축</text>
+  <circle cx="730" cy="185" r="8" fill="#b8860b"/>
+  <text x="750" y="304" font-size="9.5" fill="#444">main</text>
+  <text x="745" y="182" font-size="9.5" fill="#b8860b" font-weight="700">PR 1커밋</text>
+  <text x="730" y="316" font-size="9.5" fill="#b8860b" text-anchor="middle">main 이력이 PR 단위 · 롤백 깔끔</text>
+
+  <!-- guide row -->
+  <rect x="40" y="345" width="820" height="60" rx="10" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="56" y="367" font-size="10.5" fill="#444">· feature를 최신 main에 동기화 → <tspan font-weight="700" fill="#1a7f37">rebase</tspan> (선형 유지)   · 이미 push해 남과 공유한 브랜치 → <tspan font-weight="700" fill="#3a6fd6">merge</tspan> (rebase는 force push 위험)</text>
+  <text x="56" y="388" font-size="10.5" fill="#444">· PR을 main에 최종 병합 → <tspan font-weight="700" fill="#b8860b">squash merge</tspan> 권장 (커밋 1개로 정리, revert가 쉬움)</text>
+</svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 290" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="290" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">인증 옵션의 규모별 진화 — API 키 → OAuth → SSO</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">회사가 커질수록 A → B → C로 옮겨갑니다. 인증(누구인가)은 첫날부터 켭니다.</text>
+  <defs>
+    <marker id="ae_a" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/></marker>
+  </defs>
+  <g>
+    <rect x="40" y="100" width="250" height="130" rx="12" fill="#f1faf3" stroke="#cfe9d7"/>
+    <text x="60" y="128" font-size="14" font-weight="700" fill="#1a7f37">A. API 키</text>
+    <text x="60" y="150" font-size="11" fill="#444">가장 단순 · 소규모</text>
+    <text x="60" y="176" font-size="10.5" fill="#444">환경변수에 키 저장</text>
+    <text x="60" y="194" font-size="10.5" fill="#444">서버 전체가 같은 권한</text>
+    <text x="60" y="216" font-size="10" fill="#6b6b6b">첫 자체 MCP에 적합</text>
+  </g>
+  <line x1="296" y1="165" x2="322" y2="165" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#ae_a)"/>
+  <g>
+    <rect x="325" y="100" width="250" height="130" rx="12" fill="#fff7e6" stroke="#f3d488"/>
+    <text x="345" y="128" font-size="14" font-weight="700" fill="#b8860b">B. OAuth</text>
+    <text x="345" y="150" font-size="11" fill="#444">사용자 단위 권한 · 중간</text>
+    <text x="345" y="176" font-size="10.5" fill="#444">사람마다 다른 권한</text>
+    <text x="345" y="194" font-size="10.5" fill="#444">본인 범위 안에서만 접근</text>
+    <text x="345" y="216" font-size="10" fill="#6b6b6b">토큰 갱신 관리 필요</text>
+  </g>
+  <line x1="581" y1="165" x2="607" y2="165" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#ae_a)"/>
+  <g>
+    <rect x="610" y="100" width="250" height="130" rx="12" fill="#eef3fd" stroke="#bcd0f5"/>
+    <text x="630" y="128" font-size="14" font-weight="700" fill="#3a6fd6">C. SSO + 게이트웨이</text>
+    <text x="630" y="150" font-size="11" fill="#444">대기업 표준 · 대규모</text>
+    <text x="630" y="176" font-size="10.5" fill="#444">SAML·OIDC 통합</text>
+    <text x="630" y="194" font-size="10.5" fill="#444">외부 접근·중앙 관리</text>
+    <text x="630" y="216" font-size="10" fill="#6b6b6b">사내 인증 시스템 연계</text>
+  </g>
+  <text x="450" y="268" font-size="11" fill="#6b6b6b" text-anchor="middle">인증(누구인가)과 권한(무엇을 할 수 있나)은 다른 질문 — 도구별 RBAC와 감사 로그가 함께 세 겹을 이룹니다.</text>
+</svg>

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="400" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">권한 모드와 규칙 — 느슨함에서 엄격함까지</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">다섯 모드로 큰 틀을 잡고, 규칙 문법으로 파일·명령 단위까지 세밀하게 제어합니다.</text>
+
+  <rect x="40" y="95" width="400" height="255" rx="10" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="60" y="119" font-size="13" font-weight="700" fill="#1a1a1a">Permission Mode 5가지</text>
+
+  <rect x="60" y="135" width="360" height="34" rx="7" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="74" y="157" font-size="11" fill="#1a7f37">Read-Only — 읽기만, 수정·실행 불가</text>
+  <rect x="60" y="175" width="360" height="34" rx="7" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="74" y="197" font-size="11" fill="#3a6fd6">Sandbox — 프로젝트 폴더 외부 접근 차단</text>
+  <rect x="60" y="215" width="360" height="34" rx="7" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="74" y="237" font-size="11" fill="#b8860b">Standard(기본) — 쓰기·삭제·외부 통신 시 확인</text>
+  <rect x="60" y="255" width="360" height="34" rx="7" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="74" y="277" font-size="11" fill="#7c3aed">Strict — 모든 파일 접근·셸 실행 시 확인</text>
+  <rect x="60" y="295" width="360" height="34" rx="7" fill="#fdeef0" stroke="#f3c9d0"/>
+  <text x="74" y="317" font-size="11" fill="#b00020">Unrestricted — 제약 없음 (테스트 환경만)</text>
+
+  <rect x="460" y="95" width="400" height="255" rx="10" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="480" y="119" font-size="13" font-weight="700" fill="#1a1a1a">규칙 문법과 우선순위</text>
+  <g font-size="11" fill="#444">
+    <text x="480" y="146">allow: "write" on: "src/**/*.ts"</text>
+    <text x="480" y="168">deny: "execute" on: "rm *"</text>
+    <text x="480" y="190">require_approval: "before" "npm install"</text>
+    <text x="480" y="212">allow: "api_call" to: "*.company.com"</text>
+  </g>
+  <rect x="480" y="230" width="360" height="100" rx="8" fill="#ffffff" stroke="#e3e6ea"/>
+  <text x="496" y="252" font-size="11" font-weight="700" fill="#1a1a1a">평가 규칙</text>
+  <g font-size="10.5" fill="#444">
+    <text x="496" y="274">위에서부터 매칭, 첫 매치가 우선</text>
+    <text x="496" y="294">우선순위: deny &gt; require_approval &gt; allow</text>
+    <text x="496" y="314">설정: 세션 /permission &gt; 프로젝트 &gt; 글로벌 &gt; 기본</text>
+  </g>
+</svg>

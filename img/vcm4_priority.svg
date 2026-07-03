@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="400" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">설정 5단계 우선순위 — 조직 강제부터 기본값까지</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">높은 순위가 낮은 순위를 덮어씁니다. 단 permissions·hooks 배열은 병합됩니다.</text>
+
+  <defs><marker id="m4pr_ar" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/></marker></defs>
+
+  <!-- 5 levels stacked -->
+  <rect x="40" y="90" width="520" height="46" rx="9" fill="#fff5f6" stroke="#f3c9cf"/>
+  <text x="58" y="110" font-size="12" font-weight="700" fill="#b00020">1  managed-settings.json — 조직 전체 강제</text>
+  <text x="58" y="128" font-size="9.5" fill="#444">관리자: IT/보안팀 · 개인이 덮어쓸 수 없음 (최우선)</text>
+
+  <rect x="40" y="144" width="520" height="46" rx="9" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="58" y="164" font-size="12" font-weight="700" fill="#b8860b">2  settings.local.json — 개인 임시 설정</text>
+  <text x="58" y="182" font-size="9.5" fill="#444">관리자: 개인 · 테스트용 임시 훅</text>
+
+  <rect x="40" y="198" width="520" height="46" rx="9" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="58" y="218" font-size="12" font-weight="700" fill="#b8860b">3  .claude/settings.json — 현재 프로젝트</text>
+  <text x="58" y="236" font-size="9.5" fill="#444">관리자: 팀장/DevOps · 팀 표준 훅</text>
+
+  <rect x="40" y="252" width="520" height="46" rx="9" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="58" y="272" font-size="12" font-weight="700" fill="#3a6fd6">4  ~/.claude/settings.json — 개인 전역</text>
+  <text x="58" y="290" font-size="9.5" fill="#444">관리자: 개인 · 개인 환경설정</text>
+
+  <rect x="40" y="306" width="520" height="46" rx="9" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="58" y="326" font-size="12" font-weight="700" fill="#6b6b6b">5  (기본값) — Claude 기본값</text>
+  <text x="58" y="344" font-size="9.5" fill="#444">훅 없음</text>
+
+  <!-- override arrow -->
+  <line x1="575" y1="330" x2="575" y2="118" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#m4pr_ar)"/>
+  <text x="590" y="228" font-size="10.5" fill="#6b6b6b" transform="rotate(-90 590 228)" text-anchor="middle">덮어쓰기 (위로 갈수록 우선)</text>
+
+  <!-- merge note box -->
+  <rect x="630" y="90" width="230" height="262" rx="11" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="745" y="114" font-size="12.5" font-weight="700" fill="#1a7f37" text-anchor="middle">배열은 병합된다</text>
+  <text x="648" y="140" font-size="10" fill="#444">permissions.allow / deny,</text>
+  <text x="648" y="156" font-size="10" fill="#444">hooks.* 는 덮어쓰기가 아니라</text>
+  <text x="648" y="172" font-size="10" fill="#444">우선순위 역순으로 누적됩니다.</text>
+  <rect x="648" y="186" width="194" height="30" rx="6" fill="#ffffff" stroke="#cfe9d7"/>
+  <text x="658" y="205" font-size="9" fill="#444">프로젝트: Bash(git log *), Edit(*.md)</text>
+  <rect x="648" y="220" width="194" height="30" rx="6" fill="#ffffff" stroke="#cfe9d7"/>
+  <text x="658" y="239" font-size="9" fill="#444">개인: Bash(npm test), Write(test/*)</text>
+  <rect x="648" y="256" width="194" height="40" rx="6" fill="#1a7f37"/>
+  <text x="745" y="273" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">결과: 네 가지 모두 허용</text>
+  <text x="745" y="288" font-size="8.5" fill="#cfe9d7" text-anchor="middle">조직 훅 + 개인 훅 공존</text>
+  <text x="745" y="322" font-size="9" fill="#6b6b6b" text-anchor="middle">전사 품질 게이트는 1순위로</text>
+  <text x="745" y="337" font-size="9" fill="#6b6b6b" text-anchor="middle">배포해 개인이 끄지 못하게</text>
+</svg>

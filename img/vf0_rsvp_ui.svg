@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 470" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="470" fill="#ffffff"/>
+  <text x="40" y="38" font-size="21" font-weight="700" fill="#1a1a1a">이벤트 RSVP — 대표 화면 4개 (대략적 UI)</text>
+  <text x="40" y="62" font-size="14" fill="#6b6b6b">실제 화면은 아니고, 어떤 화면을 만들지 감을 잡기 위한 와이어프레임입니다.</text>
+
+  <!-- 공통: 브라우저 프레임 헬퍼 느낌 -->
+  <!-- 1) 이벤트 목록 -->
+  <g>
+    <rect x="30" y="86" width="196" height="360" rx="10" fill="#ffffff" stroke="#d5d9e0"/>
+    <rect x="30" y="86" width="196" height="26" rx="10" fill="#f4f5f7"/>
+    <circle cx="44" cy="99" r="3" fill="#e0655f"/><circle cx="54" cy="99" r="3" fill="#e8b84b"/><circle cx="64" cy="99" r="3" fill="#68b26a"/>
+    <text x="128" y="103" font-size="9" fill="#9aa0a6" text-anchor="middle">이벤트 목록</text>
+    <text x="44" y="132" font-size="11" font-weight="700" fill="#1a1a1a">다가오는 이벤트</text>
+    <!-- card 1 -->
+    <rect x="44" y="144" width="168" height="66" rx="7" fill="#fafbfc" stroke="#e3e6ea"/>
+    <rect x="52" y="152" width="46" height="46" rx="5" fill="#eef3fd"/>
+    <rect x="106" y="156" width="96" height="9" rx="3" fill="#c9d3e0"/>
+    <rect x="106" y="171" width="70" height="7" rx="3" fill="#dde3ea"/>
+    <rect x="106" y="185" width="54" height="12" rx="6" fill="#E8344E"/><text x="133" y="194" font-size="7" fill="#fff" text-anchor="middle">신청</text>
+    <!-- card 2 -->
+    <rect x="44" y="218" width="168" height="66" rx="7" fill="#fafbfc" stroke="#e3e6ea"/>
+    <rect x="52" y="226" width="46" height="46" rx="5" fill="#f1faf3"/>
+    <rect x="106" y="230" width="96" height="9" rx="3" fill="#c9d3e0"/>
+    <rect x="106" y="245" width="70" height="7" rx="3" fill="#dde3ea"/>
+    <rect x="106" y="259" width="54" height="12" rx="6" fill="#E8344E"/><text x="133" y="268" font-size="7" fill="#fff" text-anchor="middle">신청</text>
+    <!-- card 3 -->
+    <rect x="44" y="292" width="168" height="66" rx="7" fill="#fafbfc" stroke="#e3e6ea"/>
+    <rect x="52" y="300" width="46" height="46" rx="5" fill="#fff7e6"/>
+    <rect x="106" y="304" width="96" height="9" rx="3" fill="#c9d3e0"/>
+    <rect x="106" y="319" width="70" height="7" rx="3" fill="#dde3ea"/>
+    <rect x="106" y="333" width="54" height="12" rx="6" fill="#cfd4da"/><text x="133" y="342" font-size="7" fill="#fff" text-anchor="middle">마감</text>
+    <text x="44" y="386" font-size="8.5" fill="#9aa0a6">SSR로 최신 목록 표시</text>
+    <text x="128" y="430" font-size="10" font-weight="700" fill="#3a6fd6" text-anchor="middle">① 이벤트 목록</text>
+  </g>
+
+  <!-- 2) 이벤트 상세 + 신청 폼 -->
+  <g>
+    <rect x="248" y="86" width="196" height="360" rx="10" fill="#ffffff" stroke="#d5d9e0"/>
+    <rect x="248" y="86" width="196" height="26" rx="10" fill="#f4f5f7"/>
+    <circle cx="262" cy="99" r="3" fill="#e0655f"/><circle cx="272" cy="99" r="3" fill="#e8b84b"/><circle cx="282" cy="99" r="3" fill="#68b26a"/>
+    <text x="346" y="103" font-size="9" fill="#9aa0a6" text-anchor="middle">이벤트 상세 · 신청</text>
+    <rect x="262" y="124" width="168" height="40" rx="6" fill="#eef3fd"/>
+    <text x="270" y="141" font-size="10" font-weight="700" fill="#1a1a1a">사내 해커톤 2026</text>
+    <text x="270" y="156" font-size="8" fill="#6b6b6b">10/24(금) 14:00 · 대강당 · 정원 50</text>
+    <!-- 정원 게이지 -->
+    <rect x="262" y="172" width="168" height="8" rx="4" fill="#e3e6ea"/><rect x="262" y="172" width="120" height="8" rx="4" fill="#1a7f37"/>
+    <text x="262" y="194" font-size="8" fill="#6b6b6b">신청 36 / 50명</text>
+    <!-- 폼 -->
+    <text x="262" y="214" font-size="9" font-weight="700" fill="#1a1a1a">참석 신청</text>
+    <rect x="262" y="222" width="168" height="20" rx="5" fill="#fafbfc" stroke="#dde3ea"/><text x="270" y="236" font-size="8" fill="#9aa0a6">이름</text>
+    <rect x="262" y="248" width="168" height="20" rx="5" fill="#fafbfc" stroke="#dde3ea"/><text x="270" y="262" font-size="8" fill="#9aa0a6">이메일</text>
+    <rect x="262" y="274" width="168" height="20" rx="5" fill="#fafbfc" stroke="#dde3ea"/><text x="270" y="288" font-size="8" fill="#9aa0a6">참석 여부</text><path d="M416,282 l8,0 l-4,5 z" fill="#9aa0a6"/>
+    <rect x="262" y="300" width="168" height="22" rx="6" fill="#E8344E"/><text x="346" y="315" font-size="9" font-weight="700" fill="#fff" text-anchor="middle">신청하기</text>
+    <text x="262" y="340" font-size="8.5" font-weight="700" fill="#1a1a1a">참가자 명단(익명 공개)</text>
+    <rect x="262" y="348" width="168" height="7" rx="3" fill="#dde3ea"/>
+    <rect x="262" y="360" width="140" height="7" rx="3" fill="#dde3ea"/>
+    <rect x="262" y="372" width="150" height="7" rx="3" fill="#dde3ea"/>
+    <text x="346" y="430" font-size="10" font-weight="700" fill="#3a6fd6" text-anchor="middle">② 이벤트 상세 · 신청 폼</text>
+  </g>
+
+  <!-- 3) 내 신청 -->
+  <g>
+    <rect x="466" y="86" width="196" height="360" rx="10" fill="#ffffff" stroke="#d5d9e0"/>
+    <rect x="466" y="86" width="196" height="26" rx="10" fill="#f4f5f7"/>
+    <circle cx="480" cy="99" r="3" fill="#e0655f"/><circle cx="490" cy="99" r="3" fill="#e8b84b"/><circle cx="500" cy="99" r="3" fill="#68b26a"/>
+    <text x="564" y="103" font-size="9" fill="#9aa0a6" text-anchor="middle">내 신청</text>
+    <circle cx="564" cy="150" r="22" fill="#f1faf3" stroke="#cfe9d7"/><text x="564" y="156" font-size="18" fill="#1a7f37" text-anchor="middle">✓</text>
+    <text x="564" y="188" font-size="10" font-weight="700" fill="#1a1a1a" text-anchor="middle">신청이 완료됐습니다</text>
+    <text x="564" y="204" font-size="8" fill="#6b6b6b" text-anchor="middle">확인 메일을 보냈습니다</text>
+    <text x="482" y="232" font-size="9" font-weight="700" fill="#1a1a1a">내가 신청한 이벤트</text>
+    <rect x="482" y="242" width="164" height="40" rx="6" fill="#fafbfc" stroke="#e3e6ea"/>
+    <rect x="490" y="250" width="90" height="8" rx="3" fill="#c9d3e0"/><rect x="490" y="264" width="60" height="7" rx="3" fill="#dde3ea"/>
+    <rect x="596" y="256" width="42" height="14" rx="7" fill="#fff5f6" stroke="#f3c9cf"/><text x="617" y="266" font-size="7" fill="#b00020" text-anchor="middle">취소</text>
+    <rect x="482" y="290" width="164" height="40" rx="6" fill="#fafbfc" stroke="#e3e6ea"/>
+    <rect x="490" y="298" width="90" height="8" rx="3" fill="#c9d3e0"/><rect x="490" y="312" width="60" height="7" rx="3" fill="#dde3ea"/>
+    <rect x="596" y="304" width="42" height="14" rx="7" fill="#fff5f6" stroke="#f3c9cf"/><text x="617" y="314" font-size="7" fill="#b00020" text-anchor="middle">취소</text>
+    <text x="564" y="430" font-size="10" font-weight="700" fill="#3a6fd6" text-anchor="middle">③ 신청 확인 · 내 신청</text>
+  </g>
+
+  <!-- 4) 주최자 대시보드 -->
+  <g>
+    <rect x="684" y="86" width="196" height="360" rx="10" fill="#ffffff" stroke="#d5d9e0"/>
+    <rect x="684" y="86" width="196" height="26" rx="10" fill="#f4f5f7"/>
+    <circle cx="698" cy="99" r="3" fill="#e0655f"/><circle cx="708" cy="99" r="3" fill="#e8b84b"/><circle cx="718" cy="99" r="3" fill="#68b26a"/>
+    <text x="782" y="103" font-size="9" fill="#9aa0a6" text-anchor="middle">주최자 대시보드</text>
+    <rect x="698" y="124" width="80" height="44" rx="7" fill="#eef3fd"/><text x="738" y="146" font-size="16" font-weight="700" fill="#3a6fd6" text-anchor="middle">36</text><text x="738" y="160" font-size="7" fill="#6b6b6b" text-anchor="middle">신청</text>
+    <rect x="786" y="124" width="80" height="44" rx="7" fill="#f1faf3"/><text x="826" y="146" font-size="16" font-weight="700" fill="#1a7f37" text-anchor="middle">14</text><text x="826" y="160" font-size="7" fill="#6b6b6b" text-anchor="middle">잔여</text>
+    <text x="698" y="188" font-size="9" font-weight="700" fill="#1a1a1a">참석자 명단</text>
+    <!-- table -->
+    <rect x="698" y="196" width="168" height="16" fill="#f4f5f7"/>
+    <text x="704" y="207" font-size="7" fill="#6b6b6b">이름</text><text x="770" y="207" font-size="7" fill="#6b6b6b">이메일</text><text x="838" y="207" font-size="7" fill="#6b6b6b">상태</text>
+    <line x1="698" y1="228" x2="866" y2="228" stroke="#eef0f3"/><line x1="698" y1="244" x2="866" y2="244" stroke="#eef0f3"/><line x1="698" y1="260" x2="866" y2="260" stroke="#eef0f3"/>
+    <text x="704" y="224" font-size="7" fill="#444">김철수</text><text x="838" y="224" font-size="7" fill="#1a7f37">참석</text>
+    <text x="704" y="240" font-size="7" fill="#444">이영희</text><text x="838" y="240" font-size="7" fill="#1a7f37">참석</text>
+    <text x="704" y="256" font-size="7" fill="#444">박민수</text><text x="838" y="256" font-size="7" fill="#b8860b">미정</text>
+    <rect x="698" y="274" width="80" height="18" rx="6" fill="#fafbfc" stroke="#dde3ea"/><text x="738" y="286" font-size="7.5" fill="#1a1a1a" text-anchor="middle">정원 변경</text>
+    <rect x="786" y="274" width="80" height="18" rx="6" fill="#fafbfc" stroke="#dde3ea"/><text x="826" y="286" font-size="7.5" fill="#1a1a1a" text-anchor="middle">CSV 내보내기</text>
+    <text x="782" y="430" font-size="10" font-weight="700" fill="#3a6fd6" text-anchor="middle">④ 주최자 대시보드</text>
+  </g>
+</svg>

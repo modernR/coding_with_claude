@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="300" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">반응형 웹 — 화면 크기에 맞춰 배치가 바뀐다</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">하나의 HTML·CSS로 폰·태블릿·PC에 대응(CSS 미디어 쿼리).</text>
+  <text x="150" y="104" font-size="13" font-weight="700" fill="#3a6fd6" text-anchor="middle">폰 — 1열</text>
+  <rect x="112" y="116" width="76" height="150" rx="10" fill="#eef3fd" stroke="#bcd0f5"/>
+  <rect x="124" y="128" width="52" height="30" rx="4" fill="#ffffff" stroke="#bcd0f5"/>
+  <rect x="124" y="164" width="52" height="30" rx="4" fill="#ffffff" stroke="#bcd0f5"/>
+  <rect x="124" y="200" width="52" height="30" rx="4" fill="#ffffff" stroke="#bcd0f5"/>
+  <text x="150" y="254" font-size="10" fill="#6b6b6b" text-anchor="middle">카드 세로로</text>
+  <text x="420" y="104" font-size="13" font-weight="700" fill="#7c3aed" text-anchor="middle">태블릿 — 2열</text>
+  <rect x="330" y="116" width="180" height="150" rx="10" fill="#ede9fe" stroke="#a78bda"/>
+  <rect x="344" y="130" width="70" height="44" rx="4" fill="#ffffff" stroke="#a78bda"/>
+  <rect x="426" y="130" width="70" height="44" rx="4" fill="#ffffff" stroke="#a78bda"/>
+  <rect x="344" y="184" width="70" height="44" rx="4" fill="#ffffff" stroke="#a78bda"/>
+  <rect x="426" y="184" width="70" height="44" rx="4" fill="#ffffff" stroke="#a78bda"/>
+  <text x="420" y="254" font-size="10" fill="#6b6b6b" text-anchor="middle">두 칸으로</text>
+  <text x="720" y="104" font-size="13" font-weight="700" fill="#1a7f37" text-anchor="middle">PC — 3열</text>
+  <rect x="600" y="116" width="240" height="150" rx="10" fill="#f1faf3" stroke="#cfe9d7"/>
+  <rect x="614" y="140" width="66" height="90" rx="4" fill="#ffffff" stroke="#cfe9d7"/>
+  <rect x="687" y="140" width="66" height="90" rx="4" fill="#ffffff" stroke="#cfe9d7"/>
+  <rect x="760" y="140" width="66" height="90" rx="4" fill="#ffffff" stroke="#cfe9d7"/>
+  <text x="720" y="254" font-size="10" fill="#6b6b6b" text-anchor="middle">세 칸으로 넓게</text>
+  <text x="40" y="286" font-size="12" fill="#6b6b6b">※ 같은 카드 목록도 화면 폭에 따라 1열 → 2열 → 3열로 재배치됩니다. 관리는 쉽지만 큰 화면용 코드까지 함께 내려받습니다.</text>
+</svg>

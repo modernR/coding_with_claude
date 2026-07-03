@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="400" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">Hook vs CLAUDE.md 규칙 — 권고와 강제의 차이</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">규칙은 확률적으로 지켜지고(약 90%), 훅은 이벤트에 기계가 100% 실행합니다.</text>
+
+  <!-- left: CLAUDE.md rule -->
+  <rect x="40" y="95" width="390" height="270" rx="12" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="235" y="122" font-size="14" font-weight="700" fill="#b8860b" text-anchor="middle">CLAUDE.md 규칙 — 권고</text>
+  <text x="235" y="146" font-size="11" fill="#6b6b6b" text-anchor="middle">비유: 회의 룰북 ("민감 정보 언급 자제")</text>
+
+  <rect x="70" y="164" width="330" height="34" rx="7" fill="#ffffff" stroke="#f0d6b8"/>
+  <text x="84" y="186" font-size="10.5" fill="#444">성격: 권고 — 따를 수도, 안 따를 수도</text>
+  <rect x="70" y="204" width="330" height="34" rx="7" fill="#ffffff" stroke="#f0d6b8"/>
+  <text x="84" y="226" font-size="10.5" fill="#444">발동: Claude가 상황을 판단해 적용 (추론)</text>
+  <rect x="70" y="244" width="330" height="34" rx="7" fill="#ffffff" stroke="#f0d6b8"/>
+  <text x="84" y="266" font-size="10.5" fill="#444">신뢰도: 약 90% — LLM이 오해 가능</text>
+  <rect x="70" y="292" width="330" height="46" rx="8" fill="#b8860b"/>
+  <text x="235" y="313" font-size="12.5" font-weight="700" fill="#fff" text-anchor="middle">우회 가능 — LLM이 무시할 수 있음</text>
+  <text x="235" y="330" font-size="9.5" fill="#f0d6b8" text-anchor="middle">개인차가 생긴다</text>
+
+  <!-- right: Hook -->
+  <rect x="470" y="95" width="390" height="270" rx="12" fill="#fff5f6" stroke="#f3c9cf"/>
+  <text x="665" y="122" font-size="14" font-weight="700" fill="#b00020" text-anchor="middle">Hook — 강제</text>
+  <text x="665" y="146" font-size="11" fill="#6b6b6b" text-anchor="middle">비유: 입구 보안 게이트 (출입증 없으면 못 들어감)</text>
+
+  <rect x="500" y="164" width="330" height="34" rx="7" fill="#ffffff" stroke="#f3c9cf"/>
+  <text x="514" y="186" font-size="10.5" fill="#444">성격: 강제 — 반드시 실행</text>
+  <rect x="500" y="204" width="330" height="34" rx="7" fill="#ffffff" stroke="#f3c9cf"/>
+  <text x="514" y="226" font-size="10.5" fill="#444">발동: 정해진 이벤트 발생 시 자동 (고정)</text>
+  <rect x="500" y="244" width="330" height="34" rx="7" fill="#ffffff" stroke="#f3c9cf"/>
+  <text x="514" y="266" font-size="10.5" fill="#444">신뢰도: 100% — 기계가 실행</text>
+  <rect x="500" y="292" width="330" height="46" rx="8" fill="#b00020"/>
+  <text x="665" y="313" font-size="12.5" font-weight="700" fill="#fff" text-anchor="middle">우회 불가 — 차단되면 끝</text>
+  <text x="665" y="330" font-size="9.5" fill="#ffd7dd" text-anchor="middle">추론 시스템 위의 고정 안전 레일</text>
+</svg>

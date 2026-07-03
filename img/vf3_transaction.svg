@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 340" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="880" height="340" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">동시 신청과 트랜잭션 — 왜 오버부킹이 생기나</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">정원 50, 현재 49명. A·B가 동시에 신청하면?</text>
+
+  <!-- 없음 -->
+  <rect x="36" y="86" width="392" height="220" rx="12" fill="#fff5f6" stroke="#f3c9cf"/>
+  <text x="56" y="112" font-size="14" font-weight="700" fill="#b00020">트랜잭션 없음 — 오버부킹 ✕</text>
+  <g font-size="11" fill="#1a1a1a">
+    <text x="56" y="142">A: count 조회 → 49</text>
+    <text x="56" y="166">B: count 조회 → 49  (동시에 읽음)</text>
+    <text x="56" y="190">A: INSERT → count 50 · "성공"</text>
+    <text x="56" y="214">B: INSERT → count 51 · "성공"</text>
+  </g>
+  <rect x="56" y="236" width="352" height="46" rx="8" fill="#ffffff" stroke="#f3c9cf"/>
+  <text x="232" y="264" font-size="12" font-weight="700" fill="#b00020" text-anchor="middle">결과: 51명 저장 (정원 초과)</text>
+
+  <!-- 있음 -->
+  <rect x="452" y="86" width="392" height="220" rx="12" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="472" y="112" font-size="14" font-weight="700" fill="#1a7f37">트랜잭션 + 행 잠금 — 안전 ✓</text>
+  <g font-size="11" fill="#1a1a1a">
+    <text x="472" y="142">A: BEGIN · SELECT FOR UPDATE</text>
+    <text x="472" y="166">B: 같은 행 잠금 대기…</text>
+    <text x="472" y="190">A: 49&lt;50 → INSERT · COMMIT</text>
+    <text x="472" y="214">B: 잠금 풀림 → count 50 = 정원</text>
+  </g>
+  <rect x="472" y="236" width="352" height="46" rx="8" fill="#ffffff" stroke="#cfe9d7"/>
+  <text x="648" y="258" font-size="12" font-weight="700" fill="#1a7f37" text-anchor="middle">결과: A 성공 · B 거부(정원 초과)</text>
+  <text x="648" y="276" font-size="10" fill="#6b6b6b" text-anchor="middle">정확히 50명</text>
+
+  <text x="40" y="328" font-size="12" fill="#6b6b6b">ACID(원자성·일관성·격리성·지속성)를 지키는 트랜잭션이 '동시에 읽고 쓰는' 충돌을 막습니다.</text>
+</svg>

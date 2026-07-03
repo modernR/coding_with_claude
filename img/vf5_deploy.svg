@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="420" fill="#ffffff"/>
+  <text x="40" y="38" font-size="21" font-weight="700" fill="#1a1a1a">배포 시나리오별 추천 조합</text>
+  <text x="40" y="62" font-size="14" fill="#6b6b6b">"누가·무엇을 배포하느냐"에 따라 무난한 조합이 갈립니다.</text>
+
+  <!-- 개인 동적 -->
+  <rect x="36" y="86" width="270" height="300" rx="12" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="52" y="112" font-size="13.5" font-weight="700" fill="#3a6fd6">개인 · 사이드 프로젝트</text>
+  <text x="52" y="132" font-size="10.5" fill="#3a6fd6">DB·로그인·폼이 필요한 동적 앱</text>
+  <rect x="52" y="146" width="238" height="30" rx="7" fill="#ffffff" stroke="#bcd0f5"/><text x="64" y="165" font-size="11" fill="#1a1a1a"><tspan font-weight="700">GitHub</tspan> — 코드·버전 관리</text>
+  <rect x="52" y="182" width="238" height="30" rx="7" fill="#ffffff" stroke="#bcd0f5"/><text x="64" y="201" font-size="11" fill="#1a1a1a"><tspan font-weight="700">Supabase</tspan> — DB·인증·스토리지</text>
+  <rect x="52" y="218" width="238" height="30" rx="7" fill="#ffffff" stroke="#bcd0f5"/><text x="64" y="237" font-size="11" fill="#1a1a1a"><tspan font-weight="700">Vercel</tspan> — 프론트 배포·CI/CD</text>
+  <text x="52" y="270" font-size="10" fill="#1a7f37">→ 가장 빠르고, 대부분 무료 티어로 충분</text>
+  <line x1="52" y1="284" x2="290" y2="284" stroke="#d5e0f2"/>
+  <text x="52" y="304" font-size="11" font-weight="700" fill="#1a1a1a">정적 페이지라면 더 가볍게</text>
+  <rect x="52" y="314" width="238" height="28" rx="7" fill="#f1faf3" stroke="#cfe9d7"/><text x="64" y="332" font-size="10" fill="#1a1a1a"><tspan font-weight="700">GitHub Pages</tspan> — 무료 정적 호스팅</text>
+  <rect x="52" y="348" width="238" height="30" rx="7" fill="#fff7e6" stroke="#f3d488"/><text x="64" y="362" font-size="9.5" fill="#1a1a1a">입력값 수집이 필요하면</text><text x="64" y="374" font-size="9.5" fill="#1a1a1a"><tspan font-weight="700">Google Sheets + Apps Script</tspan> 연동</text>
+
+  <!-- 회사 가벼운 배포 -->
+  <rect x="322" y="86" width="300" height="300" rx="12" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="338" y="112" font-size="13.5" font-weight="700" fill="#b8860b">회사 · 가벼운 배포</text>
+  <text x="338" y="132" font-size="10.5" fill="#b8860b">사내 인프라가 AWS로 통일된 경우</text>
+  <rect x="338" y="146" width="268" height="30" rx="7" fill="#ffffff" stroke="#f0d6b8"/><text x="350" y="165" font-size="11" fill="#1a1a1a"><tspan font-weight="700">GitHub</tspan> — 코드·버전 관리</text>
+  <rect x="338" y="182" width="268" height="30" rx="7" fill="#ffffff" stroke="#f0d6b8"/><text x="350" y="201" font-size="11" fill="#1a1a1a"><tspan font-weight="700">AWS Amplify</tspan> — 프론트 호스팅·백엔드</text>
+  <rect x="338" y="218" width="268" height="30" rx="7" fill="#ffffff" stroke="#f0d6b8"/><text x="350" y="237" font-size="11" fill="#1a1a1a"><tspan font-weight="700">Supabase</tspan> — DB</text>
+  <rect x="338" y="254" width="268" height="30" rx="7" fill="#ffffff" stroke="#f0d6b8"/><text x="350" y="273" font-size="11" fill="#1a1a1a"><tspan font-weight="700">AWS 관리형 서비스</tspan> — Lambda 등 서버리스</text>
+  <text x="338" y="306" font-size="10" fill="#1a7f37">→ 인증·데이터·파일을 한 계정·한 청구서로</text>
+  <rect x="338" y="318" width="268" height="60" rx="8" fill="#f5f0fb" stroke="#d9c6f0"/>
+  <text x="352" y="340" font-size="11" font-weight="700" fill="#7c3aed">이 셋업·배포는 Claude가 진행</text>
+  <text x="352" y="359" font-size="9.5" fill="#444">Cowork·Code에게 자연어로 시키면 저장소 생성·</text>
+  <text x="352" y="372" font-size="9.5" fill="#444">환경 변수·빌드·배포까지 대신 수행합니다.</text>
+
+  <!-- 선택 가이드 -->
+  <rect x="638" y="86" width="226" height="300" rx="12" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="654" y="112" font-size="13" font-weight="700" fill="#1a1a1a">고를 때 한 줄 기준</text>
+  <text x="654" y="140" font-size="10.5" fill="#444">· 혼자·빠르게 → 개인 조합</text>
+  <text x="654" y="162" font-size="10.5" fill="#444">· 화면만 보여주면 됨(DB 불필요)</text>
+  <text x="670" y="178" font-size="10.5" fill="#6b6b6b">→ GitHub Pages</text>
+  <text x="654" y="200" font-size="10.5" fill="#444">· 정적인데 신청 폼만 필요</text>
+  <text x="670" y="216" font-size="10.5" fill="#6b6b6b">→ Sheets + Apps Script</text>
+  <text x="654" y="238" font-size="10.5" fill="#444">· 회사가 이미 AWS를 씀</text>
+  <text x="670" y="254" font-size="10.5" fill="#6b6b6b">→ Amplify 조합</text>
+  <text x="654" y="282" font-size="10.5" fill="#444">· 규정·보안이 엄격</text>
+  <text x="670" y="298" font-size="10.5" fill="#6b6b6b">→ AWS 리전·관리형 서비스</text>
+  <line x1="654" y1="316" x2="848" y2="316" stroke="#e3e6ea"/>
+  <text x="654" y="338" font-size="9.5" fill="#9aa0a6">Vercel+Supabase와 Amplify는</text>
+  <text x="654" y="352" font-size="9.5" fill="#9aa0a6">둘 다 조각을 자동으로 엮어주는</text>
+  <text x="654" y="366" font-size="9.5" fill="#9aa0a6">PaaS/BaaS 성격입니다.</text>
+</svg>

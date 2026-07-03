@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 340" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="880" height="340" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">인증 vs 인가, 그리고 로그인 유지 방식</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">"너 누구야?"(인증)와 "그거 해도 돼?"(인가)는 다릅니다.</text>
+
+  <!-- 인증/인가 비유 -->
+  <rect x="36" y="90" width="380" height="98" rx="12" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="56" y="116" font-size="14" font-weight="700" fill="#3a6fd6">인증(Authentication)</text>
+  <text x="56" y="140" font-size="11.5" fill="#1a1a1a">"넌 정말 김철수 맞아?" — 신분증 확인</text>
+  <text x="56" y="162" font-size="11.5" fill="#6b6b6b">로그인(아이디·비밀번호·소셜) → 토큰 발급</text>
+
+  <rect x="436" y="90" width="408" height="98" rx="12" fill="#fdeef1" stroke="#f7c0c8"/>
+  <text x="456" y="116" font-size="14" font-weight="700" fill="#E8344E">인가(Authorization)</text>
+  <text x="456" y="140" font-size="11.5" fill="#1a1a1a">"김철수는 이걸 해도 돼?" — 배지·권한 확인</text>
+  <text x="456" y="162" font-size="11.5" fill="#6b6b6b">역할(RBAC)·행 단위 권한(RLS)으로 강제</text>
+
+  <!-- 세션/JWT/OAuth -->
+  <text x="40" y="220" font-size="13.5" font-weight="700" fill="#1a1a1a">로그인 상태를 유지하는 세 방식</text>
+  <g font-size="11">
+    <rect x="36" y="232" width="264" height="86" rx="10" fill="#f4f5f7" stroke="#d9dde3"/>
+    <text x="52" y="254" font-size="12.5" font-weight="700" fill="#555">세션(Session)</text>
+    <text x="52" y="274" fill="#444">서버가 로그인 목록을 기억</text>
+    <text x="52" y="292" fill="#1a7f37">+ 즉시 로그아웃</text><text x="180" y="292" fill="#b00020">− 서버 부하·분산 복잡</text>
+    <text x="52" y="310" font-size="9.5" fill="#9aa0a6">소규모·즉시 로그아웃 중요</text>
+
+    <rect x="308" y="232" width="264" height="86" rx="10" fill="#eef3fd" stroke="#bcd0f5"/>
+    <text x="324" y="254" font-size="12.5" font-weight="700" fill="#3a6fd6">JWT(토큰)</text>
+    <text x="324" y="274" fill="#444">서명된 토큰을 브라우저가 지님</text>
+    <text x="324" y="292" fill="#1a7f37">+ 무상태·확장 쉬움</text><text x="470" y="292" fill="#b00020">− 즉시 무효화 까다로움</text>
+    <text x="324" y="310" font-size="9.5" fill="#9aa0a6">API·모바일·분산 환경</text>
+
+    <rect x="580" y="232" width="264" height="86" rx="10" fill="#fff7e6" stroke="#f3d488"/>
+    <text x="596" y="254" font-size="12.5" font-weight="700" fill="#b8860b">OAuth(위임)</text>
+    <text x="596" y="274" fill="#444">구글·카카오 등 외부에 위임</text>
+    <text x="596" y="292" fill="#1a7f37">+ 인증 로직 아웃소싱</text><text x="740" y="292" fill="#b00020">− 외부 의존</text>
+    <text x="596" y="310" font-size="9.5" fill="#9aa0a6">소셜 로그인·외부 연동</text>
+  </g>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="320" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">SQL Injection — 입력을 코드로 오해하면 뚫린다</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">입력을 문자열로 이어 붙이면 조작당하고, 값으로 '따로' 넘기면 안전합니다.</text>
+  <rect x="36" y="92" width="392" height="200" rx="12" fill="#fdeef1" stroke="#f7c0c8"/>
+  <text x="56" y="118" font-size="14" font-weight="700" fill="#E8344E">취약 — 입력을 그대로 이어 붙임</text>
+  <rect x="56" y="132" width="352" height="30" rx="5" fill="#ffffff" stroke="#f7c0c8"/>
+  <text x="66" y="152" font-size="10.5" fill="#444" font-family="monospace">... WHERE email = '입력값'</text>
+  <text x="56" y="184" font-size="11" fill="#6b6b6b">공격자가 이렇게 입력하면 →</text>
+  <rect x="56" y="194" width="352" height="30" rx="5" fill="#fff0f2" stroke="#f7c0c8"/>
+  <text x="66" y="214" font-size="10.5" fill="#b00020" font-family="monospace">email:  admin' --</text>
+  <rect x="56" y="230" width="352" height="30" rx="5" fill="#fff0f2" stroke="#f7c0c8"/>
+  <text x="66" y="250" font-size="10.5" fill="#b00020" font-family="monospace">WHERE email='admin' -- '  (비번확인 무력화)</text>
+  <text x="56" y="280" font-size="11" fill="#b00020">입력이 SQL 명령으로 실행됨 → DB 조작·유출</text>
+  <rect x="472" y="92" width="392" height="200" rx="12" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="492" y="118" font-size="14" font-weight="700" fill="#1a7f37">안전 — 값을 매개변수로 분리</text>
+  <rect x="492" y="132" width="352" height="30" rx="5" fill="#ffffff" stroke="#cfe9d7"/>
+  <text x="502" y="152" font-size="10.5" fill="#444" font-family="monospace">... WHERE email = ?</text>
+  <rect x="492" y="168" width="352" height="30" rx="5" fill="#ffffff" stroke="#cfe9d7"/>
+  <text x="502" y="188" font-size="10.5" fill="#444" font-family="monospace">값: [ "admin' --" ]  ← 따로 전달</text>
+  <text x="492" y="222" font-size="11" fill="#1a7f37">입력은 언제나 '값'으로만 취급 → 명령이 될 수 없음</text>
+  <text x="492" y="248" font-size="11" fill="#6b6b6b">막기: 매개변수화 쿼리 · ORM</text>
+  <text x="492" y="276" font-size="11" fill="#6b6b6b">(XSS·CSRF도 '입력을 안 믿는' 같은 원리)</text>
+</svg>

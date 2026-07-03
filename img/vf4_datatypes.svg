@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 320" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="880" height="320" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">데이터 4종류와 어울리는 저장소</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">먼저 '어떤 데이터인지' 분류하면, '어디에 담을지'가 정해집니다.</text>
+
+  <g text-anchor="middle">
+    <rect x="36" y="94" width="196" height="180" rx="12" fill="#eef3fd" stroke="#bcd0f5"/>
+    <text x="134" y="120" font-size="14" font-weight="700" fill="#3a6fd6">정형</text><text x="134" y="140" font-size="10.5" fill="#6b6b6b">틀이 정해진 표</text>
+    <text x="134" y="168" font-size="11" fill="#1a1a1a">회원·이벤트·신청·결제</text>
+    <text x="134" y="188" font-size="10.5" fill="#9aa0a6">행·열, 자료형 명확</text>
+    <rect x="52" y="216" width="164" height="42" rx="8" fill="#ffffff" stroke="#bcd0f5"/><text x="134" y="236" font-size="10.5" fill="#3a6fd6">관계형 DB</text><text x="134" y="251" font-size="9" fill="#6b6b6b">PostgreSQL·MySQL·SQLite</text>
+
+    <rect x="244" y="94" width="196" height="180" rx="12" fill="#fff7e6" stroke="#f3d488"/>
+    <text x="342" y="120" font-size="14" font-weight="700" fill="#b8860b">반정형</text><text x="342" y="140" font-size="10.5" fill="#6b6b6b">느슨한 구조</text>
+    <text x="342" y="168" font-size="11" fill="#1a1a1a">로그·이벤트·JSON 응답</text>
+    <text x="342" y="188" font-size="10.5" fill="#9aa0a6">필드가 들쭉날쭉</text>
+    <rect x="260" y="216" width="164" height="42" rx="8" fill="#ffffff" stroke="#f3d488"/><text x="342" y="236" font-size="10.5" fill="#b8860b">문서형 NoSQL</text><text x="342" y="251" font-size="9" fill="#6b6b6b">MongoDB·BigQuery</text>
+
+    <rect x="452" y="94" width="196" height="180" rx="12" fill="#fdeef1" stroke="#f7c0c8"/>
+    <text x="550" y="120" font-size="14" font-weight="700" fill="#E8344E">비정형</text><text x="550" y="140" font-size="10.5" fill="#6b6b6b">자유 형식·대용량</text>
+    <text x="550" y="168" font-size="11" fill="#1a1a1a">이미지·영상·PDF·음성</text>
+    <text x="550" y="188" font-size="10.5" fill="#9aa0a6">메타만 DB, 파일은 분리</text>
+    <rect x="468" y="216" width="164" height="42" rx="8" fill="#ffffff" stroke="#f7c0c8"/><text x="550" y="236" font-size="10.5" fill="#E8344E">객체 스토리지</text><text x="550" y="251" font-size="9" fill="#6b6b6b">S3·GCS·R2</text>
+
+    <rect x="660" y="94" width="196" height="180" rx="12" fill="#eaf6ee" stroke="#bfe3cb"/>
+    <text x="758" y="120" font-size="14" font-weight="700" fill="#1a7f37">시계열</text><text x="758" y="140" font-size="10.5" fill="#6b6b6b">시간 축에 쌓임</text>
+    <text x="758" y="168" font-size="11" fill="#1a1a1a">CPU·트래픽·센서·시세</text>
+    <text x="758" y="188" font-size="10.5" fill="#9aa0a6">최근만 자주 조회</text>
+    <rect x="676" y="216" width="164" height="42" rx="8" fill="#ffffff" stroke="#bfe3cb"/><text x="758" y="236" font-size="10.5" fill="#1a7f37">시계열 DB·메모리</text><text x="758" y="251" font-size="9" fill="#6b6b6b">InfluxDB·Prometheus·Redis</text>
+  </g>
+  <text x="40" y="302" font-size="12" fill="#6b6b6b">RSVP 예: 정형(회원·이벤트·신청) · 반정형(이벤트별 커스텀 필드) · 비정형(포스터·증명 PDF) · 시계열(시간당 신청 수)</text>
+</svg>

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 350" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="350" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">4단 파이프라인 — Planner → Copywriter → Designer → Reviewer</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">순차 분업. 각 단계는 JSON을 입출력하고, Reviewer가 자가 수정 루프로 품질을 지킵니다.</text>
+
+  <defs>
+    <marker id="fs_a" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/>
+    </marker>
+    <marker id="fs_r" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#E8344E"/>
+    </marker>
+  </defs>
+
+  <rect x="40" y="120" width="170" height="72" rx="11" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="125" y="148" font-size="12.5" font-weight="700" fill="#7c3aed" text-anchor="middle">Planner</text>
+  <text x="125" y="168" font-size="9.5" fill="#444" text-anchor="middle">핵심 지표 5~7개</text>
+  <text x="125" y="184" font-size="9" fill="#6b6b6b" text-anchor="middle">Haiku</text>
+
+  <rect x="255" y="120" width="170" height="72" rx="11" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="340" y="148" font-size="12.5" font-weight="700" fill="#3a6fd6" text-anchor="middle">Copywriter</text>
+  <text x="340" y="168" font-size="9.5" fill="#444" text-anchor="middle">임원 보고용 문안</text>
+  <text x="340" y="184" font-size="9" fill="#6b6b6b" text-anchor="middle">Sonnet</text>
+
+  <rect x="470" y="120" width="170" height="72" rx="11" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="555" y="148" font-size="12.5" font-weight="700" fill="#3a6fd6" text-anchor="middle">Designer</text>
+  <text x="555" y="168" font-size="9.5" fill="#444" text-anchor="middle">레이아웃·스타일</text>
+  <text x="555" y="184" font-size="9" fill="#6b6b6b" text-anchor="middle">Sonnet</text>
+
+  <rect x="685" y="120" width="170" height="72" rx="11" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="770" y="148" font-size="12.5" font-weight="700" fill="#b8860b" text-anchor="middle">Reviewer</text>
+  <text x="770" y="168" font-size="9.5" fill="#444" text-anchor="middle">검수·자가 수정</text>
+  <text x="770" y="184" font-size="9" fill="#6b6b6b" text-anchor="middle">Sonnet</text>
+
+  <line x1="210" y1="156" x2="251" y2="156" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#fs_a)"/>
+  <text x="230" y="146" font-size="8.5" fill="#6b6b6b" text-anchor="middle">지표 JSON</text>
+  <line x1="425" y1="156" x2="466" y2="156" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#fs_a)"/>
+  <text x="445" y="146" font-size="8.5" fill="#6b6b6b" text-anchor="middle">카피 JSON</text>
+  <line x1="640" y1="156" x2="681" y2="156" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#fs_a)"/>
+  <text x="662" y="146" font-size="8.5" fill="#6b6b6b" text-anchor="middle">레이아웃 JSON</text>
+
+  <rect x="685" y="245" width="170" height="44" rx="10" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="770" y="272" font-size="11" font-weight="700" fill="#1a7f37" text-anchor="middle">approved → 최종 리포트</text>
+  <line x1="770" y1="192" x2="770" y2="241" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#fs_a)"/>
+
+  <path d="M685 178 L555 178 L555 200" fill="none" stroke="#E8344E" stroke-width="1.5" marker-end="url(#fs_r)"/>
+  <text x="618" y="216" font-size="9.5" fill="#b00020" text-anchor="middle">rejected → Designer 재작업 (최대 2 cycle)</text>
+
+  <rect x="40" y="245" width="600" height="60" rx="10" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="55" y="266" font-size="10" fill="#444">각 단계 = 입력(이전 JSON) · 작업(고정 응답으로 처리) · 출력(JSON) · 추적성(디버깅 가능)</text>
+  <text x="55" y="288" font-size="10" fill="#444">Reviewer 판정은 approved / rejected 2가지. 3회 차부터는 사람에게 에스컬레이션.</text>
+</svg>

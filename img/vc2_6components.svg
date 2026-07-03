@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="400" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">에이전트 운영 설계의 6가지 구성요소</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">"이 에이전트를 어디까지 믿을 수 있는가"를 이 여섯 질문으로 정의합니다. (예: RSVP 운영 에이전트)</text>
+
+  <g>
+    <rect x="40" y="92" width="266" height="132" rx="10" fill="#fafbfc" stroke="#e3e6ea"/>
+    <text x="58" y="118" font-size="13.5" font-weight="700" fill="#3a6fd6">인격 (Persona)</text>
+    <text x="58" y="138" font-size="10.5" fill="#6b6b6b">에이전트가 누구인가?</text>
+    <text x="58" y="164" font-size="10.5" fill="#1a1a1a">파일: CLAUDE.md 첫 섹션</text>
+    <text x="58" y="188" font-size="10.5" fill="#8a6d1a">예: "행사팀 코디네이터,</text>
+    <text x="58" y="204" font-size="10.5" fill="#8a6d1a">따뜻하고 문제해결 지향"</text>
+
+    <rect x="317" y="92" width="266" height="132" rx="10" fill="#fafbfc" stroke="#e3e6ea"/>
+    <text x="335" y="118" font-size="13.5" font-weight="700" fill="#3a6fd6">기억 (Memory)</text>
+    <text x="335" y="138" font-size="10.5" fill="#6b6b6b">무엇을 알고 있는가?</text>
+    <text x="335" y="164" font-size="10.5" fill="#1a1a1a">파일: memory/ + CLAUDE.md</text>
+    <text x="335" y="188" font-size="10.5" fill="#8a6d1a">예: 지난 행사 참석률·</text>
+    <text x="335" y="204" font-size="10.5" fill="#8a6d1a">취소 패턴·VIP 명단</text>
+
+    <rect x="594" y="92" width="266" height="132" rx="10" fill="#fafbfc" stroke="#e3e6ea"/>
+    <text x="612" y="118" font-size="13.5" font-weight="700" fill="#3a6fd6">재능 (Skills)</text>
+    <text x="612" y="138" font-size="10.5" fill="#6b6b6b">무엇을 잘하는가?</text>
+    <text x="612" y="164" font-size="10.5" fill="#1a1a1a">파일: skills/</text>
+    <text x="612" y="188" font-size="10.5" fill="#8a6d1a">예: 일정·장소 관리,</text>
+    <text x="612" y="204" font-size="10.5" fill="#8a6d1a">거절 메일 작성</text>
+
+    <rect x="40" y="238" width="266" height="132" rx="10" fill="#fafbfc" stroke="#e3e6ea"/>
+    <text x="58" y="264" font-size="13.5" font-weight="700" fill="#1a7f37">능력 (Capabilities)</text>
+    <text x="58" y="284" font-size="10.5" fill="#6b6b6b">무엇을 할 수 있는가?</text>
+    <text x="58" y="310" font-size="10.5" fill="#1a1a1a">도구: Settings + MCP</text>
+    <text x="58" y="334" font-size="10.5" fill="#8a6d1a">예: 캘린더 조회·메일</text>
+    <text x="58" y="350" font-size="10.5" fill="#8a6d1a">발송·Slack 알림</text>
+
+    <rect x="317" y="238" width="266" height="132" rx="10" fill="#fff5f6" stroke="#f3c9cf"/>
+    <text x="335" y="264" font-size="13.5" font-weight="700" fill="#b00020">규칙 (Rules)</text>
+    <text x="335" y="284" font-size="10.5" fill="#6b6b6b">무엇을 하면 안 되는가?</text>
+    <text x="335" y="310" font-size="10.5" fill="#1a1a1a">파일: rules/ + Hook</text>
+    <text x="335" y="334" font-size="10.5" fill="#8a6d1a">예: 개인정보 외부 노출</text>
+    <text x="335" y="350" font-size="10.5" fill="#8a6d1a">금지, 확정 인원만 보고</text>
+
+    <rect x="594" y="238" width="266" height="132" rx="10" fill="#fafbfc" stroke="#e3e6ea"/>
+    <text x="612" y="264" font-size="13.5" font-weight="700" fill="#3a6fd6">분업 (Subagents)</text>
+    <text x="612" y="284" font-size="10.5" fill="#6b6b6b">누구에게 넘기는가?</text>
+    <text x="612" y="310" font-size="10.5" fill="#1a1a1a">파일: agents/ · Plugin</text>
+    <text x="612" y="334" font-size="10.5" fill="#8a6d1a">예: 복잡한 식사 제약은</text>
+    <text x="612" y="350" font-size="10.5" fill="#8a6d1a">영양사 하위 에이전트</text>
+  </g>
+</svg>

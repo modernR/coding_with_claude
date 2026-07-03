@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="320" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">스킬 평가 자동화 — 게시 전 5항목 점검</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">감으로 게시하지 않습니다. 다섯 관점을 통과해야 마켓플레이스에 오릅니다.</text>
+  <defs>
+    <marker id="se_a" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/></marker>
+  </defs>
+  <rect x="40" y="95" width="150" height="150" rx="11" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="115" y="160" font-size="13" font-weight="700" fill="#7c3aed" text-anchor="middle">새 스킬</text>
+  <text x="115" y="182" font-size="10.5" fill="#444" text-anchor="middle">평가 워크플로우</text>
+  <text x="115" y="199" font-size="10.5" fill="#444" text-anchor="middle">호출</text>
+  <line x1="192" y1="170" x2="222" y2="170" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#se_a)"/>
+  <g font-size="10.5" fill="#444">
+    <rect x="228" y="95" width="300" height="42" rx="9" fill="#eef3fd" stroke="#bcd0f5"/>
+    <text x="243" y="112" font-weight="700" fill="#3a6fd6">① 결과 품질</text>
+    <text x="243" y="129">샘플 5개로 호출해 산출 품질 확인</text>
+    <rect x="228" y="143" width="300" height="42" rx="9" fill="#eef3fd" stroke="#bcd0f5"/>
+    <text x="243" y="160" font-weight="700" fill="#3a6fd6">② 자동 분배</text>
+    <text x="243" y="177">trigger_examples 5개가 이 스킬로 가나</text>
+    <rect x="228" y="191" width="300" height="42" rx="9" fill="#eef3fd" stroke="#bcd0f5"/>
+    <text x="243" y="208" font-weight="700" fill="#3a6fd6">③ 오분배 방지</text>
+    <text x="243" y="225">counter_examples는 다른 스킬로 가나</text>
+    <rect x="540" y="95" width="300" height="42" rx="9" fill="#fff7e6" stroke="#f3d488"/>
+    <text x="555" y="112" font-weight="700" fill="#b8860b">④ 출력 일관성</text>
+    <text x="555" y="129">형식이 매번 같은 구조로 나오나</text>
+    <rect x="540" y="143" width="300" height="42" rx="9" fill="#fff7e6" stroke="#f3d488"/>
+    <text x="555" y="160" font-weight="700" fill="#b8860b">⑤ 비용 측정</text>
+    <text x="555" y="177">토큰·시간 비용을 잰다</text>
+    <rect x="540" y="191" width="300" height="42" rx="9" fill="#f1faf3" stroke="#cfe9d7"/>
+    <text x="555" y="211" font-weight="700" fill="#1a7f37">평가 리포트 → tests/eval.json</text>
+    <text x="555" y="227" font-size="9.5" fill="#6b6b6b">버전 올릴 때 회귀 검증에 재사용</text>
+  </g>
+  <text x="450" y="280" font-size="11" fill="#6b6b6b" text-anchor="middle">②·③은 frontmatter의 trigger/counter_examples가 실제 자동 분배에서 작동하는지 검증하는 절차입니다.</text>
+  <text x="450" y="300" font-size="10.5" fill="#b00020" text-anchor="middle">이 다섯 항목 통과 = 사내 마켓플레이스 게시 기준</text>
+</svg>

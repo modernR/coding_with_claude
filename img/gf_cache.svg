@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="320" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">캐싱 — 자주 쓰는 답을 빠른 곳에 복사해 둔다</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">같은 질문을 100번 받아도, 캐시가 있으면 느린 DB는 한 번만 두드립니다.</text>
+  <defs><marker id="ca" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/></marker></defs>
+  <rect x="60" y="130" width="150" height="70" rx="12" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="135" y="162" font-size="13" font-weight="700" fill="#3a6fd6" text-anchor="middle">요청</text>
+  <text x="135" y="182" font-size="10.5" fill="#6b6b6b" text-anchor="middle">"참석자 수?"</text>
+  <rect x="360" y="130" width="180" height="70" rx="12" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="450" y="158" font-size="13" font-weight="700" fill="#7c3aed" text-anchor="middle">캐시 (Redis)</text>
+  <text x="450" y="180" font-size="10.5" fill="#6b6b6b" text-anchor="middle">메모리 — 매우 빠름</text>
+  <rect x="690" y="130" width="150" height="70" rx="12" fill="#eaf6ee" stroke="#bfe3cb"/>
+  <text x="765" y="158" font-size="13" font-weight="700" fill="#1a7f37" text-anchor="middle">DB</text>
+  <text x="765" y="180" font-size="10.5" fill="#6b6b6b" text-anchor="middle">느림 · 원본</text>
+  <line x1="210" y1="165" x2="358" y2="165" stroke="#9aa0a6" stroke-width="1.8" marker-end="url(#ca)"/>
+  <line x1="540" y1="152" x2="212" y2="152" stroke="#1a7f37" stroke-width="1.8" marker-end="url(#ca)"/>
+  <text x="376" y="120" font-size="11" fill="#1a7f37" text-anchor="middle">캐시 적중(hit) → 바로 응답 (빠름)</text>
+  <line x1="540" y1="178" x2="688" y2="178" stroke="#9aa0a6" stroke-width="1.6" stroke-dasharray="4 3" marker-end="url(#ca)"/>
+  <line x1="688" y1="192" x2="542" y2="192" stroke="#9aa0a6" stroke-width="1.6" stroke-dasharray="4 3" marker-end="url(#ca)"/>
+  <text x="614" y="224" font-size="11" fill="#6b6b6b" text-anchor="middle">캐시 없음(miss) 때만 DB → 값 저장</text>
+  <text x="40" y="286" font-size="12" fill="#6b6b6b">※ '참석자 수=45' 같은 값을 캐시에 두면, 조회 100번 중 대부분을 메모리에서 즉시 처리합니다. (TTL로 만료 시간 지정)</text>
+</svg>

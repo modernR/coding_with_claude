@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="300" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">사내 마켓플레이스 구현 세 방식 — 규모에 맞춰 고른다</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">작을수록 단순하게. 이 강은 가장 실용적인 A 방식을 중심으로 다룹니다.</text>
+  <g>
+    <rect x="40" y="95" width="260" height="170" rx="12" fill="#f1faf3" stroke="#cfe9d7"/>
+    <text x="60" y="122" font-size="14" font-weight="700" fill="#1a7f37">A. git 저장소 + index.json</text>
+    <text x="60" y="144" font-size="11" fill="#444">가장 단순 · 소규모</text>
+    <text x="60" y="170" font-size="10.5" fill="#444">· 사내 git에 플러그인 저장소</text>
+    <text x="60" y="188" font-size="10.5" fill="#444">· 메타 저장소에 전체 목록(index)</text>
+    <text x="60" y="206" font-size="10.5" fill="#444">· 인프라 거의 불필요</text>
+    <rect x="60" y="224" width="220" height="26" rx="6" fill="#e8f6ec"/>
+    <text x="70" y="241" font-size="10" fill="#1a7f37">이 강의 중심</text>
+  </g>
+  <g>
+    <rect x="320" y="95" width="260" height="170" rx="12" fill="#fff7e6" stroke="#f3d488"/>
+    <text x="340" y="122" font-size="14" font-weight="700" fill="#b8860b">B. 마켓플레이스 웹 + API</text>
+    <text x="340" y="144" font-size="11" fill="#444">중간 규모</text>
+    <text x="340" y="170" font-size="10.5" fill="#444">· 검색·평점·다운로드 통계</text>
+    <text x="340" y="188" font-size="10.5" fill="#444">· 웹 UI로 제공</text>
+    <text x="340" y="206" font-size="10.5" fill="#444">· 운영 인프라 필요</text>
+  </g>
+  <g>
+    <rect x="600" y="95" width="260" height="170" rx="12" fill="#eef3fd" stroke="#bcd0f5"/>
+    <text x="620" y="122" font-size="14" font-weight="700" fill="#3a6fd6">C. 공식 + private 옵션</text>
+    <text x="620" y="144" font-size="11" fill="#444">대규모</text>
+    <text x="620" y="170" font-size="10.5" fill="#444">· 공식 마켓 + 사내 private</text>
+    <text x="620" y="188" font-size="10.5" fill="#444">· 중앙 관리·거버넌스</text>
+    <text x="620" y="206" font-size="10.5" fill="#444">· 미래 시나리오</text>
+  </g>
+  <text x="450" y="290" font-size="11" fill="#6b6b6b" text-anchor="middle">직원 수와 갱신 빈도가 커질수록 A → B → C로 옮겨갑니다. git과 CDN은 병행할 수 있습니다.</text>
+</svg>

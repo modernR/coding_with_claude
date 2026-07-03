@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 320" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="880" height="320" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">흔한 보안 위협 5 — 무엇을 노리고, 어떻게 막나</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">공격은 대개 '입력 신뢰'와 '비밀 노출'에서 비롯됩니다.</text>
+
+  <g font-size="11">
+    <rect x="36" y="90" width="808" height="42" rx="8" fill="#fff5f6" stroke="#f3c9cf"/>
+    <text x="52" y="116" font-size="12.5" font-weight="700" fill="#b00020">SQL Injection</text><text x="240" y="116" fill="#1a1a1a">입력에 SQL을 끼워 DB 조작</text><text x="560" y="116" fill="#1a7f37">막기: 매개변수화 쿼리·ORM</text>
+
+    <rect x="36" y="138" width="808" height="42" rx="8" fill="#fff7e6" stroke="#f3d488"/>
+    <text x="52" y="164" font-size="12.5" font-weight="700" fill="#b8860b">XSS</text><text x="240" y="164" fill="#1a1a1a">악성 스크립트 주입 → 쿠키·세션 탈취</text><text x="560" y="164" fill="#1a7f37">막기: HTML 이스케이프·CSP</text>
+
+    <rect x="36" y="186" width="808" height="42" rx="8" fill="#eef3fd" stroke="#bcd0f5"/>
+    <text x="52" y="212" font-size="12.5" font-weight="700" fill="#3a6fd6">CSRF</text><text x="240" y="212" fill="#1a1a1a">사용자 모르게 그의 계정으로 요청</text><text x="560" y="212" fill="#1a7f37">막기: CSRF 토큰·SameSite 쿠키</text>
+
+    <rect x="36" y="234" width="808" height="42" rx="8" fill="#eef3fd" stroke="#bcd0f5"/>
+    <text x="52" y="260" font-size="12.5" font-weight="700" fill="#3a6fd6">계정 탈취</text><text x="240" y="260" fill="#1a1a1a">유출된 비번 목록으로 무작위 로그인</text><text x="560" y="260" fill="#1a7f37">막기: MFA·시도 제한·강한 비번</text>
+  </g>
+  <rect x="36" y="282" width="808" height="30" rx="8" fill="#1a1a1a"/>
+  <text x="52" y="302" font-size="12" font-weight="700" fill="#fff">민감정보 노출</text><text x="240" y="302" font-size="11" fill="#cfcfcf">API 키를 Git에 커밋 → 도용·과금 폭탄</text><text x="560" y="302" font-size="11" fill="#bfe3cb">막기: .gitignore·비밀 스캔·즉시 키 회전</text>
+</svg>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 440" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="440" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">슬래시 명령 지도 — 메타 작업의 단축키</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">입문 6개 위에 중급 14개를 더해, 목적별 네 갈래로 나눠 익힙니다.</text>
+
+  <rect x="40" y="90" width="820" height="60" rx="10" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="56" y="114" font-size="12.5" font-weight="700" fill="#1a1a1a">입문 6개 (복습)</text>
+  <g font-size="11" fill="#444">
+    <text x="56" y="136">/help</text>
+    <text x="140" y="136">/init</text>
+    <text x="220" y="136">/clear</text>
+    <text x="310" y="136">/permissions</text>
+    <text x="430" y="136">/compact</text>
+    <text x="530" y="136">/exit</text>
+  </g>
+
+  <rect x="40" y="170" width="200" height="230" rx="10" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="60" y="194" font-size="12.5" font-weight="700" fill="#3a6fd6">컨텍스트·세션</text>
+  <g font-size="11" fill="#1a1a1a">
+    <text x="60" y="222">/cost</text><text x="60" y="240" font-size="9.5" fill="#6b6b6b">토큰·비용</text>
+    <text x="60" y="266">/model</text><text x="60" y="284" font-size="9.5" fill="#6b6b6b">모델 변경</text>
+    <text x="60" y="310">/memory</text><text x="60" y="328" font-size="9.5" fill="#6b6b6b">기억 상태</text>
+    <text x="60" y="354">/sessions</text><text x="60" y="372" font-size="9.5" fill="#6b6b6b">세션 이력</text>
+  </g>
+
+  <rect x="255" y="170" width="200" height="230" rx="10" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="275" y="194" font-size="12.5" font-weight="700" fill="#b8860b">출력·표시</text>
+  <g font-size="11" fill="#1a1a1a">
+    <text x="275" y="222">/output-style</text><text x="275" y="240" font-size="9.5" fill="#6b6b6b">응답 스타일</text>
+    <text x="275" y="266">/statusline</text><text x="275" y="284" font-size="9.5" fill="#6b6b6b">상태표시줄</text>
+    <text x="275" y="310">/quiet</text><text x="275" y="328" font-size="9.5" fill="#6b6b6b">출력 최소화</text>
+  </g>
+
+  <rect x="470" y="170" width="200" height="230" rx="10" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="490" y="194" font-size="12.5" font-weight="700" fill="#1a7f37">작업 자동화</text>
+  <g font-size="11" fill="#1a1a1a">
+    <text x="490" y="222">/agents</text><text x="490" y="240" font-size="9.5" fill="#6b6b6b">서브에이전트</text>
+    <text x="490" y="266">/skill &lt;name&gt;</text><text x="490" y="284" font-size="9.5" fill="#6b6b6b">스킬 명시 호출</text>
+    <text x="490" y="310">/run &lt;command&gt;</text><text x="490" y="328" font-size="9.5" fill="#6b6b6b">커스텀 커맨드</text>
+    <text x="490" y="354">/plan</text><text x="490" y="372" font-size="9.5" fill="#6b6b6b">플랜 모드</text>
+  </g>
+
+  <rect x="685" y="170" width="175" height="230" rx="10" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="705" y="194" font-size="12.5" font-weight="700" fill="#7c3aed">환경·설정</text>
+  <g font-size="11" fill="#1a1a1a">
+    <text x="705" y="222">/config</text><text x="705" y="240" font-size="9.5" fill="#6b6b6b">설정 편집</text>
+    <text x="705" y="266">/mcp</text><text x="705" y="284" font-size="9.5" fill="#6b6b6b">MCP 관리</text>
+    <text x="705" y="310">/login</text><text x="705" y="328" font-size="9.5" fill="#6b6b6b">/logout</text>
+    <text x="705" y="354" font-size="9.5" fill="#6b6b6b">계정 전환</text>
+  </g>
+</svg>

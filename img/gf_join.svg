@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="300" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">JOIN — 두 표를 외래키로 이어 붙여 본다</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">신청 표의 user_id로 회원 표를 연결해 '누가 신청했나'를 한눈에 봅니다.</text>
+  <defs><marker id="jn" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/></marker></defs>
+  <rect x="40" y="96" width="200" height="120" rx="10" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="140" y="118" font-size="12" font-weight="700" fill="#3a6fd6" text-anchor="middle">users</text>
+  <rect x="56" y="130" width="168" height="24" rx="4" fill="#ffffff" stroke="#bcd0f5"/><text x="64" y="147" font-size="10" fill="#444">id=7 · 김철수</text>
+  <rect x="56" y="158" width="168" height="24" rx="4" fill="#ffffff" stroke="#bcd0f5"/><text x="64" y="175" font-size="10" fill="#444">id=8 · 이영희</text>
+  <rect x="56" y="186" width="168" height="24" rx="4" fill="#ffffff" stroke="#bcd0f5"/><text x="64" y="203" font-size="10" fill="#444">id=9 · 박민수</text>
+  <rect x="300" y="96" width="200" height="120" rx="10" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="400" y="118" font-size="12" font-weight="700" fill="#b8860b" text-anchor="middle">rsvps</text>
+  <rect x="316" y="130" width="168" height="24" rx="4" fill="#ffffff" stroke="#f3d488"/><text x="324" y="147" font-size="10" fill="#444">신청1 · user_id=7</text>
+  <rect x="316" y="158" width="168" height="24" rx="4" fill="#ffffff" stroke="#f3d488"/><text x="324" y="175" font-size="10" fill="#444">신청2 · user_id=9</text>
+  <text x="270" y="240" font-size="10.5" fill="#6b6b6b" text-anchor="middle">FK(user_id)로 두 표를 연결</text>
+  <line x1="316" y1="142" x2="226" y2="142" stroke="#9aa0a6" stroke-width="1.4" marker-end="url(#jn)"/>
+  <line x1="316" y1="170" x2="226" y2="198" stroke="#9aa0a6" stroke-width="1.4" marker-end="url(#jn)"/>
+  <rect x="560" y="96" width="300" height="120" rx="10" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="710" y="118" font-size="12" font-weight="700" fill="#1a7f37" text-anchor="middle">JOIN 결과</text>
+  <rect x="576" y="130" width="268" height="24" rx="4" fill="#ffffff" stroke="#cfe9d7"/><text x="584" y="147" font-size="10" fill="#444">신청1 · 김철수</text>
+  <rect x="576" y="158" width="268" height="24" rx="4" fill="#ffffff" stroke="#cfe9d7"/><text x="584" y="175" font-size="10" fill="#444">신청2 · 박민수</text>
+  <text x="710" y="203" font-size="10" fill="#6b6b6b" text-anchor="middle">신청 + 신청자 이름을 함께</text>
+  <line x1="500" y1="156" x2="558" y2="156" stroke="#9aa0a6" stroke-width="1.8" marker-end="url(#jn)"/>
+  <text x="40" y="270" font-size="12" fill="#6b6b6b">※ 이름을 중복 저장하지 않아도(정규화), 필요할 때 JOIN으로 합쳐 볼 수 있습니다 — 이래서 '관계형'입니다.</text>
+</svg>

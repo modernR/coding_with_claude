@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="380" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">하네스(harness) 패턴 — 멀티에이전트 운영의 기본 틀</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">각 에이전트에게 명확한 작업 경계·기준을 한 세트로 제공합니다. 4요소 + 3원칙.</text>
+
+  <defs>
+    <marker id="hn_a" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/>
+    </marker>
+  </defs>
+
+  <rect x="40" y="90" width="600" height="180" rx="12" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="60" y="116" font-size="13.5" font-weight="700" fill="#1a1a1a">하네스 4요소</text>
+
+  <rect x="60" y="130" width="270" height="60" rx="10" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="75" y="152" font-size="11.5" font-weight="700" fill="#7c3aed">Agent (누가)</text>
+  <text x="75" y="172" font-size="9.5" fill="#444">역할별 LLM 인격 · model · description</text>
+
+  <rect x="350" y="130" width="270" height="60" rx="10" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="365" y="152" font-size="11.5" font-weight="700" fill="#3a6fd6">Environment (어디서)</text>
+  <text x="365" y="172" font-size="9.5" fill="#444">폴더·도구·권한 · tools · isolation</text>
+
+  <rect x="60" y="200" width="270" height="60" rx="10" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="75" y="222" font-size="11.5" font-weight="700" fill="#b8860b">Session (어떤 컨텍스트)</text>
+  <text x="75" y="242" font-size="9.5" fill="#444">대화 단위·기억 범위 · 격리 윈도우</text>
+
+  <rect x="350" y="200" width="270" height="60" rx="10" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="365" y="222" font-size="11.5" font-weight="700" fill="#1a7f37">Events (어떤 트리거)</text>
+  <text x="365" y="242" font-size="9.5" fill="#444">스케줄·Hook · GitHub Actions 헤드리스</text>
+
+  <line x1="644" y1="180" x2="684" y2="180" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#hn_a)"/>
+
+  <rect x="690" y="90" width="170" height="180" rx="12" fill="#fdecef" stroke="#E8344E"/>
+  <text x="775" y="116" font-size="12.5" font-weight="700" fill="#b00020" text-anchor="middle">3원칙</text>
+  <text x="705" y="150" font-size="10.5" font-weight="700" fill="#1a1a1a">Constrain</text>
+  <text x="705" y="167" font-size="9" fill="#444">턴·시간·권한 제한</text>
+  <text x="705" y="192" font-size="10.5" font-weight="700" fill="#1a1a1a">Inform</text>
+  <text x="705" y="209" font-size="9" fill="#444">도메인 지식·형식 주입</text>
+  <text x="705" y="234" font-size="10.5" font-weight="700" fill="#1a1a1a">Human-in-loop</text>
+  <text x="705" y="251" font-size="9" fill="#444">결정 지점에 사람 검토</text>
+
+  <rect x="40" y="292" width="820" height="66" rx="10" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="60" y="315" font-size="10.5" fill="#444">외주 디자이너에게 "프로젝트 폴더 + 디자인 가이드 + 검수 지점"을 한 세트로 주듯,</text>
+  <text x="60" y="335" font-size="10.5" fill="#444">각 에이전트에게 작업 경계와 기준을 제공하는 것이 하네스입니다. 4요소로 무대를 세우고,</text>
+  <text x="60" y="352" font-size="10.5" font-weight="700" fill="#b8860b">3원칙(제약·정보·사람 검토)으로 안전하게 운영합니다.</text>
+</svg>

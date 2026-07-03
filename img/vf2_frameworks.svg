@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 360" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="860" height="360" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">도구는 '그때그때의 문제'를 풀며 진화했다</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">각 도구는 앞 세대의 한계를 해결하며 등장했습니다 — '왜 쓰는가'가 여기서 나옵니다.</text>
+
+  <defs><marker id="fw" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/></marker></defs>
+
+  <rect x="36" y="110" width="250" height="96" rx="10" fill="#f4f5f7" stroke="#d9dde3"/>
+  <text x="56" y="136" font-size="13.5" font-weight="700" fill="#555">① jQuery (2006)</text>
+  <text x="56" y="160" font-size="11.5" fill="#6b6b6b">문제: JS로 DOM 조작이 복잡</text>
+  <text x="56" y="182" font-size="11.5" fill="#1a1a1a">→ 간단한 셀렉터·조작 문법</text>
+
+  <rect x="305" y="110" width="250" height="96" rx="10" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="325" y="136" font-size="13.5" font-weight="700" fill="#3a6fd6">② 컴포넌트 라이브러리</text>
+  <text x="325" y="160" font-size="11.5" fill="#6b6b6b">문제: 대규모 앱 코드가 산란</text>
+  <text x="325" y="182" font-size="11.5" fill="#1a1a1a">→ React·Vue·Svelte (상태 기반 UI)</text>
+
+  <rect x="574" y="110" width="250" height="96" rx="10" fill="#fdeef1" stroke="#f7c0c8"/>
+  <text x="594" y="136" font-size="13.5" font-weight="700" fill="#E8344E">③ 메타프레임워크</text>
+  <text x="594" y="160" font-size="11.5" fill="#6b6b6b">문제: 서버·라우팅·배포가 별개</text>
+  <text x="594" y="182" font-size="11.5" fill="#1a1a1a">→ Next·Nuxt·SvelteKit (풀스택)</text>
+
+  <line x1="286" y1="158" x2="303" y2="158" stroke="#9aa0a6" stroke-width="1.8" marker-end="url(#fw)"/>
+  <line x1="555" y1="158" x2="572" y2="158" stroke="#9aa0a6" stroke-width="1.8" marker-end="url(#fw)"/>
+
+  <rect x="36" y="238" width="788" height="86" rx="10" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="56" y="262" font-size="12.5" font-weight="700" fill="#1a1a1a">언제 무엇을 (요지)</text>
+  <text x="56" y="284" font-size="11.5" fill="#444">· 간단한 페이지(FAQ·블로그) = HTML+CSS  · 레거시에 상호작용 추가 = jQuery  · MVP·중소 = React/Vue</text>
+  <text x="56" y="304" font-size="11.5" fill="#444">· SEO 중요 기업 서비스 = Next.js(+TypeScript)  · 가벼운 인터랙티브 = Svelte  · 복잡한 실시간 UI = React + 상태관리</text>
+</svg>

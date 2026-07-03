@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 280" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="280" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">AI와 사람의 역할 분담 — 자동화의 마지막 문은 사람이 잡는다</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">이 강 전체를 관통하는 원칙. 다섯 함정의 공통 해법이기도 합니다.</text>
+  <g>
+    <rect x="40" y="95" width="390" height="150" rx="12" fill="#eef3fd" stroke="#bcd0f5"/>
+    <text x="60" y="122" font-size="15" font-weight="700" fill="#3a6fd6">AI가 빠르게 한다</text>
+    <line x1="60" y1="134" x2="410" y2="134" stroke="#bcd0f5"/>
+    <text x="60" y="160" font-size="11" fill="#444">· 작업 분해 (PRD → 100+개, 30분)</text>
+    <text x="60" y="182" font-size="11" fill="#444">· 의존 관계 추론</text>
+    <text x="60" y="204" font-size="11" fill="#444">· 집계·진행 추적·리포트 생성</text>
+    <text x="60" y="226" font-size="11" fill="#444">· 우선순위 후보 제안</text>
+  </g>
+  <g>
+    <rect x="470" y="95" width="390" height="150" rx="12" fill="#f1faf3" stroke="#cfe9d7"/>
+    <text x="490" y="122" font-size="15" font-weight="700" fill="#1a7f37">사람이 판단한다</text>
+    <line x1="490" y1="134" x2="840" y2="134" stroke="#cfe9d7"/>
+    <text x="490" y="160" font-size="11" fill="#444">· 첫 분해·의존 검토·승인 (PR처럼)</text>
+    <text x="490" y="182" font-size="11" fill="#444">· 분기 우선순위 고정</text>
+    <text x="490" y="204" font-size="11" fill="#444">· 비즈니스 판단·이해관계자 협상</text>
+    <text x="490" y="226" font-size="11" fill="#444">· 전략 결정 (운영자 → 결정자로 이동)</text>
+  </g>
+  <text x="450" y="270" font-size="11" fill="#b00020" text-anchor="middle">AI는 분해·추론·집계를 빠르게, 사람은 검토·기준 고정·전략 판단을 — 이 경계가 무너지면 잘못된 결정이 빠르게 확산됩니다.</text>
+</svg>

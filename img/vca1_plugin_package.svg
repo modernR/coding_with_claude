@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="420" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">플러그인 패키지 구성 — 확장 기능을 한 묶음으로</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">plugin.json 메타데이터 아래에 스킬·커맨드·에이전트·훅·MCP를 담아 "한 줄 설치" 단위로 만듭니다.</text>
+
+  <defs><marker id="vca1pk_ar" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/></marker></defs>
+
+  <!-- root -->
+  <rect x="330" y="90" width="240" height="52" rx="11" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="450" y="114" font-size="13" font-weight="700" fill="#7c3aed" text-anchor="middle">realestate-pro/</text>
+  <text x="450" y="132" font-size="9.5" fill="#6b6b6b" text-anchor="middle">플러그인 git 저장소 (설치 단위)</text>
+
+  <!-- meta row -->
+  <rect x="60" y="170" width="230" height="60" rx="10" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="175" y="192" font-size="12" font-weight="700" fill="#3a6fd6" text-anchor="middle">plugin.json</text>
+  <text x="175" y="209" font-size="9.5" fill="#444" text-anchor="middle">name·version·description</text>
+  <text x="175" y="223" font-size="9.5" fill="#444" text-anchor="middle">compatibility·contents·permissions</text>
+
+  <rect x="335" y="170" width="230" height="60" rx="10" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="450" y="192" font-size="12" font-weight="700" fill="#3a6fd6" text-anchor="middle">문서</text>
+  <text x="450" y="209" font-size="9.5" fill="#444" text-anchor="middle">README · CHANGELOG</text>
+  <text x="450" y="223" font-size="9.5" fill="#444" text-anchor="middle">LICENSE</text>
+
+  <rect x="610" y="170" width="230" height="60" rx="10" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="725" y="192" font-size="12" font-weight="700" fill="#3a6fd6" text-anchor="middle">tests/eval.json</text>
+  <text x="725" y="209" font-size="9.5" fill="#444" text-anchor="middle">자동 평가·게시 기준</text>
+  <text x="725" y="223" font-size="9.5" fill="#444" text-anchor="middle">샘플·기대 출력</text>
+
+  <line x1="450" y1="142" x2="175" y2="168" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#vca1pk_ar)"/>
+  <line x1="450" y1="142" x2="450" y2="168" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#vca1pk_ar)"/>
+  <line x1="450" y1="142" x2="725" y2="168" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#vca1pk_ar)"/>
+
+  <!-- .claude container -->
+  <rect x="60" y="258" width="780" height="132" rx="11" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="80" y="282" font-size="12" font-weight="700" fill="#1a1a1a">.claude/ — 실제 확장 기능</text>
+
+  <rect x="80" y="296" width="140" height="80" rx="9" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="150" y="318" font-size="11" font-weight="700" fill="#b8860b" text-anchor="middle">skills/</text>
+  <text x="150" y="337" font-size="9" fill="#444" text-anchor="middle">contract-reviewer</text>
+  <text x="150" y="352" font-size="9" fill="#444" text-anchor="middle">valuation-estimator</text>
+  <text x="150" y="368" font-size="9" fill="#6b6b6b" text-anchor="middle">스킬 5~10개</text>
+
+  <rect x="232" y="296" width="140" height="80" rx="9" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="302" y="318" font-size="11" font-weight="700" fill="#b8860b" text-anchor="middle">commands/</text>
+  <text x="302" y="337" font-size="9" fill="#444" text-anchor="middle">매물조사 · 시세분석</text>
+  <text x="302" y="358" font-size="9" fill="#6b6b6b" text-anchor="middle">커맨드 3~5개</text>
+
+  <rect x="384" y="296" width="140" height="80" rx="9" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="454" y="318" font-size="11" font-weight="700" fill="#b8860b" text-anchor="middle">agents/</text>
+  <text x="454" y="337" font-size="9" fill="#444" text-anchor="middle">legal-checker</text>
+  <text x="454" y="358" font-size="9" fill="#6b6b6b" text-anchor="middle">서브에이전트</text>
+
+  <rect x="536" y="296" width="140" height="80" rx="9" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="606" y="318" font-size="11" font-weight="700" fill="#b8860b" text-anchor="middle">hooks/</text>
+  <text x="606" y="337" font-size="9" fill="#444" text-anchor="middle">before_command_</text>
+  <text x="606" y="351" font-size="9" fill="#444" text-anchor="middle">legal_warning.sh</text>
+  <text x="606" y="368" font-size="9" fill="#6b6b6b" text-anchor="middle">품질·안전 레일</text>
+
+  <rect x="688" y="296" width="140" height="80" rx="9" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="758" y="318" font-size="11" font-weight="700" fill="#b8860b" text-anchor="middle">mcps/</text>
+  <text x="758" y="337" font-size="9" fill="#444" text-anchor="middle">company-rfc.json</text>
+  <text x="758" y="358" font-size="9" fill="#6b6b6b" text-anchor="middle">MCP 1~2개</text>
+
+  <line x1="450" y1="230" x2="450" y2="256" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#vca1pk_ar)"/>
+</svg>

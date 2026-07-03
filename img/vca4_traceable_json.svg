@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="380" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">JSON 파이프라인 TRACEABLE 패턴</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">모든 산출물을 JSON으로 디스크에 저장 — 추적·재현·회고·개선의 기반이 됩니다.</text>
+
+  <defs>
+    <marker id="tj_a" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/>
+    </marker>
+  </defs>
+
+  <rect x="40" y="95" width="480" height="255" rx="12" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="60" y="120" font-size="12.5" font-weight="700" fill="#1a1a1a">/output/reports/2026-05-04-weekly-001/</text>
+
+  <rect x="60" y="135" width="440" height="42" rx="8" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="75" y="153" font-size="9.5" font-weight="700" fill="#7c3aed">01_planner.json</text>
+  <text x="75" y="169" font-size="8.5" fill="#444">stage·input·output·model·tokens·cost·timestamp</text>
+
+  <rect x="60" y="183" width="440" height="42" rx="8" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="75" y="201" font-size="9.5" font-weight="700" fill="#3a6fd6">02_copywriter.json</text>
+  <text x="75" y="217" font-size="8.5" fill="#444">headline·body·cta · cost $0.06 · 180s</text>
+
+  <rect x="60" y="231" width="440" height="42" rx="8" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="75" y="249" font-size="9.5" font-weight="700" fill="#3a6fd6">03_designer.json</text>
+  <text x="75" y="265" font-size="8.5" fill="#444">slides·style · cost $0.06 · 240s</text>
+
+  <rect x="60" y="279" width="440" height="42" rx="8" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="75" y="297" font-size="9.5" font-weight="700" fill="#b8860b">04_reviewer.json</text>
+  <text x="75" y="313" font-size="8.5" fill="#444">status:approved · retries:1 · $0.04</text>
+
+  <rect x="60" y="327" width="440" height="16" rx="5" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="75" y="339" font-size="8.5" font-weight="700" fill="#1a7f37">manifest.json — run 요약 · total_cost $0.17</text>
+
+  <line x1="524" y1="220" x2="564" y2="220" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#tj_a)"/>
+
+  <rect x="570" y="95" width="290" height="255" rx="12" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="590" y="120" font-size="12.5" font-weight="700" fill="#b8860b">JSON 보존의 네 가지 이득</text>
+  <text x="590" y="150" font-size="10.5" font-weight="700" fill="#1a1a1a">① 추적 가능</text>
+  <text x="590" y="167" font-size="9.5" fill="#444">어느 단계에서 문제가 났는지 즉시 파악</text>
+  <text x="590" y="195" font-size="10.5" font-weight="700" fill="#1a1a1a">② 재현 가능</text>
+  <text x="590" y="212" font-size="9.5" fill="#444">같은 입력 → 같은 결과 (고정 응답)</text>
+  <text x="590" y="240" font-size="10.5" font-weight="700" fill="#1a1a1a">③ 회고 가능</text>
+  <text x="590" y="257" font-size="9.5" fill="#444">"왜 이 선택을 했나"를 나중에 분석</text>
+  <text x="590" y="285" font-size="10.5" font-weight="700" fill="#1a1a1a">④ 개선 기반</text>
+  <text x="590" y="302" font-size="9.5" fill="#444">rejected 케이스만 모아 프롬프트 개선</text>
+  <text x="590" y="332" font-size="9" fill="#6b6b6b">jq로 재시도·실패 케이스 필터링</text>
+</svg>

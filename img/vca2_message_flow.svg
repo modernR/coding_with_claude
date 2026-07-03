@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="400" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">MCP 메시지 흐름 — 연결부터 도구 호출, 종료까지</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">클라이언트와 서버는 정해진 순서로 대화합니다. 도구 호출(3단계)만 반복됩니다.</text>
+  <defs>
+    <marker id="vca2msg_arr" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/>
+    </marker>
+  </defs>
+
+  <rect x="120" y="95" width="180" height="46" rx="9" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="210" y="123" font-size="13" font-weight="700" fill="#3a6fd6" text-anchor="middle">클라이언트 (Cowork)</text>
+  <rect x="600" y="95" width="180" height="46" rx="9" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="690" y="123" font-size="13" font-weight="700" fill="#1a1a1a" text-anchor="middle">MCP 서버 (자체)</text>
+  <line x1="210" y1="141" x2="210" y2="360" stroke="#d0d4d9" stroke-width="1.5"/>
+  <line x1="690" y1="141" x2="690" y2="360" stroke="#d0d4d9" stroke-width="1.5"/>
+
+  <text x="40" y="176" font-size="11" font-weight="700" fill="#6b6b6b">1. 초기화</text>
+  <line x1="210" y1="185" x2="688" y2="185" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#vca2msg_arr)"/>
+  <text x="450" y="178" font-size="10.5" fill="#444" text-anchor="middle">initialize (지원 기능 협상)</text>
+  <line x1="690" y1="205" x2="212" y2="205" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#vca2msg_arr)"/>
+  <text x="450" y="198" font-size="10.5" fill="#444" text-anchor="middle">capabilities 반환</text>
+
+  <text x="40" y="240" font-size="11" font-weight="700" fill="#6b6b6b">2. 목록 조회</text>
+  <line x1="210" y1="249" x2="688" y2="249" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#vca2msg_arr)"/>
+  <text x="450" y="242" font-size="10.5" fill="#444" text-anchor="middle">tools/list</text>
+  <line x1="690" y1="269" x2="212" y2="269" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#vca2msg_arr)"/>
+  <text x="450" y="262" font-size="10.5" fill="#444" text-anchor="middle">[tool1, tool2 ...] 스키마 포함</text>
+
+  <rect x="40" y="288" width="820" height="52" rx="9" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="58" y="308" font-size="11" font-weight="700" fill="#b8860b">3. 도구 호출 (반복)</text>
+  <line x1="210" y1="322" x2="688" y2="322" stroke="#b8860b" stroke-width="1.5" marker-end="url(#vca2msg_arr)"/>
+  <text x="415" y="315" font-size="10.5" fill="#444" text-anchor="middle">tools/call (name, arguments)</text>
+  <line x1="690" y1="335" x2="212" y2="335" stroke="#b8860b" stroke-width="1.5" marker-end="url(#vca2msg_arr)"/>
+  <text x="430" y="335" font-size="10" fill="#6b6b6b" text-anchor="middle">서버가 비즈니스 로직 수행 후 result 또는 error</text>
+
+  <text x="40" y="378" font-size="11" fill="#9aa0a6">4. 종료 — 클라이언트가 shutdown 을 보내면 연결이 정리됩니다.</text>
+</svg>

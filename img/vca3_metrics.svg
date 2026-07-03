@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 340" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="340" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">운영 메트릭 자동 수집 흐름</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">SessionEnd 훅이 지표를 사내 분석 시스템으로 전송 → 대시보드는 임원 설득 자산.</text>
+
+  <defs>
+    <marker id="mt_a" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/>
+    </marker>
+  </defs>
+
+  <!-- 세션 종료 -->
+  <rect x="40" y="130" width="150" height="80" rx="11" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="115" y="160" font-size="12" font-weight="700" fill="#b8860b" text-anchor="middle">SessionEnd 훅</text>
+  <text x="115" y="182" font-size="9.5" fill="#444" text-anchor="middle">메타데이터 수집</text>
+  <text x="115" y="198" font-size="9" fill="#6b6b6b" text-anchor="middle">토큰·시간·훅 발동</text>
+
+  <!-- 전송 지표들 -->
+  <rect x="250" y="100" width="300" height="140" rx="12" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="270" y="124" font-size="12" font-weight="700" fill="#6b6b6b">전송 지표</text>
+  <text x="270" y="148" font-size="10" fill="#444">· 품질 게이트 통과율 (통과·실패·우회)</text>
+  <text x="270" y="168" font-size="10" fill="#444">· 자동 fix 비율 · 비밀 키 차단 횟수</text>
+  <text x="270" y="188" font-size="10" fill="#444">· 평균 PR 머지 시간 · 작업 처리량</text>
+  <text x="270" y="208" font-size="10" fill="#444">· 토큰·비용 (집계 단위)</text>
+  <text x="270" y="228" font-size="9" fill="#b00020">익명화·집계 — 개인 추적 안 함</text>
+
+  <!-- 분석 API -->
+  <rect x="610" y="100" width="250" height="60" rx="11" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="735" y="126" font-size="11.5" font-weight="700" fill="#3a6fd6" text-anchor="middle">사내 분석 API</text>
+  <text x="735" y="146" font-size="9.5" fill="#444" text-anchor="middle">Bearer 토큰 인증 · POST</text>
+
+  <!-- 대시보드 -->
+  <rect x="610" y="180" width="250" height="120" rx="11" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="735" y="205" font-size="11.5" font-weight="700" fill="#1a7f37" text-anchor="middle">사내 대시보드</text>
+  <text x="735" y="228" font-size="9.5" fill="#444" text-anchor="middle">Grafana·Metabase·Next.js</text>
+  <text x="735" y="250" font-size="9.5" fill="#444" text-anchor="middle">통과율 94.3% · 차단 12건</text>
+  <text x="735" y="268" font-size="9.5" fill="#444" text-anchor="middle">머지 -28% · 비용 $2,140</text>
+  <text x="735" y="288" font-size="9" fill="#6b6b6b" text-anchor="middle">예산·정책 결정 근거</text>
+
+  <line x1="190" y1="170" x2="246" y2="170" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#mt_a)"/>
+  <line x1="550" y1="150" x2="606" y2="132" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#mt_a)"/>
+  <line x1="735" y1="160" x2="735" y2="176" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#mt_a)"/>
+</svg>

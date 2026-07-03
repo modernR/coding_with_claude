@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 320" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="880" height="320" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">HTTP vs HTTPS — 자물쇠는 무엇을 잠그나</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">HTTPS는 전송 구간을 암호화하고, 인증서로 '진짜 그 사이트'임을 증명합니다.</text>
+
+  <defs><marker id="ht" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/></marker></defs>
+
+  <!-- HTTP -->
+  <rect x="36" y="92" width="392" height="96" rx="12" fill="#fff5f6" stroke="#f3c9cf"/>
+  <text x="56" y="118" font-size="14" font-weight="700" fill="#b00020">HTTP — 평문 ✕</text>
+  <rect x="56" y="132" width="90" height="34" rx="7" fill="#ffffff" stroke="#f3c9cf"/><text x="101" y="154" font-size="11" fill="#1a1a1a" text-anchor="middle">브라우저</text>
+  <rect x="318" y="132" width="90" height="34" rx="7" fill="#ffffff" stroke="#f3c9cf"/><text x="363" y="154" font-size="11" fill="#1a1a1a" text-anchor="middle">서버</text>
+  <line x1="146" y1="149" x2="316" y2="149" stroke="#b00020" stroke-width="1.6" marker-end="url(#ht)"/><text x="231" y="142" font-size="10" fill="#b00020" text-anchor="middle">"비밀번호=1234" 그대로</text>
+  <text x="231" y="182" font-size="10" fill="#b00020" text-anchor="middle">중간에서 도청 가능(공용 와이파이 등)</text>
+
+  <!-- HTTPS -->
+  <rect x="452" y="92" width="392" height="96" rx="12" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="472" y="118" font-size="14" font-weight="700" fill="#1a7f37">HTTPS — 암호화 ✓</text>
+  <rect x="472" y="132" width="90" height="34" rx="7" fill="#ffffff" stroke="#cfe9d7"/><text x="517" y="154" font-size="11" fill="#1a1a1a" text-anchor="middle">브라우저</text>
+  <rect x="734" y="132" width="90" height="34" rx="7" fill="#ffffff" stroke="#cfe9d7"/><text x="779" y="154" font-size="11" fill="#1a1a1a" text-anchor="middle">서버</text>
+  <line x1="562" y1="149" x2="732" y2="149" stroke="#1a7f37" stroke-width="1.6" marker-end="url(#ht)"/><text x="647" y="142" font-size="10" fill="#1a7f37" text-anchor="middle">암호문 "x8$@k…"</text>
+  <text x="647" y="182" font-size="10" fill="#1a7f37" text-anchor="middle">도청해도 못 읽음 · SEO 우대</text>
+
+  <rect x="36" y="212" width="808" height="72" rx="8" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="56" y="234" font-size="12" font-weight="700" fill="#1a1a1a">SSL/TLS 인증서 = "이 사이트가 진짜 example.com이다"라는 증명서</text>
+  <text x="56" y="256" font-size="11" fill="#444">발급: 요청 → 인증기관(Let's Encrypt 등)이 도메인 소유 검증 → 발급 → 설치 → <tspan font-weight="700">자동 갱신</tspan>(무료는 90일)</text>
+  <text x="56" y="274" font-size="10.5" fill="#9aa0a6">PaaS(Vercel·Netlify)는 인증서 발급·갱신을 자동 처리 — 신경 쓸 필요 없음. (갱신 주기는 점점 짧아지는 추세 → 자동화 필수)</text>
+</svg>

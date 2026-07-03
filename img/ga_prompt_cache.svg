@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="300" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">Prompt Caching — 반복 컨텍스트의 읽기 비용을 줄인다</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">시스템 프롬프트·CLAUDE.md·스킬처럼 매 세션 반복되는 컨텍스트에 적용됩니다.</text>
+  <defs>
+    <marker id="pc_a" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/></marker>
+  </defs>
+  <rect x="40" y="95" width="230" height="120" rx="11" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="155" y="120" font-size="13" font-weight="700" fill="#b8860b" text-anchor="middle">1차 호출 (쓰기)</text>
+  <text x="155" y="146" font-size="10.5" fill="#444" text-anchor="middle">시스템·CLAUDE.md를</text>
+  <text x="155" y="163" font-size="10.5" fill="#444" text-anchor="middle">캐시에 저장</text>
+  <text x="155" y="192" font-size="10" fill="#6b6b6b" text-anchor="middle">일반 입력 대비 약 1.25배</text>
+  <text x="155" y="207" font-size="10" fill="#6b6b6b" text-anchor="middle">(5분) / 약 2배 (1시간)</text>
+  <line x1="278" y1="155" x2="322" y2="155" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#pc_a)"/>
+  <rect x="325" y="120" width="150" height="70" rx="11" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="400" y="150" font-size="12" font-weight="700" fill="#1a1a1a" text-anchor="middle">캐시</text>
+  <text x="400" y="172" font-size="9.5" fill="#6b6b6b" text-anchor="middle">저장된 컨텍스트</text>
+  <line x1="478" y1="155" x2="522" y2="155" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#pc_a)"/>
+  <rect x="525" y="95" width="335" height="120" rx="11" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="692" y="120" font-size="13" font-weight="700" fill="#1a7f37" text-anchor="middle">2차 이후 호출 (읽기)</text>
+  <text x="692" y="146" font-size="10.5" fill="#444" text-anchor="middle">같은 내용을 캐시에서 읽어옴</text>
+  <rect x="545" y="160" width="295" height="40" rx="8" fill="#e8f6ec"/>
+  <text x="692" y="185" font-size="11" font-weight="700" fill="#1a7f37" text-anchor="middle">일반 입력 대비 약 90% 절감</text>
+  <text x="450" y="248" font-size="11" fill="#6b6b6b" text-anchor="middle">CLAUDE.md 200줄 반복 시 읽기 약 90%↓ · 스킬 5개면 누적 50~70%↓ · 장기 프로젝트 월 30~40%↓</text>
+  <text x="450" y="272" font-size="10.5" fill="#b00020" text-anchor="middle">적중률이 낮으면(매번 다른 컨텍스트) 쓰기 오버헤드만 나므로 반복 프롬프트에만 켭니다.</text>
+</svg>

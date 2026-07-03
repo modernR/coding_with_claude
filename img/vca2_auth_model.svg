@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="420" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">인증·권한 모델 — 세 가지 인증과 도구별 권한</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">"누구인지" 확인(인증)과 "무엇을 할 수 있는지" 확인(권한)은 다릅니다. 둘 다 필요합니다.</text>
+  <defs>
+    <marker id="vca2auth_arr" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/>
+    </marker>
+  </defs>
+
+  <text x="40" y="100" font-size="13" font-weight="700" fill="#1a1a1a">인증 옵션 — 규모가 커질수록 오른쪽으로</text>
+
+  <rect x="40" y="115" width="260" height="120" rx="11" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="170" y="141" font-size="13" font-weight="700" fill="#1a7f37" text-anchor="middle">A. API 키</text>
+  <text x="170" y="160" font-size="10.5" fill="#6b6b6b" text-anchor="middle">가장 단순</text>
+  <text x="55" y="184" font-size="10.5" fill="#444">직원이 사내에서 키 발급 →</text>
+  <text x="55" y="201" font-size="10.5" fill="#444">환경변수 저장 → 서버가 검사</text>
+  <text x="55" y="224" font-size="10" fill="#9aa0a6">첫 자체 MCP에 적합</text>
+
+  <rect x="320" y="115" width="260" height="120" rx="11" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="450" y="141" font-size="13" font-weight="700" fill="#3a6fd6" text-anchor="middle">B. OAuth</text>
+  <text x="450" y="160" font-size="10.5" fill="#6b6b6b" text-anchor="middle">사용자 단위 권한</text>
+  <text x="335" y="184" font-size="10.5" fill="#444">직원이 로그인 → 본인 권한</text>
+  <text x="335" y="201" font-size="10.5" fill="#444">범위 안에서만 데이터 접근</text>
+  <text x="335" y="224" font-size="10" fill="#9aa0a6">더 안전·토큰 갱신 필요</text>
+
+  <rect x="600" y="115" width="260" height="120" rx="11" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="730" y="141" font-size="13" font-weight="700" fill="#7c3aed" text-anchor="middle">C. SSO 게이트웨이</text>
+  <text x="730" y="160" font-size="10.5" fill="#6b6b6b" text-anchor="middle">대기업 표준</text>
+  <text x="615" y="184" font-size="10.5" fill="#444">SAML·OIDC로 사내 인증</text>
+  <text x="615" y="201" font-size="10.5" fill="#444">시스템과 통합</text>
+  <text x="615" y="224" font-size="10" fill="#9aa0a6">외부 접근·중앙 관리</text>
+
+  <line x1="300" y1="175" x2="318" y2="175" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#vca2auth_arr)"/>
+  <line x1="580" y1="175" x2="598" y2="175" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#vca2auth_arr)"/>
+
+  <text x="40" y="272" font-size="13" font-weight="700" fill="#1a1a1a">권한 검사 — 호출마다 통과해야 하는 관문</text>
+
+  <rect x="40" y="288" width="150" height="80" rx="10" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="115" y="320" font-size="11" font-weight="700" fill="#1a1a1a" text-anchor="middle">도구 호출</text>
+  <text x="115" y="342" font-size="10" fill="#6b6b6b" text-anchor="middle">tools/call</text>
+
+  <rect x="230" y="288" width="180" height="80" rx="10" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="320" y="315" font-size="11" font-weight="700" fill="#b8860b" text-anchor="middle">인증 확인</text>
+  <text x="320" y="336" font-size="10" fill="#444" text-anchor="middle">토큰이 유효한 사용자인가</text>
+  <text x="320" y="353" font-size="9.5" fill="#9aa0a6" text-anchor="middle">누구인가</text>
+
+  <rect x="450" y="288" width="200" height="80" rx="10" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="550" y="311" font-size="11" font-weight="700" fill="#b8860b" text-anchor="middle">권한 확인 (RBAC)</text>
+  <text x="550" y="331" font-size="10" fill="#444" text-anchor="middle">read:listings 있는가</text>
+  <text x="550" y="349" font-size="9.5" fill="#9aa0a6" text-anchor="middle">무엇을 할 수 있는가</text>
+
+  <rect x="690" y="288" width="170" height="80" rx="10" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="775" y="315" font-size="11" font-weight="700" fill="#1a7f37" text-anchor="middle">실행 + 감사 로그</text>
+  <text x="775" y="336" font-size="10" fill="#444" text-anchor="middle">누가·언제·무엇을</text>
+  <text x="775" y="353" font-size="9.5" fill="#9aa0a6" text-anchor="middle">전부 기록</text>
+
+  <line x1="190" y1="328" x2="228" y2="328" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#vca2auth_arr)"/>
+  <line x1="410" y1="328" x2="448" y2="328" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#vca2auth_arr)"/>
+  <line x1="650" y1="328" x2="688" y2="328" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#vca2auth_arr)"/>
+
+  <rect x="40" y="384" width="820" height="30" rx="8" fill="#fff5f6" stroke="#f3c9cf"/>
+  <text x="60" y="404" font-size="11.5" fill="#b00020">주의: 테스트라도 인증 없이 시작하면 사내 데이터가 누구에게나 열립니다. 인증은 처음부터 필수입니다.</text>
+</svg>

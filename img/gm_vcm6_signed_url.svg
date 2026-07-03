@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="300" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">Storage 심화 — 파일 성격별로 버킷을 나눈다</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">"공개해도 되는 것"과 "한시적으로만 열어야 하는 것"을 구분하는 것이 핵심입니다.</text>
+
+  <rect x="40" y="95" width="260" height="185" rx="12" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="170" y="122" font-size="12.5" font-weight="700" fill="#1a7f37" text-anchor="middle">공개 버킷 + CDN</text>
+  <rect x="62" y="140" width="216" height="40" rx="8" fill="#ffffff" stroke="#cfe9d7"/>
+  <text x="170" y="164" font-size="11" fill="#444" text-anchor="middle">이벤트 포스터</text>
+  <text x="170" y="210" font-size="10.5" fill="#444" text-anchor="middle">누구나 접근 가능</text>
+  <text x="170" y="232" font-size="10.5" fill="#444" text-anchor="middle">공개 URL 상시 유효</text>
+
+  <rect x="320" y="95" width="260" height="185" rx="12" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="450" y="122" font-size="12.5" font-weight="700" fill="#b8860b" text-anchor="middle">비공개 + Signed URL</text>
+  <rect x="342" y="140" width="216" height="40" rx="8" fill="#ffffff" stroke="#f0d6b8"/>
+  <text x="450" y="164" font-size="11" fill="#444" text-anchor="middle">개인 증명 PDF</text>
+  <text x="450" y="210" font-size="10.5" fill="#444" text-anchor="middle">만료 시각이 서명에 포함</text>
+  <text x="450" y="232" font-size="10.5" fill="#444" text-anchor="middle">정해진 시간만 접근 (예: 1시간)</text>
+  <rect x="342" y="246" width="216" height="24" rx="6" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="450" y="263" font-size="9" fill="#8a6d00" text-anchor="middle" font-family="monospace">createSignedUrl(path, 3600)</text>
+
+  <rect x="600" y="95" width="260" height="185" rx="12" fill="#fff5f6" stroke="#f3c9cf"/>
+  <text x="730" y="122" font-size="12.5" font-weight="700" fill="#b00020" text-anchor="middle">비공개 + 관리자만</text>
+  <rect x="622" y="140" width="216" height="40" rx="8" fill="#ffffff" stroke="#f3c9cf"/>
+  <text x="730" y="164" font-size="11" fill="#444" text-anchor="middle">당일 행사 사진</text>
+  <text x="730" y="210" font-size="10.5" fill="#444" text-anchor="middle">관리자 역할만 접근</text>
+  <text x="730" y="232" font-size="10.5" fill="#444" text-anchor="middle">RLS·권한으로 통제</text>
+</svg>

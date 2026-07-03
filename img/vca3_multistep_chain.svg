@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="400" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">멀티스텝 훅 체인 — 저장에서 에스컬레이션까지</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">자가 수정 루프. 재시도 상한(MAX_RETRY)을 넘기면 사람에게 넘깁니다.</text>
+
+  <defs>
+    <marker id="ms_a" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/>
+    </marker>
+  </defs>
+
+  <!-- 파일 저장 -->
+  <rect x="60" y="100" width="130" height="46" rx="10" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="125" y="128" font-size="12" font-weight="700" fill="#1a1a1a" text-anchor="middle">파일 저장</text>
+
+  <!-- 검증 (마름모 느낌 rounded) -->
+  <rect x="250" y="95" width="150" height="56" rx="10" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="325" y="120" font-size="12" font-weight="700" fill="#b8860b" text-anchor="middle">검증</text>
+  <text x="325" y="138" font-size="10" fill="#444" text-anchor="middle">npm test</text>
+
+  <!-- 통과 -->
+  <rect x="250" y="215" width="150" height="46" rx="10" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="325" y="243" font-size="12" font-weight="700" fill="#1a7f37" text-anchor="middle">저장 완료</text>
+
+  <!-- 재시도 판정 -->
+  <rect x="470" y="95" width="160" height="56" rx="10" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="550" y="120" font-size="12" font-weight="700" fill="#b8860b" text-anchor="middle">retry_count</text>
+  <text x="550" y="138" font-size="10.5" fill="#444" text-anchor="middle">&lt; MAX_RETRY(2)?</text>
+
+  <!-- 자동 fix -->
+  <rect x="470" y="215" width="160" height="56" rx="10" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="550" y="240" font-size="11.5" font-weight="700" fill="#3a6fd6" text-anchor="middle">자동 fix</text>
+  <text x="550" y="257" font-size="9.5" fill="#444" text-anchor="middle">prettier · eslint --fix</text>
+
+  <!-- count +1 -->
+  <rect x="470" y="300" width="160" height="42" rx="10" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="550" y="326" font-size="11" fill="#7c3aed" text-anchor="middle">retry_count + 1</text>
+
+  <!-- 에스컬레이션 -->
+  <rect x="700" y="95" width="160" height="56" rx="10" fill="#fff5f6" stroke="#f3c9cf"/>
+  <text x="780" y="120" font-size="12" font-weight="700" fill="#b00020" text-anchor="middle">에스컬레이션</text>
+  <text x="780" y="138" font-size="9.5" fill="#444" text-anchor="middle">이메일 · Slack 알림</text>
+
+  <!-- arrows -->
+  <line x1="190" y1="123" x2="246" y2="123" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#ms_a)"/>
+  <line x1="325" y1="151" x2="325" y2="211" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#ms_a)"/>
+  <text x="345" y="188" font-size="10" fill="#1a7f37" text-anchor="start">통과</text>
+  <line x1="400" y1="123" x2="466" y2="123" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#ms_a)"/>
+  <text x="433" y="113" font-size="10" fill="#b00020" text-anchor="middle">실패</text>
+  <line x1="550" y1="151" x2="550" y2="211" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#ms_a)"/>
+  <text x="565" y="188" font-size="10" fill="#3a6fd6" text-anchor="start">yes</text>
+  <line x1="630" y1="123" x2="696" y2="123" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#ms_a)"/>
+  <text x="663" y="113" font-size="9.5" fill="#b00020" text-anchor="middle">no·한계</text>
+  <line x1="550" y1="271" x2="550" y2="296" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#ms_a)"/>
+
+  <!-- loop back to 검증 -->
+  <path d="M470 321 L200 321 L200 123 L246 123" fill="none" stroke="#3a6fd6" stroke-width="1.6" stroke-dasharray="5 3" marker-end="url(#ms_a)"/>
+  <text x="300" y="338" font-size="10" fill="#3a6fd6" text-anchor="middle">재검증 루프</text>
+
+  <text x="450" y="378" font-size="11" fill="#6b6b6b" text-anchor="middle">RSVP 정원 로직 회귀 — 포맷·린트 문제면 자동 복구, 로직 문제면 담당자 호출</text>
+</svg>

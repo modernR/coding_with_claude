@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="400" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">PRD 12개 섹션 구조 — 회사 표준 템플릿</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">각 섹션에 표준 분량과 필수 항목이 붙어, 자동 생성 결과의 편차를 줄입니다.</text>
+
+  <!-- row 1 -->
+  <rect x="40" y="90" width="200" height="66" rx="10" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="52" y="112" font-size="11" font-weight="700" fill="#3a6fd6">① 배경 · 300단어</text>
+  <text x="52" y="130" font-size="9.5" fill="#444">시장·페인 포인트</text>
+  <text x="52" y="146" font-size="9.5" fill="#444">비즈니스 영향</text>
+
+  <rect x="255" y="90" width="200" height="66" rx="10" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="267" y="112" font-size="11" font-weight="700" fill="#3a6fd6">② 목표 · 200단어</text>
+  <text x="267" y="130" font-size="9.5" fill="#444">Primary/Secondary 지표</text>
+  <text x="267" y="146" font-size="9.5" fill="#444">측정 방법·기간</text>
+
+  <rect x="470" y="90" width="200" height="66" rx="10" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="482" y="112" font-size="11" font-weight="700" fill="#3a6fd6">③ 페르소나 · 500단어</text>
+  <text x="482" y="130" font-size="9.5" fill="#444">주 페르소나·행동 패턴</text>
+  <text x="482" y="146" font-size="9.5" fill="#444">결정 요인</text>
+
+  <rect x="685" y="90" width="185" height="66" rx="10" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="697" y="112" font-size="11" font-weight="700" fill="#3a6fd6">④ 시나리오 · 500</text>
+  <text x="697" y="130" font-size="9.5" fill="#444">핵심 3개·해피 패스</text>
+  <text x="697" y="146" font-size="9.5" fill="#444">엣지 케이스</text>
+
+  <!-- row 2 -->
+  <rect x="40" y="166" width="200" height="66" rx="10" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="52" y="188" font-size="11" font-weight="700" fill="#b8860b">⑤ 기능 요구 · 1000</text>
+  <text x="52" y="206" font-size="9.5" fill="#444">Must/Should/Could/</text>
+  <text x="52" y="222" font-size="9.5" fill="#444">Won't (MoSCoW)</text>
+
+  <rect x="255" y="166" width="200" height="66" rx="10" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="267" y="188" font-size="11" font-weight="700" fill="#b8860b">⑥ 비기능 · 300단어</text>
+  <text x="267" y="206" font-size="9.5" fill="#444">성능·보안·접근성</text>
+  <text x="267" y="222" font-size="9.5" fill="#444">멀티 디바이스</text>
+
+  <rect x="470" y="166" width="200" height="66" rx="10" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="482" y="188" font-size="11" font-weight="700" fill="#b8860b">⑦ 디자인·UX · 500</text>
+  <text x="482" y="206" font-size="9.5" fill="#444">와이어프레임·흐름</text>
+  <text x="482" y="222" font-size="9.5" fill="#444">디자인 시스템 적용</text>
+
+  <rect x="685" y="166" width="185" height="66" rx="10" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="697" y="188" font-size="11" font-weight="700" fill="#b8860b">⑧ 기술 · 500단어</text>
+  <text x="697" y="206" font-size="9.5" fill="#444">아키텍처·DB·API</text>
+  <text x="697" y="222" font-size="9.5" fill="#444">인프라 영향</text>
+
+  <!-- row 3 -->
+  <rect x="40" y="242" width="200" height="66" rx="10" fill="#fff5f6" stroke="#f3c9cf"/>
+  <text x="52" y="264" font-size="11" font-weight="700" fill="#b00020">⑨ 법적·규정 · 300</text>
+  <text x="52" y="282" font-size="9.5" fill="#444">도메인 법규 (특화)</text>
+  <text x="52" y="298" font-size="9.5" fill="#444">개인정보·약관</text>
+
+  <rect x="255" y="242" width="200" height="66" rx="10" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="267" y="264" font-size="11" font-weight="700" fill="#1a7f37">⑩ 일정·마일스톤 · 200</text>
+  <text x="267" y="282" font-size="9.5" fill="#444">Phase 1·2·3</text>
+  <text x="267" y="298" font-size="9.5" fill="#444">산출물·의존 관계</text>
+
+  <rect x="470" y="242" width="200" height="66" rx="10" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="482" y="264" font-size="11" font-weight="700" fill="#1a7f37">⑪ 위험·완화 · 300</text>
+  <text x="482" y="282" font-size="9.5" fill="#444">Top 5 위험</text>
+  <text x="482" y="298" font-size="9.5" fill="#444">각 완화책</text>
+
+  <rect x="685" y="242" width="185" height="66" rx="10" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="697" y="264" font-size="11" font-weight="700" fill="#1a7f37">⑫ 검증·출시 · 200</text>
+  <text x="697" y="282" font-size="9.5" fill="#444">베타·A/B 테스트</text>
+  <text x="697" y="298" font-size="9.5" fill="#444">성공 기준</text>
+
+  <text x="40" y="342" font-size="11" fill="#3a6fd6">파랑 = 기획·조사</text>
+  <text x="200" y="342" font-size="11" fill="#b8860b">앰버 = 요구·설계</text>
+  <text x="360" y="342" font-size="11" fill="#b00020">빨강 = 도메인 특화</text>
+  <text x="520" y="342" font-size="11" fill="#1a7f37">초록 = 실행·검증</text>
+  <text x="40" y="372" font-size="10" fill="#6b6b6b">⑨ 법적·규정은 도메인마다 크게 달라지는 특화 섹션 — RSVP라면 참석자 개인정보·대기 순번 공개 범위가 여기 들어갑니다.</text>
+</svg>

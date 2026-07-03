@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 330" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="330" fill="#ffffff"/>
+  <text x="40" y="38" font-size="21" font-weight="700" fill="#1a1a1a">HTTP vs WebSocket — 실시간이 필요할 때</text>
+  <text x="40" y="62" font-size="14" fill="#6b6b6b">HTTP는 물어볼 때마다 새로 연결하고 끊지만, WebSocket은 한 번 연결해 두고 양방향으로 계속 주고받습니다.</text>
+
+  <defs><marker id="ws" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L6,3 L0,6 Z" fill="#9aa0a6"/></marker></defs>
+
+  <!-- HTTP -->
+  <rect x="36" y="86" width="400" height="220" rx="12" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="56" y="112" font-size="14" font-weight="700" fill="#3a6fd6">HTTP — 요청 → 응답 후 끊김</text>
+  <text x="90" y="140" font-size="10.5" fill="#1a1a1a" text-anchor="middle">브라우저</text>
+  <text x="382" y="140" font-size="10.5" fill="#1a1a1a" text-anchor="middle">서버</text>
+  <line x1="90" y1="150" x2="90" y2="290" stroke="#bcd0f5" stroke-width="1.4"/>
+  <line x1="382" y1="150" x2="382" y2="290" stroke="#bcd0f5" stroke-width="1.4"/>
+  <line x1="94" y1="166" x2="378" y2="166" stroke="#9aa0a6" stroke-width="1.3" marker-end="url(#ws)"/><text x="236" y="161" font-size="9" fill="#6b6b6b" text-anchor="middle">"지금 신청자 몇 명?"</text>
+  <line x1="378" y1="188" x2="94" y2="188" stroke="#9aa0a6" stroke-width="1.3" marker-end="url(#ws)"/><text x="236" y="183" font-size="9" fill="#6b6b6b" text-anchor="middle">"36명" → 연결 끊김</text>
+  <line x1="94" y1="228" x2="378" y2="228" stroke="#9aa0a6" stroke-width="1.3" marker-end="url(#ws)"/><text x="236" y="223" font-size="9" fill="#6b6b6b" text-anchor="middle">(1초 뒤) 또 물어봄 — 새 연결</text>
+  <line x1="378" y1="250" x2="94" y2="250" stroke="#9aa0a6" stroke-width="1.3" marker-end="url(#ws)"/><text x="236" y="245" font-size="9" fill="#6b6b6b" text-anchor="middle">"37명"</text>
+  <text x="236" y="286" font-size="10" fill="#3a6fd6" text-anchor="middle">간단하지만, 실시간엔 계속 물어봐야 함(폴링)</text>
+
+  <!-- WebSocket -->
+  <rect x="464" y="86" width="400" height="220" rx="12" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="484" y="112" font-size="14" font-weight="700" fill="#1a7f37">WebSocket — 한 번 연결, 계속 양방향</text>
+  <text x="518" y="140" font-size="10.5" fill="#1a1a1a" text-anchor="middle">브라우저</text>
+  <text x="810" y="140" font-size="10.5" fill="#1a1a1a" text-anchor="middle">서버</text>
+  <line x1="518" y1="150" x2="518" y2="290" stroke="#cfe9d7" stroke-width="1.4"/>
+  <line x1="810" y1="150" x2="810" y2="290" stroke="#cfe9d7" stroke-width="1.4"/>
+  <line x1="522" y1="166" x2="806" y2="166" stroke="#1a7f37" stroke-width="1.6" marker-end="url(#ws)"/><text x="664" y="161" font-size="9" fill="#1a7f37" text-anchor="middle">연결 수립(handshake) — 딱 한 번</text>
+  <rect x="620" y="176" width="88" height="14" rx="7" fill="#dff2e5"/><text x="664" y="186" font-size="8" fill="#1a7f37" text-anchor="middle">연결 유지 ↕</text>
+  <line x1="806" y1="212" x2="522" y2="212" stroke="#9aa0a6" stroke-width="1.3" marker-end="url(#ws)"/><text x="664" y="207" font-size="9" fill="#6b6b6b" text-anchor="middle">서버가 먼저 밀어줌: "37명!"</text>
+  <line x1="806" y1="234" x2="522" y2="234" stroke="#9aa0a6" stroke-width="1.3" marker-end="url(#ws)"/><text x="664" y="229" font-size="9" fill="#6b6b6b" text-anchor="middle">"38명!" (신청 즉시)</text>
+  <line x1="522" y1="256" x2="806" y2="256" stroke="#9aa0a6" stroke-width="1.3" marker-end="url(#ws)"/><text x="664" y="251" font-size="9" fill="#6b6b6b" text-anchor="middle">브라우저도 아무 때나 전송 가능</text>
+  <text x="664" y="286" font-size="10" fill="#1a7f37" text-anchor="middle">채팅·실시간 신청 현황·알림에 적합</text>
+</svg>

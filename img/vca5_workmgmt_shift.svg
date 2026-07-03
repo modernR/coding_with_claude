@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="420" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">AI 시대의 작업관리 변화 — 전과 후</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">사람이 손으로 하던 6단계가 AI 자동 처리로 옮겨지고, PM은 전략 판단으로 이동합니다.</text>
+
+  <defs><marker id="vca5shift_ar" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/></marker></defs>
+
+  <!-- left column: 전통 -->
+  <rect x="40" y="95" width="360" height="255" rx="12" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="60" y="122" font-size="13" font-weight="700" fill="#6b6b6b">전통 — 사람(PM)이 직접</text>
+
+  <rect x="60" y="138" width="320" height="30" rx="7" fill="#ffffff" stroke="#e3e6ea"/>
+  <text x="72" y="158" font-size="10.5" fill="#444">작업 분해 · PRD를 작업 50개로 (약 1주)</text>
+  <rect x="60" y="173" width="320" height="30" rx="7" fill="#ffffff" stroke="#e3e6ea"/>
+  <text x="72" y="193" font-size="10.5" fill="#444">의존 관계 · 사람이 그림</text>
+  <rect x="60" y="208" width="320" height="30" rx="7" fill="#ffffff" stroke="#e3e6ea"/>
+  <text x="72" y="228" font-size="10.5" fill="#444">우선순위 · 협의로 결정</text>
+  <rect x="60" y="243" width="320" height="30" rx="7" fill="#ffffff" stroke="#e3e6ea"/>
+  <text x="72" y="263" font-size="10.5" fill="#444">진행 추적 · 매니저가 매주 확인</text>
+  <rect x="60" y="278" width="320" height="30" rx="7" fill="#ffffff" stroke="#e3e6ea"/>
+  <text x="72" y="298" font-size="10.5" fill="#444">보고서 · PM이 매주 작성</text>
+  <rect x="60" y="313" width="320" height="28" rx="7" fill="#ffffff" stroke="#e3e6ea"/>
+  <text x="72" y="332" font-size="10.5" fill="#444">할당 · 매니저 판단</text>
+
+  <!-- right column: AI 시대 -->
+  <rect x="500" y="95" width="360" height="255" rx="12" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="520" y="122" font-size="13" font-weight="700" fill="#3a6fd6">AI 시대 — 자동 처리 + 사람 검토</text>
+
+  <rect x="520" y="138" width="320" height="30" rx="7" fill="#ffffff" stroke="#bcd0f5"/>
+  <text x="532" y="158" font-size="10.5" fill="#444">AI가 30분 내 100+개로 분해</text>
+  <rect x="520" y="173" width="320" height="30" rx="7" fill="#ffffff" stroke="#bcd0f5"/>
+  <text x="532" y="193" font-size="10.5" fill="#444">AI가 의존 그래프 자동 추론</text>
+  <rect x="520" y="208" width="320" height="30" rx="7" fill="#ffffff" stroke="#bcd0f5"/>
+  <text x="532" y="228" font-size="10.5" fill="#444">AI가 비즈니스 영향 분석 후 제안</text>
+  <rect x="520" y="243" width="320" height="30" rx="7" fill="#ffffff" stroke="#bcd0f5"/>
+  <text x="532" y="263" font-size="10.5" fill="#444">AI가 매일 자동 점검·알림</text>
+  <rect x="520" y="278" width="320" height="30" rx="7" fill="#ffffff" stroke="#bcd0f5"/>
+  <text x="532" y="298" font-size="10.5" fill="#444">AI가 리포트 자동 생성</text>
+  <rect x="520" y="313" width="320" height="28" rx="7" fill="#ffffff" stroke="#bcd0f5"/>
+  <text x="532" y="332" font-size="10.5" fill="#444">AI가 역량·가용성 매칭 제안</text>
+
+  <line x1="400" y1="222" x2="498" y2="222" stroke="#9aa0a6" stroke-width="1.8" marker-end="url(#vca5shift_ar)"/>
+
+  <!-- bottom note -->
+  <rect x="40" y="368" width="820" height="38" rx="10" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="60" y="392" font-size="10.5" fill="#444">PM의 역할 이동 · 운영자(손으로 관리) → 전략 결정자(비즈니스 판단·이해관계자 협상·AI 결과 검토·승인)</text>
+</svg>

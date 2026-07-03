@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="420" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">MCP 운영 4패턴 — 어디까지 켜둘 것인가</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">설정 부담과 컨텍스트 비용은 반대로 움직입니다. 기획자는 보통 B+C 조합을 씁니다.</text>
+
+  <rect x="40" y="95" width="200" height="230" rx="11" fill="#fff5f6" stroke="#f3c9cf"/>
+  <text x="140" y="122" font-size="14" font-weight="700" fill="#b00020" text-anchor="middle">A. 항상 켜둠</text>
+  <text x="140" y="141" font-size="10.5" fill="#6b6b6b" text-anchor="middle">단순</text>
+  <text x="55" y="168" font-size="10.5" fill="#444">모든 MCP를 글로벌</text>
+  <text x="55" y="184" font-size="10.5" fill="#444">설정에 켜둡니다.</text>
+  <text x="55" y="212" font-size="10.5" fill="#1a7f37">＋ 설정 부담 최소</text>
+  <text x="55" y="232" font-size="10.5" fill="#b00020">－ 컨텍스트 비용 최대</text>
+  <rect x="55" y="270" width="170" height="40" rx="7" fill="#ffffff" stroke="#f3c9cf"/>
+  <text x="140" y="288" font-size="10" fill="#6b6b6b" text-anchor="middle">MCP 소수·개인 실험</text>
+  <text x="140" y="303" font-size="10" fill="#6b6b6b" text-anchor="middle">단계에만 적합</text>
+
+  <rect x="256" y="95" width="200" height="230" rx="11" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="356" y="122" font-size="14" font-weight="700" fill="#3a6fd6" text-anchor="middle">B. 프로젝트별</text>
+  <text x="356" y="141" font-size="10.5" fill="#6b6b6b" text-anchor="middle">권장</text>
+  <text x="271" y="168" font-size="10.5" fill="#444">프로젝트마다 필요한</text>
+  <text x="271" y="184" font-size="10.5" fill="#444">MCP만 정의합니다.</text>
+  <text x="271" y="204" font-size="9.5" fill="#9aa0a6">.claude/settings.json</text>
+  <text x="271" y="230" font-size="10.5" fill="#1a7f37">＋ 균형이 좋음</text>
+  <text x="271" y="250" font-size="10.5" fill="#444">＝ 팀 공유가 쉬움</text>
+  <rect x="271" y="270" width="170" height="40" rx="7" fill="#ffffff" stroke="#bcd0f5"/>
+  <text x="356" y="288" font-size="10" fill="#6b6b6b" text-anchor="middle">RSVP는 Supabase·</text>
+  <text x="356" y="303" font-size="10" fill="#6b6b6b" text-anchor="middle">GitHub·Sentry만</text>
+
+  <rect x="472" y="95" width="200" height="230" rx="11" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="572" y="122" font-size="14" font-weight="700" fill="#b8860b" text-anchor="middle">C. 세션별</text>
+  <text x="572" y="141" font-size="10.5" fill="#6b6b6b" text-anchor="middle">정밀</text>
+  <text x="487" y="168" font-size="10.5" fill="#444">세션 시작 시 작업에</text>
+  <text x="487" y="184" font-size="10.5" fill="#444">맞춰 골라 켭니다.</text>
+  <text x="487" y="204" font-size="9.5" fill="#9aa0a6">/mcp 명령으로 on·off</text>
+  <text x="487" y="230" font-size="10.5" fill="#1a7f37">＋ 컨텍스트 알뜰</text>
+  <text x="487" y="250" font-size="10.5" fill="#b00020">－ 매번 손이 감</text>
+  <rect x="487" y="270" width="170" height="40" rx="7" fill="#ffffff" stroke="#f3d488"/>
+  <text x="572" y="288" font-size="10" fill="#6b6b6b" text-anchor="middle">결제 분석 세션에만</text>
+  <text x="572" y="303" font-size="10" fill="#6b6b6b" text-anchor="middle">Stripe를 잠깐 켜기</text>
+
+  <rect x="688" y="95" width="200" height="230" rx="11" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="788" y="122" font-size="14" font-weight="700" fill="#7c3aed" text-anchor="middle">D. Tool Search</text>
+  <text x="788" y="141" font-size="10.5" fill="#6b6b6b" text-anchor="middle">고급</text>
+  <text x="703" y="168" font-size="10.5" fill="#444">등록만 해두고 호출</text>
+  <text x="703" y="184" font-size="10.5" fill="#444">때 도구를 검색해 씀</text>
+  <text x="703" y="212" font-size="10.5" fill="#1a7f37">＋ 컨텍스트 효율 최고</text>
+  <text x="703" y="232" font-size="10.5" fill="#b00020">－ 셋업 복잡</text>
+  <rect x="703" y="270" width="170" height="40" rx="7" fill="#ffffff" stroke="#a78bda"/>
+  <text x="788" y="288" font-size="10" fill="#6b6b6b" text-anchor="middle">MCP 수십 개를</text>
+  <text x="788" y="303" font-size="10" fill="#6b6b6b" text-anchor="middle">동시 운영할 때</text>
+
+  <rect x="40" y="345" width="848" height="52" rx="10" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="60" y="368" font-size="11.5" fill="#444">왼쪽으로 갈수록 설정이 쉽고 컨텍스트 비용이 크며, 오른쪽으로 갈수록 셋업이 까다롭고 컨텍스트가 알뜰합니다.</text>
+  <text x="60" y="388" font-size="11.5" fill="#444">기본은 B로 프로젝트에 필요한 MCP를 고정하고, 무거운 도구는 C로 그때그때 켜는 조합을 권합니다.</text>
+</svg>

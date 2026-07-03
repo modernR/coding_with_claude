@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 430" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="430" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">SKILL.md 구조 — 심화 frontmatter + 본문 7영역 + 리소스</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">frontmatter는 검색·분배·통계용 메타, 본문은 실제 도메인 지식입니다.</text>
+
+  <defs><marker id="vca1sk_ar" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/></marker></defs>
+
+  <rect x="40" y="95" width="360" height="200" rx="11" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="60" y="120" font-size="13" font-weight="700" fill="#7c3aed">① frontmatter (YAML) — 메타데이터</text>
+  <text x="60" y="142" font-size="10.5" fill="#444">name · description · type · domain</text>
+  <text x="60" y="160" font-size="10.5" fill="#444">version · authors · homepage · tags</text>
+  <text x="60" y="178" font-size="10.5" fill="#444">required_tools · optional_tools</text>
+  <text x="60" y="196" font-size="10.5" fill="#444">trigger_examples (자동 분배 신호)</text>
+  <text x="60" y="214" font-size="10.5" fill="#444">counter_examples (호출 금지 상황)</text>
+  <text x="60" y="232" font-size="10.5" fill="#444">licenses_required · last_reviewed</text>
+  <text x="60" y="258" font-size="9.5" fill="#7c3aed">→ 마켓플레이스 검색·필터·통계의 근거</text>
+  <text x="60" y="277" font-size="9.5" fill="#6b6b6b">--- 로 본문과 구분</text>
+
+  <rect x="420" y="95" width="440" height="230" rx="11" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="440" y="120" font-size="13" font-weight="700" fill="#3a6fd6">② 본문 — 7영역 (1500~3000단어)</text>
+  <text x="440" y="144" font-size="10.5" fill="#444">1. 역할 정의 — "당신은 X 전문가"</text>
+  <text x="440" y="163" font-size="10.5" fill="#444">2. 입력 분석 — 입력 형태·분류</text>
+  <text x="440" y="182" font-size="10.5" fill="#444">3. 단계별 처리 — 무엇을 어느 순서로</text>
+  <text x="440" y="201" font-size="10.5" fill="#444">4. 출력 형식 — 정확한 구조·예시</text>
+  <text x="440" y="220" font-size="10.5" fill="#444">5. 도메인 지식 — 업계 룰·용어·관습</text>
+  <text x="440" y="239" font-size="10.5" fill="#444">6. 절대 금지 — 보안·법적·윤리 금기</text>
+  <text x="440" y="258" font-size="10.5" fill="#444">7. 호출 예시 — 사용자 호출 5개</text>
+  <text x="440" y="288" font-size="9.5" fill="#b00020">5000자 초과 시 매 호출 비용 급증 — 핵심만</text>
+  <text x="440" y="307" font-size="9.5" fill="#6b6b6b">일반론 금지: 회사 실제 사례를 녹입니다</text>
+
+  <rect x="40" y="330" width="820" height="72" rx="11" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="60" y="356" font-size="13" font-weight="700" fill="#b8860b">③ 리소스 — 스킬 폴더에 함께 두는 참조 자료</text>
+  <text x="60" y="380" font-size="10.5" fill="#444">체크리스트·양식 템플릿 · 사내 용어집 · 예시 산출물 · 도메인 참조 문서</text>
+  <text x="60" y="396" font-size="10" fill="#6b6b6b">본문이 필요할 때만 읽어 들이는 보조 파일. 본문을 가볍게 유지하면서 깊이는 확보합니다.</text>
+
+  <line x1="400" y1="195" x2="418" y2="195" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#vca1sk_ar)"/>
+</svg>

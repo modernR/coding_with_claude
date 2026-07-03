@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="300" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">자동화 스펙트럼 — 완전 · 부분 · 수동</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">4축(FROM·HOW·OUTPUT·WHO)이 모두 맞으면 완전, 일부만 맞으면 부분, 모두 안 맞으면 수동입니다.</text>
+
+  <!-- 완전 -->
+  <rect x="40" y="96" width="270" height="176" rx="12" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="60" y="122" font-size="14" font-weight="700" fill="#1a7f37">완전 자동화</text>
+  <text x="60" y="142" font-size="10" fill="#6b6b6b">4축 모두 적합 · 사람은 검수만</text>
+  <rect x="60" y="154" width="230" height="100" rx="8" fill="#ffffff" stroke="#cfe9d7"/>
+  <text x="72" y="176" font-size="10.5" fill="#1a1a1a">· 주간 KPI 보고서</text>
+  <text x="72" y="196" font-size="10.5" fill="#1a1a1a">· 회의록 정리·공유</text>
+  <text x="72" y="216" font-size="10.5" fill="#1a1a1a">· 이벤트 등록·RSVP</text>
+  <text x="72" y="236" font-size="10.5" fill="#1a1a1a">· 카드뉴스 정기 발행(+검수)</text>
+
+  <!-- 부분 -->
+  <rect x="320" y="96" width="270" height="176" rx="12" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="340" y="122" font-size="14" font-weight="700" fill="#b8860b">부분 자동화</text>
+  <text x="340" y="142" font-size="10" fill="#6b6b6b">일부만 적합 · 초안→사람 마감</text>
+  <rect x="340" y="154" width="230" height="100" rx="8" fill="#ffffff" stroke="#f0d6b8"/>
+  <text x="352" y="176" font-size="10.5" fill="#1a1a1a">· 신규 PRD 초안</text>
+  <text x="352" y="196" font-size="10.5" fill="#1a1a1a">· 사용자 인터뷰 분석(전사)</text>
+  <text x="352" y="216" font-size="10.5" fill="#1a1a1a">· 임원 보고용 피칭(구조·시안)</text>
+  <text x="352" y="236" font-size="10" fill="#6b6b6b">기계가 밑작업, 사람이 판단</text>
+
+  <!-- 수동 -->
+  <rect x="600" y="96" width="260" height="176" rx="12" fill="#fff5f6" stroke="#f3c9cf"/>
+  <text x="620" y="122" font-size="14" font-weight="700" fill="#b00020">수동 유지</text>
+  <text x="620" y="142" font-size="10" fill="#6b6b6b">4축 모두 부적합 · 사람이 직접</text>
+  <rect x="620" y="154" width="220" height="100" rx="8" fill="#ffffff" stroke="#f3c9cf"/>
+  <text x="632" y="176" font-size="10.5" fill="#1a1a1a">· 신규 기능 정책 결정</text>
+  <text x="632" y="196" font-size="10.5" fill="#1a1a1a">· 직원 1:1 면담</text>
+  <text x="632" y="228" font-size="10" fill="#6b6b6b">규제·관계·책임이 큰 일</text>
+  <text x="632" y="246" font-size="10" fill="#6b6b6b">억지 자동화는 오히려 손해</text>
+</svg>

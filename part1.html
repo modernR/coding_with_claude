@@ -1,0 +1,2610 @@
+<!doctype html><html lang="ko"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1부 · 기술 기초 · 코딩 with Claude</title><link rel="stylesheet" href="assets/style.css">
+</head><body class="reader">
+<header class="topbar">
+  <a class="home" href="index.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="vertical-align:-2px;margin-right:5px"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>코딩 with Claude</a>
+  <div class="crumb" id="crumb"></div>
+  <div class="nav-btns"><button id="prevBtn">&#8249; 이전</button><button id="nextBtn">다음 &#8250;</button></div>
+</header>
+<div class="layout">
+  <aside class="sidebar" id="sidebar"><div class="sidebar-title">1부 · 기술 기초</div><nav class="toc" id="toc">
+<div class="toc-doc">
+<button class="toc-doc-btn" data-doc="0"><span class="caret">▸</span><span class="lbl">0강. 러닝 예시 — 이벤트 RSVP 서비스</span></button>
+<div class="toc-sub" data-for="0">
+<div class="toc-l2-wrap">
+<a class="toc-l2" href="#d0-h1" data-doc="0" data-target="d0-h1">1. 서비스 개요</a>
+<div class="toc-l3">
+<a class="toc-l3-a" href="#d0-h2" data-doc="0" data-target="d0-h2">1.1 만들 화면 미리보기</a>
+</div>
+</div>
+<div class="toc-l2-wrap">
+<a class="toc-l2" href="#d0-h3" data-doc="0" data-target="d0-h3">2. 아키텍처 한눈에</a>
+</div>
+<div class="toc-l2-wrap">
+<a class="toc-l2" href="#d0-h4" data-doc="0" data-target="d0-h4">3. 강별로 RSVP의 어떤 면을 쓰나</a>
+</div>
+</div></div>
+<div class="toc-doc">
+<button class="toc-doc-btn" data-doc="1"><span class="caret">▸</span><span class="lbl">입문(기술 기초) 2강. 프론트엔드</span></button>
+<div class="toc-sub" data-for="1">
+<div class="toc-l2-wrap">
+<a class="toc-l2" href="#d1-h1" data-doc="1" data-target="d1-h1">0. 들어가며</a>
+</div>
+<div class="toc-l2-wrap">
+<a class="toc-l2" href="#d1-h2" data-doc="1" data-target="d1-h2">1. 화면을 이루는 세 계층</a>
+<div class="toc-l3">
+<a class="toc-l3-a" href="#d1-h3" data-doc="1" data-target="d1-h3">1.1 HTML·CSS·JavaScript의 역할 분담</a>
+<a class="toc-l3-a" href="#d1-h4" data-doc="1" data-target="d1-h4">1.2 예시 화면 — 이벤트 목록 페이지로 보는 분담</a>
+<a class="toc-l3-a" href="#d1-h5" data-doc="1" data-target="d1-h5">1.3 계층 분담이 깨질 때의 위험</a>
+</div>
+</div>
+<div class="toc-l2-wrap">
+<a class="toc-l2" href="#d1-h6" data-doc="1" data-target="d1-h6">2. 화면이 만들어지는 두 갈래 — 정적·동적</a>
+<div class="toc-l3">
+<a class="toc-l3-a" href="#d1-h7" data-doc="1" data-target="d1-h7">2.1 정적 페이지(Static Page)</a>
+<a class="toc-l3-a" href="#d1-h8" data-doc="1" data-target="d1-h8">2.2 동적 페이지(Dynamic Page)</a>
+<a class="toc-l3-a" href="#d1-h9" data-doc="1" data-target="d1-h9">2.3 이벤트 RSVP의 정적·동적 판단</a>
+</div>
+</div>
+<div class="toc-l2-wrap">
+<a class="toc-l2" href="#d1-h10" data-doc="1" data-target="d1-h10">3. 한 페이지냐 여러 페이지냐 — SPA vs MPA</a>
+</div>
+<div class="toc-l2-wrap">
+<a class="toc-l2" href="#d1-h11" data-doc="1" data-target="d1-h11">4. 라이브러리·프레임워크 의사결정</a>
+<div class="toc-l3">
+<a class="toc-l3-a" href="#d1-h12" data-doc="1" data-target="d1-h12">4.1 도구는 &#x27;그때그때의 문제&#x27;를 풀며 진화했다</a>
+<a class="toc-l3-a" href="#d1-h13" data-doc="1" data-target="d1-h13">4.2 언제 무엇을 — 의사결정 표</a>
+<a class="toc-l3-a" href="#d1-h14" data-doc="1" data-target="d1-h14">4.3 이벤트 RSVP의 선택 — Next.js + React + TypeScript</a>
+</div>
+</div>
+<div class="toc-l2-wrap">
+<a class="toc-l2" href="#d1-h15" data-doc="1" data-target="d1-h15">5. 렌더링 모드 4가지 — 언제 무엇을</a>
+<div class="toc-l3">
+<a class="toc-l3-a" href="#d1-h16" data-doc="1" data-target="d1-h16">5.1 이벤트 RSVP의 렌더링 전략</a>
+</div>
+</div>
+<div class="toc-l2-wrap">
+<a class="toc-l2" href="#d1-h17" data-doc="1" data-target="d1-h17">6. 빌드와 패키지 관리 — 왜 이 단계가 있나</a>
+<div class="toc-l3">
+<a class="toc-l3-a" href="#d1-h18" data-doc="1" data-target="d1-h18">6.1 개발 코드 ≠ 배포 코드</a>
+<a class="toc-l3-a" href="#d1-h19" data-doc="1" data-target="d1-h19">6.2 패키지 관리자 (npm · pnpm · yarn)</a>
+<a class="toc-l3-a" href="#d1-h20" data-doc="1" data-target="d1-h20">6.3 빌드 도구 (webpack · Vite · esbuild · Turbopack)</a>
+<a class="toc-l3-a" href="#d1-h21" data-doc="1" data-target="d1-h21">6.4 빌드가 하는 네 가지 일</a>
+</div>
+</div>
+<div class="toc-l2-wrap">
+<a class="toc-l2" href="#d1-h22" data-doc="1" data-target="d1-h22">7. 디자인 시스템과 UI 컴포넌트</a>
+<div class="toc-l3">
+<a class="toc-l3-a" href="#d1-h23" data-doc="1" data-target="d1-h23">7.1 왜 필요한가</a>
+<a class="toc-l3-a" href="#d1-h24" data-doc="1" data-target="d1-h24">7.2 디자인 시스템의 3계층</a>
+<a class="toc-l3-a" href="#d1-h25" data-doc="1" data-target="d1-h25">7.3 인기 도구</a>
+</div>
+</div>
+<div class="toc-l2-wrap">
+<a class="toc-l2" href="#d1-h26" data-doc="1" data-target="d1-h26">8. 모바일·반응형 의사결정</a>
+<div class="toc-l3">
+<a class="toc-l3-a" href="#d1-h27" data-doc="1" data-target="d1-h27">8.1 네 가지 접근법</a>
+<a class="toc-l3-a" href="#d1-h28" data-doc="1" data-target="d1-h28">8.2 결정의 큰 줄기</a>
+</div>
+</div>
+<div class="toc-l2-wrap">
+<a class="toc-l2" href="#d1-h29" data-doc="1" data-target="d1-h29">9. 핵심 용어 (40)</a>
+</div>
+<div class="toc-l2-wrap">
+<a class="toc-l2" href="#d1-h30" data-doc="1" data-target="d1-h30">10. 한눈에 정리</a>
+<div class="toc-l3">
+<a class="toc-l3-a" href="#d1-h31" data-doc="1" data-target="d1-h31">다음 강 예고</a>
+</div>
+</div>
+</div></div>
+<div class="toc-doc">
+<button class="toc-doc-btn" data-doc="2"><span class="caret">▸</span><span class="lbl">입문(기술 기초) 3강. 백엔드</span></button>
+<div class="toc-sub" data-for="2">
+<div class="toc-l2-wrap">
+<a class="toc-l2" href="#d2-h1" data-doc="2" data-target="d2-h1">0. 들어가며</a>
+</div>
+<div class="toc-l2-wrap">
+<a class="toc-l2" href="#d2-h2" data-doc="2" data-target="d2-h2">1. 백엔드가 하는 다섯 가지 일</a>
+</div>
+<div class="toc-l2-wrap">
+<a class="toc-l2" href="#d2-h3" data-doc="2" data-target="d2-h3">2. API — 프론트와의 약속</a>
+<div class="toc-l3">
+<a class="toc-l3-a" href="#d2-h4" data-doc="2" data-target="d2-h4">2.1 API의 정의와 역할</a>
+<a class="toc-l3-a" href="#d2-h5" data-doc="2" data-target="d2-h5">2.2 REST · GraphQL · WebSocket — 언제 무엇을</a>
+<a class="toc-l3-a" href="#d2-h6" data-doc="2" data-target="d2-h6">2.3 CRUD 네 동작</a>
+<a class="toc-l3-a" href="#d2-h7" data-doc="2" data-target="d2-h7">2.4 API 명세를 함께 보는 법</a>
+</div>
+</div>
+<div class="toc-l2-wrap">
+<a class="toc-l2" href="#d2-h8" data-doc="2" data-target="d2-h8">3. 인증·권한</a>
+<div class="toc-l3">
+<a class="toc-l3-a" href="#d2-h9" data-doc="2" data-target="d2-h9">3.1 인증 vs 인가</a>
+<a class="toc-l3-a" href="#d2-h10" data-doc="2" data-target="d2-h10">3.2 세션 · JWT · OAuth</a>
+<a class="toc-l3-a" href="#d2-h11" data-doc="2" data-target="d2-h11">3.3 권한 모델 — RBAC · ABAC · RLS</a>
+<a class="toc-l3-a" href="#d2-h12" data-doc="2" data-target="d2-h12">3.4 RSVP의 권한 매트릭스</a>
+</div>
+</div>
+<div class="toc-l2-wrap">
+<a class="toc-l2" href="#d2-h13" data-doc="2" data-target="d2-h13">4. 비즈니스 로직</a>
+<div class="toc-l3">
+<a class="toc-l3-a" href="#d2-h14" data-doc="2" data-target="d2-h14">4.1 비즈니스 로직이란</a>
+<a class="toc-l3-a" href="#d2-h15" data-doc="2" data-target="d2-h15">4.2 MVC 패턴</a>
+<a class="toc-l3-a" href="#d2-h16" data-doc="2" data-target="d2-h16">4.3 RSVP의 규칙 네 가지 — &#x27;참석&#x27;이 통과해야 할 관문</a>
+</div>
+</div>
+<div class="toc-l2-wrap">
+<a class="toc-l2" href="#d2-h17" data-doc="2" data-target="d2-h17">5. 백엔드 언어·프레임워크</a>
+<div class="toc-l3">
+<a class="toc-l3-a" href="#d2-h18" data-doc="2" data-target="d2-h18">5.1 핵심은 같고 문법만 다르다</a>
+<a class="toc-l3-a" href="#d2-h19" data-doc="2" data-target="d2-h19">5.2 언어별 강점</a>
+<a class="toc-l3-a" href="#d2-h20" data-doc="2" data-target="d2-h20">5.3 프레임워크가 자동화하는 것</a>
+<a class="toc-l3-a" href="#d2-h21" data-doc="2" data-target="d2-h21">5.4 장기전 vs 단기전</a>
+</div>
+</div>
+<div class="toc-l2-wrap">
+<a class="toc-l2" href="#d2-h22" data-doc="2" data-target="d2-h22">6. 컨테이너와 배포 자동화</a>
+<div class="toc-l3">
+<a class="toc-l3-a" href="#d2-h23" data-doc="2" data-target="d2-h23">6.1 Docker — &#x27;내 컴퓨터에선 되는데&#x27; 문제 해결</a>
+<a class="toc-l3-a" href="#d2-h24" data-doc="2" data-target="d2-h24">6.2 모놀리식 vs 마이크로서비스</a>
+<a class="toc-l3-a" href="#d2-h25" data-doc="2" data-target="d2-h25">6.3 CI/CD 파이프라인</a>
+</div>
+</div>
+<div class="toc-l2-wrap">
+<a class="toc-l2" href="#d2-h26" data-doc="2" data-target="d2-h26">7. 성능과 안정성</a>
+<div class="toc-l3">
+<a class="toc-l3-a" href="#d2-h27" data-doc="2" data-target="d2-h27">7.1 캐싱 — Redis·CDN</a>
+<a class="toc-l3-a" href="#d2-h28" data-doc="2" data-target="d2-h28">7.2 트랜잭션·ACID — 동시 신청의 함정</a>
+<a class="toc-l3-a" href="#d2-h29" data-doc="2" data-target="d2-h29">7.3 메시지 큐 — 비동기 처리</a>
+<a class="toc-l3-a" href="#d2-h30" data-doc="2" data-target="d2-h30">7.4 부하 분산 — 로드 밸런싱</a>
+<a class="toc-l3-a" href="#d2-h31" data-doc="2" data-target="d2-h31">7.5 모니터링·로깅 — 운영의 안전망</a>
+</div>
+</div>
+<div class="toc-l2-wrap">
+<a class="toc-l2" href="#d2-h32" data-doc="2" data-target="d2-h32">8. 백엔드 투자 우선순위</a>
+</div>
+<div class="toc-l2-wrap">
+<a class="toc-l2" href="#d2-h33" data-doc="2" data-target="d2-h33">9. 자주 나오는 기술 질문</a>
+</div>
+<div class="toc-l2-wrap">
+<a class="toc-l2" href="#d2-h34" data-doc="2" data-target="d2-h34">10. 핵심 용어</a>
+</div>
+<div class="toc-l2-wrap">
+<a class="toc-l2" href="#d2-h35" data-doc="2" data-target="d2-h35">11. 한눈에 정리</a>
+<div class="toc-l3">
+<a class="toc-l3-a" href="#d2-h36" data-doc="2" data-target="d2-h36">다음 강 예고</a>
+</div>
+</div>
+</div></div>
+<div class="toc-doc">
+<button class="toc-doc-btn" data-doc="3"><span class="caret">▸</span><span class="lbl">입문(기술 기초) 4강. 데이터</span></button>
+<div class="toc-sub" data-for="3">
+<div class="toc-l2-wrap">
+<a class="toc-l2" href="#d3-h1" data-doc="3" data-target="d3-h1">0. 들어가며</a>
+</div>
+<div class="toc-l2-wrap">
+<a class="toc-l2" href="#d3-h2" data-doc="3" data-target="d3-h2">1. 데이터의 네 종류</a>
+</div>
+<div class="toc-l2-wrap">
+<a class="toc-l2" href="#d3-h3" data-doc="3" data-target="d3-h3">2. 관계형 데이터베이스</a>
+<div class="toc-l3">
+<a class="toc-l3-a" href="#d3-h4" data-doc="3" data-target="d3-h4">2.1 테이블·컬럼·행, 그리고 외래키</a>
+<a class="toc-l3-a" href="#d3-h5" data-doc="3" data-target="d3-h5">2.2 정규화 — 같은 정보를 한 번만</a>
+<a class="toc-l3-a" href="#d3-h6" data-doc="3" data-target="d3-h6">2.3 인덱스·트랜잭션·ACID</a>
+<a class="toc-l3-a" href="#d3-h7" data-doc="3" data-target="d3-h7">2.4 PostgreSQL · MySQL · SQLite</a>
+</div>
+</div>
+<div class="toc-l2-wrap">
+<a class="toc-l2" href="#d3-h8" data-doc="3" data-target="d3-h8">3. NoSQL과 메모리 DB</a>
+<div class="toc-l3">
+<a class="toc-l3-a" href="#d3-h9" data-doc="3" data-target="d3-h9">3.1 NoSQL이란</a>
+<a class="toc-l3-a" href="#d3-h10" data-doc="3" data-target="d3-h10">3.2 트레이드오프와 선택</a>
+</div>
+</div>
+<div class="toc-l2-wrap">
+<a class="toc-l2" href="#d3-h11" data-doc="3" data-target="d3-h11">4. 파일·이미지 보관 — 객체 스토리지</a>
+<div class="toc-l3">
+<a class="toc-l3-a" href="#d3-h12" data-doc="3" data-target="d3-h12">4.1 서버 디스크 대신 객체 스토리지</a>
+<a class="toc-l3-a" href="#d3-h13" data-doc="3" data-target="d3-h13">4.2 권한과 CDN</a>
+</div>
+</div>
+<div class="toc-l2-wrap">
+<a class="toc-l2" href="#d3-h14" data-doc="3" data-target="d3-h14">5. BaaS — 통합 솔루션</a>
+</div>
+<div class="toc-l2-wrap">
+<a class="toc-l2" href="#d3-h15" data-doc="3" data-target="d3-h15">6. 권한 모델 — RLS</a>
+<div class="toc-l3">
+<a class="toc-l3-a" href="#d3-h16" data-doc="3" data-target="d3-h16">6.1 권한이 깨지면</a>
+<a class="toc-l3-a" href="#d3-h17" data-doc="3" data-target="d3-h17">6.2 코드가 아니라 DB에서 강제 — RLS</a>
+</div>
+</div>
+<div class="toc-l2-wrap">
+<a class="toc-l2" href="#d3-h18" data-doc="3" data-target="d3-h18">7. 데이터의 흐름</a>
+</div>
+<div class="toc-l2-wrap">
+<a class="toc-l2" href="#d3-h19" data-doc="3" data-target="d3-h19">8. 핵심 용어</a>
+</div>
+<div class="toc-l2-wrap">
+<a class="toc-l2" href="#d3-h20" data-doc="3" data-target="d3-h20">9. 한눈에 정리</a>
+</div>
+<div class="toc-l2-wrap">
+<a class="toc-l2" href="#d3-h21" data-doc="3" data-target="d3-h21">자가 진단</a>
+<div class="toc-l3">
+<a class="toc-l3-a" href="#d3-h22" data-doc="3" data-target="d3-h22">다음 강 예고</a>
+</div>
+</div>
+</div></div>
+<div class="toc-doc">
+<button class="toc-doc-btn" data-doc="4"><span class="caret">▸</span><span class="lbl">입문(기술 기초) 5강. 인프라 · 배포 · 보안</span></button>
+<div class="toc-sub" data-for="4">
+<div class="toc-l2-wrap">
+<a class="toc-l2" href="#d4-h1" data-doc="4" data-target="d4-h1">0. 들어가며</a>
+</div>
+<div class="toc-l2-wrap">
+<a class="toc-l2" href="#d4-h2" data-doc="4" data-target="d4-h2">1. 인프라 4계층 — IaaS · PaaS · SaaS · BaaS</a>
+</div>
+<div class="toc-l2-wrap">
+<a class="toc-l2" href="#d4-h3" data-doc="4" data-target="d4-h3">2. 클라우드 사업자 — AWS · GCP · Azure · Cloudflare</a>
+</div>
+<div class="toc-l2-wrap">
+<a class="toc-l2" href="#d4-h4" data-doc="4" data-target="d4-h4">3. 풀스택 PaaS — Vercel · Netlify · Render · Railway</a>
+</div>
+<div class="toc-l2-wrap">
+<a class="toc-l2" href="#d4-h5" data-doc="4" data-target="d4-h5">4. 도메인과 DNS</a>
+</div>
+<div class="toc-l2-wrap">
+<a class="toc-l2" href="#d4-h6" data-doc="4" data-target="d4-h6">5. HTTPS · SSL/TLS</a>
+</div>
+<div class="toc-l2-wrap">
+<a class="toc-l2" href="#d4-h7" data-doc="4" data-target="d4-h7">6. 흔한 보안 위협 5</a>
+</div>
+<div class="toc-l2-wrap">
+<a class="toc-l2" href="#d4-h8" data-doc="4" data-target="d4-h8">7. 환경 변수 · 시크릿 관리</a>
+</div>
+<div class="toc-l2-wrap">
+<a class="toc-l2" href="#d4-h9" data-doc="4" data-target="d4-h9">8. 모니터링 · 로깅 · 알림</a>
+</div>
+<div class="toc-l2-wrap">
+<a class="toc-l2" href="#d4-h10" data-doc="4" data-target="d4-h10">9. 개인정보 · 법규</a>
+</div>
+<div class="toc-l2-wrap">
+<a class="toc-l2" href="#d4-h11" data-doc="4" data-target="d4-h11">10. RSVP 인프라 구성 (개념 요약)</a>
+</div>
+<div class="toc-l2-wrap">
+<a class="toc-l2" href="#d4-h12" data-doc="4" data-target="d4-h12">11. AWS 주요 서비스 둘러보기</a>
+<div class="toc-l3">
+<a class="toc-l3-a" href="#d4-h13" data-doc="4" data-target="d4-h13">11.1 AWS Amplify — 위 서비스들을 하나로 묶은 풀스택 도구</a>
+</div>
+</div>
+<div class="toc-l2-wrap">
+<a class="toc-l2" href="#d4-h14" data-doc="4" data-target="d4-h14">12. 배포 시나리오별 추천 조합</a>
+<div class="toc-l3">
+<a class="toc-l3-a" href="#d4-h15" data-doc="4" data-target="d4-h15">12.1 개인·사이드 프로젝트</a>
+<a class="toc-l3-a" href="#d4-h16" data-doc="4" data-target="d4-h16">12.2 회사의 가벼운 배포</a>
+</div>
+</div>
+<div class="toc-l2-wrap">
+<a class="toc-l2" href="#d4-h17" data-doc="4" data-target="d4-h17">13. 핵심 용어</a>
+</div>
+<div class="toc-l2-wrap">
+<a class="toc-l2" href="#d4-h18" data-doc="4" data-target="d4-h18">14. 한눈에 정리</a>
+</div>
+<div class="toc-l2-wrap">
+<a class="toc-l2" href="#d4-h19" data-doc="4" data-target="d4-h19">자가 진단</a>
+<div class="toc-l3">
+<a class="toc-l3-a" href="#d4-h20" data-doc="4" data-target="d4-h20">다음 강 예고</a>
+</div>
+</div>
+</div></div>
+</nav></aside>
+  <div class="resizer" id="resizer"></div>
+  <main class="content" id="content"><article class="doc" data-doc="0">
+<div class="doc-head"><span class="crumb-part">1부 · 기술 기초</span><h1>0강. 러닝 예시 — 이벤트 RSVP 서비스</h1></div>
+
+<blockquote>
+<p><strong>이 강의 목적</strong>: 이 교재는 처음부터 끝까지 하나의 서비스를 예시로 사용합니다. 바로 <strong>사내 이벤트 RSVP 서비스</strong>입니다. 각 강은 이 서비스를 다시 설명하지 않고 여기(0강)를 참조합니다. 먼저 이 서비스가 무엇인지 한 번 읽어두면, 이후 모든 강의 프론트엔드·백엔드·데이터·인프라·자동화 설명이 하나의 구체적인 그림 위에서 이어집니다.</p>
+</blockquote>
+<hr/>
+<h2 id="d0-h1">1. 서비스 개요</h2>
+<p><strong>무엇을 하는 서비스인가.</strong> 사내·동호회 이벤트의 <strong>신청·취소·정원 관리</strong>(RSVP는 '회신 바랍니다'라는 뜻의 프랑스어 <em>Répondez s'il vous plaît</em>의 약자입니다)를 온라인으로 처리하는 작은 서비스입니다. 지금까지 신청이 카카오톡 단체방에서 이뤄져 명단 추적·취소 확인·정원 파악이 어려웠던 문제를 해결합니다.</p>
+<p><strong>누가 쓰는가.</strong> 주최자(HR·팀장)는 이벤트를 개설하고 명단을 조회하고 정원을 변경합니다. 참석자(직원·회원)는 신청하고 취소하고 일정을 확인합니다.</p>
+<p><strong>핵심 기능(MVP).</strong> 이벤트 생성 · 참석 신청(이름·이메일·참석 여부) · 주최자 명단 조회 · 참석자 신청 취소 · 정원 변경입니다.</p>
+<p><strong>하지 않을 것(V2 이후).</strong> 결제 · 대기열 · 좌석 배치도 · SNS 공유 · 푸시 알림은 초기 범위에서 제외합니다.</p>
+<p><strong>성공 지표(예).</strong> 출시 2주 내 가입 100명 · 월 5회 이상 개설 · 신청 프로세스 1분 이내입니다.</p>
+<h3 id="d0-h2">1.1 만들 화면 미리보기</h3>
+<p>말보다 그림이 빠릅니다. 이 서비스로 실제 만들 화면은 크게 네 개입니다. 아래는 실제 화면이 아니라 "무엇을 만들지" 감을 잡기 위한 대략적 와이어프레임입니다.</p>
+<p><img alt="이벤트 RSVP 대표 화면 4개 — 목록·상세와 신청 폼·내 신청·주최자 대시보드" loading="lazy" src="img/vf0_rsvp_ui.svg"/></p>
+<p>참석자는 <strong>① 이벤트 목록</strong>에서 관심 이벤트를 고르고 <strong>② 상세 화면의 신청 폼</strong>으로 참석을 신청하며, <strong>③ 내 신청</strong> 화면에서 확인·취소합니다. 주최자는 <strong>④ 대시보드</strong>에서 신청 현황과 명단을 보고 정원을 조정합니다. 이 네 화면을 기준으로 이후 강의 프론트엔드·백엔드·데이터 설명이 이어집니다.</p>
+<hr/>
+<h2 id="d0-h3">2. 아키텍처 한눈에</h2>
+<p>이 서비스를 프론트엔드·백엔드·데이터·인프라 네 계층으로 나눠 정리하면 다음과 같습니다. 각 계층의 구체적인 원리는 기술 기초 파트(2~5강)에서 이 서비스를 예시로 풀어갑니다.</p>
+<p><strong>프론트엔드.</strong> <span class="tt" data-tip="리액트에 서버 기능과 검색 최적화를 더한 프레임워크. 실제 서비스를 만들 때 표준처럼 쓰임.">Next.js</span> + <span class="tt" data-tip="화면을 '컴포넌트'라는 조각으로 나눠 만드는, 가장 널리 쓰는 프론트엔드 라이브러리. 데이터가 바뀌면 화면이 자동으로 다시 그려짐.">React</span> + <span class="tt" data-tip="자바스크립트에 '오타 검사기'를 붙인 버전. 실수를 미리 잡아줘서 큰 프로젝트에서 오류를 줄임.">TypeScript</span>로 만들고, <span class="tt" data-tip="'글자 크게, 파랑, 가운데'처럼 짧은 이름표를 붙여 빠르게 꾸미는 CSS 도구. 별도 디자인 파일 없이 화면에서 바로 스타일링함.">Tailwind CSS</span> + <span class="tt" data-tip="버튼·입력창 같은 예쁜 화면 부품을 복사해다 마음대로 고쳐 쓰는 컴포넌트 모음. 디자인 통일에 편함.">shadcn/ui</span>로 스타일링하며, 폰·태블릿·PC를 아우르는 <span class="tt" data-tip="PC, 태블릿, 폰 등 화면 크기에 맞춰 자동으로 배치가 바뀌는 웹. 기기마다 따로 안 만들어도 됨.">반응형 웹</span>입니다. 페이지 성격에 따라 렌더링 전략을 다르게 씁니다 — 회사 소개·이벤트 상세는 <span class="tt" data-tip="미리 화면을 다 만들어 저장해두고 그대로 보여주는 방식. 매우 빠르고, 블로그·문서 사이트에 적합.">SSG</span>(+시간당 <span class="tt" data-tip="미리 만들어둔 페이지를 일정 주기로 조용히 갱신하는 방식. 빠른 속도와 최신 정보를 둘 다 잡음.">ISR</span>), 이벤트 목록은 <span class="tt" data-tip="서버가 화면을 미리 완성해서 보내주는 방식. 첫 화면이 빨리 뜨고 검색엔진에 잘 잡힘.">SSR</span>, 신청 폼·대시보드는 <span class="tt" data-tip="서버는 빈 껍데기만 주고 브라우저가 화면을 그려내는 방식. 앱처럼 동적이지만 첫 로딩이 느릴 수 있음.">CSR</span>, 개인 신청 내역은 <span class="tt" data-tip="서버가 화면을 미리 완성해서 보내주는 방식. 첫 화면이 빨리 뜨고 검색엔진에 잘 잡힘.">SSR</span>입니다. 대표 화면은 이벤트 목록, 이벤트 상세+신청 폼, 신청 확인/내 신청, 주최자 대시보드 네 개입니다.</p>
+<p><strong>백엔드.</strong> Python <span class="tt" data-tip="파이썬으로 빠르고 간편하게 API를 만드는 인기 도구(프레임워크). 속도가 빠르고 문서가 자동 생성돼 최근 많이 쓰임.">FastAPI</span>(대안 <span class="tt" data-tip="웹사이트용 언어(자바스크립트)를 서버에서도 돌릴 수 있게 해주는 환경. 화면과 서버를 같은 언어로 만들 수 있어 널리 쓰임.">Node.js</span>/<span class="tt" data-tip="Node.js 기반으로 구조를 잡아 대규모 서버를 체계적으로 만드는 프레임워크. 규칙이 잘 잡혀 있어 팀 협업과 유지보수에 유리.">NestJS</span>)로 <span class="tt" data-tip="웹에서 데이터를 주고받는 대표적인 규칙(약속). 주소로 자원을 가리키고 '조회·생성·수정·삭제' 같은 정해진 방식으로 서버와 대화하도록 정리한 방식.">REST</span> API를 제공합니다(예: <code>/api/v1/events/{id}/rsvp</code>). 인증·권한은 <span class="tt" data-tip="로그인한 사용자임을 증명하는 '전자 출입증' 같은 토큰. 서버가 매번 기억하지 않아도, 이 토큰만 보면 누구인지 확인됨.">JWT</span> + <span class="tt" data-tip="'역할'에 따라 권한을 주는 방식. 관리자·일반회원 같은 직책을 정하고, 그 직책에 맞는 기능만 열어주는 회사 직급별 출입증 개념.">RBAC</span>로, 역할은 일반 참석자·이벤트 호스트·관리자 셋입니다. 비즈니스 규칙은 반드시 백엔드가 강제합니다 — 마감(400), 정원 초과(409), 중복 신청(409), 종료 후에는 조회만입니다. 동시 신청은 <span class="tt" data-tip="여러 작업을 '하나의 묶음'으로 처리하는 단위. 계좌이체처럼 중간에 실패하면 통째로 되돌려, 어중간한 상태가 안 생기게 함.">트랜잭션</span> + 행 잠금(<span class="tt" data-tip="거래(트랜잭션)가 안전하게 처리되도록 지켜야 할 4대 원칙. 돈 이체 등 실수가 치명적인 작업이 '전부 되거나, 전부 취소되게' 보장.">ACID</span>)으로 오버부킹을 막습니다. 운영 측면에서는 <span class="tt" data-tip="자주 쓰는 데이터를 가까이 미리 저장해 빠르게 꺼내 쓰는 기법. 매번 멀리서 가져오지 않아 속도가 빨라지는 '즉석 서랍'.">캐싱</span>(<span class="tt" data-tip="데이터를 메모리에 두고 초고속으로 읽고 쓰는 저장소. 캐시나 실시간 순위표처럼 속도가 중요한 곳에 쓴다.">Redis</span>)·이메일 <span class="tt" data-tip="요청해두고 결과를 기다리지 않은 채 다른 일을 먼저 하는 방식. 커피 주문 후 자리에서 기다리며 딴 일 하는 것처럼 효율적.">비동기</span> 큐·<span class="tt" data-tip="몰려드는 접속을 여러 서버에 골고루 나눠주는 기술. 한 서버에 부하가 쏠리지 않게 줄을 분산시켜줌.">로드밸런싱</span>·로깅/모니터링을 두고, 배포는 <span class="tt" data-tip="앱과 실행 환경을 통째로 '컨테이너'라는 상자에 담아, 어디서든 똑같이 실행되게 하는 도구. '내 PC에선 됐는데' 문제를 없앰.">Docker</span> + <span class="tt" data-tip="코드를 저장하면 자동으로 검사·배포까지 이어지는 개발 자동화 과정. 수동 작업을 줄여 실수와 시간을 아낌.">CI/CD</span>로 합니다.</p>
+<p><strong>데이터.</strong> <span class="tt" data-tip="안정성과 기능이 뛰어난 오픈소스 관계형 데이터베이스. 복잡한 데이터나 대규모 서비스에 널리 쓰인다.">PostgreSQL</span>(<span class="tt" data-tip="데이터를 중복 없이 규칙에 맞게 표로 쪼개 정리하는 것. 같은 정보를 여러 곳에 저장해 생기는 오류를 막는다.">정규화</span>)을 쓰되, MVP는 <span class="tt" data-tip="PostgreSQL 기반으로 데이터베이스·인증·저장소를 한 번에 주는 개발 플랫폼. 백엔드를 빠르게 구축할 때 쓴다.">Supabase</span>(<span class="tt" data-tip="백엔드를 직접 안 만들고 빌려 쓰는 서비스(Backend as a Service). 로그인·DB 등을 완제품처럼 가져다 쓴다.">BaaS</span>)로 시작해 규모가 커지면 자체 스택으로 옮깁니다. 테이블은 네 개입니다 — <code>users</code>(id·email·name), <code>events</code>(id·title·capacity·created_by·scheduled_at), <code>rsvps</code>(id·user_id·event_id·status·created_at), <code>admins</code>(user_id·event_id·permission). 접근은 <span class="tt" data-tip="데이터베이스에서 '이 행은 이 사람만 볼 수 있다'를 행 단위로 강제하는 보안 규칙. 정책이 없으면 기본 차단.">RLS</span>(행 단위)로 통제합니다. 사용자는 본인 행, 호스트는 담당 이벤트, 관리자는 전체를 봅니다. 파일은 성격에 따라 나눕니다 — 포스터는 <span class="tt" data-tip="파일·이미지·영상 등을 저장하는 AWS의 대용량 창고. 인터넷 어디서든 꺼내 쓸 수 있는 온라인 저장소.">S3</span> + <span class="tt" data-tip="콘텐츠를 세계 곳곳 서버에 복제해 사용자와 가까운 곳에서 전달하는 망. 이미지·영상 로딩을 빠르게 한다.">CDN</span>(공개), 개인 증명 PDF는 <span class="tt" data-tip="파일·이미지·영상 등을 저장하는 AWS의 대용량 창고. 인터넷 어디서든 꺼내 쓸 수 있는 온라인 저장소.">S3</span>(비공개) + 서명된 URL, 당일 사진은 <span class="tt" data-tip="파일·이미지·영상 등을 저장하는 AWS의 대용량 창고. 인터넷 어디서든 꺼내 쓸 수 있는 온라인 저장소.">S3</span>(관리자만)입니다.</p>
+<p><strong>인프라·배포·보안.</strong> 프론트는 <span class="tt" data-tip="웹사이트를 코드만 올리면 자동으로 배포·운영해주는 서비스. 서버 설정 없이 빠르게 웹을 띄울 때 씀.">Vercel</span>(<span class="tt" data-tip="앱 개발·실행에 필요한 환경까지 갖춰서 빌려주는 클라우드. 주방 설비 딸린 공간을 빌려 요리(개발)에만 집중.">PaaS</span>), DB는 <span class="tt" data-tip="PostgreSQL 기반으로 데이터베이스·인증·저장소를 한 번에 주는 개발 플랫폼. 백엔드를 빠르게 구축할 때 쓴다.">Supabase</span>(<span class="tt" data-tip="백엔드를 직접 안 만들고 빌려 쓰는 서비스(Backend as a Service). 로그인·DB 등을 완제품처럼 가져다 쓴다.">BaaS</span>)에 자동 <span class="tt" data-tip="코드를 저장하면 자동으로 검사·배포까지 이어지는 개발 자동화 과정. 수동 작업을 줄여 실수와 시간을 아낌.">CI/CD</span>로 배포합니다. 도메인은 <code>rsvp.ourcompany.com</code>(<span class="tt" data-tip="도메인 주소를 실제 서버의 IP 주소(숫자)로 연결하는 DNS 설정. 이름표에 진짜 위치를 적어두는 것.">A 레코드</span>)이고 <span class="tt" data-tip="웹사이트 통신을 암호화해 안전하게 주고받는 방식. 주소에 자물쇠가 붙는, 도청 걱정 없는 연결.">HTTPS</span>는 <span class="tt" data-tip="HTTPS에 필요한 보안 인증서를 무료로 발급해주는 서비스. 돈 안 들이고 웹사이트에 자물쇠를 달 수 있음.">Let's Encrypt</span>로 자동 발급됩니다. 시크릿은 배포 플랫폼의 <span class="tt" data-tip="비밀번호·설정값 등을 코드 밖에 따로 저장해 두는 값. 민감 정보를 코드에 안 적고 안전하게 관리하는 방법.">환경 변수</span> 패널에 두고(코드·<span class="tt" data-tip="파일 변경 이력을 저장·되돌리는 '버전 관리 도구'. 언제든 이전 상태로 복구 가능한 무한 되돌리기 장부.">Git</span>에 두지 않음) 주기적으로 회전합니다. 보안은 매개변수화 쿼리·이스케이프·SameSite <span class="tt" data-tip="브라우저에 저장되는 작은 메모. 로그인 정보나 설정을 기억해, 다시 방문했을 때 나를 알아보게 해주는 '이름표 쪽지'.">쿠키</span>·MFA의 다층 방어로, 모니터링은 <span class="tt" data-tip="앱에서 발생한 오류를 자동으로 잡아 알려주는 서비스. 문제가 어디서 났는지 빠르게 찾게 도와줌.">Sentry</span>+분석에서 Slack 알림으로 잇습니다. 개인정보는 동의 체크와 처리방침(수집·목적·보관기간 30일 명시)을 두고 PIPA/GDPR를 고려합니다.</p>
+<hr/>
+<h2 id="d0-h4">3. 강별로 RSVP의 어떤 면을 쓰나</h2>
+<table>
+<thead>
+<tr>
+<th>파트 · 강</th>
+<th>RSVP를 이렇게 활용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>기술 기초 2강 프론트엔드</td>
+<td>목록 페이지 목업(세 계층), 화면별 정적/동적·렌더링 모드·스택 선택</td>
+</tr>
+<tr>
+<td>기술 기초 3강 백엔드</td>
+<td>다섯 책임, API 명세, <span class="tt" data-tip="로그인한 사용자임을 증명하는 '전자 출입증' 같은 토큰. 서버가 매번 기억하지 않아도, 이 토큰만 보면 누구인지 확인됨.">JWT</span>+<span class="tt" data-tip="'역할'에 따라 권한을 주는 방식. 관리자·일반회원 같은 직책을 정하고, 그 직책에 맞는 기능만 열어주는 회사 직급별 출입증 개념.">RBAC</span> 권한 매트릭스, 규칙 4관문, <span class="tt" data-tip="여러 작업을 '하나의 묶음'으로 처리하는 단위. 계좌이체처럼 중간에 실패하면 통째로 되돌려, 어중간한 상태가 안 생기게 함.">트랜잭션</span> 오버부킹</td>
+</tr>
+<tr>
+<td>기술 기초 4강 데이터</td>
+<td>데이터 4종류, <span class="tt" data-tip="표들이 서로 어떻게 연결되는지 그림으로 나타낸 데이터베이스 설계도. 전체 데이터 구조를 한눈에 파악한다.">ERD</span>(4테이블), <span class="tt" data-tip="데이터를 중복 없이 규칙에 맞게 표로 쪼개 정리하는 것. 같은 정보를 여러 곳에 저장해 생기는 오류를 막는다.">정규화</span>, 객체 스토리지+<span class="tt" data-tip="콘텐츠를 세계 곳곳 서버에 복제해 사용자와 가까운 곳에서 전달하는 망. 이미지·영상 로딩을 빠르게 한다.">CDN</span>, <span class="tt" data-tip="데이터베이스에서 '이 행은 이 사람만 볼 수 있다'를 행 단위로 강제하는 보안 규칙. 정책이 없으면 기본 차단.">RLS</span> 정책, 데이터 흐름</td>
+</tr>
+<tr>
+<td>기술 기초 5강 인프라·배포·보안</td>
+<td>4계층·클라우드·<span class="tt" data-tip="사람이 쓰는 인터넷 주소를 컴퓨터 주소(숫자)로 바꿔주는 시스템. 인터넷 세상의 전화번호부.">DNS</span>·<span class="tt" data-tip="웹사이트 통신을 암호화해 안전하게 주고받는 방식. 주소에 자물쇠가 붙는, 도청 걱정 없는 연결.">HTTPS</span>·보안 위협·시크릿·모니터링·법규·인프라 구성</td>
+</tr>
+<tr>
+<td>코딩 with Claude 초급 4강</td>
+<td>Cowork으로 RSVP 웹앱을 만드는 전체 워크플로우(생성→DB→배포)</td>
+</tr>
+<tr>
+<td>코딩 with Claude 중급·고급</td>
+<td>커맨드·서브<span class="tt" data-tip="목표를 주면 스스로 판단해 여러 단계를 실행하는 AI. 시키는 것만 답하는 챗봇과 달리 '일을 처리'함.">에이전트</span>·hooks·<span class="tt" data-tip="Claude가 노션·슬랙·깃허브 같은 외부 서비스에 연결되는 '표준 어댑터'. 한 번 연결하면 그 서비스를 도구처럼 씀.">MCP</span>·품질 게이트·멀티<span class="tt" data-tip="목표를 주면 스스로 판단해 여러 단계를 실행하는 AI. 시키는 것만 답하는 챗봇과 달리 '일을 처리'함.">에이전트</span>를 RSVP 운영에 적용</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<blockquote>
+<p>이제 이 서비스를 머릿속에 두고, 기술 기초 파트부터 시작합니다. 개발을 몰라도 괜찮습니다. 각 강이 이 RSVP 서비스를 하나씩 뜯어보며 "화면 뒤에서 무슨 일이 벌어지는가"를 설명합니다.</p>
+</blockquote>
+</article>
+<article class="doc" data-doc="1" style="display:none">
+<div class="doc-head"><span class="crumb-part">1부 · 기술 기초</span><h1>입문(기술 기초) 2강. 프론트엔드</h1></div>
+
+<blockquote>
+<p><strong>유형</strong>: 이론 (다이어그램 보강판) · <strong>읽는 데 약 30분</strong>
+<strong>선수</strong>: 1강(서비스 큰 그림). 이벤트 RSVP 예시가 머릿속에 있으면 좋습니다.
+<strong>이 강을 마치면</strong>: ① <span class="tt" data-tip="웹페이지의 뼈대를 만드는 언어. 제목, 문단, 버튼 같은 요소가 '무엇'인지 정해줌.">HTML</span>·<span class="tt" data-tip="웹페이지를 예쁘게 꾸미는 언어. 색깔, 글꼴, 크기, 배치 같은 '겉모습'을 담당함.">CSS</span>·<span class="tt" data-tip="웹페이지에 동작을 넣는 언어. 버튼 클릭, 팝업, 애니메이션처럼 화면을 살아 움직이게 함.">JavaScript</span>의 역할 분담을 설명한다 ② 정적 vs 동적 화면을 판단한다 ③ <span class="tt" data-tip="페이지를 통째로 새로 불러오지 않고 필요한 부분만 바꿔서 앱처럼 매끄럽게 넘어가는 웹 방식.">SPA</span>와 <span class="tt" data-tip="링크를 누를 때마다 페이지 전체를 새로 불러오는 전통적인 웹 방식. 페이지가 여러 장으로 나뉨.">MPA</span>를 구분한다 ④ <span class="tt" data-tip="화면을 '컴포넌트'라는 조각으로 나눠 만드는, 가장 널리 쓰는 프론트엔드 라이브러리. 데이터가 바뀌면 화면이 자동으로 다시 그려짐.">React</span>·<span class="tt" data-tip="리액트와 비슷하지만 배우기 쉽고 문법이 직관적인 프론트엔드 프레임워크. 중소 규모 프로젝트에서 인기.">Vue</span>·<span class="tt" data-tip="리액트에 서버 기능과 검색 최적화를 더한 프레임워크. 실제 서비스를 만들 때 표준처럼 쓰임.">Next.js</span>를 <em>왜</em> 쓰는지 설명한다 ⑤ 렌더링 모드(<span class="tt" data-tip="서버는 빈 껍데기만 주고 브라우저가 화면을 그려내는 방식. 앱처럼 동적이지만 첫 로딩이 느릴 수 있음.">CSR</span>·<span class="tt" data-tip="서버가 화면을 미리 완성해서 보내주는 방식. 첫 화면이 빨리 뜨고 검색엔진에 잘 잡힘.">SSR</span>·<span class="tt" data-tip="미리 화면을 다 만들어 저장해두고 그대로 보여주는 방식. 매우 빠르고, 블로그·문서 사이트에 적합.">SSG</span>·<span class="tt" data-tip="미리 만들어둔 페이지를 일정 주기로 조용히 갱신하는 방식. 빠른 속도와 최신 정보를 둘 다 잡음.">ISR</span>)를 비교한다.</p>
+</blockquote>
+<hr/>
+<h2 id="d1-h1">0. 들어가며</h2>
+<p>프론트엔드는 <strong>사용자가 눈으로 보고 손으로 만지는 모든 것</strong> 입니다. 버튼·텍스트·이미지·폼·애니메이션·반응성이 모두 프론트엔드의 책임입니다.</p>
+<p>이 강은 다음 순서로 갑니다 — ① 화면의 3가지 책임(<span class="tt" data-tip="웹페이지의 뼈대를 만드는 언어. 제목, 문단, 버튼 같은 요소가 '무엇'인지 정해줌.">HTML</span>·<span class="tt" data-tip="웹페이지를 예쁘게 꾸미는 언어. 색깔, 글꼴, 크기, 배치 같은 '겉모습'을 담당함.">CSS</span>·JS) → ② 정적 vs 동적 → ③ <span class="tt" data-tip="페이지를 통째로 새로 불러오지 않고 필요한 부분만 바꿔서 앱처럼 매끄럽게 넘어가는 웹 방식.">SPA</span> vs <span class="tt" data-tip="링크를 누를 때마다 페이지 전체를 새로 불러오는 전통적인 웹 방식. 페이지가 여러 장으로 나뉨.">MPA</span> → ④ 라이브러리·프레임워크 의사결정 → ⑤ 렌더링 모드 4가지 → ⑥ 빌드·패키지 관리 → ⑦ 디자인 시스템 → ⑧ 모바일·반응형.</p>
+<blockquote>
+<p>🎯 <strong>러닝 예시</strong> — 이벤트 RSVP의 화면 4개(목록·상세·신청 폼·관리자 대시보드)를 예로 들어, 각 화면의 정적/동적 여부·렌더링 모드·디자인 시스템을 <em>판단</em> 해 봅니다. (직접 만드는 실습이 아니라, 판단 근거를 읽는 용도입니다.)</p>
+</blockquote>
+<hr/>
+<h2 id="d1-h2">1. 화면을 이루는 세 계층</h2>
+<h3 id="d1-h3">1.1 HTML·CSS·JavaScript의 역할 분담</h3>
+<p>사용자가 보는 화면은 보통 <strong>세 계층</strong> 으로 이뤄집니다.</p>
+<p><img alt="화면을 이루는 세 계층 — HTML(구조)·CSS(표현)·JavaScript(행동)" loading="lazy" src="img/vf2_layers.svg"/></p>
+<table>
+<thead>
+<tr>
+<th>계층</th>
+<th>정체</th>
+<th>책임</th>
+<th>깨졌을 때</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><span class="tt" data-tip="웹페이지의 뼈대를 만드는 언어. 제목, 문단, 버튼 같은 요소가 '무엇'인지 정해줌.">HTML</span></strong></td>
+<td>구조 계층(마크업)</td>
+<td>요소의 순서·계층·의미를 정의</td>
+<td>스크린 리더가 읽을 수 없고, 검색 엔진이 색인하지 못함</td>
+</tr>
+<tr>
+<td><strong><span class="tt" data-tip="웹페이지를 예쁘게 꾸미는 언어. 색깔, 글꼴, 크기, 배치 같은 '겉모습'을 담당함.">CSS</span></strong></td>
+<td>표현 계층(스타일)</td>
+<td>색상·크기·위치·폰트·애니메이션을 지정</td>
+<td>기획자가 의도한 디자인이 표현되지 않음</td>
+</tr>
+<tr>
+<td><strong><span class="tt" data-tip="웹페이지에 동작을 넣는 언어. 버튼 클릭, 팝업, 애니메이션처럼 화면을 살아 움직이게 함.">JavaScript</span></strong></td>
+<td>행동 계층(상호작용)</td>
+<td>클릭·입력·스크롤 등 사용자 행동에 반응</td>
+<td>버튼이 안 눌리고, 폼 검증·동적 효과가 없음</td>
+</tr>
+</tbody>
+</table>
+<h3 id="d1-h4">1.2 예시 화면 — 이벤트 목록 페이지로 보는 분담</h3>
+<p>카드 형태로 이벤트를 보여주는 <strong>이벤트 목록 페이지</strong> 를 예로 들면, 세 계층이 이렇게 나눠 일합니다.</p>
+<p><img alt="예시 화면 — 이벤트 목록 페이지에서 세 계층이 하는 일" loading="lazy" src="img/vf2_pagemock.svg"/></p>
+<ul>
+<li><strong><span class="tt" data-tip="웹페이지의 뼈대를 만드는 언어. 제목, 문단, 버튼 같은 요소가 '무엇'인지 정해줌.">HTML</span></strong> — 카드들을 목록으로 정의하고, 각 카드 안에 <em>상태 배지·제목·날짜·장소·참여자 수</em> 순서를 지정하고, "신청하기" 버튼 요소를 놓습니다.</li>
+<li><strong><span class="tt" data-tip="웹페이지를 예쁘게 꾸미는 언어. 색깔, 글꼴, 크기, 배치 같은 '겉모습'을 담당함.">CSS</span></strong> — 카드 너비·그림자·둥근 모서리, 제목/날짜의 색·크기, 상태 배지(모집중/마감) 색, 버튼의 색과 호버 효과, 그리고 <em>반응형</em>(폰 1열 → 태블릿 2열 → PC 3열)을 지정합니다.</li>
+<li><strong><span class="tt" data-tip="웹페이지에 동작을 넣는 언어. 버튼 클릭, 팝업, 애니메이션처럼 화면을 살아 움직이게 함.">JavaScript</span></strong> — "신청하기"를 누르면 서버에 반영하고 참여자 수를 +1로 갱신하고, 버튼을 "신청 취소"로 바꾸고, "신청되었습니다" 알림을 잠시 띄우며, 마감된 카드는 버튼을 비활성화합니다.</li>
+</ul>
+<h3 id="d1-h5">1.3 계층 분담이 깨질 때의 위험</h3>
+<ul>
+<li><strong>"<span class="tt" data-tip="웹페이지를 예쁘게 꾸미는 언어. 색깔, 글꼴, 크기, 배치 같은 '겉모습'을 담당함.">CSS</span>로 빠르게" 하려고 <span class="tt" data-tip="웹페이지의 뼈대를 만드는 언어. 제목, 문단, 버튼 같은 요소가 '무엇'인지 정해줌.">HTML</span> 구조를 무시</strong> 하면 → 스크린 리더 사용자가 화면을 이용하지 못하고, 검색 엔진이 의미를 파악하지 못하며, 유지보수가 어려워집니다.</li>
+<li><strong>"<span class="tt" data-tip="웹페이지에 동작을 넣는 언어. 버튼 클릭, 팝업, 애니메이션처럼 화면을 살아 움직이게 함.">JavaScript</span>만으로 다 그리면 유연하니까"</strong> 하고 <span class="tt" data-tip="웹페이지의 뼈대를 만드는 언어. 제목, 문단, 버튼 같은 요소가 '무엇'인지 정해줌.">HTML</span>·<span class="tt" data-tip="웹페이지를 예쁘게 꾸미는 언어. 색깔, 글꼴, 크기, 배치 같은 '겉모습'을 담당함.">CSS</span>를 무시하면 → JS가 로드되는 동안 사용자가 <em>백지 화면</em> 을 보게 됩니다(느린 네트워크에서 특히 심각).</li>
+</ul>
+<blockquote>
+<p>💡 <strong>포인트</strong> — 세 계층을 <em>의도에 맞게</em> 분담하면 빠르고·접근 가능하고·유지보수하기 쉬운 화면이 됩니다. 기획자가 "이 버튼 누르면 이렇게"라고 말하는 대부분은 <em><span class="tt" data-tip="웹페이지에 동작을 넣는 언어. 버튼 클릭, 팝업, 애니메이션처럼 화면을 살아 움직이게 함.">JavaScript</span>의 영역</em> 입니다.</p>
+</blockquote>
+<hr/>
+<h2 id="d1-h6">2. 화면이 만들어지는 두 갈래 — 정적·동적</h2>
+<h3 id="d1-h7">2.1 정적 페이지(Static Page)</h3>
+<p>서버가 처음부터 <em>완성된 <span class="tt" data-tip="웹페이지의 뼈대를 만드는 언어. 제목, 문단, 버튼 같은 요소가 '무엇'인지 정해줌.">HTML</span></em> 을 보냅니다. 누가 열든 같은 내용을 봅니다.</p>
+<ul>
+<li><strong>장점</strong>: 로드 빠름(<span class="tt" data-tip="웹페이지의 뼈대를 만드는 언어. 제목, 문단, 버튼 같은 요소가 '무엇'인지 정해줌.">HTML</span> 한 번), 서버 비용 저렴, SEO 유리(완성 <span class="tt" data-tip="웹페이지의 뼈대를 만드는 언어. 제목, 문단, 버튼 같은 요소가 '무엇'인지 정해줌.">HTML</span>이 이미 존재).</li>
+<li><strong>한계</strong>: 동적 효과가 제한적(JS로 일부만).</li>
+<li><strong>적합</strong>: 회사 소개·블로그 게시물·FAQ·정책/약관 등 <em>거의 안 바뀌는</em> 화면.</li>
+</ul>
+<h3 id="d1-h8">2.2 동적 페이지(Dynamic Page)</h3>
+<p>서버가 <em>틀만</em> 주고, 브라우저(또는 서버)가 데이터를 받아 화면을 그립니다. 사용자·시간에 따라 내용이 바뀝니다.</p>
+<ul>
+<li><strong>장점</strong>: 사용자마다 다른 내용, 실시간 반영 가능.</li>
+<li><strong>한계</strong>: 초기에 백지 화면이 날 수 있고, 서버·네트워크 비용이 추가됩니다.</li>
+<li><strong>적합</strong>: 받은편지함·소셜 타임라인·장바구니·대시보드·개인화 추천처럼 <em>수시로 바뀌는</em> 화면.</li>
+</ul>
+<p><img alt="정적 페이지 vs 동적 페이지 — 완성 HTML을 주느냐, 틀만 주고 채우느냐" loading="lazy" src="img/gf_static_dynamic.svg"/></p>
+<h3 id="d1-h9">2.3 이벤트 RSVP의 정적·동적 판단</h3>
+<table>
+<thead>
+<tr>
+<th>화면</th>
+<th>정적/동적</th>
+<th>이유</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>회사·이벤트 상세 정보</td>
+<td>정적</td>
+<td>한번 만들면 자주 안 바뀜, SEO 중요</td>
+</tr>
+<tr>
+<td>이벤트 목록</td>
+<td>동적</td>
+<td>새 이벤트 추가·종료 시 목록이 변함</td>
+</tr>
+<tr>
+<td>신청 폼</td>
+<td>동적</td>
+<td>사용자 입력에 실시간 반응·검증 필요</td>
+</tr>
+<tr>
+<td>관리자 대시보드</td>
+<td>동적</td>
+<td>참여자 수·상태가 실시간으로 변함</td>
+</tr>
+<tr>
+<td>개인 신청 내역</td>
+<td>동적</td>
+<td>사용자마다 다름, 취소 시 변함</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="d1-h10">3. 한 페이지냐 여러 페이지냐 — SPA vs MPA</h2>
+<p>프레임워크를 고르기 전에, 화면을 <em>어떻게 넘길지</em> 의 두 갈래를 알아야 합니다. 이것이 뒤의 도구·렌더링 선택에도 영향을 줍니다.</p>
+<p><img alt="MPA vs SPA — 페이지 전환 방식 비교" loading="lazy" src="img/vf2_spa_mpa.svg"/></p>
+<ul>
+<li><strong><span class="tt" data-tip="링크를 누를 때마다 페이지 전체를 새로 불러오는 전통적인 웹 방식. 페이지가 여러 장으로 나뉨.">MPA</span>(Multi-Page Application, 여러 페이지)</strong> — 전통적 방식입니다. 링크를 누르면 <em>서버에서 새 <span class="tt" data-tip="웹페이지의 뼈대를 만드는 언어. 제목, 문단, 버튼 같은 요소가 '무엇'인지 정해줌.">HTML</span> 전체</em> 를 받아 화면을 새로고침합니다. 페이지마다 별도 주소·별도 문서죠. 구조가 단순하고 SEO에 유리하지만, 이동할 때마다 <em>깜빡임</em> 이 있고 서버가 매번 <span class="tt" data-tip="웹페이지의 뼈대를 만드는 언어. 제목, 문단, 버튼 같은 요소가 '무엇'인지 정해줌.">HTML</span>을 만듭니다.</li>
+<li><strong><span class="tt" data-tip="페이지를 통째로 새로 불러오지 않고 필요한 부분만 바꿔서 앱처럼 매끄럽게 넘어가는 웹 방식.">SPA</span>(Single-Page Application, 한 페이지)</strong> — 첫 로드로 <em>앱 껍데기</em> 를 받은 뒤, 이후 이동은 <strong><span class="tt" data-tip="웹페이지에 동작을 넣는 언어. 버튼 클릭, 팝업, 애니메이션처럼 화면을 살아 움직이게 함.">JavaScript</span>가 필요한 부분만 갈아끼웁니다</strong>(새로고침 없음). 앱처럼 매끄럽고 서버 부하가 낮지만, 첫 로드가 무거울 수 있고 SEO는 별도 대비가 필요합니다. Gmail·구글지도처럼 <em>앱 같은 웹</em> 이 대표적입니다.</li>
+</ul>
+<p>비교하면 — <em>첫 로드</em> 는 <span class="tt" data-tip="링크를 누를 때마다 페이지 전체를 새로 불러오는 전통적인 웹 방식. 페이지가 여러 장으로 나뉨.">MPA</span>가 가볍고, <em>전환 경험</em> 은 <span class="tt" data-tip="페이지를 통째로 새로 불러오지 않고 필요한 부분만 바꿔서 앱처럼 매끄럽게 넘어가는 웹 방식.">SPA</span>가 매끄럽고, <em>SEO</em> 는 <span class="tt" data-tip="링크를 누를 때마다 페이지 전체를 새로 불러오는 전통적인 웹 방식. 페이지가 여러 장으로 나뉨.">MPA</span>가 유리(<span class="tt" data-tip="페이지를 통째로 새로 불러오지 않고 필요한 부분만 바꿔서 앱처럼 매끄럽게 넘어가는 웹 방식.">SPA</span>는 대비 필요)합니다.</p>
+<blockquote>
+<p>💡 <strong>포인트</strong> — <span class="tt" data-tip="페이지를 통째로 새로 불러오지 않고 필요한 부분만 바꿔서 앱처럼 매끄럽게 넘어가는 웹 방식.">SPA</span>/<span class="tt" data-tip="링크를 누를 때마다 페이지 전체를 새로 불러오는 전통적인 웹 방식. 페이지가 여러 장으로 나뉨.">MPA</span>는 <em>페이지를 넘기는 방식</em>, 다음다음 절의 렌더링 모드(<span class="tt" data-tip="서버는 빈 껍데기만 주고 브라우저가 화면을 그려내는 방식. 앱처럼 동적이지만 첫 로딩이 느릴 수 있음.">CSR</span>/<span class="tt" data-tip="서버가 화면을 미리 완성해서 보내주는 방식. 첫 화면이 빨리 뜨고 검색엔진에 잘 잡힘.">SSR</span>/<span class="tt" data-tip="미리 화면을 다 만들어 저장해두고 그대로 보여주는 방식. 매우 빠르고, 블로그·문서 사이트에 적합.">SSG</span>)는 <em><span class="tt" data-tip="웹페이지의 뼈대를 만드는 언어. 제목, 문단, 버튼 같은 요소가 '무엇'인지 정해줌.">HTML</span>을 그리는 시점</em> 입니다. 둘은 짝을 이룹니다 — 보통 <strong><span class="tt" data-tip="페이지를 통째로 새로 불러오지 않고 필요한 부분만 바꿔서 앱처럼 매끄럽게 넘어가는 웹 방식.">SPA</span>는 <span class="tt" data-tip="서버는 빈 껍데기만 주고 브라우저가 화면을 그려내는 방식. 앱처럼 동적이지만 첫 로딩이 느릴 수 있음.">CSR</span></strong> 과, <strong><span class="tt" data-tip="링크를 누를 때마다 페이지 전체를 새로 불러오는 전통적인 웹 방식. 페이지가 여러 장으로 나뉨.">MPA</span>는 서버 렌더(<span class="tt" data-tip="서버가 화면을 미리 완성해서 보내주는 방식. 첫 화면이 빨리 뜨고 검색엔진에 잘 잡힘.">SSR</span>/<span class="tt" data-tip="미리 화면을 다 만들어 저장해두고 그대로 보여주는 방식. 매우 빠르고, 블로그·문서 사이트에 적합.">SSG</span>)</strong> 와 함께 갑니다. 그래서 "<span class="tt" data-tip="페이지를 통째로 새로 불러오지 않고 필요한 부분만 바꿔서 앱처럼 매끄럽게 넘어가는 웹 방식.">SPA</span>로 만들되 SEO가 필요한 페이지는 <span class="tt" data-tip="서버가 화면을 미리 완성해서 보내주는 방식. 첫 화면이 빨리 뜨고 검색엔진에 잘 잡힘.">SSR</span>을 섞는" 조합이 나오고, 이를 <em>메타프레임워크(<span class="tt" data-tip="리액트에 서버 기능과 검색 최적화를 더한 프레임워크. 실제 서비스를 만들 때 표준처럼 쓰임.">Next.js</span> 등)</em> 가 해줍니다.</p>
+</blockquote>
+<hr/>
+<h2 id="d1-h11">4. 라이브러리·프레임워크 의사결정</h2>
+<h3 id="d1-h12">4.1 도구는 '그때그때의 문제'를 풀며 진화했다</h3>
+<p><img alt="프론트엔드 도구의 진화 — jQuery → 컴포넌트 라이브러리 → 메타프레임워크" loading="lazy" src="img/vf2_frameworks.svg"/></p>
+<ul>
+<li><strong>1단계</strong> — <span class="tt" data-tip="웹페이지에 동작을 넣는 언어. 버튼 클릭, 팝업, 애니메이션처럼 화면을 살아 움직이게 함.">JavaScript</span>로 <span class="tt" data-tip="브라우저가 웹페이지를 이해하려고 만든 '설계도 트리'. 코드가 이걸 통해 화면 요소를 찾고 바꿈.">DOM</span> 조작이 복잡했다 → <strong>jQuery(2006)</strong> 가 간단한 셀렉터·조작 문법으로 해결.</li>
+<li><strong>2단계</strong> — jQuery로도 <em>대규모</em> 앱은 코드가 산란했다 → <strong><span class="tt" data-tip="버튼, 카드처럼 화면을 이루는 재사용 가능한 조각. 레고 블록처럼 조립해 화면을 만듦.">컴포넌트</span> 기반</strong> 라이브러리 등장: <strong><span class="tt" data-tip="화면을 '컴포넌트'라는 조각으로 나눠 만드는, 가장 널리 쓰는 프론트엔드 라이브러리. 데이터가 바뀌면 화면이 자동으로 다시 그려짐.">React</span>(2013, Meta)</strong> 상태 기반 UI, <strong><span class="tt" data-tip="리액트와 비슷하지만 배우기 쉽고 문법이 직관적인 프론트엔드 프레임워크. 중소 규모 프로젝트에서 인기.">Vue</span>(2014)</strong> 한 파일에 <span class="tt" data-tip="웹페이지의 뼈대를 만드는 언어. 제목, 문단, 버튼 같은 요소가 '무엇'인지 정해줌.">HTML</span>·<span class="tt" data-tip="웹페이지를 예쁘게 꾸미는 언어. 색깔, 글꼴, 크기, 배치 같은 '겉모습'을 담당함.">CSS</span>·JS, <strong><span class="tt" data-tip="미리 완성된 코드로 변환해두는 방식이라 결과물이 가볍고 빠른 프론트엔드 도구. 문법도 간결함.">Svelte</span>(2019)</strong> 컴파일 타임 최적화.</li>
+</ul>
+<blockquote>
+<p>📄 <strong><span class="tt" data-tip="리액트와 비슷하지만 배우기 쉽고 문법이 직관적인 프론트엔드 프레임워크. 중소 규모 프로젝트에서 인기.">Vue</span>의 '한 파일' 모습</strong> — 위 <span class="tt" data-tip="화면을 '컴포넌트'라는 조각으로 나눠 만드는, 가장 널리 쓰는 프론트엔드 라이브러리. 데이터가 바뀌면 화면이 자동으로 다시 그려짐.">React</span>와 같은 카드를 <span class="tt" data-tip="리액트와 비슷하지만 배우기 쉽고 문법이 직관적인 프론트엔드 프레임워크. 중소 규모 프로젝트에서 인기.">Vue</span>의 단일 파일 <span class="tt" data-tip="버튼, 카드처럼 화면을 이루는 재사용 가능한 조각. 레고 블록처럼 조립해 화면을 만듦.">컴포넌트</span>(SFC)로 쓰면, 화면·동작·스타일이 한 <code>.vue</code> 파일에 모입니다.</p>
+<p><code>vue
+&lt;!-- EventCard.vue — 세 구역이 한 파일에 --&gt;
+&lt;template&gt;                          &lt;!-- ① 화면(HTML) --&gt;
+  &lt;div class="card"&gt;
+    &lt;p&gt;참여자 {{ count }}명&lt;/p&gt;
+    &lt;button @click="count++"&gt;신청하기&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script setup&gt;                       // ② 동작(JS)
+  import { ref } from 'vue'
+  const count = ref(37)              // 바뀌면 화면이 자동 갱신되는 값
+&lt;/script&gt;
+&lt;style scoped&gt;                       /* ③ 스타일(CSS) — 이 컴포넌트에만 적용 */
+  .card { border-radius: 12px; }
+&lt;/style&gt;</code></p>
+</blockquote>
+<ul>
+<li><strong>3단계</strong> — 프레임워크만으론 <em>서버·라우팅·배포</em> 가 별개였다 → <strong>메타프레임워크</strong>: <strong><span class="tt" data-tip="리액트에 서버 기능과 검색 최적화를 더한 프레임워크. 실제 서비스를 만들 때 표준처럼 쓰임.">Next.js</span></strong>(<span class="tt" data-tip="화면을 '컴포넌트'라는 조각으로 나눠 만드는, 가장 널리 쓰는 프론트엔드 라이브러리. 데이터가 바뀌면 화면이 자동으로 다시 그려짐.">React</span>), <strong><span class="tt" data-tip="Next.js의 Vue 버전. Vue에 서버 렌더링과 검색 최적화 기능을 더해줌.">Nuxt</span></strong>(<span class="tt" data-tip="리액트와 비슷하지만 배우기 쉽고 문법이 직관적인 프론트엔드 프레임워크. 중소 규모 프로젝트에서 인기.">Vue</span>), <strong>SvelteKit</strong>(<span class="tt" data-tip="미리 완성된 코드로 변환해두는 방식이라 결과물이 가볍고 빠른 프론트엔드 도구. 문법도 간결함.">Svelte</span>), <strong>Remix</strong>(로더·액션 중심).</li>
+</ul>
+<p>여기서 <strong><span class="tt" data-tip="버튼, 카드처럼 화면을 이루는 재사용 가능한 조각. 레고 블록처럼 조립해 화면을 만듦.">컴포넌트</span></strong>(재사용 가능한 UI 조각: Button·Card·Modal)와 <strong>상태(state)</strong>(화면이 기억하는 값)라는 두 기둥이 핵심입니다. 현대 프레임워크의 원리는 <em>"상태가 바뀌면 관련 화면이 자동으로 다시 그려진다"</em> 는 것입니다 — 개발자가 화면을 직접 고쳐 그리지 않고 <em>상태만</em> 바꾸면 됩니다.</p>
+<p><img alt="상태(state)가 바뀌면 화면이 자동으로 다시 그려진다" loading="lazy" src="img/gf_state_render.svg"/></p>
+<p><img alt="Virtual DOM — 이전·이후를 비교해 바뀐 부분만 실제 화면에 반영" loading="lazy" src="img/gf_vdom.svg"/></p>
+<p>실제 코드로는 이렇게 짧습니다. 아래는 <span class="tt" data-tip="화면을 '컴포넌트'라는 조각으로 나눠 만드는, 가장 널리 쓰는 프론트엔드 라이브러리. 데이터가 바뀌면 화면이 자동으로 다시 그려짐.">React</span>의 <strong>함수형 <span class="tt" data-tip="버튼, 카드처럼 화면을 이루는 재사용 가능한 조각. 레고 블록처럼 조립해 화면을 만듦.">컴포넌트</span></strong> 로, "신청하기" 버튼을 누르면 <em>상태(참여자 수)만</em> 1 늘리고, 화면은 <span class="tt" data-tip="화면을 '컴포넌트'라는 조각으로 나눠 만드는, 가장 널리 쓰는 프론트엔드 라이브러리. 데이터가 바뀌면 화면이 자동으로 다시 그려짐.">React</span>가 알아서 다시 그립니다.</p>
+<pre><code class="language-jsx">// EventCard.jsx — 이벤트 카드 하나를 그리는 컴포넌트
+function EventCard() {
+  // count = 화면이 기억하는 값(state). setCount로 바꾸면 화면이 자동 갱신됩니다.
+  const [count, setCount] = useState(37);        // 처음 참여자 수 37
+
+  return (
+    &lt;div className="card"&gt;
+      &lt;h3&gt;사내 해커톤 2026&lt;/h3&gt;
+      &lt;p&gt;참여자 {count}명&lt;/p&gt;
+      {/* 버튼을 누르면 count를 +1 → 화면의 숫자도 자동으로 38로 바뀜 */}
+      &lt;button onClick={() =&gt; setCount(count + 1)}&gt;신청하기&lt;/button&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre>
+<h3 id="d1-h13">4.2 언제 무엇을 — 의사결정 표</h3>
+<table>
+<thead>
+<tr>
+<th>상황</th>
+<th>도구</th>
+<th>이유</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>간단한 페이지(FAQ·블로그·정책)</td>
+<td><strong><span class="tt" data-tip="웹페이지의 뼈대를 만드는 언어. 제목, 문단, 버튼 같은 요소가 '무엇'인지 정해줌.">HTML</span> + <span class="tt" data-tip="웹페이지를 예쁘게 꾸미는 언어. 색깔, 글꼴, 크기, 배치 같은 '겉모습'을 담당함.">CSS</span>만</strong></td>
+<td>라이브러리 불필요, 빠르고 저렴</td>
+</tr>
+<tr>
+<td>레거시 사이트에 일부 상호작용 추가</td>
+<td><strong>jQuery</strong></td>
+<td>기존 코드와 호환, 학습곡선 낮음</td>
+</tr>
+<tr>
+<td>중소 규모(초기 MVP)</td>
+<td><strong><span class="tt" data-tip="화면을 '컴포넌트'라는 조각으로 나눠 만드는, 가장 널리 쓰는 프론트엔드 라이브러리. 데이터가 바뀌면 화면이 자동으로 다시 그려짐.">React</span></strong> 또는 <strong><span class="tt" data-tip="리액트와 비슷하지만 배우기 쉽고 문법이 직관적인 프론트엔드 프레임워크. 중소 규모 프로젝트에서 인기.">Vue</span></strong></td>
+<td>생태계 풍부, 개발 속도 빠름</td>
+</tr>
+<tr>
+<td>SEO가 중요한 기업 서비스</td>
+<td><strong><span class="tt" data-tip="리액트에 서버 기능과 검색 최적화를 더한 프레임워크. 실제 서비스를 만들 때 표준처럼 쓰임.">Next.js</span></strong></td>
+<td><span class="tt" data-tip="서버가 화면을 미리 완성해서 보내주는 방식. 첫 화면이 빨리 뜨고 검색엔진에 잘 잡힘.">SSR</span>·<span class="tt" data-tip="미리 화면을 다 만들어 저장해두고 그대로 보여주는 방식. 매우 빠르고, 블로그·문서 사이트에 적합.">SSG</span> 지원, 검색 최적화</td>
+</tr>
+<tr>
+<td>전사 대규모 애플리케이션</td>
+<td><strong><span class="tt" data-tip="리액트에 서버 기능과 검색 최적화를 더한 프레임워크. 실제 서비스를 만들 때 표준처럼 쓰임.">Next.js</span> + <span class="tt" data-tip="자바스크립트에 '오타 검사기'를 붙인 버전. 실수를 미리 잡아줘서 큰 프로젝트에서 오류를 줄임.">TypeScript</span></strong></td>
+<td>타입 안정성, 팀 협업 용이</td>
+</tr>
+<tr>
+<td>가벼운 인터랙티브 사이트</td>
+<td><strong><span class="tt" data-tip="미리 완성된 코드로 변환해두는 방식이라 결과물이 가볍고 빠른 프론트엔드 도구. 문법도 간결함.">Svelte</span></strong></td>
+<td>번들 크기 최소, 성능 우수</td>
+</tr>
+<tr>
+<td>실시간 협업 도구(<span class="tt" data-tip="웹·앱 화면을 그리고 함께 편집하는 대표 디자인 협업 도구. 기획·디자인·개발이 같은 화면을 보며 소통함.">Figma</span>류)</td>
+<td><strong><span class="tt" data-tip="화면을 '컴포넌트'라는 조각으로 나눠 만드는, 가장 널리 쓰는 프론트엔드 라이브러리. 데이터가 바뀌면 화면이 자동으로 다시 그려짐.">React</span> + 정교한 상태 관리</strong></td>
+<td>복잡한 UI 상태 관리 필요</td>
+</tr>
+</tbody>
+</table>
+<h3 id="d1-h14">4.3 이벤트 RSVP의 선택 — Next.js + React + TypeScript</h3>
+<p>정적 페이지(회사 소개)와 동적 페이지(신청)를 <em>모두</em> 지원해야 하므로 <span class="tt" data-tip="서버가 화면을 미리 완성해서 보내주는 방식. 첫 화면이 빨리 뜨고 검색엔진에 잘 잡힘.">SSR</span>·<span class="tt" data-tip="미리 화면을 다 만들어 저장해두고 그대로 보여주는 방식. 매우 빠르고, 블로그·문서 사이트에 적합.">SSG</span>가 필요하고, 신청 폼의 실시간 검증에는 <span class="tt" data-tip="화면을 '컴포넌트'라는 조각으로 나눠 만드는, 가장 널리 쓰는 프론트엔드 라이브러리. 데이터가 바뀌면 화면이 자동으로 다시 그려짐.">React</span>의 상태 관리가, 관리자 대시보드의 복잡한 상태에는 <span class="tt" data-tip="자바스크립트에 '오타 검사기'를 붙인 버전. 실수를 미리 잡아줘서 큰 프로젝트에서 오류를 줄임.">TypeScript</span>의 타입 정확성이, SNS 공유용 동적 메타 태그에는 <span class="tt" data-tip="서버가 화면을 미리 완성해서 보내주는 방식. 첫 화면이 빨리 뜨고 검색엔진에 잘 잡힘.">SSR</span>이 맞습니다.</p>
+<blockquote>
+<p>🔤 <strong><span class="tt" data-tip="자바스크립트에 '오타 검사기'를 붙인 버전. 실수를 미리 잡아줘서 큰 프로젝트에서 오류를 줄임.">TypeScript</span>가 잡아 주는 것</strong> — <span class="tt" data-tip="자바스크립트에 '오타 검사기'를 붙인 버전. 실수를 미리 잡아줘서 큰 프로젝트에서 오류를 줄임.">TypeScript</span>는 <span class="tt" data-tip="웹페이지에 동작을 넣는 언어. 버튼 클릭, 팝업, 애니메이션처럼 화면을 살아 움직이게 함.">JavaScript</span>에 <em>타입(자료형)</em> 을 붙여, 잘못된 데이터를 <strong>코드를 실행하기 전에</strong> 미리 잡아 줍니다. 예를 들어 RSVP 신청 데이터의 모양을 <code>interface</code>로 정해 두면:</p>
+<p>```typescript
+// RSVP 신청 한 건의 '모양'을 정의
+interface Rsvp {
+  userId: number;                          // 숫자여야 함
+  name: string;                            // 문자열이어야 함
+  status: "attending" | "not_attending";   // 이 둘 중 하나만 허용
+}</p>
+<p>const r: Rsvp = { userId: 456, name: "김철수", status: "가는중" };
+//                                            ↑ 오타! "가는중"은 허용값이 아니라 여기서 바로 오류 표시
+```</p>
+</blockquote>
+<hr/>
+<h2 id="d1-h15">5. 렌더링 모드 4가지 — 언제 무엇을</h2>
+<p>화면이 <em>그려지는 시점</em> 에 따라 네 가지 모드가 있습니다. (<span class="tt" data-tip="페이지를 통째로 새로 불러오지 않고 필요한 부분만 바꿔서 앱처럼 매끄럽게 넘어가는 웹 방식.">SPA</span>/<span class="tt" data-tip="링크를 누를 때마다 페이지 전체를 새로 불러오는 전통적인 웹 방식. 페이지가 여러 장으로 나뉨.">MPA</span>가 '페이지를 넘기는 방식'이라면, 렌더링 모드는 '한 화면의 <span class="tt" data-tip="웹페이지의 뼈대를 만드는 언어. 제목, 문단, 버튼 같은 요소가 '무엇'인지 정해줌.">HTML</span>을 언제·어디서 만드나'입니다.)</p>
+<p><img alt="렌더링 4모드 비교 — CSR·SSR·SSG·ISR" loading="lazy" src="img/vf2_render4.svg"/></p>
+<ul>
+<li><strong><span class="tt" data-tip="서버는 빈 껍데기만 주고 브라우저가 화면을 그려내는 방식. 앱처럼 동적이지만 첫 로딩이 느릴 수 있음.">CSR</span>(Client Side Rendering)</strong> — 서버는 <em>빈 <span class="tt" data-tip="웹페이지의 뼈대를 만드는 언어. 제목, 문단, 버튼 같은 요소가 '무엇'인지 정해줌.">HTML</span></em> 을 주고 <strong>브라우저의 JS가</strong> 데이터를 받아 그립니다. 한 번 로드되면 페이지 전환이 빠르고(<span class="tt" data-tip="페이지를 통째로 새로 불러오지 않고 필요한 부분만 바꿔서 앱처럼 매끄럽게 넘어가는 웹 방식.">SPA</span>) 서버 부하가 낮지만, <em>초기 로드가 느리고 SEO가 약합니다.</em> 적합: SNS 타임라인·지도·Gmail·Slack처럼 로그인 필수·매우 동적인 화면.</li>
+<li><strong><span class="tt" data-tip="서버가 화면을 미리 완성해서 보내주는 방식. 첫 화면이 빨리 뜨고 검색엔진에 잘 잡힘.">SSR</span>(Server Side Rendering)</strong> — <em>요청마다 서버가</em> 완성 <span class="tt" data-tip="웹페이지의 뼈대를 만드는 언어. 제목, 문단, 버튼 같은 요소가 '무엇'인지 정해줌.">HTML</span>을 그려 보냅니다. 즉시 화면이 뜨고 SEO가 우수하지만, <em>서버 비용·부하가 큽니다.</em> 이후 JS가 붙어 상호작용이 가능해지는 과정을 <strong>하이드레이션</strong> 이라 합니다. 적합: 블로그·상품 페이지·뉴스처럼 콘텐츠·SEO가 중요한 화면.</li>
+<li><strong><span class="tt" data-tip="미리 화면을 다 만들어 저장해두고 그대로 보여주는 방식. 매우 빠르고, 블로그·문서 사이트에 적합.">SSG</span>(Static Site Generation)</strong> — <em>빌드할 때 미리</em> <span class="tt" data-tip="웹페이지의 뼈대를 만드는 언어. 제목, 문단, 버튼 같은 요소가 '무엇'인지 정해줌.">HTML</span>을 만들어 <span class="tt" data-tip="콘텐츠를 세계 곳곳 서버에 복제해 사용자와 가까운 곳에서 전달하는 망. 이미지·영상 로딩을 빠르게 한다.">CDN</span>에서 그대로 서빙합니다. <em>가장 빠르고 저렴하며 SEO 최고</em> 지만, 콘텐츠가 바뀌면 재빌드·재배포가 필요하고 동적 데이터를 못 담습니다. 적합: 회사 소개·문서·포트폴리오·약관.</li>
+<li><strong><span class="tt" data-tip="미리 만들어둔 페이지를 일정 주기로 조용히 갱신하는 방식. 빠른 속도와 최신 정보를 둘 다 잡음.">ISR</span>(Incremental Static Regeneration)</strong> — 대부분 <span class="tt" data-tip="미리 화면을 다 만들어 저장해두고 그대로 보여주는 방식. 매우 빠르고, 블로그·문서 사이트에 적합.">SSG</span>처럼 빠르게 주되, <em>일부 페이지를 주기·요청 기준으로 백그라운드에서 재생성</em> 합니다. <span class="tt" data-tip="미리 화면을 다 만들어 저장해두고 그대로 보여주는 방식. 매우 빠르고, 블로그·문서 사이트에 적합.">SSG</span>의 속도 + 자동 갱신을 얻는 대신 설정이 복잡하고 갱신 지연을 허용해야 합니다. 적합: 주간 업데이트 블로그, 시간당 갱신 카탈로그·뉴스.</li>
+</ul>
+<h3 id="d1-h16">5.1 이벤트 RSVP의 렌더링 전략</h3>
+<table>
+<thead>
+<tr>
+<th>페이지</th>
+<th>모드</th>
+<th>이유</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>회사 소개·이벤트 상세</td>
+<td><span class="tt" data-tip="미리 화면을 다 만들어 저장해두고 그대로 보여주는 방식. 매우 빠르고, 블로그·문서 사이트에 적합.">SSG</span>(시간당 1회 <span class="tt" data-tip="미리 만들어둔 페이지를 일정 주기로 조용히 갱신하는 방식. 빠른 속도와 최신 정보를 둘 다 잡음.">ISR</span>)</td>
+<td>SEO 중요, 콘텐츠 자주 안 바뀜, 성능 최우선</td>
+</tr>
+<tr>
+<td>이벤트 목록</td>
+<td><span class="tt" data-tip="서버가 화면을 미리 완성해서 보내주는 방식. 첫 화면이 빨리 뜨고 검색엔진에 잘 잡힘.">SSR</span></td>
+<td>새 이벤트·마감 상태가 자주 변함, SEO 필요</td>
+</tr>
+<tr>
+<td>신청 폼·대시보드</td>
+<td><span class="tt" data-tip="서버는 빈 껍데기만 주고 브라우저가 화면을 그려내는 방식. 앱처럼 동적이지만 첫 로딩이 느릴 수 있음.">CSR</span></td>
+<td>로그인 필수, SEO 불필요, 실시간 상호작용</td>
+</tr>
+<tr>
+<td>개인 신청 내역</td>
+<td><span class="tt" data-tip="서버가 화면을 미리 완성해서 보내주는 방식. 첫 화면이 빨리 뜨고 검색엔진에 잘 잡힘.">SSR</span></td>
+<td>사용자별 맞춤, 새로고침 시 최신 상태</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>💡 <strong>포인트</strong> — 실무는 <em>한 서비스 안에서 페이지마다</em> 모드를 고릅니다. "이 화면은 왜 이 모드?"가 기획·개발의 좋은 대화 주제입니다.</p>
+</blockquote>
+<hr/>
+<h2 id="d1-h17">6. 빌드와 패키지 관리 — 왜 이 단계가 있나</h2>
+<h3 id="d1-h18">6.1 개발 코드 ≠ 배포 코드</h3>
+<p>개발자가 작성한 코드는 사용자 브라우저에 <em>그대로</em> 가지 않습니다. 읽기 좋은 개발 코드(상세한 이름·주석·디버그 로그)를, <em>가볍고 안전하고 호환되게</em> 바꾸는 <strong>빌드</strong> 과정을 거칩니다.</p>
+<p><img alt="빌드 파이프라인 — 트랜스파일·번들·최소화·트리셰이킹을 거쳐 CDN으로" loading="lazy" src="img/vf2_build.svg"/></p>
+<p>빌드의 목표는 세 가지입니다 — <strong>빠른 로드</strong>(파일 크기 축소), <strong>보안</strong>(소스 난독화), <strong>호환성</strong>(최신 문법을 구형 브라우저용으로).</p>
+<h3 id="d1-h19">6.2 패키지 관리자 (npm · pnpm · yarn)</h3>
+<p>프로젝트가 쓰는 <em>라이브러리 목록</em> 을 관리합니다.</p>
+<ul>
+<li><strong><span class="tt" data-tip="필요한 코드 부품(라이브러리)을 인터넷에서 받아 설치·관리하는 앱스토어 같은 도구. 자바스크립트 표준.">npm</span></strong> — 가장 널리 쓰이는 기본 표준. <code>package.json</code>에 의존성, <code>package-lock.json</code>으로 버전 고정.</li>
+</ul>
+<p><code>package.json</code>은 이렇게 생겼습니다 — <em>이 프로젝트가 어떤 라이브러리를 쓰고</em>(dependencies), <em>어떤 명령을 갖는지</em>(scripts)를 적어 둔 목록입니다.</p>
+<pre><code class="language-json">{
+  "name": "rsvp-app",
+  "scripts": {
+    "dev": "next dev",        // npm run dev  → 개발 서버 실행
+    "build": "next build",    // npm run build → 배포용 빌드
+    "lint": "eslint ."        // npm run lint → 코드 검사
+  },
+  "dependencies": {           // 서비스 실행에 꼭 필요한 라이브러리들
+    "next": "^15.0.0",
+    "react": "^19.0.0"
+  }
+}
+</code></pre>
+<ul>
+<li><strong><span class="tt" data-tip="npm의 경쟁 도구. 설치 속도와 안정성을 높이려고 페이스북이 만든 부품 관리 도구.">yarn</span></strong> — Meta가 만든 것으로 설치가 빠르고 오프라인 <span class="tt" data-tip="자주 쓰는 데이터를 가까이 미리 저장해 빠르게 꺼내 쓰는 기법. 매번 멀리서 가져오지 않아 속도가 빨라지는 '즉석 서랍'.">캐싱</span>·병렬 설치를 지원.</li>
+<li><strong><span class="tt" data-tip="npm과 같은 역할이지만 저장 공간을 아끼고 설치가 빠른 개선 버전.">pnpm</span></strong> — 최신. 하드 링크로 디스크를 아끼고 속도가 가장 빠릅니다.</li>
+</ul>
+<p><em>선택 기준</em>: <span class="tt" data-tip="필요한 코드 부품(라이브러리)을 인터넷에서 받아 설치·관리하는 앱스토어 같은 도구. 자바스크립트 표준.">npm</span>으로 시작하고, 프로젝트가 커지면 <span class="tt" data-tip="npm과 같은 역할이지만 저장 공간을 아끼고 설치가 빠른 개선 버전.">pnpm</span>을 검토합니다.</p>
+<h3 id="d1-h20">6.3 빌드 도구 (webpack · Vite · esbuild · Turbopack)</h3>
+<table>
+<thead>
+<tr>
+<th>도구</th>
+<th>특징</th>
+<th>속도</th>
+<th>학습곡선</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><span class="tt" data-tip="흩어진 코드와 파일을 하나로 묶어 배포용으로 정리해주는 전통적인 번들링 도구.">webpack</span></strong></td>
+<td>가장 강력, 설정 복잡</td>
+<td>느림</td>
+<td>높음</td>
+</tr>
+<tr>
+<td><strong><span class="tt" data-tip="코드를 화면에 바로바로 반영해주는 빠른 개발 도구. 저장하면 즉시 결과가 보여 작업이 쾌적함.">Vite</span></strong></td>
+<td>개발 경험 최고, 번들 가벼움</td>
+<td>매우 빠름</td>
+<td>낮음</td>
+</tr>
+<tr>
+<td><strong>esbuild</strong></td>
+<td>Rust 기반, 번들 속도 최고</td>
+<td>최고</td>
+<td>중간</td>
+</tr>
+<tr>
+<td><strong>Turbopack</strong></td>
+<td>Rust 기반, <span class="tt" data-tip="흩어진 코드와 파일을 하나로 묶어 배포용으로 정리해주는 전통적인 번들링 도구.">webpack</span> 호환</td>
+<td>최고</td>
+<td>낮음</td>
+</tr>
+</tbody>
+</table>
+<p><em>현재 추천</em>: 일반은 <strong><span class="tt" data-tip="코드를 화면에 바로바로 반영해주는 빠른 개발 도구. 저장하면 즉시 결과가 보여 작업이 쾌적함.">Vite</span></strong>, 풀스택은 <strong><span class="tt" data-tip="리액트에 서버 기능과 검색 최적화를 더한 프레임워크. 실제 서비스를 만들 때 표준처럼 쓰임.">Next.js</span></strong>(내장 빌드).</p>
+<h3 id="d1-h21">6.4 빌드가 하는 네 가지 일</h3>
+<ul>
+<li><strong>① <span class="tt" data-tip="한 언어·문법의 코드를 다른 버전으로 번역하는 것. 예: 타입스크립트를 자바스크립트로 바꿈.">트랜스파일</span>링</strong> — 최신 <span class="tt" data-tip="웹페이지에 동작을 넣는 언어. 버튼 클릭, 팝업, 애니메이션처럼 화면을 살아 움직이게 함.">JavaScript</span>(예: ES2024)를 구형 브라우저도 이해하는 문법으로 변환.</li>
+<li><strong>② <span class="tt" data-tip="여러 코드 파일을 하나(또는 몇 개)로 묶는 작업. 파일 수를 줄여 웹페이지를 더 빨리 불러오게 함.">번들링</span></strong> — 수십~수백 개 파일을 소수(main·vendor·styles)로 묶어 네트워크 요청을 줄임.</li>
+<li><strong>③ 최소화(Minify)</strong> — 공백·주석·긴 변수명을 제거해 크기를 크게 줄임(예: 100KB → 30KB).</li>
+<li><strong>④ 트리셰이킹</strong> — <em>실제로 쓰지 않는 코드</em> 를 자동 제거(라이브러리에서 함수 하나만 쓰면 나머지는 빠짐).</li>
+</ul>
+<blockquote>
+<p>💡 <strong>비유</strong> — 책 출판과 같습니다. <em>원고 작성</em>(개발 코드) → <em>편집·교정</em>(최소화로 군더더기 제거) → <em>인쇄 최적화</em>(번들·트리셰이킹) → <em>서점 배포</em>(<span class="tt" data-tip="콘텐츠를 세계 곳곳 서버에 복제해 사용자와 가까운 곳에서 전달하는 망. 이미지·영상 로딩을 빠르게 한다.">CDN</span>에 올려 사용자 접근).</p>
+</blockquote>
+<hr/>
+<h2 id="d1-h22">7. 디자인 시스템과 UI 컴포넌트</h2>
+<h3 id="d1-h23">7.1 왜 필요한가</h3>
+<p>디자인 시스템이 <strong>없으면</strong> — 개발자마다 다른 파란색을 쓰고, 같은 버튼이 세 가지 크기로 존재하고, "예상한 디자인과 다르다"는 갈등이 반복되고, 매번 스타일을 새로 작성해 시간을 낭비합니다. <strong>있으면</strong> — 컬러·버튼 패턴이 통일되고, 디자이너·개발자 사이 기준이 명확해지며, <span class="tt" data-tip="버튼, 카드처럼 화면을 이루는 재사용 가능한 조각. 레고 블록처럼 조립해 화면을 만듦.">컴포넌트</span>를 재사용해 빠르게 개발합니다.</p>
+<h3 id="d1-h24">7.2 디자인 시스템의 3계층</h3>
+<p><img alt="디자인 시스템 3계층 — 토큰·컴포넌트·패턴" loading="lazy" src="img/vf2_designsys.svg"/></p>
+<ul>
+<li><strong>레벨 1 — 디자인 토큰</strong>(가장 기본): 색상(Primary Blue 등)·타이포그래피(제목/본문 크기)·간격(4·8·16·24px…) 같은 <em>값</em>.</li>
+<li><strong>레벨 2 — <span class="tt" data-tip="버튼, 카드처럼 화면을 이루는 재사용 가능한 조각. 레고 블록처럼 조립해 화면을 만듦.">컴포넌트</span></strong>(토큰으로 만든 재사용 단위): Button·Card·Input.</li>
+<li><strong>레벨 3 — 패턴</strong>(<span class="tt" data-tip="버튼, 카드처럼 화면을 이루는 재사용 가능한 조각. 레고 블록처럼 조립해 화면을 만듦.">컴포넌트</span>로 만든 화면 부분): Header(로고+내비+버튼), Form(입력+라벨+검증+제출), Modal.</li>
+</ul>
+<h3 id="d1-h25">7.3 인기 도구</h3>
+<table>
+<thead>
+<tr>
+<th>도구</th>
+<th>특징</th>
+<th>잘 맞는 규모</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><span class="tt" data-tip="'글자 크게, 파랑, 가운데'처럼 짧은 이름표를 붙여 빠르게 꾸미는 CSS 도구. 별도 디자인 파일 없이 화면에서 바로 스타일링함.">Tailwind CSS</span></strong></td>
+<td>유틸리티 클래스(색·크기를 <span class="tt" data-tip="웹페이지의 뼈대를 만드는 언어. 제목, 문단, 버튼 같은 요소가 '무엇'인지 정해줌.">HTML</span>에 직접)</td>
+<td>빠른 프로토타이핑</td>
+</tr>
+<tr>
+<td><strong>Material UI(MUI)</strong></td>
+<td>구글 Material Design 구현, <span class="tt" data-tip="버튼, 카드처럼 화면을 이루는 재사용 가능한 조각. 레고 블록처럼 조립해 화면을 만듦.">컴포넌트</span> 풍부</td>
+<td>대규모 엔터프라이즈</td>
+</tr>
+<tr>
+<td><strong><span class="tt" data-tip="버튼·입력창 같은 예쁜 화면 부품을 복사해다 마음대로 고쳐 쓰는 컴포넌트 모음. 디자인 통일에 편함.">shadcn/ui</span></strong></td>
+<td>Headless(스타일 최소), 복사해서 수정</td>
+<td>맞춤 커스터마이즈</td>
+</tr>
+<tr>
+<td><strong>Ant Design</strong></td>
+<td>대시보드·관리 화면 <span class="tt" data-tip="버튼, 카드처럼 화면을 이루는 재사용 가능한 조각. 레고 블록처럼 조립해 화면을 만듦.">컴포넌트</span> 풍부</td>
+<td>데이터 중심 앱</td>
+</tr>
+<tr>
+<td><strong><span class="tt" data-tip="웹페이지를 예쁘게 꾸미는 언어. 색깔, 글꼴, 크기, 배치 같은 '겉모습'을 담당함.">CSS</span>-in-JS</strong>(Styled Components·Emotion)</td>
+<td>JS로 <span class="tt" data-tip="웹페이지를 예쁘게 꾸미는 언어. 색깔, 글꼴, 크기, 배치 같은 '겉모습'을 담당함.">CSS</span> 작성</td>
+<td>동적 스타일 필요 시</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>💡 <strong>비유 — 사내 PPT 마스터 슬라이드</strong>&gt; 🎨 <strong>Tailwind 맛보기</strong> — "유틸리티 클래스"란 색·여백·크기를 <span class="tt" data-tip="웹페이지의 뼈대를 만드는 언어. 제목, 문단, 버튼 같은 요소가 '무엇'인지 정해줌.">HTML</span> 클래스로 직접 붙이는 방식입니다. 별도 <span class="tt" data-tip="웹페이지를 예쁘게 꾸미는 언어. 색깔, 글꼴, 크기, 배치 같은 '겉모습'을 담당함.">CSS</span> 파일 없이 클래스 이름만으로 스타일이 완성됩니다.</p>
+<p><code>html
+&lt;!-- bg-blue-600=파란 배경, text-white=흰 글씨, rounded-lg=둥근 모서리, px-4 py-2=안쪽 여백 --&gt;
+&lt;button class="bg-blue-600 text-white rounded-lg px-4 py-2 hover:bg-blue-700"&gt;
+  신청하기
+&lt;/button&gt;</code></p>
+</blockquote>
+<p>— 마스터가 없으면 슬라이드마다 폰트·색을 새로 지정하며 일관성이 깨집니다. 마스터가 있으면 발표자는 <em>콘텐츠만</em> 채우고도 프로 같은 결과를 얻습니다. 디자인 시스템이 프론트엔드의 '마스터 슬라이드'입니다.</p>
+<p><em>이벤트 RSVP의 선택</em>: <strong><span class="tt" data-tip="'글자 크게, 파랑, 가운데'처럼 짧은 이름표를 붙여 빠르게 꾸미는 CSS 도구. 별도 디자인 파일 없이 화면에서 바로 스타일링함.">Tailwind CSS</span> + <span class="tt" data-tip="버튼·입력창 같은 예쁜 화면 부품을 복사해다 마음대로 고쳐 쓰는 컴포넌트 모음. 디자인 통일에 편함.">shadcn/ui</span></strong> — 빠른 개발 + 접근성·다크 모드 기본 지원 + <span class="tt" data-tip="리액트에 서버 기능과 검색 최적화를 더한 프레임워크. 실제 서비스를 만들 때 표준처럼 쓰임.">Next.js</span>와 호환.</p>
+<hr/>
+<h2 id="d1-h26">8. 모바일·반응형 의사결정</h2>
+<h3 id="d1-h27">8.1 네 가지 접근법</h3>
+<ul>
+<li><strong>① <span class="tt" data-tip="PC, 태블릿, 폰 등 화면 크기에 맞춰 자동으로 배치가 바뀌는 웹. 기기마다 따로 안 만들어도 됨.">반응형 웹</span></strong> — 하나의 <span class="tt" data-tip="웹페이지의 뼈대를 만드는 언어. 제목, 문단, 버튼 같은 요소가 '무엇'인지 정해줌.">HTML</span>·<span class="tt" data-tip="웹페이지를 예쁘게 꾸미는 언어. 색깔, 글꼴, 크기, 배치 같은 '겉모습'을 담당함.">CSS</span>로 모든 기기에 대응(<span class="tt" data-tip="웹페이지를 예쁘게 꾸미는 언어. 색깔, 글꼴, 크기, 배치 같은 '겉모습'을 담당함.">CSS</span> 미디어 쿼리). <em>관리 쉽고 배포 1회</em> 지만, 모든 기기를 만족시키려다 타협이 생기고 큰 화면용 코드까지 내려받습니다.</li>
+</ul>
+<p><img alt="반응형 웹 — 화면 크기에 맞춰 카드가 1열·2열·3열로 재배치" loading="lazy" src="img/gf_responsive.svg"/></p>
+<p>실제로는 <strong>미디어 쿼리</strong> 로 "화면이 이만큼 넓어지면 이렇게 배치하라"를 지정합니다. 아래는 폰(1열) → 태블릿(2열) → PC(3열)를 정의한 <span class="tt" data-tip="웹페이지를 예쁘게 꾸미는 언어. 색깔, 글꼴, 크기, 배치 같은 '겉모습'을 담당함.">CSS</span>입니다.</p>
+<p>```css
+  /<em> 기본(폰): 카드를 1열로 </em>/
+  .events { display: grid; grid-template-columns: 1fr; }</p>
+<p>/<em> 화면 폭이 768px 이상(태블릿)이면 2열로 </em>/
+  @media (min-width: 768px) {
+    .events { grid-template-columns: 1fr 1fr; }
+  }
+  /<em> 1024px 이상(PC)이면 3열로 </em>/
+  @media (min-width: 1024px) {
+    .events { grid-template-columns: 1fr 1fr 1fr; }
+  }
+  ```</p>
+<ul>
+<li><strong>② <span class="tt" data-tip="웹사이트를 앱처럼 설치해 쓰게 해주는 기술. 오프라인 사용, 홈 화면 아이콘, 알림도 가능해짐.">PWA</span>(Progressive Web App)</strong> — 웹으로 만들되 앱처럼 <em>설치·오프라인·푸시</em> 가 가능. <em>앱스토어가 불필요</em> 하지만 iOS 지원이 제한적이고 사용자 발견이 어렵습니다.</li>
+<li><strong>③ 네이티브 앱(iOS/Android)</strong> — Swift·Kotlin으로 각각 개발. <em>최고 성능·기능·앱스토어 노출</em> 이지만 <em>개발 비용이 2배</em> 이고 심사·버전 관리가 복잡합니다.</li>
+<li><strong>④ <span class="tt" data-tip="화면을 '컴포넌트'라는 조각으로 나눠 만드는, 가장 널리 쓰는 프론트엔드 라이브러리. 데이터가 바뀌면 화면이 자동으로 다시 그려짐.">React</span> Native / Flutter</strong> — 한 번 작성해 iOS·Android 모두 배포. <em>코드 대부분을 재사용</em> 해 비용을 아끼지만(네이티브를 두 벌 만드는 것보다 훨씬 적음), <em>성능이 네이티브보다 낮고</em> 복잡한 UI에선 네이티브 코드가 필요합니다.</li>
+</ul>
+<h3 id="d1-h28">8.2 결정의 큰 줄기</h3>
+<p><em>모바일이 필수가 아니면</em> <span class="tt" data-tip="PC, 태블릿, 폰 등 화면 크기에 맞춰 자동으로 배치가 바뀌는 웹. 기기마다 따로 안 만들어도 됨.">반응형 웹</span>으로 충분합니다. <em>모바일이 필수</em> 라면 — 오프라인·푸시가 필요한지, iOS를 반드시 지원해야 하는지, 예산이 얼마인지에 따라 갈립니다. 예산이 빠듯하면 <span class="tt" data-tip="PC, 태블릿, 폰 등 화면 크기에 맞춰 자동으로 배치가 바뀌는 웹. 기기마다 따로 안 만들어도 됨.">반응형 웹</span> 또는 <span class="tt" data-tip="화면을 '컴포넌트'라는 조각으로 나눠 만드는, 가장 널리 쓰는 프론트엔드 라이브러리. 데이터가 바뀌면 화면이 자동으로 다시 그려짐.">React</span> Native, 성능·기능이 최우선이면 네이티브 앱 쪽입니다.</p>
+<p><em>이벤트 RSVP의 선택</em>: <strong><span class="tt" data-tip="PC, 태블릿, 폰 등 화면 크기에 맞춰 자동으로 배치가 바뀌는 웹. 기기마다 따로 안 만들어도 됨.">반응형 웹</span></strong>(추후 <span class="tt" data-tip="웹사이트를 앱처럼 설치해 쓰게 해주는 기술. 오프라인 사용, 홈 화면 아이콘, 알림도 가능해짐.">PWA</span> 고려) — 사내·동호회 이벤트라 모바일은 필수지만 오프라인은 불필요하고, 신청 폼이 단순해 비용·시간 제약이 크기 때문입니다. 폰/태블릿/PC 3단계 반응형으로 정의합니다.</p>
+<hr/>
+<h2 id="d1-h29">9. 핵심 용어 (40)</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>용어</th>
+<th>정의</th>
+<th>예시</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong><span class="tt" data-tip="브라우저가 웹페이지를 이해하려고 만든 '설계도 트리'. 코드가 이걸 통해 화면 요소를 찾고 바꿈.">DOM</span></strong></td>
+<td>브라우저가 <span class="tt" data-tip="웹페이지의 뼈대를 만드는 언어. 제목, 문단, 버튼 같은 요소가 '무엇'인지 정해줌.">HTML</span>을 메모리에 표현한 트리 구조</td>
+<td><code>document.querySelector('.card')</code></td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>하이드레이션</strong></td>
+<td>서버가 보낸 정적 <span class="tt" data-tip="웹페이지의 뼈대를 만드는 언어. 제목, 문단, 버튼 같은 요소가 '무엇'인지 정해줌.">HTML</span>에 JS 상호작용을 입히는 과정</td>
+<td><span class="tt" data-tip="서버가 화면을 미리 완성해서 보내주는 방식. 첫 화면이 빨리 뜨고 검색엔진에 잘 잡힘.">SSR</span> 후 브라우저에서 <span class="tt" data-tip="화면을 '컴포넌트'라는 조각으로 나눠 만드는, 가장 널리 쓰는 프론트엔드 라이브러리. 데이터가 바뀌면 화면이 자동으로 다시 그려짐.">React</span>가 수행</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong><span class="tt" data-tip="페이지를 통째로 새로 불러오지 않고 필요한 부분만 바꿔서 앱처럼 매끄럽게 넘어가는 웹 방식.">SPA</span> / <span class="tt" data-tip="링크를 누를 때마다 페이지 전체를 새로 불러오는 전통적인 웹 방식. 페이지가 여러 장으로 나뉨.">MPA</span></strong></td>
+<td>한 페이지에서 부분 교체 / 페이지마다 새 문서</td>
+<td>Gmail(<span class="tt" data-tip="페이지를 통째로 새로 불러오지 않고 필요한 부분만 바꿔서 앱처럼 매끄럽게 넘어가는 웹 방식.">SPA</span>) / 전통 웹사이트(<span class="tt" data-tip="링크를 누를 때마다 페이지 전체를 새로 불러오는 전통적인 웹 방식. 페이지가 여러 장으로 나뉨.">MPA</span>)</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>번들</strong></td>
+<td>여러 JS·<span class="tt" data-tip="웹페이지를 예쁘게 꾸미는 언어. 색깔, 글꼴, 크기, 배치 같은 '겉모습'을 담당함.">CSS</span>를 하나로 묶은 것</td>
+<td><span class="tt" data-tip="흩어진 코드와 파일을 하나로 묶어 배포용으로 정리해주는 전통적인 번들링 도구.">webpack</span>이 100개→3개 파일로</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong><span class="tt" data-tip="한 언어·문법의 코드를 다른 버전으로 번역하는 것. 예: 타입스크립트를 자바스크립트로 바꿈.">트랜스파일</span></strong></td>
+<td>최신 JS를 구형 JS로 변환</td>
+<td>ES2024 → ES5</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>트리셰이킹</strong></td>
+<td>사용하지 않는 코드 자동 제거</td>
+<td>함수 1개만 쓰면 나머지는 빠짐</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong><span class="tt" data-tip="버튼, 카드처럼 화면을 이루는 재사용 가능한 조각. 레고 블록처럼 조립해 화면을 만듦.">컴포넌트</span></strong></td>
+<td>재사용 가능한 UI 단위</td>
+<td>Button·Card·Modal</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>props</strong></td>
+<td>부모→자식으로 넘기는 데이터·설정</td>
+<td><code>&lt;Button color="blue" /&gt;</code></td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>state</strong></td>
+<td><span class="tt" data-tip="버튼, 카드처럼 화면을 이루는 재사용 가능한 조각. 레고 블록처럼 조립해 화면을 만듦.">컴포넌트</span> 내부의 변경 가능한 값. 바뀌면 화면이 자동 갱신</td>
+<td>폼 입력 값</td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>라이프사이클</strong></td>
+<td><span class="tt" data-tip="버튼, 카드처럼 화면을 이루는 재사용 가능한 조각. 레고 블록처럼 조립해 화면을 만듦.">컴포넌트</span>의 생성·갱신·제거 단계</td>
+<td><span class="tt" data-tip="화면을 '컴포넌트'라는 조각으로 나눠 만드는, 가장 널리 쓰는 프론트엔드 라이브러리. 데이터가 바뀌면 화면이 자동으로 다시 그려짐.">React</span> <code>useEffect</code></td>
+</tr>
+<tr>
+<td>11</td>
+<td><strong>Context API</strong></td>
+<td>깊은 계층까지 데이터 전달</td>
+<td>테마·언어·인증 공유</td>
+</tr>
+<tr>
+<td>12</td>
+<td><strong>Redux</strong></td>
+<td>전역 상태 관리 라이브러리</td>
+<td>복잡한 상태를 중앙 관리</td>
+</tr>
+<tr>
+<td>13</td>
+<td><strong><span class="tt" data-tip="화면을 실제로 바꾸기 전, 메모리에 만든 가상 예행연습판. 바뀐 부분만 골라 고쳐서 속도를 높임.">Virtual DOM</span></strong></td>
+<td>메모리 상의 가상 <span class="tt" data-tip="브라우저가 웹페이지를 이해하려고 만든 '설계도 트리'. 코드가 이걸 통해 화면 요소를 찾고 바꿈.">DOM</span></td>
+<td>실제 <span class="tt" data-tip="브라우저가 웹페이지를 이해하려고 만든 '설계도 트리'. 코드가 이걸 통해 화면 요소를 찾고 바꿈.">DOM</span>과 비교해 필요한 부분만 갱신</td>
+</tr>
+<tr>
+<td>14</td>
+<td><strong>렌더링</strong></td>
+<td>데이터를 화면에 그리기</td>
+<td><span class="tt" data-tip="서버는 빈 껍데기만 주고 브라우저가 화면을 그려내는 방식. 앱처럼 동적이지만 첫 로딩이 느릴 수 있음.">CSR</span>/<span class="tt" data-tip="서버가 화면을 미리 완성해서 보내주는 방식. 첫 화면이 빨리 뜨고 검색엔진에 잘 잡힘.">SSR</span>/<span class="tt" data-tip="미리 화면을 다 만들어 저장해두고 그대로 보여주는 방식. 매우 빠르고, 블로그·문서 사이트에 적합.">SSG</span> 모두 포함</td>
+</tr>
+<tr>
+<td>15</td>
+<td><strong>메타 태그</strong></td>
+<td><code>&lt;head&gt;</code>의 페이지 정보</td>
+<td><code>&lt;meta name="description"&gt;</code></td>
+</tr>
+<tr>
+<td>16</td>
+<td><strong>SEO</strong></td>
+<td>검색 엔진 최적화</td>
+<td>검색 상위 노출</td>
+</tr>
+<tr>
+<td>17</td>
+<td><strong>OG 태그</strong></td>
+<td>SNS 공유 시 썸네일·제목·설명</td>
+<td>카카오톡·페이스북 미리보기</td>
+</tr>
+<tr>
+<td>18</td>
+<td><strong>크로스 브라우징</strong></td>
+<td>여러 브라우저에서 정상 작동</td>
+<td>Safari·Chrome 모두 확인</td>
+</tr>
+<tr>
+<td>19</td>
+<td><strong>WebGL</strong></td>
+<td>브라우저 3D 그래픽</td>
+<td><span class="tt" data-tip="웹페이지에 3D 그래픽을 띄우는 도구. 제품 회전 보기, 3D 지도, 게임 같은 입체 화면에 씀.">Three.js</span></td>
+</tr>
+<tr>
+<td>20</td>
+<td><strong>Canvas</strong></td>
+<td>픽셀 단위 그리기 API</td>
+<td>이미지 처리·게임</td>
+</tr>
+<tr>
+<td>21</td>
+<td><strong>SVG</strong></td>
+<td>벡터 그래픽 형식</td>
+<td>아이콘·로고(확대해도 선명)</td>
+</tr>
+<tr>
+<td>22</td>
+<td><strong>접근성</strong></td>
+<td>장애인·저시력·청각장애도 사용 가능</td>
+<td>스크린 리더·<code>alt</code> 텍스트</td>
+</tr>
+<tr>
+<td>23</td>
+<td><strong>ARIA</strong></td>
+<td>접근성 속성</td>
+<td><code>role="button"</code></td>
+</tr>
+<tr>
+<td>24</td>
+<td><strong>WebFont</strong></td>
+<td>다운로드하는 폰트</td>
+<td>Noto Sans KR</td>
+</tr>
+<tr>
+<td>25</td>
+<td><strong><span class="tt" data-tip="구글이 정한 '좋은 웹페이지' 성적표. 로딩 속도, 반응 속도, 화면 흔들림을 점수로 재서 검색 순위에도 반영함.">Core Web Vitals</span></strong></td>
+<td>체감 성능 지표(LCP·INP·CLS)</td>
+<td>구글이 검색에 반영(2024.03 FID→INP 대체)</td>
+</tr>
+<tr>
+<td>26</td>
+<td><strong><span class="tt" data-tip="자주 쓰는 데이터를 가까이 미리 저장해 빠르게 꺼내 쓰는 기법. 매번 멀리서 가져오지 않아 속도가 빨라지는 '즉석 서랍'.">캐싱</span></strong></td>
+<td>자주 쓰는 데이터·파일 저장</td>
+<td>브라우저·<span class="tt" data-tip="콘텐츠를 세계 곳곳 서버에 복제해 사용자와 가까운 곳에서 전달하는 망. 이미지·영상 로딩을 빠르게 한다.">CDN</span> 캐시</td>
+</tr>
+<tr>
+<td>27</td>
+<td><strong><span class="tt" data-tip="콘텐츠를 세계 곳곳 서버에 복제해 사용자와 가까운 곳에서 전달하는 망. 이미지·영상 로딩을 빠르게 한다.">CDN</span></strong></td>
+<td>전 세계 분산 서버</td>
+<td><span class="tt" data-tip="웹사이트를 빠르고 안전하게 해주는 서비스. 전 세계에 콘텐츠를 미리 배치하고 해킹·공격도 막아줌.">Cloudflare</span>·<span class="tt" data-tip="콘텐츠를 전 세계 가까운 곳에 미리 두어 빠르게 전달하는 AWS 서비스. 사용자가 웹을 더 빨리 열게 해줌.">CloudFront</span></td>
+</tr>
+<tr>
+<td>28</td>
+<td><strong>HTTP 캐시 헤더</strong></td>
+<td>저장 기간 지정</td>
+<td><code>Cache-Control: max-age=3600</code></td>
+</tr>
+<tr>
+<td>29</td>
+<td><strong><span class="tt" data-tip="브라우저에 저장되는 작은 메모. 로그인 정보나 설정을 기억해, 다시 방문했을 때 나를 알아보게 해주는 '이름표 쪽지'.">쿠키</span></strong></td>
+<td>브라우저의 작은 텍스트 데이터</td>
+<td>로그인 <span class="tt" data-tip="로그인한 사용자를 서버가 잠시 기억해두는 '접속 상태'. 로그인 후 페이지를 옮겨도 계속 나로 인식되게 해주는 임시 기억표.">세션</span></td>
+</tr>
+<tr>
+<td>30</td>
+<td><strong>로컬스토리지</strong></td>
+<td>브라우저 저장소(<span class="tt" data-tip="브라우저에 저장되는 작은 메모. 로그인 정보나 설정을 기억해, 다시 방문했을 때 나를 알아보게 해주는 '이름표 쪽지'.">쿠키</span>보다 큼·영구)</td>
+<td>최근 검색어·테마</td>
+</tr>
+<tr>
+<td>31</td>
+<td><strong>API</strong></td>
+<td>프론트-백 통신 규약</td>
+<td><code>GET /api/events</code></td>
+</tr>
+<tr>
+<td>32</td>
+<td><strong><span class="tt" data-tip="웹에서 데이터를 주고받는 대표적인 규칙(약속). 주소로 자원을 가리키고 '조회·생성·수정·삭제' 같은 정해진 방식으로 서버와 대화하도록 정리한 방식.">REST</span> API</strong></td>
+<td>자원 기반 API 설계</td>
+<td>표준 형식</td>
+</tr>
+<tr>
+<td>33</td>
+<td><strong><span class="tt" data-tip="필요한 데이터만 콕 집어 한 번에 요청하는 API 방식. 뷔페처럼 여러 접시를 왔다갔다 하지 않고, 원하는 항목만 골라 한 접시에 담아 받는 느낌.">GraphQL</span></strong></td>
+<td>쿼리 기반 API</td>
+<td>필요한 필드만 요청</td>
+</tr>
+<tr>
+<td>34</td>
+<td><strong>타입스크립트</strong></td>
+<td>JS + 타입 시스템</td>
+<td><code>const n: number = 10</code></td>
+</tr>
+<tr>
+<td>35</td>
+<td><strong>린트</strong></td>
+<td>코드 스타일 자동 검사</td>
+<td><span class="tt" data-tip="코드에서 실수나 나쁜 습관을 자동으로 찾아 지적해주는 검사기. 팀의 코드 품질을 일정하게 유지함.">ESLint</span></td>
+</tr>
+<tr>
+<td>36</td>
+<td><strong>포맷팅</strong></td>
+<td>코드 자동 정렬</td>
+<td><span class="tt" data-tip="코드 줄맞춤과 띄어쓰기를 자동으로 예쁘게 정리해주는 도구. 저장만 하면 서식이 통일됨.">Prettier</span></td>
+</tr>
+<tr>
+<td>37</td>
+<td><strong>테스트</strong></td>
+<td>의도대로 작동하는지 확인</td>
+<td>Jest·Cypress</td>
+</tr>
+<tr>
+<td>38</td>
+<td><strong>스토리북</strong></td>
+<td><span class="tt" data-tip="버튼, 카드처럼 화면을 이루는 재사용 가능한 조각. 레고 블록처럼 조립해 화면을 만듦.">컴포넌트</span> 개발·문서화 환경</td>
+<td>상태별 문서화</td>
+</tr>
+<tr>
+<td>39</td>
+<td><strong>배포</strong></td>
+<td>개발 코드를 사용자 환경에 올리기</td>
+<td><span class="tt" data-tip="웹사이트를 코드만 올리면 자동으로 배포·운영해주는 서비스. 서버 설정 없이 빠르게 웹을 띄울 때 씀.">Vercel</span>·<span class="tt" data-tip="정적 웹사이트를 손쉽게 배포·호스팅해주는 서비스. Vercel과 비슷하게 코드만 올리면 바로 웹 공개.">Netlify</span></td>
+</tr>
+<tr>
+<td>40</td>
+<td><strong>다크 모드</strong></td>
+<td>야간 모드</td>
+<td><code>prefers-color-scheme: dark</code></td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="d1-h30">10. 한눈에 정리</h2>
+<ul>
+<li>화면 = <strong><span class="tt" data-tip="웹페이지의 뼈대를 만드는 언어. 제목, 문단, 버튼 같은 요소가 '무엇'인지 정해줌.">HTML</span>(구조)·<span class="tt" data-tip="웹페이지를 예쁘게 꾸미는 언어. 색깔, 글꼴, 크기, 배치 같은 '겉모습'을 담당함.">CSS</span>(표현)·<span class="tt" data-tip="웹페이지에 동작을 넣는 언어. 버튼 클릭, 팝업, 애니메이션처럼 화면을 살아 움직이게 함.">JavaScript</span>(행동)</strong> 세 계층의 분담.</li>
+<li><strong>정적/동적</strong> 은 '내용이 고정이냐 변하냐', <strong><span class="tt" data-tip="페이지를 통째로 새로 불러오지 않고 필요한 부분만 바꿔서 앱처럼 매끄럽게 넘어가는 웹 방식.">SPA</span>/<span class="tt" data-tip="링크를 누를 때마다 페이지 전체를 새로 불러오는 전통적인 웹 방식. 페이지가 여러 장으로 나뉨.">MPA</span></strong> 는 '페이지를 어떻게 넘기냐', <strong>렌더링 모드(<span class="tt" data-tip="서버는 빈 껍데기만 주고 브라우저가 화면을 그려내는 방식. 앱처럼 동적이지만 첫 로딩이 느릴 수 있음.">CSR</span>/<span class="tt" data-tip="서버가 화면을 미리 완성해서 보내주는 방식. 첫 화면이 빨리 뜨고 검색엔진에 잘 잡힘.">SSR</span>/<span class="tt" data-tip="미리 화면을 다 만들어 저장해두고 그대로 보여주는 방식. 매우 빠르고, 블로그·문서 사이트에 적합.">SSG</span>/<span class="tt" data-tip="미리 만들어둔 페이지를 일정 주기로 조용히 갱신하는 방식. 빠른 속도와 최신 정보를 둘 다 잡음.">ISR</span>)</strong> 는 '<span class="tt" data-tip="웹페이지의 뼈대를 만드는 언어. 제목, 문단, 버튼 같은 요소가 '무엇'인지 정해줌.">HTML</span>을 언제·어디서 그리냐' — 세 축을 조합해 화면을 설계한다.</li>
+<li>프레임워크는 <em>문제를 풀며 진화</em>(jQuery→<span class="tt" data-tip="화면을 '컴포넌트'라는 조각으로 나눠 만드는, 가장 널리 쓰는 프론트엔드 라이브러리. 데이터가 바뀌면 화면이 자동으로 다시 그려짐.">React</span>/<span class="tt" data-tip="리액트와 비슷하지만 배우기 쉽고 문법이 직관적인 프론트엔드 프레임워크. 중소 규모 프로젝트에서 인기.">Vue</span>→메타프레임워크). 두 기둥은 <strong><span class="tt" data-tip="버튼, 카드처럼 화면을 이루는 재사용 가능한 조각. 레고 블록처럼 조립해 화면을 만듦.">컴포넌트</span> + 상태</strong>.</li>
+<li><strong>빌드</strong> 는 개발 코드를 가볍고 안전하게(<span class="tt" data-tip="한 언어·문법의 코드를 다른 버전으로 번역하는 것. 예: 타입스크립트를 자바스크립트로 바꿈.">트랜스파일</span>·번들·최소화·트리셰이킹) 만들어 <span class="tt" data-tip="콘텐츠를 세계 곳곳 서버에 복제해 사용자와 가까운 곳에서 전달하는 망. 이미지·영상 로딩을 빠르게 한다.">CDN</span>으로.</li>
+<li><strong>디자인 시스템</strong>(토큰→<span class="tt" data-tip="버튼, 카드처럼 화면을 이루는 재사용 가능한 조각. 레고 블록처럼 조립해 화면을 만듦.">컴포넌트</span>→패턴)으로 일관성·속도를 얻고, <strong>모바일</strong> 전략(반응형/<span class="tt" data-tip="웹사이트를 앱처럼 설치해 쓰게 해주는 기술. 오프라인 사용, 홈 화면 아이콘, 알림도 가능해짐.">PWA</span>/네이티브/RN)은 필수·예산으로 고른다.</li>
+</ul>
+<hr/>
+<h3 id="d1-h31">다음 강 예고</h3>
+<p><strong>입문(기술 기초) 3강. 백엔드 — 화면 뒤에서 데이터를 지키는 서버.</strong> 요청-응답, API·인증·인가, 데이터 검증과 확장성을 봅니다.</p>
+<hr/>
+<p><sub>※ 원문(선수 M2)을 구성·내용 보존 원칙으로 재구성하고, 다이어그램을 보강(3계층·예시 화면·<span class="tt" data-tip="페이지를 통째로 새로 불러오지 않고 필요한 부분만 바꿔서 앱처럼 매끄럽게 넘어가는 웹 방식.">SPA</span>/<span class="tt" data-tip="링크를 누를 때마다 페이지 전체를 새로 불러오는 전통적인 웹 방식. 페이지가 여러 장으로 나뉨.">MPA</span>·프레임워크 진화·렌더링 4모드·빌드·디자인시스템)했습니다. 프레임워크·지표명은 시점에 따라 세부가 바뀔 수 있습니다.</sub></p>
+</article>
+<article class="doc" data-doc="2" style="display:none">
+<div class="doc-head"><span class="crumb-part">1부 · 기술 기초</span><h1>입문(기술 기초) 3강. 백엔드</h1></div>
+
+<blockquote>
+<p><strong>유형</strong>: 이론 (다이어그램 보강판) · <strong>읽는 데 약 30분</strong>
+<strong>선수</strong>: 2강(프론트엔드). 이벤트 RSVP 예시가 머릿속에 있으면 좋습니다.
+<strong>이 강을 마치면</strong>: ① 백엔드의 다섯 가지 책임을 설명한다 ② API·인증·인가·비즈니스 로직을 이해한다 ③ <span class="tt" data-tip="여러 작업을 '하나의 묶음'으로 처리하는 단위. 계좌이체처럼 중간에 실패하면 통째로 되돌려, 어중간한 상태가 안 생기게 함.">트랜잭션</span>·<span class="tt" data-tip="자주 쓰는 데이터를 가까이 미리 저장해 빠르게 꺼내 쓰는 기법. 매번 멀리서 가져오지 않아 속도가 빨라지는 '즉석 서랍'.">캐싱</span>·<span class="tt" data-tip="코드를 저장하면 자동으로 검사·배포까지 이어지는 개발 자동화 과정. 수동 작업을 줄여 실수와 시간을 아낌.">CI/CD</span> 같은 운영 개념을 잡는다.</p>
+</blockquote>
+<hr/>
+<h2 id="d2-h1">0. 들어가며</h2>
+<p>프론트엔드가 <em>화면을 그리는</em> 동안, 백엔드는 <strong>데이터를 보호하고 서비스의 규칙을 강제</strong> 합니다. 이 강은 하나의 질문을 따라갑니다 — <em>"사용자가 '참석하기'를 누르면, 화면 뒤에서 정확히 무슨 일이 벌어지는가?"</em> 이 질문을 좇다 보면 API·인증·비즈니스 로직·배포까지 자연스럽게 만납니다.</p>
+<hr/>
+<h2 id="d2-h2">1. 백엔드가 하는 다섯 가지 일</h2>
+<p><img alt="백엔드가 하는 다섯 가지 일 — 저장·인증·규칙·외부통합·안정성" loading="lazy" src="img/vf3_resp.svg"/></p>
+<p><strong>① 데이터 저장·조회(영구 보관)</strong> — 가장 기본입니다. 프론트엔드는 화면에만 데이터를 띄우고, 새로고침하면 사라집니다. 백엔드는 이를 <strong>데이터베이스(DB)</strong> 에 저장해 나중에도 꺼낼 수 있게 합니다. 예를 들어 사용자 A가 "참석"을 누르면 <code>(이벤트123, 사용자456, 상태=참석)</code> 을 저장하고, 하루 뒤 누군가 "누가 왔나?"를 물으면 그 기록을 꺼내 응답합니다. 이 저장·조회의 네 동작이 <strong><span class="tt" data-tip="데이터를 다루는 기본 4가지 동작(생성·조회·수정·삭제). 거의 모든 서비스가 결국 이 네 가지 일을 반복하는 기본 뼈대.">CRUD</span></strong>(Create·Read·Update·Delete)입니다.</p>
+<p><strong>② 인증·권한</strong> — 데이터에는 소유권이 있습니다. <em>내 신청을 남이 삭제하지 못하게</em> 막는 일이죠. <strong>인증</strong> 은 "너 정말 본인이야?"(로그인)이고, <strong>인가</strong> 는 "그럼 이걸 할 수 있어?"(권한)입니다.</p>
+<p><strong>③ 비즈니스 로직(서비스의 규칙)</strong> — "정원은 50명까지", "마감 시간 뒤엔 안 받음", "중복 신청 금지" 같은 규칙입니다. <strong>프론트엔드가 대신할 수 없는</strong> 판단으로, 반드시 백엔드가 강제해야 합니다.</p>
+<p><strong>④ 외부 통합</strong> — 결제 게이트웨이, 이메일(확인 메일), SMS(인증 문자), 푸시 알림, 분석 서비스 등 <em>외부 시스템과의 대화</em> 입니다. 예: "참석" 신청 시 이메일 서비스를 호출해 확인 메일을 보내고, 이벤트 하루 전 참석자에게 푸시 알림을 보냅니다. 이때 백엔드는 <em>비밀 API 키</em> 로 외부와 통신합니다.</p>
+<p><strong>⑤ 안정성·성능·관측</strong> — "앱이 느려요", "어제는 됐는데 오늘 안 돼요"를 막는 일입니다. <em><span class="tt" data-tip="자주 쓰는 데이터를 가까이 미리 저장해 빠르게 꺼내 쓰는 기법. 매번 멀리서 가져오지 않아 속도가 빨라지는 '즉석 서랍'.">캐싱</span></em> 으로 속도를 높이고, <em>부하 분산</em> 으로 트래픽을 견디고, <em>모니터링</em> 으로 장애를 빨리 발견하고, <em>로깅</em> 으로 원인을 파악합니다.</p>
+<blockquote>
+<p>💡 <strong>기획자 포인트</strong> — "앱이 느려요"라는 불만이 오면, 백엔드팀은 이 다섯 중 <em>어디가</em> 문제인지 찾습니다. 투자 우선순위는 대략 <strong>로깅(싸고 효과 큼) → <span class="tt" data-tip="자주 쓰는 데이터를 가까이 미리 저장해 빠르게 꺼내 쓰는 기법. 매번 멀리서 가져오지 않아 속도가 빨라지는 '즉석 서랍'.">캐싱</span> → 모니터링 → 부하 분산(필요할 때만)</strong> 순입니다. 이 다섯이 없으면 프로토타입처럼 보여도 '실제 서비스'가 되지 못합니다.</p>
+</blockquote>
+<hr/>
+<h2 id="d2-h3">2. API — 프론트와의 약속</h2>
+<h3 id="d2-h4">2.1 API의 정의와 역할</h3>
+<p><strong>API(Application Programming Interface)</strong> 는 백엔드가 <em>"이런 요청을 받으면 이런 응답을 주겠다"</em> 고 약속한 규칙입니다.</p>
+<p><img alt="요청 한 번의 여정 — 브라우저→API 서버(인증·검증·로직)→DB→응답" loading="lazy" src="img/vf3_apiflow.svg"/></p>
+<p>초기 웹은 서버가 <span class="tt" data-tip="웹페이지의 뼈대를 만드는 언어. 제목, 문단, 버튼 같은 요소가 '무엇'인지 정해줌.">HTML</span>을 직접 만들어 보냈지만, 지금은 웹·iOS·Android·데스크톱·외부 서비스가 <em>모두 같은 백엔드</em> 와 통신합니다. 각자 다른 형식으로 데이터를 받으면 혼란스럽겠죠. 그래서 API는 <em>모두가 따르는 하나의 규칙</em> 입니다. 예컨대 누가 <code>GET /api/v1/events/123/rsvp</code> 를 물으면 항상 같은 형식의 <span class="tt" data-tip="데이터를 사람도 읽기 쉽게 정리한 표준 표기법. '이름: 값' 형태로 적어, 프로그램끼리 정보를 주고받을 때 가장 널리 쓰는 공용 서식.">JSON</span>을 받습니다.</p>
+<pre><code class="language-json">{
+  "total": 45,
+  "attendees": [
+    {"userId": 456, "name": "김철수", "status": "attending"},
+    {"userId": 789, "name": "이영희", "status": "attending"}
+  ]
+}
+</code></pre>
+<p>이렇게 약속하면 프론트엔드는 이 형식을 처리하는 코드를 한 번만 짜면 되고, 모바일 팀도 외부 개발사도 같은 API를 씁니다.</p>
+<h3 id="d2-h5">2.2 REST · GraphQL · WebSocket — 언제 무엇을</h3>
+<table>
+<thead>
+<tr>
+<th>방식</th>
+<th>특징</th>
+<th>언제 쓰나</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><span class="tt" data-tip="웹에서 데이터를 주고받는 대표적인 규칙(약속). 주소로 자원을 가리키고 '조회·생성·수정·삭제' 같은 정해진 방식으로 서버와 대화하도록 정리한 방식.">REST</span></strong></td>
+<td>HTTP 메서드(GET/POST/PUT/DELETE)+URL로 리소스를 다룸</td>
+<td>대부분의 웹·모바일 앱. 간단·표준</td>
+</tr>
+<tr>
+<td><strong><span class="tt" data-tip="필요한 데이터만 콕 집어 한 번에 요청하는 API 방식. 뷔페처럼 여러 접시를 왔다갔다 하지 않고, 원하는 항목만 골라 한 접시에 담아 받는 느낌.">GraphQL</span></strong></td>
+<td>클라이언트가 "이 필드만 줘"라고 요청</td>
+<td>필드가 많고 화면마다 필요 데이터가 다를 때(모바일 데이터 절약)</td>
+</tr>
+<tr>
+<td><strong><span class="tt" data-tip="서버와 앱이 연결을 계속 열어두고 실시간으로 주고받는 통신 방식. 채팅·주식 시세처럼 새로고침 없이 즉시 오가는 '전화 통화 같은' 연결.">WebSocket</span></strong></td>
+<td>양방향 실시간 연결 유지</td>
+<td>채팅·실시간 알림·멀티플레이 게임</td>
+</tr>
+</tbody>
+</table>
+<p>RSVP 앱은 <span class="tt" data-tip="웹에서 데이터를 주고받는 대표적인 규칙(약속). 주소로 자원을 가리키고 '조회·생성·수정·삭제' 같은 정해진 방식으로 서버와 대화하도록 정리한 방식.">REST</span>가 기본이지만, "참석자 이름·프로필·코멘트만" 필요하면 <span class="tt" data-tip="필요한 데이터만 콕 집어 한 번에 요청하는 API 방식. 뷔페처럼 여러 접시를 왔다갔다 하지 않고, 원하는 항목만 골라 한 접시에 담아 받는 느낌.">GraphQL</span>이 유리합니다.</p>
+<p><strong><span class="tt" data-tip="필요한 데이터만 콕 집어 한 번에 요청하는 API 방식. 뷔페처럼 여러 접시를 왔다갔다 하지 않고, 원하는 항목만 골라 한 접시에 담아 받는 느낌.">GraphQL</span> 예시</strong> — <span class="tt" data-tip="웹에서 데이터를 주고받는 대표적인 규칙(약속). 주소로 자원을 가리키고 '조회·생성·수정·삭제' 같은 정해진 방식으로 서버와 대화하도록 정리한 방식.">REST</span>는 정해진 응답을 통째로 받지만, <span class="tt" data-tip="필요한 데이터만 콕 집어 한 번에 요청하는 API 방식. 뷔페처럼 여러 접시를 왔다갔다 하지 않고, 원하는 항목만 골라 한 접시에 담아 받는 느낌.">GraphQL</span>은 "필요한 필드만" 골라 한 번에 요청합니다.</p>
+<pre><code class="language-graphql"># 요청: 이벤트 제목과 참석자 이름만 콕 집어서
+query {
+  event(id: 123) {
+    title
+    rsvps { user { name } }
+  }
+}
+</code></pre>
+<pre><code class="language-json">// 응답: 요청한 모양 그대로 (군더더기 없음)
+{ "data": { "event": {
+  "title": "사내 해커톤 2026",
+  "rsvps": [ { "user": { "name": "김철수" } }, { "user": { "name": "이영희" } } ]
+} } }
+</code></pre>
+<p><strong><span class="tt" data-tip="서버와 앱이 연결을 계속 열어두고 실시간으로 주고받는 통신 방식. 채팅·주식 시세처럼 새로고침 없이 즉시 오가는 '전화 통화 같은' 연결.">WebSocket</span> 예시</strong> — 실시간 신청 현황처럼 "서버가 먼저 알려줘야" 하는 경우에 씁니다. 한 번 연결하면 양방향으로 계속 메시지가 오갑니다.</p>
+<p><img alt="HTTP vs WebSocket — 실시간이 필요할 때" loading="lazy" src="img/gf_websocket.svg"/></p>
+<pre><code class="language-text">// 연결 후 서버가 신청이 들어올 때마다 밀어주는 메시지(JSON)
+{ "type": "rsvp_update", "eventId": 123, "count": 37, "remaining": 13 }
+</code></pre>
+<p><strong>웹훅(<span class="tt" data-tip="특정 사건이 생기면 서버가 알아서 알려주는 '자동 알림' 방식. 매번 확인하지 않아도, 일이 생기면 먼저 연락 오게 하는 구조.">Webhook</span>) 예시</strong> — 반대로 외부 서비스가 "일이 생겼어요"라고 우리 서버로 먼저 알려주는 방식입니다(예: 결제 완료, 메일 열람). 외부가 정해진 주소로 아래 같은 데이터를 보내면, 우리 서버가 받아서 처리합니다.</p>
+<pre><code class="language-json">// 외부(결제사)가 우리 서버의 웹훅 주소로 POST 하는 알림
+{ "event": "payment.succeeded", "eventId": 123, "userId": 456, "amount": 0, "at": "2026-10-20T09:14:00Z" }
+</code></pre>
+<h3 id="d2-h6">2.3 CRUD 네 동작</h3>
+<table>
+<thead>
+<tr>
+<th>동작</th>
+<th>뜻</th>
+<th>HTTP</th>
+<th>예시</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Create</strong></td>
+<td>생성</td>
+<td>POST</td>
+<td><code>/events/123/rsvp</code> 본문 <code>{status:'attending'}</code></td>
+</tr>
+<tr>
+<td><strong>Read</strong></td>
+<td>조회</td>
+<td>GET</td>
+<td><code>/events/123/rsvp?user_id=456</code></td>
+</tr>
+<tr>
+<td><strong>Update</strong></td>
+<td>수정</td>
+<td>PUT/PATCH</td>
+<td><code>/events/123/rsvp/456</code> 본문 <code>{status:'not_attending'}</code></td>
+</tr>
+<tr>
+<td><strong>Delete</strong></td>
+<td>삭제</td>
+<td>DELETE</td>
+<td><code>/events/123/rsvp/456</code></td>
+</tr>
+</tbody>
+</table>
+<p>실제 요청과 응답은 이렇게 오갑니다. 아래는 RSVP 참석 신청을 보내는 <span class="tt" data-tip="웹에서 데이터를 주고받는 대표적인 규칙(약속). 주소로 자원을 가리키고 '조회·생성·수정·삭제' 같은 정해진 방식으로 서버와 대화하도록 정리한 방식.">REST</span> 요청(위)과 서버가 돌려주는 <span class="tt" data-tip="데이터를 사람도 읽기 쉽게 정리한 표준 표기법. '이름: 값' 형태로 적어, 프로그램끼리 정보를 주고받을 때 가장 널리 쓰는 공용 서식.">JSON</span> 응답(아래)입니다. 사람이 그대로 읽을 수 있는 형식이라, 기획자도 "무엇을 보내고 무엇을 받는지"를 눈으로 확인할 수 있습니다.</p>
+<pre><code class="language-http">POST /api/v1/events/123/rsvp        # 123번 이벤트에 신청
+Authorization: Bearer eyJhbGci...   # 로그인 증명(JWT)
+Content-Type: application/json
+
+{ "name": "김철수", "email": "chulsoo@company.com", "status": "attending" }
+</code></pre>
+<pre><code class="language-json">// 201 Created — 신청 성공, 서버가 만든 결과를 돌려줌
+{
+  "rsvpId": 8821,
+  "eventId": 123,
+  "status": "attending",
+  "position": 37,          // 37번째 신청자
+  "remaining": 13,         // 남은 자리
+  "createdAt": "2026-10-20T09:14:00Z"
+}
+</code></pre>
+<p>정원이 찼다면 같은 요청에 다른 <span class="tt" data-tip="요청 처리 결과를 숫자로 알려주는 응답 신호(예: 200 성공, 404 없음). 잘 됐는지 실패했는지 한눈에 알려주는 신호등.">상태 코드</span>로 답합니다 — 예: <code>409 Conflict</code>(정원 초과·중복 신청), <code>400 Bad Request</code>(마감). 이처럼 <strong><span class="tt" data-tip="요청 처리 결과를 숫자로 알려주는 응답 신호(예: 200 성공, 404 없음). 잘 됐는지 실패했는지 한눈에 알려주는 신호등.">상태 코드</span></strong>로 성공/실패의 종류를 구분합니다.</p>
+<p>기획자가 알아 두면 좋은 <strong>자주 쓰는 HTTP <span class="tt" data-tip="요청 처리 결과를 숫자로 알려주는 응답 신호(예: 200 성공, 404 없음). 잘 됐는지 실패했는지 한눈에 알려주는 신호등.">상태 코드</span></strong> 는 이 정도입니다 — 앞자리(2·4·5)만 봐도 성공/요청 실수/서버 문제를 구분할 수 있습니다.</p>
+<table>
+<thead>
+<tr>
+<th>코드</th>
+<th>뜻</th>
+<th>RSVP 예시</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>200 OK</strong></td>
+<td>성공(조회 등)</td>
+<td>참석자 목록 조회 성공</td>
+</tr>
+<tr>
+<td><strong>201 Created</strong></td>
+<td>생성 성공</td>
+<td>신청이 새로 등록됨</td>
+</tr>
+<tr>
+<td><strong>400 Bad Request</strong></td>
+<td>요청이 잘못됨</td>
+<td>마감된 이벤트에 신청</td>
+</tr>
+<tr>
+<td><strong>401 Unauthorized</strong></td>
+<td>로그인 안 됨</td>
+<td>토큰 없이 신청 시도</td>
+</tr>
+<tr>
+<td><strong>403 Forbidden</strong></td>
+<td>권한 없음</td>
+<td>남의 신청을 삭제 시도</td>
+</tr>
+<tr>
+<td><strong>404 Not Found</strong></td>
+<td>대상 없음</td>
+<td>없는 이벤트 번호 조회</td>
+</tr>
+<tr>
+<td><strong>409 Conflict</strong></td>
+<td>충돌</td>
+<td>정원 초과·중복 신청</td>
+</tr>
+<tr>
+<td><strong>500 Server Error</strong></td>
+<td>서버 내부 오류</td>
+<td>백엔드 버그·DB 장애</td>
+</tr>
+</tbody>
+</table>
+<h3 id="d2-h7">2.4 API 명세를 함께 보는 법</h3>
+<p>팀이 함께 보는 API 문서는 Swagger·OpenAPI·Postman 같은 도구로 만듭니다. 명세에는 각 <span class="tt" data-tip="API에 요청을 보내는 구체적인 '주소(창구)'. 원하는 기능마다 정해진 주소가 있어, 그곳으로 요청하면 해당 일이 처리됨.">엔드포인트</span>의 <em>요청·응답·에러 케이스</em> 가 담깁니다. 예를 들어 "참석 신청"은 성공 시 <code>{rsvpId, createdAt}</code> 을, 실패 시 <code>409(이미 신청)</code>·<code>400(마감)</code> 을 돌려주도록 약속합니다. 이 명세가 있으면 프론트·백·모바일·외부가 <em>같은 규칙</em> 으로 개발할 수 있습니다.</p>
+<hr/>
+<h2 id="d2-h8">3. 인증·권한</h2>
+<h3 id="d2-h9">3.1 인증 vs 인가</h3>
+<p><img alt="인증 vs 인가, 그리고 세션·JWT·OAuth" loading="lazy" src="img/vf3_auth.svg"/></p>
+<ul>
+<li><strong>인증(Authentication)</strong> = "넌 누구야?" — 신원 증명. <em>신분증 확인</em> 에 해당합니다.</li>
+<li><strong>인가(Authorization)</strong> = "그럼 넌 뭘 할 수 있어?" — 권한 확인. <em>팀 배지 확인</em>("개발팀이니 서버실 출입 가능")에 해당합니다.</li>
+</ul>
+<h3 id="d2-h10">3.2 세션 · JWT · OAuth</h3>
+<table>
+<thead>
+<tr>
+<th>방식</th>
+<th>저장 위치</th>
+<th>장점</th>
+<th>단점</th>
+<th>언제</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><span class="tt" data-tip="로그인한 사용자를 서버가 잠시 기억해두는 '접속 상태'. 로그인 후 페이지를 옮겨도 계속 나로 인식되게 해주는 임시 기억표.">세션</span></strong></td>
+<td>서버(메모리/DB)</td>
+<td>간단, 로그아웃 즉시 반영</td>
+<td>서버 부하, 분산 환경 복잡</td>
+<td>소규모, 즉시 로그아웃 중요</td>
+</tr>
+<tr>
+<td><strong><span class="tt" data-tip="로그인한 사용자임을 증명하는 '전자 출입증' 같은 토큰. 서버가 매번 기억하지 않아도, 이 토큰만 보면 누구인지 확인됨.">JWT</span></strong></td>
+<td>클라이언트(토큰)</td>
+<td>무상태, 분산 쉬움</td>
+<td>즉시 무효화 까다로움</td>
+<td>API·모바일·마이크로서비스</td>
+</tr>
+<tr>
+<td><strong><span class="tt" data-tip="비밀번호를 넘기지 않고 '이 앱에 접근 권한만' 안전하게 허락하는 방식. '구글로 로그인' 버튼 뒤에서 동작하는 위임 허가 절차.">OAuth</span></strong></td>
+<td>제3사(구글·카카오)</td>
+<td>인증 로직 아웃소싱</td>
+<td>외부 의존</td>
+<td>소셜 로그인·외부 연동</td>
+</tr>
+</tbody>
+</table>
+<p>RSVP 규모라면 <strong><span class="tt" data-tip="로그인한 사용자임을 증명하는 '전자 출입증' 같은 토큰. 서버가 매번 기억하지 않아도, 이 토큰만 보면 누구인지 확인됨.">JWT</span></strong> 가 적당합니다 — 토큰 하나로 "이 사용자가 맞다"를 매 요청에서 빠르게 증명합니다.</p>
+<p><img alt="JWT — 로그인 후 발급받은 토큰으로 매 요청의 본인 여부를 증명" loading="lazy" src="img/gf_jwt.svg"/></p>
+<p>토큰이 실제로 어떻게 생겼는지 한 번 뜯어보면 이해가 빠릅니다. <span class="tt" data-tip="로그인한 사용자임을 증명하는 '전자 출입증' 같은 토큰. 서버가 매번 기억하지 않아도, 이 토큰만 보면 누구인지 확인됨.">JWT</span>는 <code>점(.)</code>으로 나뉜 <strong>세 조각</strong>(헤더·내용·서명)을 이어 붙인 문자열입니다.</p>
+<p><img alt="JWT의 구조 — 헤더·내용·서명 세 조각과 디코딩 샘플" loading="lazy" src="img/gf_jwt_structure.svg"/></p>
+<pre><code class="language-text"># 실제 토큰(줄바꿈 없이 한 줄) — 세 조각이 점으로 이어져 있습니다
+eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI0NTYiLCJyb2xlIjoiaG9zdCJ9.Zx8kQp3rT9v0aB...
+</code></pre>
+<p>앞 두 조각을 Base64로 풀면(디코딩) 아래처럼 사람이 읽을 수 있는 <span class="tt" data-tip="데이터를 사람도 읽기 쉽게 정리한 표준 표기법. '이름: 값' 형태로 적어, 프로그램끼리 정보를 주고받을 때 가장 널리 쓰는 공용 서식.">JSON</span>이 나옵니다. RSVP라면 "이 사용자는 456번, 역할은 이벤트 호스트, 이 토큰은 언제까지 유효" 같은 정보가 담깁니다.</p>
+<pre><code class="language-json">// ① 헤더 — 어떤 방식으로 서명했는지
+{ "alg": "HS256", "typ": "JWT" }
+
+// ② 내용(payload) — 누구인지·권한·만료 시각(exp는 유닉스 시간)
+{ "sub": "456", "name": "김호스트", "role": "host", "exp": 1735689600 }
+</code></pre>
+<blockquote>
+<p>⚠️ <strong>중요</strong> — ①②는 '암호화'가 아니라 Base64 '인코딩'일 뿐이라 <strong>누구나 열어볼 수 있습니다</strong>. 비밀번호·주민번호 같은 민감정보를 payload에 넣으면 안 됩니다. 위조를 막는 것은 ③ 서명입니다 — 서버만 아는 비밀키로 만든 서명이라, 내용을 한 글자라도 바꾸면 서명이 안 맞아 거부됩니다. 그래서 서버는 <span class="tt" data-tip="로그인한 사용자를 서버가 잠시 기억해두는 '접속 상태'. 로그인 후 페이지를 옮겨도 계속 나로 인식되게 해주는 임시 기억표.">세션</span>을 따로 저장하지 않고도 "우리가 발급한 진짜 토큰"인지 즉시 확인할 수 있습니다(무상태).</p>
+</blockquote>
+<p>소셜 로그인(<strong><span class="tt" data-tip="비밀번호를 넘기지 않고 '이 앱에 접근 권한만' 안전하게 허락하는 방식. '구글로 로그인' 버튼 뒤에서 동작하는 위임 허가 절차.">OAuth</span></strong>)은 흐름이 조금 다릅니다. 사용자의 비밀번호를 우리 앱이 직접 받지 않고, 구글·카카오 같은 외부 인증 서버에 맡긴 뒤 '증표'만 넘겨받습니다.</p>
+<p><img alt="OAuth 2.0 — '구글로 로그인'의 동작 흐름" loading="lazy" src="img/gf_oauth.svg"/></p>
+<p>마지막 토큰 교환 단계에서 우리 앱이 받는 응답은 대략 이렇게 생겼습니다.</p>
+<pre><code class="language-json">// 구글이 발급하는 토큰 응답
+{
+  "access_token": "ya29.a0Af...",   // 이 토큰으로 사용자 정보를 조회
+  "token_type": "Bearer",
+  "expires_in": 3599,                 // 초 단위 만료(약 1시간)
+  "id_token": "eyJhbGci..."           // 사용자 신원이 담긴 JWT(OpenID Connect)
+}
+</code></pre>
+<p>우리 앱은 비밀번호를 저장하지 않으니 유출 위험이 사라지고, 이후에는 자체 <span class="tt" data-tip="로그인한 사용자임을 증명하는 '전자 출입증' 같은 토큰. 서버가 매번 기억하지 않아도, 이 토큰만 보면 누구인지 확인됨.">JWT</span>로 <span class="tt" data-tip="로그인한 사용자를 서버가 잠시 기억해두는 '접속 상태'. 로그인 후 페이지를 옮겨도 계속 나로 인식되게 해주는 임시 기억표.">세션</span>을 이어갑니다.</p>
+<h3 id="d2-h11">3.3 권한 모델 — RBAC · ABAC · RLS</h3>
+<ul>
+<li><strong><span class="tt" data-tip="'역할'에 따라 권한을 주는 방식. 관리자·일반회원 같은 직책을 정하고, 그 직책에 맞는 기능만 열어주는 회사 직급별 출입증 개념.">RBAC</span>(역할 기반)</strong> — 역할별 권한. "일반 사용자는 <em>자신의</em> RSVP만 수정".</li>
+<li><strong><span class="tt" data-tip="사용자·상황의 여러 '속성'을 따져 권한을 정하는 방식. 부서·시간·지역 등 조건을 조합해 '언제, 누가, 무엇을' 할 수 있는지 더 세밀하게 통제.">ABAC</span>(속성 기반)</strong> — 시간·IP·기기 등 속성 고려. "오후 6시 이후 신청 불가".</li>
+<li><strong><span class="tt" data-tip="데이터베이스에서 '이 행은 이 사람만 볼 수 있다'를 행 단위로 강제하는 보안 규칙. 정책이 없으면 기본 차단.">RLS</span>(행 단위 보안)</strong> — 데이터베이스가 <em>행 단위</em> 로 강제. "사용자 A는 자신의 RSVP 행만 조회".</li>
+</ul>
+<p>RSVP 앱은 <strong><span class="tt" data-tip="'역할'에 따라 권한을 주는 방식. 관리자·일반회원 같은 직책을 정하고, 그 직책에 맞는 기능만 열어주는 회사 직급별 출입증 개념.">RBAC</span> + <span class="tt" data-tip="데이터베이스에서 '이 행은 이 사람만 볼 수 있다'를 행 단위로 강제하는 보안 규칙. 정책이 없으면 기본 차단.">RLS</span></strong> 조합이 좋습니다 — 역할로 기본 권한을 주고, DB에서 행 단위로 강제합니다.</p>
+<h3 id="d2-h12">3.4 RSVP의 권한 매트릭스</h3>
+<table>
+<thead>
+<tr>
+<th>역할</th>
+<th>자신 RSVP 수정</th>
+<th>자신 RSVP 삭제</th>
+<th>타인 RSVP 삭제</th>
+<th>참석자 목록</th>
+<th>통계</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>일반 참석자</td>
+<td>O</td>
+<td>O</td>
+<td>X</td>
+<td>O</td>
+<td>X</td>
+</tr>
+<tr>
+<td>이벤트 호스트</td>
+<td>O</td>
+<td>O</td>
+<td>O</td>
+<td>O</td>
+<td>O</td>
+</tr>
+<tr>
+<td>관리자</td>
+<td>O</td>
+<td>O</td>
+<td>O</td>
+<td>O</td>
+<td>O(전체)</td>
+</tr>
+</tbody>
+</table>
+<p>이런 권한 매트릭스가 있으면, "호스트는 참석자를 삭제할 수 있어야 한다" 같은 요구가 <em>어디에 어떻게</em> 반영되는지 명확해집니다.</p>
+<hr/>
+<h2 id="d2-h13">4. 비즈니스 로직</h2>
+<h3 id="d2-h14">4.1 비즈니스 로직이란</h3>
+<p><em>서비스가 어떤 규칙으로 동작하는지</em> 를 정의하는 코드입니다("이메일 중복 확인", "배송 전에만 취소", "쿠폰 한 번만"). 이 규칙이 없으면 서비스가 혼란에 빠지며, <strong>반드시 백엔드에 있어야</strong> 합니다(프론트엔드는 조작 가능하므로).</p>
+<h3 id="d2-h15">4.2 MVC 패턴</h3>
+<p>초기에는 한 파일에 데이터 저장·화면·규칙이 뒤섞였습니다. <strong><span class="tt" data-tip="프로그램을 화면·데이터·처리로 나눠 만드는 설계 방식. 역할을 분담해 두면 수정과 관리가 쉬워지는, 주방의 분업 구조 같은 것.">MVC</span>(Model–View–Controller)</strong> 는 이를 나눕니다 — <strong>Model</strong>(데이터+규칙), <strong>View</strong>(응답 화면/<span class="tt" data-tip="데이터를 사람도 읽기 쉽게 정리한 표준 표기법. '이름: 값' 형태로 적어, 프로그램끼리 정보를 주고받을 때 가장 널리 쓰는 공용 서식.">JSON</span>), <strong>Controller</strong>(요청을 받아 Model 호출·응답 조율). 이렇게 나누면 같은 Model을 웹·모바일에서 재사용하고, 규칙을 한 곳만 고치면 되고, 테스트가 쉬워집니다.</p>
+<h3 id="d2-h16">4.3 RSVP의 규칙 네 가지 — '참석'이 통과해야 할 관문</h3>
+<p><img alt="비즈니스 로직 — 마감·정원·중복·종료 관문" loading="lazy" src="img/vf3_bizrules.svg"/></p>
+<ul>
+<li><strong>마감 처리</strong> — 현재 시간이 마감을 지났으면 <code>400</code>("신청이 마감되었습니다").</li>
+<li><strong>정원 초과</strong> — 참석자 수가 정원 이상이면 <code>409</code>("정원이 가득 찼습니다").</li>
+<li><strong>중복 신청</strong> — 이미 신청 기록이 있으면 <code>409</code>("이미 신청하셨습니다").</li>
+<li><strong>종료 후</strong> — 이벤트 종료일이 지났으면 신청·수정·삭제 금지, <em>조회만</em> 허용.</li>
+</ul>
+<blockquote>
+<p>⚠️ <strong>왜 백엔드여야 하나</strong> — 이 규칙들을 <em>프론트엔드에만</em> 두면, 악의적 사용자가 개발자 도구로 "마감 확인 코드"를 지나칠 수 있습니다. 마감·정원을 진짜로 강제하려면 <strong>백엔드가 절대적으로 검증</strong> 해야 합니다.</p>
+</blockquote>
+<hr/>
+<h2 id="d2-h17">5. 백엔드 언어·프레임워크</h2>
+<h3 id="d2-h18">5.1 핵심은 같고 문법만 다르다</h3>
+<p>모든 백엔드 언어가 하는 일은 같습니다 — <em>요청 받기 → 데이터 검증 → DB 쿼리 → 응답 생성 → 외부 API 호출.</em> 차이는 <strong>문법·도구·생태계</strong> 이며, 사용자 입장에서 Python이든 Java든 <em>같은 기능</em> 을 합니다. 그래서 중요한 것은 언어 자체보다 <strong>개발 속도와 팀의 숙련도</strong> 입니다. 예컨대 같은 기능이라도 팀이 익숙한 언어로 만들면 훨씬 빠릅니다.</p>
+<pre><code class="language-python"># Python FastAPI 예시 (흐름만 보세요)
+@app.post("/api/v1/events/{eventId}/rsvp")
+def create_rsvp(eventId: int, request: RSVPRequest):
+    if is_event_closed(eventId):          # 마감 검증
+        raise HTTPException(400, "신청 마감")
+    db.insert("rsvp", ...)                 # DB 저장
+    return {"rsvpId": 123, "createdAt": "2026-05-04"}
+</code></pre>
+<pre><code class="language-javascript">// Node.js Express 예시 (거의 같은 로직)
+app.post("/api/v1/events/:eventId/rsvp", async (req, res) =&gt; {
+  if (isEventClosed(eventId)) return res.status(400).json({error: "신청 마감"});
+  const rsvp = await db.insert("rsvp", ...);
+  res.json({rsvpId: rsvp.id, createdAt: rsvp.created_at});
+});
+</code></pre>
+<h3 id="d2-h19">5.2 언어별 강점</h3>
+<table>
+<thead>
+<tr>
+<th>언어</th>
+<th>강점</th>
+<th>약점</th>
+<th>좋은 대상</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Python</strong></td>
+<td>빠른 개발·데이터 처리·AI 연계</td>
+<td>실행 속도</td>
+<td>스타트업, 데이터 중심</td>
+</tr>
+<tr>
+<td><strong><span class="tt" data-tip="웹사이트용 언어(자바스크립트)를 서버에서도 돌릴 수 있게 해주는 환경. 화면과 서버를 같은 언어로 만들 수 있어 널리 쓰임.">Node.js</span></strong></td>
+<td>프론트·백 같은 언어, 실시간</td>
+<td>대규모 CPU 작업</td>
+<td>풀스택 팀, 실시간 앱</td>
+</tr>
+<tr>
+<td><strong>Go</strong></td>
+<td>빠른 속도·동시성·간단한 배포</td>
+<td>학습곡선</td>
+<td>고성능 마이크로서비스</td>
+</tr>
+<tr>
+<td><strong>Java</strong></td>
+<td>엔터프라이즈 안정성·성능</td>
+<td>보일러플레이트 많음</td>
+<td>금융·대규모 시스템</td>
+</tr>
+<tr>
+<td><strong>Ruby</strong></td>
+<td>쉬운 문법·완성도 높은 프레임워크</td>
+<td>속도</td>
+<td>초기 프로토타입</td>
+</tr>
+<tr>
+<td><strong>C#</strong></td>
+<td>MS 생태계·좋은 도구</td>
+<td>Windows 의존</td>
+<td>엔터프라이즈·<span class="tt" data-tip="마이크로소프트의 클라우드 서비스. 윈도우·오피스 등 MS 제품과 잘 연동되어 기업에서 많이 씀.">Azure</span></td>
+</tr>
+</tbody>
+</table>
+<p>RSVP 같은 중소 프로젝트는 <strong>Python(<span class="tt" data-tip="파이썬으로 빠르고 간편하게 API를 만드는 인기 도구(프레임워크). 속도가 빠르고 문서가 자동 생성돼 최근 많이 쓰임.">FastAPI</span>)</strong> 또는 <strong><span class="tt" data-tip="웹사이트용 언어(자바스크립트)를 서버에서도 돌릴 수 있게 해주는 환경. 화면과 서버를 같은 언어로 만들 수 있어 널리 쓰임.">Node.js</span>(<span class="tt" data-tip="Node.js 기반으로 구조를 잡아 대규모 서버를 체계적으로 만드는 프레임워크. 규칙이 잘 잡혀 있어 팀 협업과 유지보수에 유리.">NestJS</span>)</strong> 로 충분합니다.</p>
+<h3 id="d2-h20">5.3 프레임워크가 자동화하는 것</h3>
+<p><strong>프레임워크</strong> 는 반복 작업을 미리 해둔 틀입니다 — <em>라우팅(URL→함수)·<span class="tt" data-tip="요청과 처리 사이에서 공통 작업을 대신 해주는 중간 다리. 로그인 확인·기록 남기기처럼 매번 필요한 일을 한곳에서 처리.">미들웨어</span>(공통 전처리)·<span class="tt" data-tip="데이터베이스 표를 코드의 객체처럼 다루게 해주는 도구. 복잡한 DB 명령어 대신 익숙한 프로그래밍 방식으로 데이터를 쉽게 처리.">ORM</span>(SQL 없이 객체로 DB)·인증·에러 처리·문서 자동 생성.</em> 프레임워크가 없으면 이 모두를 수동으로 만들어야 해서 느리고 버그가 많습니다.</p>
+<p>여기서 <strong><span class="tt" data-tip="데이터베이스 표를 코드의 객체처럼 다루게 해주는 도구. 복잡한 DB 명령어 대신 익숙한 프로그래밍 방식으로 데이터를 쉽게 처리.">ORM</span></strong>(SQL 없이 객체로 DB를 다루는 도구)이 무엇인지 잠깐 보면 좋습니다. 아래는 인기 <span class="tt" data-tip="데이터베이스 표를 코드의 객체처럼 다루게 해주는 도구. 복잡한 DB 명령어 대신 익숙한 프로그래밍 방식으로 데이터를 쉽게 처리.">ORM</span>인 <strong><span class="tt" data-tip="코드에서 데이터베이스를 쉽게 다루게 해주는 도구(ORM). SQL을 직접 안 써도 데이터를 읽고 쓸 수 있다.">Prisma</span></strong> 로 "123번 이벤트의 참석자를 조회"하는 코드입니다 — SQL을 몰라도 <em>메서드 호출</em> 로 DB를 다룹니다.</p>
+<pre><code class="language-javascript">// SQL 대신 객체·메서드로 조회 (Prisma)
+const rsvps = await prisma.rsvp.findMany({
+  where: { eventId: 123, status: "attending" },  // 123번 이벤트의 '참석' 신청만
+  include: { user: true },                        // 신청자 정보도 함께
+});
+// 실제로는 아래 SQL로 번역되어 실행됩니다:
+// SELECT * FROM rsvps JOIN users ... WHERE event_id = 123 AND status = 'attending';
+</code></pre>
+<h3 id="d2-h21">5.4 장기전 vs 단기전</h3>
+<table>
+<thead>
+<tr>
+<th>상황</th>
+<th>선택</th>
+<th>정당화</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3개월 내 MVP 진출</td>
+<td>Python/Ruby(빠름)</td>
+<td>속도 &gt; 성능</td>
+</tr>
+<tr>
+<td>1년 유지, 유지자 많음</td>
+<td><span class="tt" data-tip="웹사이트용 언어(자바스크립트)를 서버에서도 돌릴 수 있게 해주는 환경. 화면과 서버를 같은 언어로 만들 수 있어 널리 쓰임.">Node.js</span>(생태계 크고 쉬움)</td>
+<td>팀 편의성</td>
+</tr>
+<tr>
+<td>3년+ 대규모·성능 중요</td>
+<td>Go/Java(안정성)</td>
+<td>성능 &gt; 개발속도</td>
+</tr>
+</tbody>
+</table>
+<p>이 차이를 알면 "3개월이 현실적인가?"를 함께 판단할 수 있습니다.</p>
+<hr/>
+<h2 id="d2-h22">6. 컨테이너와 배포 자동화</h2>
+<h3 id="d2-h23">6.1 Docker — '내 컴퓨터에선 되는데' 문제 해결</h3>
+<p><strong><span class="tt" data-tip="앱과 실행 환경을 통째로 '컨테이너'라는 상자에 담아, 어디서든 똑같이 실행되게 하는 도구. '내 PC에선 됐는데' 문제를 없앰.">Docker</span></strong> 는 <em>앱 + 의존성(라이브러리) + 실행 환경</em> 을 한 상자(이미지)에 담습니다. 개발 환경에선 되는데 운영 환경에선 안 되는 문제를 없애, <em>어디서든 같은 환경</em> 에서 앱이 돌게 합니다. 이 이미지를 실행한 것이 <strong><span class="tt" data-tip="앱과 필요한 실행 환경을 하나로 묶은 가벼운 상자. 어느 컴퓨터에 옮겨도 똑같이 작동하게 해줌.">컨테이너</span></strong> 입니다.</p>
+<p>아주 단순한 예로, 아래는 파이썬 백엔드를 <span class="tt" data-tip="앱과 필요한 실행 환경을 하나로 묶은 가벼운 상자. 어느 컴퓨터에 옮겨도 똑같이 작동하게 해줌.">컨테이너</span>로 담는 <code>Dockerfile</code>입니다. "어떤 재료(베이스 이미지)를 깔고, 무엇을 복사하고, 어떻게 실행하라"를 적은 조리법이라고 보면 됩니다.</p>
+<pre><code class="language-dockerfile"># 1) 파이썬이 설치된 표준 환경에서 시작
+FROM python:3.12-slim
+# 2) 작업 폴더 지정
+WORKDIR /app
+# 3) 의존성 목록을 먼저 복사해 설치(캐시 활용)
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+# 4) 나머지 코드 복사
+COPY . .
+# 5) 이 명령으로 서버를 실행
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+</code></pre>
+<p>이 파일 하나면 내 노트북·동료 PC·클라우드 어디서든 <strong>똑같은 환경</strong>으로 실행됩니다.</p>
+<h3 id="d2-h24">6.2 모놀리식 vs 마이크로서비스</h3>
+<ul>
+<li><strong>모놀리식</strong> — 모든 기능이 한 덩어리. 개발·배포가 간단하고 <span class="tt" data-tip="여러 작업을 '하나의 묶음'으로 처리하는 단위. 계좌이체처럼 중간에 실패하면 통째로 되돌려, 어중간한 상태가 안 생기게 함.">트랜잭션</span>이 쉽지만, 한 부분 장애가 전체로 번지고 확장이 어렵습니다. <em>초기~수백만 사용자</em> 에 적합.</li>
+<li><strong>마이크로서비스</strong> — 기능별 독립 서비스. 독립 배포·확장이 쉽지만 복잡하고 서비스 간 통신 비용이 큽니다. <em>대규모·큰 팀</em> 에 적합.</li>
+</ul>
+<p>RSVP 앱은 <strong>모놀리식으로 시작</strong> 하고, 필요할 때 나누면 됩니다.</p>
+<p><img alt="모놀리식 vs 마이크로서비스 — 한 덩어리냐, 기능별 독립 서비스냐" loading="lazy" src="img/gf_mono_micro.svg"/></p>
+<h3 id="d2-h25">6.3 CI/CD 파이프라인</h3>
+<p><img alt="CI/CD — 커밋이 자동 검사를 거쳐 배포까지" loading="lazy" src="img/vf3_cicd.svg"/></p>
+<p>가장 널리 쓰는 도구가 <strong><span class="tt" data-tip="깃허브에 코드를 올리면 자동으로 검사·배포를 실행해주는 기능. CI/CD를 깃허브 안에서 바로 구현할 때 씀.">GitHub Actions</span></strong>입니다. 저장소에 아래 같은 <code>YAML</code> 파일 하나를 두면, 코드를 push할 때마다 <span class="tt" data-tip="Git 프로젝트를 온라인에 올려 함께 작업하는 '코드 저장·협업 공간'. 팀의 코드 클라우드 같은 곳.">GitHub</span>이 자동으로 검사·빌드를 돌립니다. "언제(on) → 무엇을(steps)"을 적은 조리법입니다.</p>
+<pre><code class="language-yaml"># .github/workflows/ci.yml
+name: CI
+on: [push]                     # push가 일어나면 실행
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4     # 코드 내려받기
+      - run: npm install              # 의존성 설치
+      - run: npm run lint             # 코드 검사(ESLint)
+      - run: npm test                 # 테스트 실행
+      # 통과하면 이어서 배포 단계(Vercel 등)로 연결
+</code></pre>
+<ul>
+<li><strong>CI(지속적 통합)</strong> — 코드 변경 → 자동 테스트 → 병합.</li>
+<li><strong>CD(지속적 배포)</strong> — 테스트 통과 → 자동 배포.</li>
+</ul>
+<p>흐름은 <em>커밋·푸시 → ① 린트(문법·스타일) → ② 단위 테스트(함수별) → ③ 통합 테스트(전체 흐름) → ④ 빌드(<span class="tt" data-tip="앱과 실행 환경을 통째로 '컨테이너'라는 상자에 담아, 어디서든 똑같이 실행되게 하는 도구. '내 PC에선 됐는데' 문제를 없앰.">Docker</span> 이미지) → ⑤ 배포</em> 이고, 어느 단계든 실패하면 자동으로 멈추고 개발자에게 알립니다. 대략 30분 안에 코드가 사용자에게 닿기 때문에, "오늘 이 버그 고쳤어요?"에 "예, 1시간 뒤 반영됩니다"라고 답할 수 있습니다.</p>
+<hr/>
+<h2 id="d2-h26">7. 성능과 안정성</h2>
+<h3 id="d2-h27">7.1 캐싱 — Redis·CDN</h3>
+<p><strong><span class="tt" data-tip="자주 쓰는 데이터를 가까이 미리 저장해 빠르게 꺼내 쓰는 기법. 매번 멀리서 가져오지 않아 속도가 빨라지는 '즉석 서랍'.">캐싱</span></strong> 은 자주 쓰는 데이터를 <em>빠른 저장소에 복사</em> 하는 것입니다. <strong><span class="tt" data-tip="데이터를 메모리에 두고 초고속으로 읽고 쓰는 저장소. 캐시나 실시간 순위표처럼 속도가 중요한 곳에 쓴다.">Redis</span></strong>(메모리 캐시)에 "현재 참석자 수=45"를 저장해 DB 대신 메모리에서 응답하고, <strong><span class="tt" data-tip="콘텐츠를 세계 곳곳 서버에 복제해 사용자와 가까운 곳에서 전달하는 망. 이미지·영상 로딩을 빠르게 한다.">CDN</span></strong> 은 이미지·JS·<span class="tt" data-tip="웹페이지를 예쁘게 꾸미는 언어. 색깔, 글꼴, 크기, 배치 같은 '겉모습'을 담당함.">CSS</span> 같은 정적 파일을 전 세계 엣지 서버에 복사해 사용자 근처에서 빠르게 제공합니다. "참석자 조회"를 100번 받아도, 캐시가 있으면 DB는 한 번만 두드립니다.</p>
+<p><img alt="캐싱 — 자주 쓰는 답을 빠른 저장소(Redis)에 복사해 두고 재사용" loading="lazy" src="img/gf_cache.svg"/></p>
+<h3 id="d2-h28">7.2 트랜잭션·ACID — 동시 신청의 함정</h3>
+<p><strong><span class="tt" data-tip="여러 작업을 '하나의 묶음'으로 처리하는 단위. 계좌이체처럼 중간에 실패하면 통째로 되돌려, 어중간한 상태가 안 생기게 함.">트랜잭션</span></strong> 은 <em>"여러 작업이 모두 성공하거나 모두 실패"</em> 를 보장합니다. 그 성질이 <strong><span class="tt" data-tip="거래(트랜잭션)가 안전하게 처리되도록 지켜야 할 4대 원칙. 돈 이체 등 실수가 치명적인 작업이 '전부 되거나, 전부 취소되게' 보장.">ACID</span></strong>(원자성·일관성·격리성·지속성)입니다. 왜 필요한지는 <em>동시 신청</em> 에서 드러납니다.</p>
+<p><img alt="동시 신청과 트랜잭션 — 오버부킹과 방지" loading="lazy" src="img/vf3_transaction.svg"/></p>
+<p>정원 50, 현재 49명일 때 A·B가 동시에 신청하면 — <em><span class="tt" data-tip="여러 작업을 '하나의 묶음'으로 처리하는 단위. 계좌이체처럼 중간에 실패하면 통째로 되돌려, 어중간한 상태가 안 생기게 함.">트랜잭션</span>이 없으면</em> 둘 다 "49"를 읽고 각자 저장해 <strong>51명(오버부킹)</strong> 이 됩니다. <em><span class="tt" data-tip="여러 작업을 '하나의 묶음'으로 처리하는 단위. 계좌이체처럼 중간에 실패하면 통째로 되돌려, 어중간한 상태가 안 생기게 함.">트랜잭션</span> + 행 잠금</em> 이 있으면 A가 처리하는 동안 B는 기다렸다가, A가 50을 채운 뒤엔 정원 초과로 거부되어 <strong>정확히 50명</strong> 이 유지됩니다.</p>
+<h3 id="d2-h29">7.3 메시지 큐 — 비동기 처리</h3>
+<p><strong><span class="tt" data-tip="작업 요청을 줄 세워 순서대로 처리하게 하는 대기줄. 갑자기 일이 몰려도 밀린 순서대로 차근차근 처리하도록 완충 역할.">메시지 큐</span></strong> 는 무거운 작업을 <em>줄에 넣고 나중에</em> 처리합니다. 이벤트 공지 후 200명이 동시에 신청해도, "신청 저장 → 큐에 '이메일 발송' 추가 → 즉시 응답" 하고 워커가 백그라운드에서 이메일을 보냅니다. 사용자는 기다리지 않습니다(RabbitMQ·Kafka 등).</p>
+<p><img alt="메시지 큐 — 무거운 작업은 큐에 넣고 워커가 뒤에서 비동기로 처리" loading="lazy" src="img/gf_queue.svg"/></p>
+<h3 id="d2-h30">7.4 부하 분산 — 로드 밸런싱</h3>
+<p>한 대 서버로는 한계가 있어 여러 대에 나눕니다. <strong><span class="tt" data-tip="몰려드는 요청을 여러 서버에 골고루 나눠주는 교통정리 담당. 한 곳에 부하가 쏠리지 않게 해 서비스가 안 멈추게 함.">로드 밸런서</span></strong> 가 들어오는 요청을 서버 A·B·C에 고르게 분배하고, 한 대가 죽어도 나머지가 계속 처리합니다.</p>
+<p><img alt="로드 밸런싱 — 요청을 여러 서버에 고르게 나누고 장애 서버는 자동 제외" loading="lazy" src="img/gf_lb.svg"/></p>
+<h3 id="d2-h31">7.5 모니터링·로깅 — 운영의 안전망</h3>
+<p><strong>로깅</strong> 은 요청·에러·상태를 기록하고(예: <code>14:23:15 rsvp 409 정원초과</code>), <strong>모니터링</strong> 은 CPU·응답 시간·에러율을 실시간으로 보며 임계치를 넘으면 알람을 울립니다(<span class="tt" data-tip="서버·앱의 상태와 성능을 한눈에 보여주는 모니터링 서비스. 시스템 전체를 한 대시보드로 감시할 때 씀.">Datadog</span>·Prometheus 등).</p>
+<blockquote>
+<p>💡 <strong>기획자 포인트</strong> — 로깅·모니터링이 없으면 <em>원인을 알 수 없어</em> 무조건 큰 해결책(서버 증설)을 택하게 됩니다. 있으면 "CPU 80%, 캐시 부재" 처럼 진단해 <em>가장 싼 처방</em> 을 고를 수 있습니다.</p>
+</blockquote>
+<hr/>
+<h2 id="d2-h32">8. 백엔드 투자 우선순위</h2>
+<p>무엇부터 개선할지의 기준입니다(위에서부터).</p>
+<table>
+<thead>
+<tr>
+<th>순위</th>
+<th>항목</th>
+<th>징후</th>
+<th>시기</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>로깅·모니터링</strong></td>
+<td>"버그가 뭔지·어디가 느린지 모름"</td>
+<td>초기 3개월</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>자동화 테스트</strong></td>
+<td>"배포마다 QA 2주, 버그 반복"</td>
+<td>초기 6개월</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong><span class="tt" data-tip="자주 쓰는 데이터를 가까이 미리 저장해 빠르게 꺼내 쓰는 기법. 매번 멀리서 가져오지 않아 속도가 빨라지는 '즉석 서랍'.">캐싱</span></strong></td>
+<td>"조회 API가 1초, 느린 응답"</td>
+<td>사용자 5만+</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>API 버전 관리</strong></td>
+<td>"요청 때마다 기존 API를 바꿔야 함"</td>
+<td>클라이언트 3+</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>마이크로서비스</strong></td>
+<td>"전체 배포 30분, 한 버그가 전체 다운"</td>
+<td>사용자 100만+</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="d2-h33">9. 자주 나오는 기술 질문</h2>
+<ul>
+<li><strong>"이 기능이 백엔드인가, 프론트엔드인가?"</strong> — 대개 <em>둘 다 필요하지만, 안전을 위해 백엔드에 꼭</em> 있어야 합니다. 예: "마지막 신청 시각 표시"는 프론트가 화면에 보여주되, 백엔드가 DB에 저장해야 새로고침에도 유지되고 조작을 막습니다.</li>
+<li><strong>"에러 응답 형식은 어디서 정하나?"</strong> — <em>API 명세</em> 로 정합니다. 마감 이벤트에 신청 시 <code>400</code>인지 <code>409</code>인지, 본문 형식이 일관적인지 등을 명세에서 약속합니다.</li>
+<li><strong>"테스트는 누가 하나?"</strong> — 다층 방어입니다: 백엔드 <em>단위 테스트</em> → 프론트·백 <em>통합 테스트</em> → QA <em>수용 테스트</em> → <em>운영 모니터링</em>. 단위 테스트가 없으면 버그가 QA 단계에서야 발견돼 비용이 커집니다.</li>
+<li><strong>"API 버전 관리는 왜?"</strong> — <code>/api/v1/…</code> 을 쓰던 모바일 앱이 있는데 응답을 바꾸면 <em>구버전 앱이 깨집니다.</em> 그래서 <code>/api/v2/…</code> 로 나눠 <em>호환성</em> 을 지킵니다.</li>
+</ul>
+<hr/>
+<h2 id="d2-h34">10. 핵심 용어</h2>
+<table>
+<thead>
+<tr>
+<th>용어</th>
+<th>정의</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>API / <span class="tt" data-tip="웹에서 데이터를 주고받는 대표적인 규칙(약속). 주소로 자원을 가리키고 '조회·생성·수정·삭제' 같은 정해진 방식으로 서버와 대화하도록 정리한 방식.">REST</span> / <span class="tt" data-tip="필요한 데이터만 콕 집어 한 번에 요청하는 API 방식. 뷔페처럼 여러 접시를 왔다갔다 하지 않고, 원하는 항목만 골라 한 접시에 담아 받는 느낌.">GraphQL</span> / <span class="tt" data-tip="서버와 앱이 연결을 계속 열어두고 실시간으로 주고받는 통신 방식. 채팅·주식 시세처럼 새로고침 없이 즉시 오가는 '전화 통화 같은' 연결.">WebSocket</span></strong></td>
+<td>요청-응답 규칙 / 자원+메서드 / 필요 필드만 / 양방향 실시간</td>
+</tr>
+<tr>
+<td><strong><span class="tt" data-tip="로그인한 사용자임을 증명하는 '전자 출입증' 같은 토큰. 서버가 매번 기억하지 않아도, 이 토큰만 보면 누구인지 확인됨.">JWT</span> / <span class="tt" data-tip="로그인한 사용자를 서버가 잠시 기억해두는 '접속 상태'. 로그인 후 페이지를 옮겨도 계속 나로 인식되게 해주는 임시 기억표.">세션</span> / <span class="tt" data-tip="비밀번호를 넘기지 않고 '이 앱에 접근 권한만' 안전하게 허락하는 방식. '구글로 로그인' 버튼 뒤에서 동작하는 위임 허가 절차.">OAuth</span></strong></td>
+<td>토큰 기반 / 서버 저장 / 외부 위임 인증</td>
+</tr>
+<tr>
+<td><strong>인증 / 인가</strong></td>
+<td>신원 확인 / 권한 확인</td>
+</tr>
+<tr>
+<td><strong><span class="tt" data-tip="'역할'에 따라 권한을 주는 방식. 관리자·일반회원 같은 직책을 정하고, 그 직책에 맞는 기능만 열어주는 회사 직급별 출입증 개념.">RBAC</span> / <span class="tt" data-tip="사용자·상황의 여러 '속성'을 따져 권한을 정하는 방식. 부서·시간·지역 등 조건을 조합해 '언제, 누가, 무엇을' 할 수 있는지 더 세밀하게 통제.">ABAC</span> / <span class="tt" data-tip="데이터베이스에서 '이 행은 이 사람만 볼 수 있다'를 행 단위로 강제하는 보안 규칙. 정책이 없으면 기본 차단.">RLS</span></strong></td>
+<td>역할 기반 / 속성 기반 / 행 단위 권한</td>
+</tr>
+<tr>
+<td><strong><span class="tt" data-tip="데이터를 다루는 기본 4가지 동작(생성·조회·수정·삭제). 거의 모든 서비스가 결국 이 네 가지 일을 반복하는 기본 뼈대.">CRUD</span></strong></td>
+<td>생성·조회·수정·삭제</td>
+</tr>
+<tr>
+<td><strong><span class="tt" data-tip="프로그램을 화면·데이터·처리로 나눠 만드는 설계 방식. 역할을 분담해 두면 수정과 관리가 쉬워지는, 주방의 분업 구조 같은 것.">MVC</span> / <span class="tt" data-tip="데이터베이스 표를 코드의 객체처럼 다루게 해주는 도구. 복잡한 DB 명령어 대신 익숙한 프로그래밍 방식으로 데이터를 쉽게 처리.">ORM</span> / <span class="tt" data-tip="요청과 처리 사이에서 공통 작업을 대신 해주는 중간 다리. 로그인 확인·기록 남기기처럼 매번 필요한 일을 한곳에서 처리.">미들웨어</span></strong></td>
+<td>모델-뷰-컨트롤러 / 객체로 DB / 공통 전처리</td>
+</tr>
+<tr>
+<td><strong><span class="tt" data-tip="여러 작업을 '하나의 묶음'으로 처리하는 단위. 계좌이체처럼 중간에 실패하면 통째로 되돌려, 어중간한 상태가 안 생기게 함.">트랜잭션</span> / <span class="tt" data-tip="거래(트랜잭션)가 안전하게 처리되도록 지켜야 할 4대 원칙. 돈 이체 등 실수가 치명적인 작업이 '전부 되거나, 전부 취소되게' 보장.">ACID</span></strong></td>
+<td>모두 성공·모두 실패 / 원자·일관·격리·지속</td>
+</tr>
+<tr>
+<td><strong><span class="tt" data-tip="자주 쓰는 데이터를 가까이 미리 저장해 빠르게 꺼내 쓰는 기법. 매번 멀리서 가져오지 않아 속도가 빨라지는 '즉석 서랍'.">캐싱</span> / <span class="tt" data-tip="데이터를 메모리에 두고 초고속으로 읽고 쓰는 저장소. 캐시나 실시간 순위표처럼 속도가 중요한 곳에 쓴다.">Redis</span> / <span class="tt" data-tip="콘텐츠를 세계 곳곳 서버에 복제해 사용자와 가까운 곳에서 전달하는 망. 이미지·영상 로딩을 빠르게 한다.">CDN</span></strong></td>
+<td>재사용 저장 / 메모리 캐시 / 정적 파일 분산</td>
+</tr>
+<tr>
+<td><strong><span class="tt" data-tip="작업 요청을 줄 세워 순서대로 처리하게 하는 대기줄. 갑자기 일이 몰려도 밀린 순서대로 차근차근 처리하도록 완충 역할.">메시지 큐</span> / RabbitMQ</strong></td>
+<td><span class="tt" data-tip="요청해두고 결과를 기다리지 않은 채 다른 일을 먼저 하는 방식. 커피 주문 후 자리에서 기다리며 딴 일 하는 것처럼 효율적.">비동기</span> 작업 큐</td>
+</tr>
+<tr>
+<td><strong><span class="tt" data-tip="앱과 실행 환경을 통째로 '컨테이너'라는 상자에 담아, 어디서든 똑같이 실행되게 하는 도구. '내 PC에선 됐는데' 문제를 없앰.">Docker</span> / <span class="tt" data-tip="앱과 필요한 실행 환경을 하나로 묶은 가벼운 상자. 어느 컴퓨터에 옮겨도 똑같이 작동하게 해줌.">컨테이너</span> / CI·CD</strong></td>
+<td>앱 포장 / 격리 실행 / 통합·배포 자동화</td>
+</tr>
+<tr>
+<td><strong>로드 밸런싱 / 모놀리식 / 마이크로서비스</strong></td>
+<td>요청 분산 / 한 덩어리 / 기능별 분리</td>
+</tr>
+<tr>
+<td><strong>로깅 / 모니터링</strong></td>
+<td>기록 / 실시간 상태 추적</td>
+</tr>
+<tr>
+<td><strong><span class="tt" data-tip="데이터를 빨리 찾도록 미리 만들어 둔 색인. 책 뒤 찾아보기처럼, 원하는 데이터를 훨씬 빠르게 검색하게 한다.">인덱스</span> / <span class="tt" data-tip="데이터를 중복 없이 규칙에 맞게 표로 쪼개 정리하는 것. 같은 정보를 여러 곳에 저장해 생기는 오류를 막는다.">정규화</span> / n+1 문제</strong></td>
+<td>검색 가속 / 중복 제거 설계 / 1번 쿼리가 n번 추가 쿼리를 부르는 비효율</td>
+</tr>
+<tr>
+<td><strong>타임아웃 / 롤백 / 핫픽스</strong></td>
+<td>오래 걸려 끊김 / 이전 버전 복귀 / 긴급 수정 배포</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="d2-h35">11. 한눈에 정리</h2>
+<ul>
+<li>백엔드의 다섯 책임 = <strong>저장·조회 / 인증·권한 / 비즈니스 로직 / 외부 통합 / 안정성·관측.</strong></li>
+<li><strong>API</strong>(<span class="tt" data-tip="웹에서 데이터를 주고받는 대표적인 규칙(약속). 주소로 자원을 가리키고 '조회·생성·수정·삭제' 같은 정해진 방식으로 서버와 대화하도록 정리한 방식.">REST</span>/<span class="tt" data-tip="필요한 데이터만 콕 집어 한 번에 요청하는 API 방식. 뷔페처럼 여러 접시를 왔다갔다 하지 않고, 원하는 항목만 골라 한 접시에 담아 받는 느낌.">GraphQL</span>/<span class="tt" data-tip="서버와 앱이 연결을 계속 열어두고 실시간으로 주고받는 통신 방식. 채팅·주식 시세처럼 새로고침 없이 즉시 오가는 '전화 통화 같은' 연결.">WebSocket</span>)는 프론트-백의 계약이고, 상호작용은 <em>요청→인증·인가·검증·로직→DB→응답</em> 왕복.</li>
+<li>규칙(마감·정원·중복·종료)은 <strong>반드시 백엔드가 강제.</strong> 동시성은 <strong><span class="tt" data-tip="여러 작업을 '하나의 묶음'으로 처리하는 단위. 계좌이체처럼 중간에 실패하면 통째로 되돌려, 어중간한 상태가 안 생기게 함.">트랜잭션</span>(<span class="tt" data-tip="거래(트랜잭션)가 안전하게 처리되도록 지켜야 할 4대 원칙. 돈 이체 등 실수가 치명적인 작업이 '전부 되거나, 전부 취소되게' 보장.">ACID</span>)</strong> 으로.</li>
+<li>배포는 <strong><span class="tt" data-tip="앱과 실행 환경을 통째로 '컨테이너'라는 상자에 담아, 어디서든 똑같이 실행되게 하는 도구. '내 PC에선 됐는데' 문제를 없앰.">Docker</span> + <span class="tt" data-tip="코드를 저장하면 자동으로 검사·배포까지 이어지는 개발 자동화 과정. 수동 작업을 줄여 실수와 시간을 아낌.">CI/CD</span></strong> 로 자동화, 운영은 <strong><span class="tt" data-tip="자주 쓰는 데이터를 가까이 미리 저장해 빠르게 꺼내 쓰는 기법. 매번 멀리서 가져오지 않아 속도가 빨라지는 '즉석 서랍'.">캐싱</span>·큐·부하분산·로깅·모니터링</strong> 으로 지킴.</li>
+</ul>
+<hr/>
+<h3 id="d2-h36">다음 강 예고</h3>
+<p><strong>입문(기술 기초) 4강. 데이터·데이터베이스 — 정보를 어떻게 담고 지키나.</strong> 관계형 vs <span class="tt" data-tip="표 형식에 얽매이지 않는 데이터베이스 통칭. 문서·키값 등 자유로운 구조로, 대용량·유연한 데이터에 강하다.">NoSQL</span>, <span class="tt" data-tip="데이터베이스에 어떤 표와 항목이 어떤 형태로 들어가는지 정의한 설계도. 데이터의 뼈대이자 규칙.">스키마</span>·<span class="tt" data-tip="데이터를 빨리 찾도록 미리 만들어 둔 색인. 책 뒤 찾아보기처럼, 원하는 데이터를 훨씬 빠르게 검색하게 한다.">인덱스</span>·<span class="tt" data-tip="여러 작업을 '하나의 묶음'으로 처리하는 단위. 계좌이체처럼 중간에 실패하면 통째로 되돌려, 어중간한 상태가 안 생기게 함.">트랜잭션</span>, 그리고 앞서 배운 벡터 DB와의 연결을 봅니다.</p>
+<hr/>
+<p><sub>※ 원문(선수 M3)을 구성·내용 보존 원칙으로 재구성하고 존댓말로 통일했으며, 다이어그램을 보강(5책임·요청 여정·인증/인가·비즈니스 규칙·<span class="tt" data-tip="여러 작업을 '하나의 묶음'으로 처리하는 단위. 계좌이체처럼 중간에 실패하면 통째로 되돌려, 어중간한 상태가 안 생기게 함.">트랜잭션</span>·<span class="tt" data-tip="코드를 저장하면 자동으로 검사·배포까지 이어지는 개발 자동화 과정. 수동 작업을 줄여 실수와 시간을 아낌.">CI/CD</span>)했습니다. 언어·도구·수치는 시점에 따라 달라질 수 있습니다.</sub></p>
+</article>
+<article class="doc" data-doc="3" style="display:none">
+<div class="doc-head"><span class="crumb-part">1부 · 기술 기초</span><h1>입문(기술 기초) 4강. 데이터</h1></div>
+
+<blockquote>
+<p><strong>유형</strong>: 이론 (다이어그램 보강판) · <strong>읽는 데 약 30분</strong>
+<strong>선수</strong>: 3강(백엔드). 이벤트 RSVP 예시가 머릿속에 있으면 좋습니다.
+<strong>핵심 물음</strong>: "어떤 데이터를 어디에, 어떤 구조로 보관할 것인가?"</p>
+</blockquote>
+<hr/>
+<h2 id="d3-h1">0. 들어가며</h2>
+<p><strong>데이터는 기획 결정을 가장 많이 제약하는 요소입니다.</strong> 기능을 추가하거나 구조를 바꾸려 할 때 — "이 정보는 지금 구조로는 저장할 수 없어요", "<span class="tt" data-tip="데이터베이스 구조(표·항목)를 바꾼 내용을 순서대로 적용하는 작업. 설계 변경을 안전하게 반영한다.">마이그레이션</span>에 며칠 필요합니다", "권한을 다시 짜야 해서 2주 걸립니다" 같은 말이 계속 나옵니다. 데이터 구조를 <em>대략이라도</em> 이해하면, <strong>설계 단계에서 이런 함정을 피할 수 있습니다.</strong></p>
+<p>이 강은 데이터의 네 종류에서 시작해 관계형 DB·<span class="tt" data-tip="표 형식에 얽매이지 않는 데이터베이스 통칭. 문서·키값 등 자유로운 구조로, 대용량·유연한 데이터에 강하다.">NoSQL</span>·객체 스토리지·권한 모델까지 훑고, 각 절을 <em>이벤트 RSVP</em> 사례로 연습합니다.</p>
+<hr/>
+<h2 id="d3-h2">1. 데이터의 네 종류</h2>
+<p>어디에 보관할지 정하려면, 먼저 <strong>어떤 데이터인지 분류</strong> 하는 것이 첫 단계입니다.</p>
+<p><img alt="데이터 4종류와 어울리는 저장소" loading="lazy" src="img/vf4_datatypes.svg"/></p>
+<ul>
+<li><strong>정형(Structured)</strong> — 회원의 이름·이메일, 이벤트의 제목·정원, 결제의 금액처럼 <em>정해진 틀</em> 에 맞는 데이터. 행·열의 표로 정리되고 자료형이 명확하며 검색·집계가 빠릅니다. → <strong>관계형 DB</strong>(<span class="tt" data-tip="안정성과 기능이 뛰어난 오픈소스 관계형 데이터베이스. 복잡한 데이터나 대규모 서비스에 널리 쓰인다.">PostgreSQL</span>·<span class="tt" data-tip="가장 널리 쓰이는 오픈소스 관계형 데이터베이스. 가볍고 빨라 웹 서비스의 기본 선택지로 많이 쓴다.">MySQL</span>·<span class="tt" data-tip="서버 없이 파일 하나로 동작하는 초경량 데이터베이스. 모바일 앱이나 소규모 프로젝트에 간편하게 쓴다.">SQLite</span>).</li>
+<li><strong>반정형(Semi-structured)</strong> — 서버 로그, 사용자 이벤트 스트림, API 응답 <span class="tt" data-tip="데이터를 사람도 읽기 쉽게 정리한 표준 표기법. '이름: 값' 형태로 적어, 프로그램끼리 정보를 주고받을 때 가장 널리 쓰는 공용 서식.">JSON</span>처럼 <em>기본 구조는 있지만 필드가 들쭉날쭉</em> 한 데이터. 구조가 진화해도 기존 데이터가 잘 깨지지 않습니다. → <strong>문서형 <span class="tt" data-tip="표 형식에 얽매이지 않는 데이터베이스 통칭. 문서·키값 등 자유로운 구조로, 대용량·유연한 데이터에 강하다.">NoSQL</span></strong>(<span class="tt" data-tip="표(행/열) 대신 문서 형태로 자유롭게 데이터를 저장하는 NoSQL 데이터베이스. 형식이 자주 바뀌는 데이터에 유리하다.">MongoDB</span>)·<span class="tt" data-tip="여러 곳의 데이터를 한데 모아 분석용으로 쌓아 두는 대형 창고. 매출·통계 분석과 리포트에 쓴다.">데이터 웨어하우스</span>(BigQuery).</li>
+<li><strong>비정형(Unstructured)</strong> — 이미지·영상·PDF·음성처럼 <em>자유 형식이고 크며 검색이 어려운</em> 데이터. DB에 직접 넣기보다 <em>메타데이터만 DB에, 실제 파일은 분리된 저장소에</em> 둡니다. → <strong>객체 스토리지</strong>(<span class="tt" data-tip="파일·이미지·영상 등을 저장하는 AWS의 대용량 창고. 인터넷 어디서든 꺼내 쓸 수 있는 온라인 저장소.">S3</span>·GCS·R2).</li>
+<li><strong>시계열(Time-series)</strong> — CPU·트래픽·시세·센서처럼 <em>시간 축에 쌓이는</em> 데이터. 최근 것만 자주 조회하고 저가 저장·빠른 집계가 중요합니다. → <strong>시계열 DB</strong>(InfluxDB·Prometheus)·메모리(<span class="tt" data-tip="데이터를 메모리에 두고 초고속으로 읽고 쓰는 저장소. 캐시나 실시간 순위표처럼 속도가 중요한 곳에 쓴다.">Redis</span>).</li>
+</ul>
+<p><em>RSVP 예</em>: 정형(회원·이벤트·신청·관리자) · 반정형(이벤트별 커스텀 필드) · 비정형(포스터·증명 PDF) · 시계열(시간당 신청 수·실시간 현황).</p>
+<hr/>
+<h2 id="d3-h3">2. 관계형 데이터베이스</h2>
+<h3 id="d3-h4">2.1 테이블·컬럼·행, 그리고 외래키</h3>
+<p>관계형 DB는 <strong>엑셀 시트 여러 개가 서로 연결된 구조</strong> 라고 생각하면 쉽습니다.</p>
+<p><img alt="이벤트 RSVP의 ERD — 테이블과 외래키" loading="lazy" src="img/vf4_erd.svg"/></p>
+<ul>
+<li><strong>테이블</strong> — 같은 종류의 데이터 묶음(회원·이벤트·신청).</li>
+<li><strong>컬럼(열)</strong> — 각 데이터의 속성(id·email·name).</li>
+<li><strong>행(Row)</strong> — 개별 레코드.</li>
+<li><strong>PK(<span class="tt" data-tip="표에서 각 행을 유일하게 구분하는 대표 항목(예: 회원번호). 중복 없이 하나만 딱 가리키는 이름표.">기본키</span>)</strong> — 각 행을 고유 식별(보통 id).</li>
+<li><strong>FK(<span class="tt" data-tip="다른 표의 기본키를 가리켜 두 표를 연결하는 항목. '이 주문은 이 회원 것'처럼 관계를 이어준다.">외래키</span>)</strong> — <em>다른 테이블의 PK를 참조</em> 하는 연결고리.</li>
+</ul>
+<p>이 구조를 실제 SQL로 만들면 이렇게 됩니다. <code>events</code>(이벤트)와 <code>rsvps</code>(신청) 두 표를 만들고, <code>rsvps</code>가 <code>events</code>를 가리키는 <span class="tt" data-tip="다른 표의 기본키를 가리켜 두 표를 연결하는 항목. '이 주문은 이 회원 것'처럼 관계를 이어준다.">외래키</span>로 이어집니다.</p>
+<pre><code class="language-sql">-- 이벤트 표
+CREATE TABLE events (
+  id       SERIAL PRIMARY KEY,        -- PK: 이벤트마다 자동 부여되는 고유 번호
+  title    TEXT NOT NULL,             -- 제목(빈 값 금지)
+  capacity INT  NOT NULL              -- 정원
+);
+
+-- 신청 표
+CREATE TABLE rsvps (
+  id       SERIAL PRIMARY KEY,
+  event_id INT REFERENCES events(id), -- FK: 어떤 이벤트의 신청인지 연결
+  user_id  INT NOT NULL,              -- 누가 신청했는지
+  status   TEXT DEFAULT 'attending'   -- 상태(기본값 '참석')
+);
+</code></pre>
+<p><span class="tt" data-tip="다른 표의 기본키를 가리켜 두 표를 연결하는 항목. '이 주문은 이 회원 것'처럼 관계를 이어준다.">외래키</span> 덕분에 "홍길동이 신청한 모든 이벤트"는 <code>rsvps</code>에서 <code>user_id</code>로 찾아 각 <code>event_id</code>로 <code>events</code>를 <strong><span class="tt" data-tip="여러 표를 공통 항목으로 이어붙여 한 번에 조회하는 것. 회원 표와 주문 표를 합쳐 보고 싶을 때 쓴다.">JOIN</span></strong> 해 얻고, "이 이벤트에 신청한 사람"은 반대로 조회합니다. 이래서 <em>관계형</em> 이라 부릅니다.</p>
+<p><img alt="JOIN — 신청 표의 외래키로 회원 표를 이어 붙여 '누가 신청했나'를 조회" loading="lazy" src="img/gf_join.svg"/></p>
+<p>이 "이어 붙이기"를 SQL로 쓰면 <code>JOIN</code>입니다. <code>rsvps</code>의 <code>user_id</code>로 <code>users</code>를 연결해, <em>신청 기록 + 신청자 이름</em> 을 한 번에 가져옵니다.</p>
+<pre><code class="language-sql">-- 123번 이벤트에 신청한 사람의 이름과 상태를 조회
+SELECT users.name, rsvps.status        -- 원하는 컬럼만
+FROM rsvps
+JOIN users ON rsvps.user_id = users.id -- 신청.user_id ↔ 회원.id 로 연결
+WHERE rsvps.event_id = 123;
+</code></pre>
+<p>결과는 두 표가 합쳐진 하나의 표처럼 나옵니다.</p>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>김철수</td>
+<td>attending</td>
+</tr>
+<tr>
+<td>이영희</td>
+<td>attending</td>
+</tr>
+</tbody>
+</table>
+<h3 id="d3-h5">2.2 정규화 — 같은 정보를 한 번만</h3>
+<p>같은 정보가 여러 곳에 흩어지면 일관성이 깨집니다. 예를 들어 <code>rsvps</code>에 <code>user_id</code> 뿐 아니라 <code>user_name</code> 까지 저장하면, 이름이 바뀔 때 두 곳을 모두 고쳐야 하고 한 곳만 고치면 불일치가 생깁니다. <code>rsvps</code>에는 <code>user_id</code> 만 두고 필요할 때 <span class="tt" data-tip="여러 표를 공통 항목으로 이어붙여 한 번에 조회하는 것. 회원 표와 주문 표를 합쳐 보고 싶을 때 쓴다.">JOIN</span>으로 이름을 가져오면 됩니다. 이것이 <strong><span class="tt" data-tip="데이터를 중복 없이 규칙에 맞게 표로 쪼개 정리하는 것. 같은 정보를 여러 곳에 저장해 생기는 오류를 막는다.">정규화</span>(Normalization)</strong> — 저장 공간을 아끼고 수정 시점을 명확히 합니다. (성능을 위해 일부러 중복을 허용하는 것은 <em>역<span class="tt" data-tip="데이터를 중복 없이 규칙에 맞게 표로 쪼개 정리하는 것. 같은 정보를 여러 곳에 저장해 생기는 오류를 막는다.">정규화</span></em> 입니다.)</p>
+<p><img alt="정규화 — 이름을 한 곳(users)에만 두고 필요할 때 JOIN해 불일치를 막음" loading="lazy" src="img/gf_normalize.svg"/></p>
+<h3 id="d3-h6">2.3 인덱스·트랜잭션·ACID</h3>
+<ul>
+<li><strong><span class="tt" data-tip="데이터를 빨리 찾도록 미리 만들어 둔 색인. 책 뒤 찾아보기처럼, 원하는 데이터를 훨씬 빠르게 검색하게 한다.">인덱스</span></strong> — 빠르게 찾기 위한 색인입니다. 10만 명 중 "홍길동"을 찾을 때, 입사년도 <span class="tt" data-tip="데이터를 빨리 찾도록 미리 만들어 둔 색인. 책 뒤 찾아보기처럼, 원하는 데이터를 훨씬 빠르게 검색하게 한다.">인덱스</span>가 있으면 해당 그룹만 좁혀 훨씬 빠릅니다.</li>
+</ul>
+<p><img alt="인덱스 — 전체를 훑는 대신 색인으로 해당 위치에 바로 점프" loading="lazy" src="img/gf_index.svg"/></p>
+<p><span class="tt" data-tip="데이터를 빨리 찾도록 미리 만들어 둔 색인. 책 뒤 찾아보기처럼, 원하는 데이터를 훨씬 빠르게 검색하게 한다.">인덱스</span>는 SQL 한 줄로 만듭니다. 예를 들어 "특정 이벤트의 신청"을 자주 조회한다면, <code>event_id</code>에 <span class="tt" data-tip="데이터를 빨리 찾도록 미리 만들어 둔 색인. 책 뒤 찾아보기처럼, 원하는 데이터를 훨씬 빠르게 검색하게 한다.">인덱스</span>를 걸어 둡니다.</p>
+<p><code>sql
+  -- rsvps 표의 event_id 컬럼에 색인 생성 → event_id로 찾는 조회가 빨라짐
+  CREATE INDEX idx_rsvps_event ON rsvps(event_id);</code></p>
+<ul>
+<li><strong><span class="tt" data-tip="여러 작업을 '하나의 묶음'으로 처리하는 단위. 계좌이체처럼 중간에 실패하면 통째로 되돌려, 어중간한 상태가 안 생기게 함.">트랜잭션</span></strong> — 여러 작업을 <em>함께 성공하거나 함께 실패</em> 하게 묶는 단위입니다. "신청 기록 생성 + 신청자 수 증가"를 한 <span class="tt" data-tip="여러 작업을 '하나의 묶음'으로 처리하는 단위. 계좌이체처럼 중간에 실패하면 통째로 되돌려, 어중간한 상태가 안 생기게 함.">트랜잭션</span>으로 감싸면, 중간에 에러가 나도 <em>둘 다 취소</em> 되어 불일치가 없습니다.</li>
+<li><strong><span class="tt" data-tip="거래(트랜잭션)가 안전하게 처리되도록 지켜야 할 4대 원칙. 돈 이체 등 실수가 치명적인 작업이 '전부 되거나, 전부 취소되게' 보장.">ACID</span></strong> — <span class="tt" data-tip="여러 작업을 '하나의 묶음'으로 처리하는 단위. 계좌이체처럼 중간에 실패하면 통째로 되돌려, 어중간한 상태가 안 생기게 함.">트랜잭션</span>의 네 성질: <strong>원자성</strong>(중간 중단 없음)·<strong>일관성</strong>(규칙 유지, 예: 신청자 수 음수 불가)·<strong>격리성</strong>(동시 실행이 서로 간섭 안 함)·<strong>지속성</strong>(저장되면 장애에도 안전). (동시 신청 오버부킹을 막는 원리는 3강에서 봤습니다.)</li>
+</ul>
+<h3 id="d3-h7">2.4 PostgreSQL · MySQL · SQLite</h3>
+<table>
+<thead>
+<tr>
+<th>특성</th>
+<th><span class="tt" data-tip="안정성과 기능이 뛰어난 오픈소스 관계형 데이터베이스. 복잡한 데이터나 대규모 서비스에 널리 쓰인다.">PostgreSQL</span></th>
+<th><span class="tt" data-tip="가장 널리 쓰이는 오픈소스 관계형 데이터베이스. 가볍고 빨라 웹 서비스의 기본 선택지로 많이 쓴다.">MySQL</span></th>
+<th><span class="tt" data-tip="서버 없이 파일 하나로 동작하는 초경량 데이터베이스. 모바일 앱이나 소규모 프로젝트에 간편하게 쓴다.">SQLite</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>복잡한 쿼리</td>
+<td>우수(<span class="tt" data-tip="데이터를 사람도 읽기 쉽게 정리한 표준 표기법. '이름: 값' 형태로 적어, 프로그램끼리 정보를 주고받을 때 가장 널리 쓰는 공용 서식.">JSON</span>·배열·윈도우 함수)</td>
+<td>보통</td>
+<td>제한적</td>
+</tr>
+<tr>
+<td>동시 사용자</td>
+<td>수천+</td>
+<td>수백~수천</td>
+<td>수십</td>
+</tr>
+<tr>
+<td>권한(<span class="tt" data-tip="데이터베이스에서 '이 행은 이 사람만 볼 수 있다'를 행 단위로 강제하는 보안 규칙. 정책이 없으면 기본 차단.">RLS</span>)</td>
+<td>지원</td>
+<td>제한적</td>
+<td>미지원</td>
+</tr>
+<tr>
+<td>설치·운영</td>
+<td>자체 관리</td>
+<td>상대적으로 쉬움</td>
+<td>파일 기반, 가장 간편</td>
+</tr>
+<tr>
+<td>용도</td>
+<td>프로덕션 서비스</td>
+<td>웹 서비스</td>
+<td>모바일·프로토타입</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="d3-h8">3. NoSQL과 메모리 DB</h2>
+<h3 id="d3-h9">3.1 NoSQL이란</h3>
+<p><span class="tt" data-tip="표 형식에 얽매이지 않는 데이터베이스 통칭. 문서·키값 등 자유로운 구조로, 대용량·유연한 데이터에 강하다.">NoSQL</span>은 "Not Only SQL" — <em>테이블 구조를 고집하지 않고 더 유연하게 저장하는 방식들</em> 의 통칭입니다.</p>
+<ul>
+<li><strong>문서형(<span class="tt" data-tip="표(행/열) 대신 문서 형태로 자유롭게 데이터를 저장하는 NoSQL 데이터베이스. 형식이 자주 바뀌는 데이터에 유리하다.">MongoDB</span>·Firestore)</strong> — <span class="tt" data-tip="데이터를 사람도 읽기 쉽게 정리한 표준 표기법. '이름: 값' 형태로 적어, 프로그램끼리 정보를 주고받을 때 가장 널리 쓰는 공용 서식.">JSON</span> 문서를 그대로 저장. 문서마다 필드가 달라도 되고 깊은 객체도 바로 담습니다.</li>
+<li><strong>키-값(<span class="tt" data-tip="데이터를 메모리에 두고 초고속으로 읽고 쓰는 저장소. 캐시나 실시간 순위표처럼 속도가 중요한 곳에 쓴다.">Redis</span>·Memcached)</strong> — key에 대한 value를 메모리에 저장해 <em>매우 빠릅니다.</em> TTL(시간 제한)을 줄 수 있어 <span class="tt" data-tip="로그인한 사용자를 서버가 잠시 기억해두는 '접속 상태'. 로그인 후 페이지를 옮겨도 계속 나로 인식되게 해주는 임시 기억표.">세션</span>·캐시·실시간 순위표에 적합.</li>
+<li><strong>분산(<span class="tt" data-tip="아마존(AWS)이 운영하는 관리형 NoSQL 데이터베이스. 사용량이 폭증해도 알아서 확장돼 대규모 트래픽에 강하다.">DynamoDB</span>·Cassandra)</strong> — 수십억 행을 여러 서버에 나눠 저장. 확장성이 높고, <em>일관성보다 가용성</em> 을 택해 가끔 불일치를 허용합니다.</li>
+</ul>
+<h3 id="d3-h10">3.2 트레이드오프와 선택</h3>
+<p>관계형 DB는 <em>정확성(<span class="tt" data-tip="거래(트랜잭션)가 안전하게 처리되도록 지켜야 할 4대 원칙. 돈 이체 등 실수가 치명적인 작업이 '전부 되거나, 전부 취소되게' 보장.">ACID</span>)</em> 을 최우선으로 복잡한 관계를 안전하게 다루지만 확장 시 비용·복잡도가 늘고, <span class="tt" data-tip="표 형식에 얽매이지 않는 데이터베이스 통칭. 문서·키값 등 자유로운 구조로, 대용량·유연한 데이터에 강하다.">NoSQL</span>은 <em>속도·확장성·유연성</em> 을 우선하되 일관성 관리를 개발자가 책임집니다.</p>
+<p><img alt="관계형 DB vs NoSQL — 정확성·관계 우선이냐, 속도·확장·유연성 우선이냐" loading="lazy" src="img/gf_rdb_nosql.svg"/></p>
+<table>
+<thead>
+<tr>
+<th>상황</th>
+<th>추천</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>구조가 명확하고 관계가 많음(회원·주문·결제)</td>
+<td>RDB</td>
+</tr>
+<tr>
+<td>필드가 자주 바뀌거나 유연해야 함</td>
+<td><span class="tt" data-tip="표 형식에 얽매이지 않는 데이터베이스 통칭. 문서·키값 등 자유로운 구조로, 대용량·유연한 데이터에 강하다.">NoSQL</span>(문서형)</td>
+</tr>
+<tr>
+<td>실시간 순위표·<span class="tt" data-tip="로그인한 사용자를 서버가 잠시 기억해두는 '접속 상태'. 로그인 후 페이지를 옮겨도 계속 나로 인식되게 해주는 임시 기억표.">세션</span>·캐시</td>
+<td><span class="tt" data-tip="표 형식에 얽매이지 않는 데이터베이스 통칭. 문서·키값 등 자유로운 구조로, 대용량·유연한 데이터에 강하다.">NoSQL</span>(키-값·메모리)</td>
+</tr>
+<tr>
+<td>수십억 행을 여러 서버에 분산</td>
+<td><span class="tt" data-tip="표 형식에 얽매이지 않는 데이터베이스 통칭. 문서·키값 등 자유로운 구조로, 대용량·유연한 데이터에 강하다.">NoSQL</span>(분산형)</td>
+</tr>
+<tr>
+<td>확실하지 않음</td>
+<td><strong>RDB로 시작</strong>, 필요하면 확장</td>
+</tr>
+</tbody>
+</table>
+<p><em>RSVP 예</em>: 실시간 신청 수·<span class="tt" data-tip="자주 쓰는 데이터를 가까이 미리 저장해 빠르게 꺼내 쓰는 기법. 매번 멀리서 가져오지 않아 속도가 빨라지는 '즉석 서랍'.">캐싱</span>은 <strong><span class="tt" data-tip="데이터를 메모리에 두고 초고속으로 읽고 쓰는 저장소. 캐시나 실시간 순위표처럼 속도가 중요한 곳에 쓴다.">Redis</span></strong>, 이벤트별 커스텀 필드는 <strong><span class="tt" data-tip="표(행/열) 대신 문서 형태로 자유롭게 데이터를 저장하는 NoSQL 데이터베이스. 형식이 자주 바뀌는 데이터에 유리하다.">MongoDB</span></strong>, 초대형 동시 신청은 <strong><span class="tt" data-tip="아마존(AWS)이 운영하는 관리형 NoSQL 데이터베이스. 사용량이 폭증해도 알아서 확장돼 대규모 트래픽에 강하다.">DynamoDB</span></strong>.</p>
+<hr/>
+<h2 id="d3-h11">4. 파일·이미지 보관 — 객체 스토리지</h2>
+<h3 id="d3-h12">4.1 서버 디스크 대신 객체 스토리지</h3>
+<p>파일을 <em>서버 디스크</em> 에 저장하면(<code>/uploads/poster.jpg</code>) — 서버가 여러 대면 위치 추적이 필요하고, 서버가 초기화되면 파일이 사라지고, 용량 확장·백업이 어렵습니다. 대신 <strong>객체 스토리지(<span class="tt" data-tip="아마존이 운영하는 세계 1위 클라우드 서비스. 서버·저장소 등 IT 자원을 필요한 만큼 빌려 쓰는 대표 플랫폼.">AWS</span> <span class="tt" data-tip="파일·이미지·영상 등을 저장하는 AWS의 대용량 창고. 인터넷 어디서든 꺼내 쓸 수 있는 온라인 저장소.">S3</span> 등)</strong> 에 두면 모든 파일이 중앙에 있어 여러 서버에서 안전하게 접근하고, 자동 백업·복제·국제 배포(<span class="tt" data-tip="콘텐츠를 세계 곳곳 서버에 복제해 사용자와 가까운 곳에서 전달하는 망. 이미지·영상 로딩을 빠르게 한다.">CDN</span>)가 되며, 용량이 자동 확장됩니다. (<span class="tt" data-tip="파일·이미지·영상 등을 저장하는 AWS의 대용량 창고. 인터넷 어디서든 꺼내 쓸 수 있는 온라인 저장소.">S3</span>·Google Cloud Storage·<span class="tt" data-tip="웹사이트를 빠르고 안전하게 해주는 서비스. 전 세계에 콘텐츠를 미리 배치하고 해킹·공격도 막아줌.">Cloudflare</span> R2·자체 호스팅 MinIO 등.)</p>
+<p>객체 스토리지는 <em>저장소(Bucket) → 식별자(Key, 경로) → 객체(파일+메타데이터)</em> 의 3층으로 관리합니다.</p>
+<h3 id="d3-h13">4.2 권한과 CDN</h3>
+<p><img alt="파일은 객체 스토리지에, 배포는 CDN으로" loading="lazy" src="img/vf4_cdn.svg"/></p>
+<ul>
+<li><strong>권한</strong> — <em>퍼블릭</em>(이벤트 포스터: 누구나·<span class="tt" data-tip="콘텐츠를 세계 곳곳 서버에 복제해 사용자와 가까운 곳에서 전달하는 망. 이미지·영상 로딩을 빠르게 한다.">CDN</span> 공개), <em>프라이빗</em>(개인 신청 PDF: 로그인 확인 후 제공), <em>서명된 URL</em>(제한 시간만 유효한 일회성 링크, 예: 이메일 확인 링크 1시간 후 만료).</li>
+<li><strong><span class="tt" data-tip="콘텐츠를 세계 곳곳 서버에 복제해 사용자와 가까운 곳에서 전달하는 망. 이미지·영상 로딩을 빠르게 한다.">CDN</span>(Content Delivery Network)</strong> — 원본(예: 미국 <span class="tt" data-tip="파일·이미지·영상 등을 저장하는 AWS의 대용량 창고. 인터넷 어디서든 꺼내 쓸 수 있는 온라인 저장소.">S3</span>)에서 매번 받으면 느리므로, <em>전 세계 엣지 서버</em> 에 복제해 사용자와 가까운 곳에서 제공합니다. 서울 사용자는 서울 엣지에서 수 ms에 받습니다.</li>
+</ul>
+<p><em>RSVP 예</em>: 포스터는 <span class="tt" data-tip="파일·이미지·영상 등을 저장하는 AWS의 대용량 창고. 인터넷 어디서든 꺼내 쓸 수 있는 온라인 저장소.">S3</span>+<span class="tt" data-tip="콘텐츠를 세계 곳곳 서버에 복제해 사용자와 가까운 곳에서 전달하는 망. 이미지·영상 로딩을 빠르게 한다.">CDN</span>(공개), 참여자 증명서는 <span class="tt" data-tip="파일·이미지·영상 등을 저장하는 AWS의 대용량 창고. 인터넷 어디서든 꺼내 쓸 수 있는 온라인 저장소.">S3</span>(비공개)+서명된 URL, 당일 사진은 <span class="tt" data-tip="파일·이미지·영상 등을 저장하는 AWS의 대용량 창고. 인터넷 어디서든 꺼내 쓸 수 있는 온라인 저장소.">S3</span>(비공개, 관리자만).</p>
+<hr/>
+<h2 id="d3-h14">5. BaaS — 통합 솔루션</h2>
+<p><strong><span class="tt" data-tip="백엔드를 직접 안 만들고 빌려 쓰는 서비스(Backend as a Service). 로그인·DB 등을 완제품처럼 가져다 쓴다.">BaaS</span>(Backend as a Service)</strong> 는 <em>데이터베이스·인증·파일 저장소·API를 한곳에서</em> 제공합니다.</p>
+<table>
+<thead>
+<tr>
+<th>플랫폼</th>
+<th>RDB</th>
+<th><span class="tt" data-tip="표 형식에 얽매이지 않는 데이터베이스 통칭. 문서·키값 등 자유로운 구조로, 대용량·유연한 데이터에 강하다.">NoSQL</span></th>
+<th>인증</th>
+<th>파일</th>
+<th><span class="tt" data-tip="데이터베이스에서 '이 행은 이 사람만 볼 수 있다'를 행 단위로 강제하는 보안 규칙. 정책이 없으면 기본 차단.">RLS</span></th>
+<th>특징</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><span class="tt" data-tip="구글이 제공하는 개발 플랫폼. 데이터베이스·로그인·알림 등을 서버 없이 바로 붙여 앱을 빨리 만든다.">Firebase</span></strong></td>
+<td>–</td>
+<td>Firestore</td>
+<td>O</td>
+<td>O</td>
+<td>제한적</td>
+<td>가장 먼저(2012) 시장을 염, 저가 시작·확장 시 고가</td>
+</tr>
+<tr>
+<td><strong><span class="tt" data-tip="PostgreSQL 기반으로 데이터베이스·인증·저장소를 한 번에 주는 개발 플랫폼. 백엔드를 빠르게 구축할 때 쓴다.">Supabase</span></strong></td>
+<td><span class="tt" data-tip="안정성과 기능이 뛰어난 오픈소스 관계형 데이터베이스. 복잡한 데이터나 대규모 서비스에 널리 쓰인다.">PostgreSQL</span></td>
+<td>–</td>
+<td>O</td>
+<td>O</td>
+<td>O</td>
+<td>SQL-first, <span class="tt" data-tip="데이터베이스에서 '이 행은 이 사람만 볼 수 있다'를 행 단위로 강제하는 보안 규칙. 정책이 없으면 기본 차단.">RLS</span> 강력</td>
+</tr>
+<tr>
+<td><strong>Appwrite</strong></td>
+<td>–</td>
+<td><span class="tt" data-tip="표(행/열) 대신 문서 형태로 자유롭게 데이터를 저장하는 NoSQL 데이터베이스. 형식이 자주 바뀌는 데이터에 유리하다.">MongoDB</span></td>
+<td>O</td>
+<td>O</td>
+<td>기본</td>
+<td>자체 호스팅 가능</td>
+</tr>
+<tr>
+<td><strong>PocketBase</strong></td>
+<td><span class="tt" data-tip="서버 없이 파일 하나로 동작하는 초경량 데이터베이스. 모바일 앱이나 소규모 프로젝트에 간편하게 쓴다.">SQLite</span></td>
+<td>–</td>
+<td>O</td>
+<td>O</td>
+<td>O</td>
+<td>무료(자체 호스팅)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>같이(<span class="tt" data-tip="백엔드를 직접 안 만들고 빌려 쓰는 서비스(Backend as a Service). 로그인·DB 등을 완제품처럼 가져다 쓴다.">BaaS</span>)</strong> 는 인증-DB 연결이 자동이고 API를 직접 짜지 않아 <em>매우 빠르게 출시</em> 하지만, 커질수록 비용·종속·자유도 제약이 있습니다. <strong>따로(<span class="tt" data-tip="안정성과 기능이 뛰어난 오픈소스 관계형 데이터베이스. 복잡한 데이터나 대규모 서비스에 널리 쓰인다.">PostgreSQL</span> + 자체 API + <span class="tt" data-tip="파일·이미지·영상 등을 저장하는 AWS의 대용량 창고. 인터넷 어디서든 꺼내 쓸 수 있는 온라인 저장소.">S3</span>)</strong> 는 <em>완전한 통제와 대규모 저비용</em> 을 주지만 초기 비용·팀·보안 책임이 큽니다.</p>
+<p><em>RSVP 예</em>: MVP는 <strong><span class="tt" data-tip="PostgreSQL 기반으로 데이터베이스·인증·저장소를 한 번에 주는 개발 플랫폼. 백엔드를 빠르게 구축할 때 쓴다.">Supabase</span></strong>(<span class="tt" data-tip="안정성과 기능이 뛰어난 오픈소스 관계형 데이터베이스. 복잡한 데이터나 대규모 서비스에 널리 쓰인다.">PostgreSQL</span> <span class="tt" data-tip="데이터를 중복 없이 규칙에 맞게 표로 쪼개 정리하는 것. 같은 정보를 여러 곳에 저장해 생기는 오류를 막는다.">정규화</span> + <span class="tt" data-tip="데이터베이스에서 '이 행은 이 사람만 볼 수 있다'를 행 단위로 강제하는 보안 규칙. 정책이 없으면 기본 차단.">RLS</span> + 이미지 저장 + 빠른 출시), 스케일 후 <strong>자체 API로 이전</strong>(복잡한 로직·결제·모니터링).</p>
+<p><span class="tt" data-tip="PostgreSQL 기반으로 데이터베이스·인증·저장소를 한 번에 주는 개발 플랫폼. 백엔드를 빠르게 구축할 때 쓴다.">Supabase</span> 같은 <span class="tt" data-tip="백엔드를 직접 안 만들고 빌려 쓰는 서비스(Backend as a Service). 로그인·DB 등을 완제품처럼 가져다 쓴다.">BaaS</span>는 프론트엔드 코드에서 <em>바로</em> DB를 부를 수 있습니다. 아래는 접속을 초기화하고, "참석자 목록"을 한 번에 조회하는 예입니다(SQL을 직접 쓰지 않아도 됩니다).</p>
+<pre><code class="language-javascript">import { createClient } from '@supabase/supabase-js'
+
+// ① 접속 초기화 — 주소와 공개 키로 연결 (키는 .env에서 불러옴)
+const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
+
+// ② 123번 이벤트의 '참석' 신청만 조회
+const { data, error } = await supabase
+  .from('rsvps')                         // rsvps 표에서
+  .select('user_id, status')             // 이 컬럼만
+  .eq('event_id', 123)                   // event_id = 123 인 행만
+  .eq('status', 'attending')             // status = '참석' 인 행만
+</code></pre>
+<hr/>
+<h2 id="d3-h15">6. 권한 모델 — RLS</h2>
+<h3 id="d3-h16">6.1 권한이 깨지면</h3>
+<p>사용자 A가 B의 신청 정보를 조회하거나(프라이버시 위반), 관리자 X가 담당하지 않는 이벤트를 수정하는(무결성 파괴) 일을 <strong>권한 누출(Authorization Bug)</strong> 이라 하며, 가장 흔한 보안 사고 중 하나입니다.</p>
+<h3 id="d3-h17">6.2 코드가 아니라 DB에서 강제 — RLS</h3>
+<p><img alt="권한은 코드가 아니라 DB에서 강제 — RLS" loading="lazy" src="img/vf4_rls.svg"/></p>
+<p>권한을 <em>코드에서만</em> 확인하면(<code>if (user.role === "admin")</code>) 브라우저 도구로 값을 위조하거나 로직 버그로 뚫릴 수 있습니다. <strong><span class="tt" data-tip="데이터베이스에서 '이 행은 이 사람만 볼 수 있다'를 행 단위로 강제하는 보안 규칙. 정책이 없으면 기본 차단.">RLS</span>(Row Level Security, 행 단위 보안)</strong> 는 <em>데이터베이스가</em> 각 사용자가 볼 수 있는 행을 강제합니다.</p>
+<pre><code class="language-sql">-- 사용자는 자신의 신청만 조회
+CREATE POLICY user_own_rsvps ON rsvps
+  FOR SELECT USING (auth.uid() = user_id);
+
+-- 이벤트 관리자는 담당 이벤트의 신청을 관리
+CREATE POLICY admin_manage_rsvps ON rsvps
+  FOR UPDATE USING (
+    event_id IN (SELECT event_id FROM admins WHERE user_id = auth.uid())
+  );
+</code></pre>
+<p>이렇게 하면 코드에 버그가 있어도, 심지어 직접 쿼리해도 권한 위반이 불가능합니다 — <em>단일 진실 공급원(SSOT)</em>. 권한은 <em>컬럼/행/테이블/DB</em> 단위로 걸 수 있는데, RSVP에는 <strong>행 단위(<span class="tt" data-tip="데이터베이스에서 '이 행은 이 사람만 볼 수 있다'를 행 단위로 강제하는 보안 규칙. 정책이 없으면 기본 차단.">RLS</span>)</strong> 가 최적입니다("사용자는 본인 행, 관리자는 모든 행"이 DB에서 자동 강제).</p>
+<hr/>
+<h2 id="d3-h18">7. 데이터의 흐름</h2>
+<p><img alt="데이터의 흐름 — '신청' 한 번이 거치는 곳" loading="lazy" src="img/vf4_dataflow.svg"/></p>
+<p>사용자가 "신청하기"를 누르면 — ① 화면이 <code>POST /api/rsvps</code> 요청(토큰 포함) → ② API가 <em>토큰·존재·중복</em> 을 검증 → ③ <code>rsvps</code>에 INSERT → ④ <span class="tt" data-tip="데이터베이스에서 '이 행은 이 사람만 볼 수 있다'를 행 단위로 강제하는 보안 규칙. 정책이 없으면 기본 차단.">RLS</span>가 권한을 자동 확인 → ⑤ 응답(<code>{rsvpId, status}</code>)을 받아 화면이 "완료"로 갱신하고 버튼을 "취소"로 바꿉니다.</p>
+<p>이때 데이터가 거쳐가는 곳은 <em>프론트 메모리(휘발) → HTTP(<span class="tt" data-tip="웹사이트 통신을 암호화해 안전하게 주고받는 방식. 주소에 자물쇠가 붙는, 도청 걱정 없는 연결.">HTTPS</span> 암호화) → API 서버 메모리(임시) → </em><em>데이터베이스(영구·백업)</em><em> → 응답(<span class="tt" data-tip="자주 쓰는 데이터를 가까이 미리 저장해 빠르게 꺼내 쓰는 기법. 매번 멀리서 가져오지 않아 속도가 빨라지는 '즉석 서랍'.">캐싱</span> 가능)</em> 입니다. <strong>영구 보관은 DB 단계뿐</strong> 이고, 나머지는 스쳐 갑니다.</p>
+<hr/>
+<h2 id="d3-h19">8. 핵심 용어</h2>
+<table>
+<thead>
+<tr>
+<th>용어</th>
+<th>정의</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>관계형 DB / <span class="tt" data-tip="데이터베이스에 어떤 표와 항목이 어떤 형태로 들어가는지 정의한 설계도. 데이터의 뼈대이자 규칙.">스키마</span></strong></td>
+<td>테이블·행·컬럼 구조 / DB 구조 정의</td>
+</tr>
+<tr>
+<td><strong>PK / FK</strong></td>
+<td>각 행 고유 식별 / 다른 테이블 PK 참조(연결)</td>
+</tr>
+<tr>
+<td><strong><span class="tt" data-tip="데이터를 중복 없이 규칙에 맞게 표로 쪼개 정리하는 것. 같은 정보를 여러 곳에 저장해 생기는 오류를 막는다.">정규화</span> / 역<span class="tt" data-tip="데이터를 중복 없이 규칙에 맞게 표로 쪼개 정리하는 것. 같은 정보를 여러 곳에 저장해 생기는 오류를 막는다.">정규화</span></strong></td>
+<td>중복 제거·일관성↑ / 성능 위해 의도적 중복</td>
+</tr>
+<tr>
+<td><strong>1NF·2NF·3NF</strong></td>
+<td>원자값 / 부분 종속 제거 / 이행 종속 제거</td>
+</tr>
+<tr>
+<td><strong><span class="tt" data-tip="데이터를 빨리 찾도록 미리 만들어 둔 색인. 책 뒤 찾아보기처럼, 원하는 데이터를 훨씬 빠르게 검색하게 한다.">인덱스</span> / <span class="tt" data-tip="여러 표를 공통 항목으로 이어붙여 한 번에 조회하는 것. 회원 표와 주문 표를 합쳐 보고 싶을 때 쓴다.">JOIN</span></strong></td>
+<td>검색 색인 / 두 테이블 연결 조회(INNER·LEFT/RIGHT)</td>
+</tr>
+<tr>
+<td><strong><span class="tt" data-tip="여러 작업을 '하나의 묶음'으로 처리하는 단위. 계좌이체처럼 중간에 실패하면 통째로 되돌려, 어중간한 상태가 안 생기게 함.">트랜잭션</span> / <span class="tt" data-tip="거래(트랜잭션)가 안전하게 처리되도록 지켜야 할 4대 원칙. 돈 이체 등 실수가 치명적인 작업이 '전부 되거나, 전부 취소되게' 보장.">ACID</span></strong></td>
+<td>함께 성공·실패 / 원자·일관·격리·지속</td>
+</tr>
+<tr>
+<td><strong><span class="tt" data-tip="표 형식에 얽매이지 않는 데이터베이스 통칭. 문서·키값 등 자유로운 구조로, 대용량·유연한 데이터에 강하다.">NoSQL</span>(문서·키값·분산)</strong></td>
+<td>유연 저장 / <span class="tt" data-tip="표(행/열) 대신 문서 형태로 자유롭게 데이터를 저장하는 NoSQL 데이터베이스. 형식이 자주 바뀌는 데이터에 유리하다.">MongoDB</span>·<span class="tt" data-tip="데이터를 메모리에 두고 초고속으로 읽고 쓰는 저장소. 캐시나 실시간 순위표처럼 속도가 중요한 곳에 쓴다.">Redis</span>·<span class="tt" data-tip="아마존(AWS)이 운영하는 관리형 NoSQL 데이터베이스. 사용량이 폭증해도 알아서 확장돼 대규모 트래픽에 강하다.">DynamoDB</span></td>
+</tr>
+<tr>
+<td><strong>객체 스토리지 / 버킷 / 오브젝트</strong></td>
+<td>파일 저장(<span class="tt" data-tip="파일·이미지·영상 등을 저장하는 AWS의 대용량 창고. 인터넷 어디서든 꺼내 쓸 수 있는 온라인 저장소.">S3</span>) / 저장 단위 / 저장된 파일</td>
+</tr>
+<tr>
+<td><strong>서명된 URL / <span class="tt" data-tip="콘텐츠를 세계 곳곳 서버에 복제해 사용자와 가까운 곳에서 전달하는 망. 이미지·영상 로딩을 빠르게 한다.">CDN</span></strong></td>
+<td>시간 제한 접근 링크 / 엣지 배포</td>
+</tr>
+<tr>
+<td><strong><span class="tt" data-tip="백엔드를 직접 안 만들고 빌려 쓰는 서비스(Backend as a Service). 로그인·DB 등을 완제품처럼 가져다 쓴다.">BaaS</span> / <span class="tt" data-tip="데이터베이스에서 '이 행은 이 사람만 볼 수 있다'를 행 단위로 강제하는 보안 규칙. 정책이 없으면 기본 차단.">RLS</span></strong></td>
+<td>백엔드 통합 제공 / 행 단위 접근 제어</td>
+</tr>
+<tr>
+<td><strong><span class="tt" data-tip="자주 쓰는 데이터를 가까이 미리 저장해 빠르게 꺼내 쓰는 기법. 매번 멀리서 가져오지 않아 속도가 빨라지는 '즉석 서랍'.">캐싱</span> / TTL</strong></td>
+<td>빠른 저장소 복사 / 자동 만료 시간</td>
+</tr>
+<tr>
+<td><strong><span class="tt" data-tip="데이터베이스 구조(표·항목)를 바꾼 내용을 순서대로 적용하는 작업. 설계 변경을 안전하게 반영한다.">마이그레이션</span> / 다운타임 / 롤백</strong></td>
+<td>구조 변환 / 중단 시간 / 이전 버전 복귀</td>
+</tr>
+<tr>
+<td><strong>OLTP / OLAP / <span class="tt" data-tip="데이터가 너무 많을 때 여러 서버로 쪼개 나눠 담는 것. 한 곳에 몰리는 부하를 분산해 대규모 서비스를 버티게 한다.">샤딩</span> / 복제 / 백업 / 감사 로그</strong></td>
+<td>실시간 처리 / 분석 처리 / 분산 저장 / 동일 유지 / 복사 보존 / 변경 기록</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="d3-h20">9. 한눈에 정리</h2>
+<ul>
+<li>데이터는 <strong>정형·반정형·비정형·시계열</strong> 로 나뉘고, 종류가 저장소(관계형·문서형·객체·시계열)를 정한다.</li>
+<li>관계형 DB의 핵심 = <strong><span class="tt" data-tip="다른 표의 기본키를 가리켜 두 표를 연결하는 항목. '이 주문은 이 회원 것'처럼 관계를 이어준다.">외래키</span>(관계) · <span class="tt" data-tip="데이터를 중복 없이 규칙에 맞게 표로 쪼개 정리하는 것. 같은 정보를 여러 곳에 저장해 생기는 오류를 막는다.">정규화</span>(중복 제거) · <span class="tt" data-tip="데이터를 빨리 찾도록 미리 만들어 둔 색인. 책 뒤 찾아보기처럼, 원하는 데이터를 훨씬 빠르게 검색하게 한다.">인덱스</span>(속도) · <span class="tt" data-tip="여러 작업을 '하나의 묶음'으로 처리하는 단위. 계좌이체처럼 중간에 실패하면 통째로 되돌려, 어중간한 상태가 안 생기게 함.">트랜잭션</span>(<span class="tt" data-tip="거래(트랜잭션)가 안전하게 처리되도록 지켜야 할 4대 원칙. 돈 이체 등 실수가 치명적인 작업이 '전부 되거나, 전부 취소되게' 보장.">ACID</span>).</strong></li>
+<li>파일은 <strong>객체 스토리지 + <span class="tt" data-tip="콘텐츠를 세계 곳곳 서버에 복제해 사용자와 가까운 곳에서 전달하는 망. 이미지·영상 로딩을 빠르게 한다.">CDN</span></strong>, 권한은 <strong>코드가 아니라 DB(<span class="tt" data-tip="데이터베이스에서 '이 행은 이 사람만 볼 수 있다'를 행 단위로 강제하는 보안 규칙. 정책이 없으면 기본 차단.">RLS</span>)</strong> 에서 강제.</li>
+<li><strong><span class="tt" data-tip="백엔드를 직접 안 만들고 빌려 쓰는 서비스(Backend as a Service). 로그인·DB 등을 완제품처럼 가져다 쓴다.">BaaS</span>(<span class="tt" data-tip="PostgreSQL 기반으로 데이터베이스·인증·저장소를 한 번에 주는 개발 플랫폼. 백엔드를 빠르게 구축할 때 쓴다.">Supabase</span> 등)</strong> 로 빠르게 시작하고 커지면 자체 스택으로. 영구 보관은 <strong>DB 단계뿐.</strong></li>
+</ul>
+<h2 id="d3-h21">자가 진단</h2>
+<p>① 네 데이터 종류를 구분할 수 있나 ② 간단한 <span class="tt" data-tip="표들이 서로 어떻게 연결되는지 그림으로 나타낸 데이터베이스 설계도. 전체 데이터 구조를 한눈에 파악한다.">ERD</span>(엔티티·속성·관계)를 그릴 수 있나 ③ <span class="tt" data-tip="데이터를 중복 없이 규칙에 맞게 표로 쪼개 정리하는 것. 같은 정보를 여러 곳에 저장해 생기는 오류를 막는다.">정규화</span>의 의도를 설명할 수 있나 ④ <span class="tt" data-tip="데이터베이스에서 '이 행은 이 사람만 볼 수 있다'를 행 단위로 강제하는 보안 규칙. 정책이 없으면 기본 차단.">RLS</span>로 "누가 어떤 행을" 보는지 설계할 수 있나.</p>
+<hr/>
+<h3 id="d3-h22">다음 강 예고</h3>
+<p><strong>입문(기술 기초) 5강. 인프라·배포·보안 — 서비스가 실제로 도는 환경.</strong> 클라우드·<span class="tt" data-tip="앱과 필요한 실행 환경을 하나로 묶은 가벼운 상자. 어느 컴퓨터에 옮겨도 똑같이 작동하게 해줌.">컨테이너</span>·<span class="tt" data-tip="코드를 저장하면 자동으로 검사·배포까지 이어지는 개발 자동화 과정. 수동 작업을 줄여 실수와 시간을 아낌.">CI/CD</span>·모니터링과 보안(암호화·인증·비밀 관리)을 봅니다.</p>
+<hr/>
+<p><sub>※ 원문(선수 M4)을 구성·내용 보존 원칙으로 재구성하고 존댓말로 통일했으며, 다이어그램을 보강(4종류·<span class="tt" data-tip="표들이 서로 어떻게 연결되는지 그림으로 나타낸 데이터베이스 설계도. 전체 데이터 구조를 한눈에 파악한다.">ERD</span>·객체스토리지+<span class="tt" data-tip="콘텐츠를 세계 곳곳 서버에 복제해 사용자와 가까운 곳에서 전달하는 망. 이미지·영상 로딩을 빠르게 한다.">CDN</span>·<span class="tt" data-tip="데이터베이스에서 '이 행은 이 사람만 볼 수 있다'를 행 단위로 강제하는 보안 규칙. 정책이 없으면 기본 차단.">RLS</span>·데이터 일생)하고 깨진 이미지 참조를 교체했습니다. 도구·플랫폼은 시점에 따라 달라질 수 있습니다.</sub></p>
+</article>
+<article class="doc" data-doc="4" style="display:none">
+<div class="doc-head"><span class="crumb-part">1부 · 기술 기초</span><h1>입문(기술 기초) 5강. 인프라 · 배포 · 보안</h1></div>
+
+<blockquote>
+<p><strong>유형</strong>: 이론 (다이어그램 보강판) · <strong>읽는 데 약 30분</strong>
+<strong>선수</strong>: 2~4강. 러닝 예시 = 이벤트 RSVP(개요·아키텍처는 러닝 예시 참조).
+<strong>이 강을 마치면</strong>: ① 인프라 4계층(<span class="tt" data-tip="서버·저장공간 같은 IT 하드웨어를 빌려 쓰는 클라우드 서비스. 건물 뼈대만 임대받고 내부는 직접 꾸미는 방식.">IaaS</span>·<span class="tt" data-tip="앱 개발·실행에 필요한 환경까지 갖춰서 빌려주는 클라우드. 주방 설비 딸린 공간을 빌려 요리(개발)에만 집중.">PaaS</span>·<span class="tt" data-tip="설치 없이 인터넷으로 바로 쓰는 완성된 소프트웨어. 노션·구글독스처럼 로그인만 하면 되는 서비스.">SaaS</span>·<span class="tt" data-tip="백엔드를 직접 안 만들고 빌려 쓰는 서비스(Backend as a Service). 로그인·DB 등을 완제품처럼 가져다 쓴다.">BaaS</span>)을 구분한다 ② 도메인·<span class="tt" data-tip="사람이 쓰는 인터넷 주소를 컴퓨터 주소(숫자)로 바꿔주는 시스템. 인터넷 세상의 전화번호부.">DNS</span>·<span class="tt" data-tip="웹사이트 통신을 암호화해 안전하게 주고받는 방식. 주소에 자물쇠가 붙는, 도청 걱정 없는 연결.">HTTPS</span> 연결을 이해한다 ③ 흔한 보안 위협 5가지와 시크릿 관리를 안다 ④ 모니터링·개인정보 법규의 요점을 잡는다.</p>
+</blockquote>
+<hr/>
+<h2 id="d4-h1">0. 들어가며</h2>
+<p>웹 애플리케이션이 실제로 사람들의 손에 닿으려면 <strong>어디에, 어떻게, 누구의 접근을 허용할지</strong> 를 정해야 합니다. 이 강은 클라우드 인프라부터 도메인·<span class="tt" data-tip="웹사이트 통신을 암호화해 안전하게 주고받는 방식. 주소에 자물쇠가 붙는, 도청 걱정 없는 연결.">HTTPS</span>, 보안 위협, 시크릿 관리, 모니터링, 개인정보 법규까지 훑습니다. (이벤트 RSVP 시스템을 예로 의사결정을 따라갑니다.)</p>
+<hr/>
+<h2 id="d4-h2">1. 인프라 4계층 — IaaS · PaaS · SaaS · BaaS</h2>
+<p>클라우드 인프라는 <em>추상화 수준</em> 에 따라 네 계층으로 나뉩니다.</p>
+<p><img alt="인프라 4계층 — 무엇까지 내가 관리하나" loading="lazy" src="img/vf5_layers.svg"/></p>
+<table>
+<thead>
+<tr>
+<th>계층</th>
+<th>제공</th>
+<th>내 관리 책임</th>
+<th>사례</th>
+<th>시작 비용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><span class="tt" data-tip="서버·저장공간 같은 IT 하드웨어를 빌려 쓰는 클라우드 서비스. 건물 뼈대만 임대받고 내부는 직접 꾸미는 방식.">IaaS</span></strong></td>
+<td>CPU·메모리·스토리지·네트워크</td>
+<td>OS·DB·앱까지 거의 전부</td>
+<td><span class="tt" data-tip="아마존이 운영하는 세계 1위 클라우드 서비스. 서버·저장소 등 IT 자원을 필요한 만큼 빌려 쓰는 대표 플랫폼.">AWS</span> <span class="tt" data-tip="AWS에서 빌려 쓰는 가상 서버(컴퓨터). 원하는 사양으로 서버를 켜고 끄며 앱을 직접 운영할 때 사용.">EC2</span>·GCE</td>
+<td>높음</td>
+</tr>
+<tr>
+<td><strong><span class="tt" data-tip="앱 개발·실행에 필요한 환경까지 갖춰서 빌려주는 클라우드. 주방 설비 딸린 공간을 빌려 요리(개발)에만 집중.">PaaS</span></strong></td>
+<td>개발·배포 환경</td>
+<td>앱 코드만</td>
+<td><span class="tt" data-tip="웹사이트를 코드만 올리면 자동으로 배포·운영해주는 서비스. 서버 설정 없이 빠르게 웹을 띄울 때 씀.">Vercel</span>·<span class="tt" data-tip="정적 웹사이트를 손쉽게 배포·호스팅해주는 서비스. Vercel과 비슷하게 코드만 올리면 바로 웹 공개.">Netlify</span>·Heroku</td>
+<td>중간</td>
+</tr>
+<tr>
+<td><strong><span class="tt" data-tip="백엔드를 직접 안 만들고 빌려 쓰는 서비스(Backend as a Service). 로그인·DB 등을 완제품처럼 가져다 쓴다.">BaaS</span></strong></td>
+<td>DB·인증·스토리지</td>
+<td>프론트엔드만</td>
+<td><span class="tt" data-tip="PostgreSQL 기반으로 데이터베이스·인증·저장소를 한 번에 주는 개발 플랫폼. 백엔드를 빠르게 구축할 때 쓴다.">Supabase</span>·<span class="tt" data-tip="구글이 제공하는 개발 플랫폼. 데이터베이스·로그인·알림 등을 서버 없이 바로 붙여 앱을 빨리 만든다.">Firebase</span></td>
+<td>낮음</td>
+</tr>
+<tr>
+<td><strong><span class="tt" data-tip="설치 없이 인터넷으로 바로 쓰는 완성된 소프트웨어. 노션·구글독스처럼 로그인만 하면 되는 서비스.">SaaS</span></strong></td>
+<td>완성된 소프트웨어</td>
+<td>없음(사용자로 사용)</td>
+<td>Google Workspace·Slack</td>
+<td>낮음</td>
+</tr>
+</tbody>
+</table>
+<p>위로 갈수록 관리 책임과 자유도가 함께 줄어듭니다. <em>팀 1~3명·인프라 경험 없음</em> 이면 <span class="tt" data-tip="앱 개발·실행에 필요한 환경까지 갖춰서 빌려주는 클라우드. 주방 설비 딸린 공간을 빌려 요리(개발)에만 집중.">PaaS</span>(<span class="tt" data-tip="웹사이트를 코드만 올리면 자동으로 배포·운영해주는 서비스. 서버 설정 없이 빠르게 웹을 띄울 때 씀.">Vercel</span>)+<span class="tt" data-tip="백엔드를 직접 안 만들고 빌려 쓰는 서비스(Backend as a Service). 로그인·DB 등을 완제품처럼 가져다 쓴다.">BaaS</span>(<span class="tt" data-tip="PostgreSQL 기반으로 데이터베이스·인증·저장소를 한 번에 주는 개발 플랫폼. 백엔드를 빠르게 구축할 때 쓴다.">Supabase</span>), <em>DevOps 인력이 있는 10명+</em> 이면 <span class="tt" data-tip="서버·저장공간 같은 IT 하드웨어를 빌려 쓰는 클라우드 서비스. 건물 뼈대만 임대받고 내부는 직접 꾸미는 방식.">IaaS</span>(<span class="tt" data-tip="아마존이 운영하는 세계 1위 클라우드 서비스. 서버·저장소 등 IT 자원을 필요한 만큼 빌려 쓰는 대표 플랫폼.">AWS</span>/<span class="tt" data-tip="구글이 제공하는 클라우드 서비스. AWS와 비슷하며 데이터 분석·AI 기능에 강점이 있는 것으로 알려짐.">GCP</span>)+쿠버네티스가 무난합니다.</p>
+<blockquote>
+<p><strong>RSVP 예</strong>: 프론트엔드는 <strong><span class="tt" data-tip="앱 개발·실행에 필요한 환경까지 갖춰서 빌려주는 클라우드. 주방 설비 딸린 공간을 빌려 요리(개발)에만 집중.">PaaS</span>(<span class="tt" data-tip="웹사이트를 코드만 올리면 자동으로 배포·운영해주는 서비스. 서버 설정 없이 빠르게 웹을 띄울 때 씀.">Vercel</span>)</strong>, 데이터는 <strong><span class="tt" data-tip="백엔드를 직접 안 만들고 빌려 쓰는 서비스(Backend as a Service). 로그인·DB 등을 완제품처럼 가져다 쓴다.">BaaS</span>(<span class="tt" data-tip="PostgreSQL 기반으로 데이터베이스·인증·저장소를 한 번에 주는 개발 플랫폼. 백엔드를 빠르게 구축할 때 쓴다.">Supabase</span>)</strong> — 별도 인프라 팀이 필요 없습니다.</p>
+</blockquote>
+<hr/>
+<h2 id="d4-h3">2. 클라우드 사업자 — AWS · GCP · Azure · Cloudflare</h2>
+<table>
+<thead>
+<tr>
+<th>사업자</th>
+<th>강점</th>
+<th>약점</th>
+<th>적합</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><span class="tt" data-tip="아마존이 운영하는 세계 1위 클라우드 서비스. 서버·저장소 등 IT 자원을 필요한 만큼 빌려 쓰는 대표 플랫폼.">AWS</span></strong></td>
+<td>서비스 수·성숙도·커뮤니티 최고</td>
+<td>가격 복잡, 한국 리전 비쌈</td>
+<td>대규모·엔터프라이즈</td>
+</tr>
+<tr>
+<td><strong><span class="tt" data-tip="구글이 제공하는 클라우드 서비스. AWS와 비슷하며 데이터 분석·AI 기능에 강점이 있는 것으로 알려짐.">GCP</span></strong></td>
+<td>AI/ML·가격 투명·<span class="tt" data-tip="구글이 제공하는 개발 플랫폼. 데이터베이스·로그인·알림 등을 서버 없이 바로 붙여 앱을 빨리 만든다.">Firebase</span></td>
+<td>서비스 수·커뮤니티 상대적 작음</td>
+<td>데이터 분석·스타트업</td>
+</tr>
+<tr>
+<td><strong><span class="tt" data-tip="마이크로소프트의 클라우드 서비스. 윈도우·오피스 등 MS 제품과 잘 연동되어 기업에서 많이 씀.">Azure</span></strong></td>
+<td>Windows/Office 생태계·기업 지원</td>
+<td>학습곡선·가격</td>
+<td>MS 도구 쓰는 기업</td>
+</tr>
+<tr>
+<td><strong><span class="tt" data-tip="웹사이트를 빠르고 안전하게 해주는 서비스. 전 세계에 콘텐츠를 미리 배치하고 해킹·공격도 막아줌.">Cloudflare</span></strong></td>
+<td><span class="tt" data-tip="콘텐츠를 세계 곳곳 서버에 복제해 사용자와 가까운 곳에서 전달하는 망. 이미지·영상 로딩을 빠르게 한다.">CDN</span>·<span class="tt" data-tip="사람이 쓰는 인터넷 주소를 컴퓨터 주소(숫자)로 바꿔주는 시스템. 인터넷 세상의 전화번호부.">DNS</span>·<span class="tt" data-tip="해킹 공격을 걸러내는 웹 방화벽. 나쁜 요청을 미리 막아 웹사이트를 보호하는 보안 검문소.">WAF</span> 통합·저렴·성능</td>
+<td>컴퓨팅만으론 부족</td>
+<td>보안·성능 중심</td>
+</tr>
+</tbody>
+</table>
+<p>의사결정은 대략 <em>기술 스택</em>(<span class="tt" data-tip="리액트에 서버 기능과 검색 최적화를 더한 프레임워크. 실제 서비스를 만들 때 표준처럼 쓰임.">Next.js</span>→<span class="tt" data-tip="웹사이트를 코드만 올리면 자동으로 배포·운영해주는 서비스. 서버 설정 없이 빠르게 웹을 띄울 때 씀.">Vercel</span>, Python→<span class="tt" data-tip="구글이 제공하는 클라우드 서비스. AWS와 비슷하며 데이터 분석·AI 기능에 강점이 있는 것으로 알려짐.">GCP</span>), <em>예산</em>(월 $100 이하→<span class="tt" data-tip="웹사이트를 코드만 올리면 자동으로 배포·운영해주는 서비스. 서버 설정 없이 빠르게 웹을 띄울 때 씀.">Vercel</span>+<span class="tt" data-tip="PostgreSQL 기반으로 데이터베이스·인증·저장소를 한 번에 주는 개발 플랫폼. 백엔드를 빠르게 구축할 때 쓴다.">Supabase</span>, $1,000+→<span class="tt" data-tip="아마존이 운영하는 세계 1위 클라우드 서비스. 서버·저장소 등 IT 자원을 필요한 만큼 빌려 쓰는 대표 플랫폼.">AWS</span>), <em>규정</em>(금융·의료→<span class="tt" data-tip="아마존이 운영하는 세계 1위 클라우드 서비스. 서버·저장소 등 IT 자원을 필요한 만큼 빌려 쓰는 대표 플랫폼.">AWS</span>/<span class="tt" data-tip="마이크로소프트의 클라우드 서비스. 윈도우·오피스 등 MS 제품과 잘 연동되어 기업에서 많이 씀.">Azure</span> 한국 리전)으로 갈립니다. (한국 리전은 <span class="tt" data-tip="아마존이 운영하는 세계 1위 클라우드 서비스. 서버·저장소 등 IT 자원을 필요한 만큼 빌려 쓰는 대표 플랫폼.">AWS</span>·<span class="tt" data-tip="구글이 제공하는 클라우드 서비스. AWS와 비슷하며 데이터 분석·AI 기능에 강점이 있는 것으로 알려짐.">GCP</span>·<span class="tt" data-tip="마이크로소프트의 클라우드 서비스. 윈도우·오피스 등 MS 제품과 잘 연동되어 기업에서 많이 씀.">Azure</span> 모두 서울에 있습니다.)</p>
+<hr/>
+<h2 id="d4-h4">3. 풀스택 PaaS — Vercel · Netlify · Render · Railway</h2>
+<p>초기 팀은 <span class="tt" data-tip="파일 변경 이력을 저장·되돌리는 '버전 관리 도구'. 언제든 이전 상태로 복구 가능한 무한 되돌리기 장부.">Git</span> 저장소와 연동해 자동 배포(<span class="tt" data-tip="코드를 저장하면 자동으로 검사·배포까지 이어지는 개발 자동화 과정. 수동 작업을 줄여 실수와 시간을 아낌.">CI/CD</span>)되는 풀스택 <span class="tt" data-tip="앱 개발·실행에 필요한 환경까지 갖춰서 빌려주는 클라우드. 주방 설비 딸린 공간을 빌려 요리(개발)에만 집중.">PaaS</span>가 편합니다.</p>
+<table>
+<thead>
+<tr>
+<th><span class="tt" data-tip="앱 개발·실행에 필요한 환경까지 갖춰서 빌려주는 클라우드. 주방 설비 딸린 공간을 빌려 요리(개발)에만 집중.">PaaS</span></th>
+<th>강점</th>
+<th>약점</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><span class="tt" data-tip="웹사이트를 코드만 올리면 자동으로 배포·운영해주는 서비스. 서버 설정 없이 빠르게 웹을 띄울 때 씀.">Vercel</span></strong></td>
+<td><span class="tt" data-tip="리액트에 서버 기능과 검색 최적화를 더한 프레임워크. 실제 서비스를 만들 때 표준처럼 쓰임.">Next.js</span> 최적화·Edge·빠름</td>
+<td>백엔드 복잡 시 비용↑</td>
+</tr>
+<tr>
+<td><strong><span class="tt" data-tip="정적 웹사이트를 손쉽게 배포·호스팅해주는 서비스. Vercel과 비슷하게 코드만 올리면 바로 웹 공개.">Netlify</span></strong></td>
+<td>정적 사이트·폼 처리 내장</td>
+<td>백엔드 제약</td>
+</tr>
+<tr>
+<td><strong><span class="tt" data-tip="웹앱·서버·DB를 간편하게 올려 운영하는 클라우드 서비스. 복잡한 설정 없이 서비스를 배포할 때 사용.">Render</span></strong></td>
+<td>DB·백엔드 풀스택·가격 명확</td>
+<td>무료 tier 콜드 스타트</td>
+</tr>
+<tr>
+<td><strong><span class="tt" data-tip="앱과 데이터베이스를 클릭 몇 번으로 배포하는 클라우드 서비스. 초보 개발자도 쉽게 서버를 띄울 수 있음.">Railway</span></strong></td>
+<td>저렴·모든 서비스 포함·DX 우수</td>
+<td>한국 리전 없음</td>
+</tr>
+</tbody>
+</table>
+<p><em>선택</em>: 정적=<span class="tt" data-tip="정적 웹사이트를 손쉽게 배포·호스팅해주는 서비스. Vercel과 비슷하게 코드만 올리면 바로 웹 공개.">Netlify</span>, <span class="tt" data-tip="리액트에 서버 기능과 검색 최적화를 더한 프레임워크. 실제 서비스를 만들 때 표준처럼 쓰임.">Next.js</span>=<span class="tt" data-tip="웹사이트를 코드만 올리면 자동으로 배포·운영해주는 서비스. 서버 설정 없이 빠르게 웹을 띄울 때 씀.">Vercel</span>, 백엔드 포함 풀스택=<span class="tt" data-tip="웹앱·서버·DB를 간편하게 올려 운영하는 클라우드 서비스. 복잡한 설정 없이 서비스를 배포할 때 사용.">Render</span>/<span class="tt" data-tip="앱과 데이터베이스를 클릭 몇 번으로 배포하는 클라우드 서비스. 초보 개발자도 쉽게 서버를 띄울 수 있음.">Railway</span> 또는 <span class="tt" data-tip="PostgreSQL 기반으로 데이터베이스·인증·저장소를 한 번에 주는 개발 플랫폼. 백엔드를 빠르게 구축할 때 쓴다.">Supabase</span>+Vercel.</p>
+<blockquote>
+<p><strong>RSVP 예</strong>: 프론트=<span class="tt" data-tip="웹사이트를 코드만 올리면 자동으로 배포·운영해주는 서비스. 서버 설정 없이 빠르게 웹을 띄울 때 씀.">Vercel</span>, 백엔드=<span class="tt" data-tip="웹앱·서버·DB를 간편하게 올려 운영하는 클라우드 서비스. 복잡한 설정 없이 서비스를 배포할 때 사용.">Render</span>(또는 <span class="tt" data-tip="웹사이트를 코드만 올리면 자동으로 배포·운영해주는 서비스. 서버 설정 없이 빠르게 웹을 띄울 때 씀.">Vercel</span> Functions), DB=Supabase. 트래픽이 적을 때 월 $50~100 수준.</p>
+</blockquote>
+<hr/>
+<h2 id="d4-h5">4. 도메인과 DNS</h2>
+<p><img alt="도메인과 DNS — 이름이 서버로 연결되는 법" loading="lazy" src="img/vf5_dns.svg"/></p>
+<p><strong>도메인</strong> 은 '내 집 주소'입니다. 사용자가 <code>rsvp.example.com</code> 을 입력하면, <strong><span class="tt" data-tip="사람이 쓰는 인터넷 주소를 컴퓨터 주소(숫자)로 바꿔주는 시스템. 인터넷 세상의 전화번호부.">DNS</span></strong>(전화번호부)가 이름을 IP 주소로 바꿔 서버로 연결합니다. <span class="tt" data-tip="사람이 쓰는 인터넷 주소를 컴퓨터 주소(숫자)로 바꿔주는 시스템. 인터넷 세상의 전화번호부.">DNS</span> 레코드는 다섯 가지가 핵심입니다.</p>
+<table>
+<thead>
+<tr>
+<th>레코드</th>
+<th>용도</th>
+<th>예</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A / AAAA</strong></td>
+<td>IPv4 / IPv6 주소 매핑</td>
+<td><code>example.com</code> → <code>192.0.2.1</code></td>
+</tr>
+<tr>
+<td><strong><span class="tt" data-tip="한 도메인 주소를 다른 주소로 연결하는 DNS 별명 설정. '이 이름은 저 이름과 같다'고 알려주는 방식.">CNAME</span></strong></td>
+<td>별칭(다른 도메인 가리킴)</td>
+<td><code>www</code> → <code>example.com</code></td>
+</tr>
+<tr>
+<td><strong>MX</strong></td>
+<td>메일 서버</td>
+<td><code>@</code> → Google Workspace</td>
+</tr>
+<tr>
+<td><strong>TXT</strong></td>
+<td>검증(SPF·DKIM 등)</td>
+<td><code>v=spf1 …</code></td>
+</tr>
+</tbody>
+</table>
+<p>서브도메인(<code>api.rsvp.example.com</code>)은 각각 다른 서버로 보낼 수 있고, <strong>Apex</strong>(<code>example.com</code> 자체)는 <span class="tt" data-tip="한 도메인 주소를 다른 주소로 연결하는 DNS 별명 설정. '이 이름은 저 이름과 같다'고 알려주는 방식.">CNAME</span>을 쓸 수 없어 <span class="tt" data-tip="도메인 주소를 실제 서버의 IP 주소(숫자)로 연결하는 DNS 설정. 이름표에 진짜 위치를 적어두는 것.">A 레코드</span>를 씁니다. 도메인은 국내 대상이면 <code>.kr</code>(KISA), 글로벌이면 <code>.com</code>(<span class="tt" data-tip="웹사이트를 빠르고 안전하게 해주는 서비스. 전 세계에 콘텐츠를 미리 배치하고 해킹·공격도 막아줌.">Cloudflare</span>·Namecheap 등)을 씁니다.</p>
+<p>실제 도메인 관리 화면에 등록하는 레코드는 이런 표 한 장입니다(RSVP 배포 예). "이름 → 종류 → 값"만 채우면 됩니다.</p>
+<pre><code class="language-dns">; 타입    이름              값(가리키는 곳)
+A        rsvp             76.76.21.21        ; rsvp.ourcompany.com → 호스팅 서버 IP
+CNAME    www              rsvp.ourcompany.com; www로 와도 rsvp로 연결
+MX       @                aspmx.google.com   ; 메일은 Google Workspace로
+TXT      @                "v=spf1 include:_spf.google.com ~all"  ; 메일 위조 방지(SPF)
+</code></pre>
+<hr/>
+<h2 id="d4-h6">5. HTTPS · SSL/TLS</h2>
+<p><img alt="HTTP vs HTTPS — 자물쇠는 무엇을 잠그나" loading="lazy" src="img/vf5_https.svg"/></p>
+<p>HTTP는 <em>평문</em> 이라 공용 와이파이 등에서 도청되면 비밀번호가 노출됩니다. <strong><span class="tt" data-tip="웹사이트 통신을 암호화해 안전하게 주고받는 방식. 주소에 자물쇠가 붙는, 도청 걱정 없는 연결.">HTTPS</span></strong> 는 전송 구간을 암호화하고, <strong><span class="tt" data-tip="웹 통신을 암호화해 정보를 보호하는 보안 기술. HTTPS를 가능하게 하는 자물쇠 역할(현재는 TLS로 발전).">SSL</span>/<span class="tt" data-tip="인터넷 통신을 암호화하는 최신 보안 기술. SSL의 후속으로, 데이터를 안전하게 주고받게 해줌.">TLS</span> 인증서</strong> 로 "이 사이트가 진짜 example.com"임을 증명합니다(검색 순위에도 우대).</p>
+<p>인증서는 <em>요청(<span class="tt" data-tip="서버는 빈 껍데기만 주고 브라우저가 화면을 그려내는 방식. 앱처럼 동적이지만 첫 로딩이 느릴 수 있음.">CSR</span>) → 인증기관(CA, 예: <span class="tt" data-tip="HTTPS에 필요한 보안 인증서를 무료로 발급해주는 서비스. 돈 안 들이고 웹사이트에 자물쇠를 달 수 있음.">Let's Encrypt</span>)이 도메인 소유 검증 → 발급 → 설치 → 갱신</em> 을 거칩니다. 무료 CA는 90일 주기라 <strong>자동 갱신</strong> 이 필수인데(업계 갱신 주기가 점점 짧아지는 추세), <strong><span class="tt" data-tip="앱 개발·실행에 필요한 환경까지 갖춰서 빌려주는 클라우드. 주방 설비 딸린 공간을 빌려 요리(개발)에만 집중.">PaaS</span>(<span class="tt" data-tip="웹사이트를 코드만 올리면 자동으로 배포·운영해주는 서비스. 서버 설정 없이 빠르게 웹을 띄울 때 씀.">Vercel</span>·<span class="tt" data-tip="정적 웹사이트를 손쉽게 배포·호스팅해주는 서비스. Vercel과 비슷하게 코드만 올리면 바로 웹 공개.">Netlify</span>)</strong> 는 발급·갱신을 자동 처리해 신경 쓸 필요가 없습니다.</p>
+<p><img alt="HTTPS 연결 — 인증서로 사이트 신원을 확인한 뒤 통신을 암호화(TLS)" loading="lazy" src="img/gf_tls.svg"/></p>
+<blockquote>
+<p>⚠️ 흔한 실수 — ① 갱신 실패로 사이트가 갑자기 안 열림 ② 와일드카드(<code>*.example.com</code>)가 <code>example.com</code> 자체는 커버 못 함 ③ 인증서-도메인 불일치(<code>www</code> 접속 시 경고) ④ 혼합 콘텐츠(<span class="tt" data-tip="웹사이트 통신을 암호화해 안전하게 주고받는 방식. 주소에 자물쇠가 붙는, 도청 걱정 없는 연결.">HTTPS</span> 페이지에서 HTTP 리소스 로드) ⑤ 자체 서명 인증서를 프로덕션에 사용.</p>
+</blockquote>
+<hr/>
+<h2 id="d4-h7">6. 흔한 보안 위협 5</h2>
+<p><img alt="흔한 보안 위협 5 — 무엇을 노리고 어떻게 막나" loading="lazy" src="img/vf5_threats.svg"/></p>
+<ul>
+<li><strong><span class="tt" data-tip="입력창에 악성 코드를 넣어 데이터베이스를 조작·탈취하는 공격. 검색창에 명령어를 몰래 심는 해킹 수법.">SQL Injection</span></strong> — 입력에 SQL을 끼워 DB를 조작(예: <code>admin' --</code> 로 비밀번호 확인 무력화). <em>막기</em>: <strong>매개변수화 쿼리</strong>(<code>WHERE email = ?</code>)·ORM.</li>
+<li><strong><span class="tt" data-tip="웹페이지에 악성 스크립트를 심어 방문자를 노리는 공격. 댓글 등에 나쁜 코드를 숨겨 정보를 빼가는 수법.">XSS</span>(Cross-Site Scripting)</strong> — 댓글 등에 악성 스크립트를 주입해 다른 사용자의 <span class="tt" data-tip="브라우저에 저장되는 작은 메모. 로그인 정보나 설정을 기억해, 다시 방문했을 때 나를 알아보게 해주는 '이름표 쪽지'.">쿠키</span>·<span class="tt" data-tip="로그인한 사용자를 서버가 잠시 기억해두는 '접속 상태'. 로그인 후 페이지를 옮겨도 계속 나로 인식되게 해주는 임시 기억표.">세션</span>을 탈취. <em>막기</em>: <strong><span class="tt" data-tip="웹페이지의 뼈대를 만드는 언어. 제목, 문단, 버튼 같은 요소가 '무엇'인지 정해줌.">HTML</span> 이스케이프</strong>·<strong>CSP</strong>(스크립트 출처 제한).</li>
+<li><strong><span class="tt" data-tip="로그인된 사용자를 속여 원치 않는 요청을 대신 실행시키는 공격. 몰래 클릭을 유도해 계정을 악용하는 수법.">CSRF</span>(Cross-Site Request Forgery)</strong> — 사용자가 모르게 그의 계정으로 요청(숨겨진 폼 등). <em>막기</em>: <strong><span class="tt" data-tip="로그인된 사용자를 속여 원치 않는 요청을 대신 실행시키는 공격. 몰래 클릭을 유도해 계정을 악용하는 수법.">CSRF</span> 토큰</strong>·<strong>SameSite <span class="tt" data-tip="브라우저에 저장되는 작은 메모. 로그인 정보나 설정을 기억해, 다시 방문했을 때 나를 알아보게 해주는 '이름표 쪽지'.">쿠키</span></strong>.</li>
+<li><strong>계정 탈취(Credential Stuffing)</strong> — 유출된 비번 목록으로 무작위 로그인. <em>막기</em>: <strong>MFA</strong>·시도 제한·강한 비밀번호.</li>
+<li><strong>민감정보 노출</strong> — <code>.env</code>·API 키를 <span class="tt" data-tip="파일 변경 이력을 저장·되돌리는 '버전 관리 도구'. 언제든 이전 상태로 복구 가능한 무한 되돌리기 장부.">Git</span>에 커밋해 공개(도용·과금 폭탄). <em>막기</em>: <code>.gitignore</code>·비밀 스캔·<strong>즉시 키 회전</strong>.</li>
+</ul>
+<p>illustration(개념): 취약한 코드는 사용자 입력을 문자열로 이어 붙여 쿼리를 만들고, 안전한 코드는 값을 <em>매개변수</em> 로 분리해 넘깁니다.</p>
+<pre><code class="language-text">취약:  SELECT * FROM users WHERE email = '&lt;입력 그대로&gt;'
+안전:  SELECT * FROM users WHERE email = ?     (값은 따로 전달)
+</code></pre>
+<p><img alt="SQL Injection — 입력을 이어 붙이면 뚫리고, 값으로 분리하면 안전" loading="lazy" src="img/gf_sqli.svg"/></p>
+<hr/>
+<h2 id="d4-h8">7. 환경 변수 · 시크릿 관리</h2>
+<p><img alt="비밀(API 키)은 어디에 두나 — 위험도 순" loading="lazy" src="img/vf5_secrets.svg"/></p>
+<p><strong><span class="tt" data-tip="비밀번호·설정값 등을 코드 밖에 따로 저장해 두는 값. 민감 정보를 코드에 안 적고 안전하게 관리하는 방법.">환경 변수</span></strong> 는 코드 밖에서 값을 설정하는 방법으로, 개발·테스트·프로덕션마다 다르게 줄 수 있습니다(<code>DATABASE_URL</code>·<code>API_KEY</code> 등). 비밀은 <em>코드에서 멀수록</em> 안전합니다.</p>
+<table>
+<thead>
+<tr>
+<th>보관 위치</th>
+<th>위험도</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>코드 안</td>
+<td>극위험(커밋되면 공개)</td>
+</tr>
+<tr>
+<td><code>.env</code>(로컬)</td>
+<td>위험(<code>.gitignore</code> 필수)</td>
+</tr>
+<tr>
+<td><span class="tt" data-tip="비밀번호·설정값 등을 코드 밖에 따로 저장해 두는 값. 민감 정보를 코드에 안 적고 안전하게 관리하는 방법.">환경 변수</span>(배포 패널)</td>
+<td>낮음</td>
+</tr>
+<tr>
+<td>Secret Manager(암호화·회전·감사)</td>
+<td>최저</td>
+</tr>
+</tbody>
+</table>
+<p><em>권장</em>: 개발 = <code>.env</code>(+<code>.gitignore</code>), 배포 = 플랫폼 <span class="tt" data-tip="비밀번호·설정값 등을 코드 밖에 따로 저장해 두는 값. 민감 정보를 코드에 안 적고 안전하게 관리하는 방법.">환경 변수</span> 패널, 엔터프라이즈 = <span class="tt" data-tip="아마존이 운영하는 세계 1위 클라우드 서비스. 서버·저장소 등 IT 자원을 필요한 만큼 빌려 쓰는 대표 플랫폼.">AWS</span> <span class="tt" data-tip="비밀번호·API 키 같은 민감 정보를 안전하게 저장·관리하는 AWS 서비스. 중요 정보를 코드에 노출하지 않게 해줌.">Secrets Manager</span>·<span class="tt" data-tip="PostgreSQL 기반으로 데이터베이스·인증·저장소를 한 번에 주는 개발 플랫폼. 백엔드를 빠르게 구축할 때 쓴다.">Supabase</span> Vault. 키는 주기적으로 <strong>회전</strong>(외부 API 키·<span class="tt" data-tip="아마존이 운영하는 세계 1위 클라우드 서비스. 서버·저장소 등 IT 자원을 필요한 만큼 빌려 쓰는 대표 플랫폼.">AWS</span> 키 90일, DB 비번 180일 등)합니다.</p>
+<p>실제 파일은 아래처럼 생겼습니다. <code>.env</code>에 값을 적고, <code>.gitignore</code>에 <code>.env</code>를 넣어 <strong><span class="tt" data-tip="파일 변경 이력을 저장·되돌리는 '버전 관리 도구'. 언제든 이전 상태로 복구 가능한 무한 되돌리기 장부.">Git</span>에 올라가지 않게</strong> 막는 것이 핵심입니다.</p>
+<pre><code class="language-bash"># .env  (로컬 개발용 — 절대 Git에 커밋하지 않음)
+DATABASE_URL=postgresql://user:pass@localhost:5432/rsvp
+SUPABASE_URL=https://xxxx.supabase.co
+SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIs...
+JWT_SECRET=길고-무작위인-비밀문자열-절대-공유금지
+RESEND_API_KEY=re_xxxxxxxxxxxx
+</code></pre>
+<pre><code class="language-bash"># .gitignore  (이 목록의 파일은 Git이 무시 → 유출 방지)
+.env
+.env.local
+node_modules/
+</code></pre>
+<p>코드에서는 값을 직접 쓰지 않고 <code>process.env.JWT_SECRET</code>(Node) 또는 <code>os.environ["JWT_SECRET"]</code>(파이썬)처럼 <strong>이름으로</strong> 불러옵니다. 배포할 때는 같은 이름을 <span class="tt" data-tip="웹사이트를 코드만 올리면 자동으로 배포·운영해주는 서비스. 서버 설정 없이 빠르게 웹을 띄울 때 씀.">Vercel</span>·<span class="tt" data-tip="PostgreSQL 기반으로 데이터베이스·인증·저장소를 한 번에 주는 개발 플랫폼. 백엔드를 빠르게 구축할 때 쓴다.">Supabase</span>·<span class="tt" data-tip="아마존이 운영하는 세계 1위 클라우드 서비스. 서버·저장소 등 IT 자원을 필요한 만큼 빌려 쓰는 대표 플랫폼.">AWS</span>의 <span class="tt" data-tip="비밀번호·설정값 등을 코드 밖에 따로 저장해 두는 값. 민감 정보를 코드에 안 적고 안전하게 관리하는 방법.">환경 변수</span> 패널에 등록하면 됩니다.</p>
+<blockquote>
+<p>⚠️ <strong><code>.env</code>를 실수로 커밋했다면</strong> — ① 해당 키를 <em>즉시 무효화(회전)</em> ② <span class="tt" data-tip="파일 변경 이력을 저장·되돌리는 '버전 관리 도구'. 언제든 이전 상태로 복구 가능한 무한 되돌리기 장부.">Git</span> 히스토리 정리(BFG 등) ③ 새 저장소 이전. <em>한번 노출된 키는 이미 유출된 것</em> 으로 간주해야 합니다.</p>
+</blockquote>
+<hr/>
+<h2 id="d4-h9">8. 모니터링 · 로깅 · 알림</h2>
+<p>무엇을 볼지 정하는 것이 먼저입니다.</p>
+<table>
+<thead>
+<tr>
+<th>항목</th>
+<th>정상 / 주의 / 심각(예)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>트래픽(req/s)</td>
+<td>&lt;100 / 100~500 / &gt;500</td>
+</tr>
+<tr>
+<td>에러율(5xx)</td>
+<td>&lt;1% / 1~5% / &gt;5%</td>
+</tr>
+<tr>
+<td>응답시간</td>
+<td>&lt;200ms / 200~1000ms / &gt;1000ms</td>
+</tr>
+<tr>
+<td>CPU·메모리</td>
+<td>&lt;70% / 70~90% / &gt;90%</td>
+</tr>
+<tr>
+<td>DB 쿼리 시간</td>
+<td>&lt;50ms / 50~200ms / &gt;200ms</td>
+</tr>
+<tr>
+<td>비즈니스 지표</td>
+<td>신청 수·가입 수 추이</td>
+</tr>
+</tbody>
+</table>
+<p>도구는 <strong><span class="tt" data-tip="앱에서 발생한 오류를 자동으로 잡아 알려주는 서비스. 문제가 어디서 났는지 빠르게 찾게 도와줌.">Sentry</span></strong>(에러 추적)·<strong><span class="tt" data-tip="서버·앱의 상태와 성능을 한눈에 보여주는 모니터링 서비스. 시스템 전체를 한 대시보드로 감시할 때 씀.">Datadog</span></strong>(통합 모니터링)·<strong>Grafana</strong>(오픈소스 시각화)·<strong><span class="tt" data-tip="웹사이트를 코드만 올리면 자동으로 배포·운영해주는 서비스. 서버 설정 없이 빠르게 웹을 띄울 때 씀.">Vercel</span> Analytics</strong> 등이 있고, 알림은 <strong>Slack</strong>(즉시)·이메일(기록)·SMS(야간 긴급)·<strong>PagerDuty</strong>(온콜 자동 호출)로 보냅니다.</p>
+<p><strong>장애 대응(개념)</strong> — <em>탐지(모니터링) → 격리(문제 부분 오프라인) → 복구(백업에서 복원) → 회고(원인 분석) → 재발 방지(정책·교육)</em> 의 순서로 다룹니다. 관련 지표로 <strong><span class="tt" data-tip="장애 발생 후 서비스를 다시 정상화하기까지 목표 복구 시간. '몇 시간 안에 복구하겠다'는 약속 기준.">RTO</span></strong>(복구 목표 시간)·<strong><span class="tt" data-tip="장애 시 감수할 수 있는 데이터 손실의 최대 범위(시간). '최근 몇 분/시간치 데이터까진 잃어도 된다'는 기준.">RPO</span></strong>(허용 데이터 손실)·<strong><span class="tt" data-tip="서비스 제공자가 보장하는 품질·가동률에 대한 약속. '99.9% 이상 정상 운영' 같은 서비스 계약 기준.">SLA</span></strong>(가용성 약정, 예 99.9%=월 43분 장애 용인)를 미리 정해 둡니다.</p>
+<p><img alt="장애 대응 순서 — 탐지 → 격리 → 복구 → 회고 → 재발 방지" loading="lazy" src="img/gf_incident.svg"/></p>
+<hr/>
+<h2 id="d4-h10">9. 개인정보 · 법규</h2>
+<ul>
+<li><strong>개인정보보호법(PIPA, 한국)</strong> — 수집(목적 명시·동의)·이용(목적 내)·보관(암호화·접근 제한)·파기(목적 완료 후 삭제)를 규정합니다. 위반 시 형사·행정 처벌이 있고, 유출 시 신고 의무가 있습니다.</li>
+<li><strong>GDPR(EU)</strong> — 한국 회사도 <em>EU 사용자를 대상으로 하면</em> 적용됩니다. 접근·정정·삭제(잊힐 권리)·제한·이동 권리를 보장해야 하며, 위반 시 과징금이 매우 무겁습니다(연 매출 4% 또는 2,000만 유로 중 큰 금액). 미국 클라우드로 EU 데이터를 옮기면 <em>데이터 이전 근거</em>(현행 EU-US Data Privacy Framework 등)를 확인해야 합니다.</li>
+<li><strong>KISA 권고(한국)</strong> — 개인정보 암호화(AES-256 이상)·접근 제어(필요한 사람만)·감사 로그·침해 시 신고.</li>
+</ul>
+<blockquote>
+<p><strong>RSVP 예 동의 문구</strong> — "이메일 수집·이용 동의 / 휴대폰은 SMS 알림용으로만 / 개인정보는 이벤트 종료 후 30일 내 삭제" 처럼 <em>수집 목적·이용 범위·보관 기간</em> 을 명확히 밝힙니다.</p>
+</blockquote>
+<hr/>
+<h2 id="d4-h11">10. RSVP 인프라 구성 (개념 요약)</h2>
+<p>앞의 결정을 이벤트 RSVP에 적용하면 다음과 같습니다(개념 — 구체 명령·코드는 생략).</p>
+<table>
+<thead>
+<tr>
+<th>요소</th>
+<th>선택</th>
+<th>비고</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>도메인</td>
+<td><code>rsvp.ourcompany.com</code> (<span class="tt" data-tip="도메인 주소를 실제 서버의 IP 주소(숫자)로 연결하는 DNS 설정. 이름표에 진짜 위치를 적어두는 것.">A 레코드</span> → 호스팅 IP)</td>
+<td>국내면 <code>.kr</code>, 글로벌이면 <code>.com</code></td>
+</tr>
+<tr>
+<td>배포</td>
+<td>프론트=<span class="tt" data-tip="웹사이트를 코드만 올리면 자동으로 배포·운영해주는 서비스. 서버 설정 없이 빠르게 웹을 띄울 때 씀.">Vercel</span> · DB=<span class="tt" data-tip="PostgreSQL 기반으로 데이터베이스·인증·저장소를 한 번에 주는 개발 플랫폼. 백엔드를 빠르게 구축할 때 쓴다.">Supabase</span></td>
+<td>자동 <span class="tt" data-tip="코드를 저장하면 자동으로 검사·배포까지 이어지는 개발 자동화 과정. 수동 작업을 줄여 실수와 시간을 아낌.">CI/CD</span></td>
+</tr>
+<tr>
+<td><span class="tt" data-tip="웹사이트 통신을 암호화해 안전하게 주고받는 방식. 주소에 자물쇠가 붙는, 도청 걱정 없는 연결.">HTTPS</span></td>
+<td><span class="tt" data-tip="HTTPS에 필요한 보안 인증서를 무료로 발급해주는 서비스. 돈 안 들이고 웹사이트에 자물쇠를 달 수 있음.">Let's Encrypt</span> (<span class="tt" data-tip="앱 개발·실행에 필요한 환경까지 갖춰서 빌려주는 클라우드. 주방 설비 딸린 공간을 빌려 요리(개발)에만 집중.">PaaS</span> 자동)</td>
+<td>갱신 자동</td>
+</tr>
+<tr>
+<td>시크릿</td>
+<td>배포 플랫폼 <span class="tt" data-tip="비밀번호·설정값 등을 코드 밖에 따로 저장해 두는 값. 민감 정보를 코드에 안 적고 안전하게 관리하는 방법.">환경 변수</span> 패널</td>
+<td>코드/<span class="tt" data-tip="파일 변경 이력을 저장·되돌리는 '버전 관리 도구'. 언제든 이전 상태로 복구 가능한 무한 되돌리기 장부.">Git</span>에 두지 않음</td>
+</tr>
+<tr>
+<td>보안</td>
+<td>매개변수화 쿼리·이스케이프·SameSite·MFA</td>
+<td>다층 방어</td>
+</tr>
+<tr>
+<td>모니터링</td>
+<td><span class="tt" data-tip="앱에서 발생한 오류를 자동으로 잡아 알려주는 서비스. 문제가 어디서 났는지 빠르게 찾게 도와줌.">Sentry</span> + 분석 도구 → Slack 알림</td>
+<td>초기부터 도입</td>
+</tr>
+<tr>
+<td>개인정보</td>
+<td>동의 체크 + 처리방침 페이지</td>
+<td>수집·목적·보관기간 명시</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="d4-h12">11. AWS 주요 서비스 둘러보기</h2>
+<p>이 교재의 예시는 배포를 <span class="tt" data-tip="웹사이트를 코드만 올리면 자동으로 배포·운영해주는 서비스. 서버 설정 없이 빠르게 웹을 띄울 때 씀.">Vercel</span> + <span class="tt" data-tip="PostgreSQL 기반으로 데이터베이스·인증·저장소를 한 번에 주는 개발 플랫폼. 백엔드를 빠르게 구축할 때 쓴다.">Supabase</span>로 잡았지만, 국내외 많은 서비스가 <strong><span class="tt" data-tip="아마존이 운영하는 세계 1위 클라우드 서비스. 서버·저장소 등 IT 자원을 필요한 만큼 빌려 쓰는 대표 플랫폼.">AWS</span>(Amazon Web Services)</strong> 위에서 돌아갑니다. <span class="tt" data-tip="아마존이 운영하는 세계 1위 클라우드 서비스. 서버·저장소 등 IT 자원을 필요한 만큼 빌려 쓰는 대표 플랫폼.">AWS</span>는 200개가 넘는 서비스를 제공하는데, 이름이 워낙 많아 처음엔 압도되기 쉽습니다. 기획자에게 필요한 건 전부 외우는 게 아니라, <strong>역할별로 대표 서비스 몇 개를 알아 두는 것</strong>입니다. 그러면 개발팀의 견적서나 아키텍처 문서에 등장하는 약어를 읽어낼 수 있습니다.</p>
+<p><img alt="AWS 주요 서비스 지도 — 역할별로 자주 쓰는 것들" loading="lazy" src="img/vf5_aws.svg"/></p>
+<p>역할별로 자주 쓰는 서비스는 다음과 같습니다.</p>
+<table>
+<thead>
+<tr>
+<th>역할</th>
+<th>대표 서비스</th>
+<th>한 줄 설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>컴퓨트(실행)</strong></td>
+<td><span class="tt" data-tip="AWS에서 빌려 쓰는 가상 서버(컴퓨터). 원하는 사양으로 서버를 켜고 끄며 앱을 직접 운영할 때 사용.">EC2</span> · Lambda · <span class="tt" data-tip="AWS에서 컨테이너들을 배포·관리해주는 서비스. Docker 컨테이너를 여러 개 운영할 때 편리하게 다룸.">ECS</span>/EKS · <span class="tt" data-tip="서버를 직접 관리하지 않아도 컨테이너를 실행해주는 AWS 서비스. 서버 신경 안 쓰고 컨테이너만 올리면 됨.">Fargate</span></td>
+<td>가상 서버 · <span class="tt" data-tip="서버 관리 없이 코드만 올리면 알아서 실행·확장되는 방식. 쓴 만큼만 비용 내며, 서버 운영 부담을 클라우드에 맡기는 것.">서버리스</span> 함수 · <span class="tt" data-tip="앱과 필요한 실행 환경을 하나로 묶은 가벼운 상자. 어느 컴퓨터에 옮겨도 똑같이 작동하게 해줌.">컨테이너</span> 실행</td>
+</tr>
+<tr>
+<td><strong>스토리지(저장)</strong></td>
+<td><span class="tt" data-tip="파일·이미지·영상 등을 저장하는 AWS의 대용량 창고. 인터넷 어디서든 꺼내 쓸 수 있는 온라인 저장소.">S3</span> · EBS · EFS · Glacier</td>
+<td>파일·이미지 저장(<span class="tt" data-tip="파일·이미지·영상 등을 저장하는 AWS의 대용량 창고. 인터넷 어디서든 꺼내 쓸 수 있는 온라인 저장소.">S3</span>) · 디스크 · 공유 파일 · 장기 보관</td>
+</tr>
+<tr>
+<td><strong>데이터베이스</strong></td>
+<td>RDS/Aurora · <span class="tt" data-tip="아마존(AWS)이 운영하는 관리형 NoSQL 데이터베이스. 사용량이 폭증해도 알아서 확장돼 대규모 트래픽에 강하다.">DynamoDB</span> · ElastiCache · Redshift</td>
+<td>관계형(<span class="tt" data-tip="안정성과 기능이 뛰어난 오픈소스 관계형 데이터베이스. 복잡한 데이터나 대규모 서비스에 널리 쓰인다.">PostgreSQL</span> 등) · <span class="tt" data-tip="표 형식에 얽매이지 않는 데이터베이스 통칭. 문서·키값 등 자유로운 구조로, 대용량·유연한 데이터에 강하다.">NoSQL</span> · 캐시 · 분석 웨어하우스</td>
+</tr>
+<tr>
+<td><strong>네트워크·전송</strong></td>
+<td>VPC · <span class="tt" data-tip="도메인 주소를 실제 서버로 연결해주는 AWS의 DNS 서비스. 인터넷 주소를 관리하는 전화번호부 역할.">Route 53</span> · <span class="tt" data-tip="콘텐츠를 전 세계 가까운 곳에 미리 두어 빠르게 전달하는 AWS 서비스. 사용자가 웹을 더 빨리 열게 해줌.">CloudFront</span> · ELB · <span class="tt" data-tip="여러 서비스로 가는 요청을 한곳에서 받아 나눠주는 '정문' 역할. 인증·트래픽 관리를 입구에서 통합 처리하는 안내 데스크.">API Gateway</span></td>
+<td>가상 네트워크 · <span class="tt" data-tip="사람이 쓰는 인터넷 주소를 컴퓨터 주소(숫자)로 바꿔주는 시스템. 인터넷 세상의 전화번호부.">DNS</span> · <span class="tt" data-tip="콘텐츠를 세계 곳곳 서버에 복제해 사용자와 가까운 곳에서 전달하는 망. 이미지·영상 로딩을 빠르게 한다.">CDN</span> · 로드밸런서 · API 입구</td>
+</tr>
+<tr>
+<td><strong>보안·인증</strong></td>
+<td><span class="tt" data-tip="누가 무엇에 접근할 수 있는지 권한을 관리하는 AWS 기능. 직원마다 출입 가능한 방을 정하는 출입증 시스템.">IAM</span> · <span class="tt" data-tip="회원가입·로그인 기능을 대신 처리해주는 AWS 서비스. 사용자 인증을 직접 만들지 않고 손쉽게 붙일 때 씀.">Cognito</span> · <span class="tt" data-tip="데이터를 암호화하는 데 쓰는 열쇠(키)를 안전하게 관리하는 AWS 서비스. 금고 열쇠를 따로 보관·관리해줌.">KMS</span> · <span class="tt" data-tip="비밀번호·API 키 같은 민감 정보를 안전하게 저장·관리하는 AWS 서비스. 중요 정보를 코드에 노출하지 않게 해줌.">Secrets Manager</span> · <span class="tt" data-tip="해킹 공격을 걸러내는 웹 방화벽. 나쁜 요청을 미리 막아 웹사이트를 보호하는 보안 검문소.">WAF</span>/Shield</td>
+<td>권한 · 사용자 인증 · 암호화 키·비밀 · 웹 방화벽/DDoS 방어</td>
+</tr>
+<tr>
+<td><strong>관측·메시징·<span class="tt" data-tip="코드를 저장하면 자동으로 검사·배포까지 이어지는 개발 자동화 과정. 수동 작업을 줄여 실수와 시간을 아낌.">CI/CD</span></strong></td>
+<td><span class="tt" data-tip="AWS 서비스가 잘 돌아가는지 감시하고 기록하는 도구. 서버 상태를 지켜보는 CCTV·계기판 역할.">CloudWatch</span> · SQS/SNS · ECR · CodePipeline/CodeBuild</td>
+<td>모니터링·로그·알림 · 큐/알림 · 이미지 저장 · 배포 자동화</td>
+</tr>
+</tbody>
+</table>
+<p>앞 강들에서 배운 개념이 대부분 <span class="tt" data-tip="아마존이 운영하는 세계 1위 클라우드 서비스. 서버·저장소 등 IT 자원을 필요한 만큼 빌려 쓰는 대표 플랫폼.">AWS</span> 서비스로 1:1 대응됩니다. 4강의 객체 스토리지 = <strong><span class="tt" data-tip="파일·이미지·영상 등을 저장하는 AWS의 대용량 창고. 인터넷 어디서든 꺼내 쓸 수 있는 온라인 저장소.">S3</span></strong>, 관계형 DB = <strong>RDS/Aurora</strong>, <span class="tt" data-tip="자주 쓰는 데이터를 가까이 미리 저장해 빠르게 꺼내 쓰는 기법. 매번 멀리서 가져오지 않아 속도가 빨라지는 '즉석 서랍'.">캐싱</span> = <strong>ElastiCache</strong>, 5강의 <span class="tt" data-tip="사람이 쓰는 인터넷 주소를 컴퓨터 주소(숫자)로 바꿔주는 시스템. 인터넷 세상의 전화번호부.">DNS</span> = <strong><span class="tt" data-tip="도메인 주소를 실제 서버로 연결해주는 AWS의 DNS 서비스. 인터넷 주소를 관리하는 전화번호부 역할.">Route 53</span></strong>, <span class="tt" data-tip="콘텐츠를 세계 곳곳 서버에 복제해 사용자와 가까운 곳에서 전달하는 망. 이미지·영상 로딩을 빠르게 한다.">CDN</span> = <strong><span class="tt" data-tip="콘텐츠를 전 세계 가까운 곳에 미리 두어 빠르게 전달하는 AWS 서비스. 사용자가 웹을 더 빨리 열게 해줌.">CloudFront</span></strong>, 시크릿 관리 = <strong><span class="tt" data-tip="비밀번호·API 키 같은 민감 정보를 안전하게 저장·관리하는 AWS 서비스. 중요 정보를 코드에 노출하지 않게 해줌.">Secrets Manager</span></strong>, 모니터링 = <strong><span class="tt" data-tip="AWS 서비스가 잘 돌아가는지 감시하고 기록하는 도구. 서버 상태를 지켜보는 CCTV·계기판 역할.">CloudWatch</span></strong> 입니다. 이름만 다를 뿐 하는 일은 같습니다.</p>
+<h3 id="d4-h13">11.1 AWS Amplify — 위 서비스들을 하나로 묶은 풀스택 도구</h3>
+<p>여러 서비스를 따로 조립하는 대신, <strong><span class="tt" data-tip="웹·모바일 앱의 개발과 배포를 한 번에 도와주는 AWS 도구. 로그인·저장소 등 기능을 빠르게 붙일 때 유용.">AWS Amplify</span></strong>는 프론트엔드·백엔드·호스팅을 한 도구로 묶어 줍니다. 이 교재가 쓰는 <span class="tt" data-tip="웹사이트를 코드만 올리면 자동으로 배포·운영해주는 서비스. 서버 설정 없이 빠르게 웹을 띄울 때 씀.">Vercel</span> + <span class="tt" data-tip="PostgreSQL 기반으로 데이터베이스·인증·저장소를 한 번에 주는 개발 플랫폼. 백엔드를 빠르게 구축할 때 쓴다.">Supabase</span> 조합에 대응하는 '<span class="tt" data-tip="아마존이 운영하는 세계 1위 클라우드 서비스. 서버·저장소 등 IT 자원을 필요한 만큼 빌려 쓰는 대표 플랫폼.">AWS</span> 한 지붕' 선택지라고 보면 됩니다. 현재의 Amplify(Gen 2)는 <span class="tt" data-tip="자바스크립트에 '오타 검사기'를 붙인 버전. 실수를 미리 잡아줘서 큰 프로젝트에서 오류를 줄임.">TypeScript</span> 코드로 백엔드를 정의하는 코드-우선 방식입니다. Amplify가 제공하는 것을 정리하면 다음과 같습니다.</p>
+<ul>
+<li><strong>인증(Authentication)</strong> — 로그인·회원가입·소셜 로그인을 Amazon <span class="tt" data-tip="회원가입·로그인 기능을 대신 처리해주는 AWS 서비스. 사용자 인증을 직접 만들지 않고 손쉽게 붙일 때 씀.">Cognito</span> 기반으로 제공. RSVP라면 참석자 로그인이 여기에 해당합니다.</li>
+<li><strong>데이터(Data) API</strong> — 타입이 완전히 잡힌 실시간 API를 <span class="tt" data-tip="아마존이 운영하는 세계 1위 클라우드 서비스. 서버·저장소 등 IT 자원을 필요한 만큼 빌려 쓰는 대표 플랫폼.">AWS</span> AppSync(<span class="tt" data-tip="필요한 데이터만 콕 집어 한 번에 요청하는 API 방식. 뷔페처럼 여러 접시를 왔다갔다 하지 않고, 원하는 항목만 골라 한 접시에 담아 받는 느낌.">GraphQL</span>) + Amazon <span class="tt" data-tip="아마존(AWS)이 운영하는 관리형 NoSQL 데이터베이스. 사용량이 폭증해도 알아서 확장돼 대규모 트래픽에 강하다.">DynamoDB</span>(<span class="tt" data-tip="표 형식에 얽매이지 않는 데이터베이스 통칭. 문서·키값 등 자유로운 구조로, 대용량·유연한 데이터에 강하다.">NoSQL</span>)로 자동 구성.</li>
+<li><strong>스토리지(Storage)</strong> — 파일·이미지 업로드를 Amazon <span class="tt" data-tip="파일·이미지·영상 등을 저장하는 AWS의 대용량 창고. 인터넷 어디서든 꺼내 쓸 수 있는 온라인 저장소.">S3</span>에 저장. RSVP의 포스터·증명 파일이 여기에 올라갑니다.</li>
+<li><strong>함수(Functions)</strong> — <span class="tt" data-tip="서버 관리 없이 코드만 올리면 알아서 실행·확장되는 방식. 쓴 만큼만 비용 내며, 서버 운영 부담을 클라우드에 맡기는 것.">서버리스</span> 백엔드 로직을 <span class="tt" data-tip="서버 관리 없이 코드만 올리면 필요할 때만 실행되는 AWS 서비스. 쓴 만큼만 요금 내는 '이벤트 실행' 방식.">AWS Lambda</span>로 실행. 마감·정원 같은 규칙 처리에 사용.</li>
+<li><strong>호스팅(Amplify Hosting)</strong> — 프론트엔드 웹앱 배포. <strong><span class="tt" data-tip="파일 변경 이력을 저장·되돌리는 '버전 관리 도구'. 언제든 이전 상태로 복구 가능한 무한 되돌리기 장부.">Git</span> <span class="tt" data-tip="본 코드를 안 건드리고 따로 복제해 작업하는 '가지'. 실험이 끝나면 원본에 합침. 안전한 별도 작업 공간.">브랜치</span>별 자동 배포(풀스택 <span class="tt" data-tip="본 코드를 안 건드리고 따로 복제해 작업하는 '가지'. 실험이 끝나면 원본에 합침. 안전한 별도 작업 공간.">브랜치</span> 배포)</strong> 를 지원해, <span class="tt" data-tip="본 코드를 안 건드리고 따로 복제해 작업하는 '가지'. 실험이 끝나면 원본에 합침. 안전한 별도 작업 공간.">브랜치</span> 하나가 환경 하나에 1:1로 대응됩니다.</li>
+<li><strong>클라우드 샌드박스</strong> — 개발자마다 격리된 클라우드 개발 환경을 받아 자기 변경을 실제 <span class="tt" data-tip="아마존이 운영하는 세계 1위 클라우드 서비스. 서버·저장소 등 IT 자원을 필요한 만큼 빌려 쓰는 대표 플랫폼.">AWS</span> 백엔드에서 바로 테스트. (Gen 1 대비 반복 배포가 최대 8배 빠릅니다.)</li>
+<li><strong>콘솔</strong> — 빌드·호스팅 설정(커스텀 도메인)·배포된 리소스(데이터 브라우저·사용자 관리)·<span class="tt" data-tip="비밀번호·설정값 등을 코드 밖에 따로 저장해 두는 값. 민감 정보를 코드에 안 적고 안전하게 관리하는 방법.">환경 변수</span>/시크릿을 한 화면에서 관리.</li>
+<li><strong>CDK 확장</strong> — 필요하면 <span class="tt" data-tip="아마존이 운영하는 세계 1위 클라우드 서비스. 서버·저장소 등 IT 자원을 필요한 만큼 빌려 쓰는 대표 플랫폼.">AWS</span> CDK로 200개가 넘는 <span class="tt" data-tip="아마존이 운영하는 세계 1위 클라우드 서비스. 서버·저장소 등 IT 자원을 필요한 만큼 빌려 쓰는 대표 플랫폼.">AWS</span> 서비스를 그대로 끌어와 붙일 수 있어, 커지더라도 도구를 갈아탈 필요가 없습니다.</li>
+</ul>
+<blockquote>
+<p>💡 <strong>기획자 포인트</strong> — <span class="tt" data-tip="웹사이트를 코드만 올리면 자동으로 배포·운영해주는 서비스. 서버 설정 없이 빠르게 웹을 띄울 때 씀.">Vercel</span> + <span class="tt" data-tip="PostgreSQL 기반으로 데이터베이스·인증·저장소를 한 번에 주는 개발 플랫폼. 백엔드를 빠르게 구축할 때 쓴다.">Supabase</span>는 초기 프로토타입을 가장 빠르게 띄우는 조합이고, <span class="tt" data-tip="웹·모바일 앱의 개발과 배포를 한 번에 도와주는 AWS 도구. 로그인·저장소 등 기능을 빠르게 붙일 때 유용.">AWS Amplify</span>는 이미 사내 인프라가 <span class="tt" data-tip="아마존이 운영하는 세계 1위 클라우드 서비스. 서버·저장소 등 IT 자원을 필요한 만큼 빌려 쓰는 대표 플랫폼.">AWS</span>로 통일돼 있거나 인증·데이터·파일을 한 계정·한 청구서로 묶고 싶을 때 유리합니다. 둘 다 "여러 인프라 조각을 자동으로 엮어 준다"는 점에서 성격이 같습니다(1절의 <span class="tt" data-tip="앱 개발·실행에 필요한 환경까지 갖춰서 빌려주는 클라우드. 주방 설비 딸린 공간을 빌려 요리(개발)에만 집중.">PaaS</span>/<span class="tt" data-tip="백엔드를 직접 안 만들고 빌려 쓰는 서비스(Backend as a Service). 로그인·DB 등을 완제품처럼 가져다 쓴다.">BaaS</span>).</p>
+</blockquote>
+<hr/>
+<h2 id="d4-h14">12. 배포 시나리오별 추천 조합</h2>
+<p>앞에서 배포 도구(§3의 <span class="tt" data-tip="앱 개발·실행에 필요한 환경까지 갖춰서 빌려주는 클라우드. 주방 설비 딸린 공간을 빌려 요리(개발)에만 집중.">PaaS</span>, §11의 <span class="tt" data-tip="아마존이 운영하는 세계 1위 클라우드 서비스. 서버·저장소 등 IT 자원을 필요한 만큼 빌려 쓰는 대표 플랫폼.">AWS</span>)를 훑었으니, 이제 "그래서 어떤 상황에 무엇을 고르면 되는가"를 정리합니다. 크게 <strong>개인/사이드 프로젝트</strong>와 <strong>회사의 가벼운 배포</strong> 두 갈래로 나눠 추천합니다.</p>
+<p><img alt="배포 시나리오별 추천 조합 — 개인 vs 회사, 정적 vs 동적" loading="lazy" src="img/vf5_deploy.svg"/></p>
+<h3 id="d4-h15">12.1 개인·사이드 프로젝트</h3>
+<p>혼자 빠르게 만들어 띄운다면 <strong><span class="tt" data-tip="Git 프로젝트를 온라인에 올려 함께 작업하는 '코드 저장·협업 공간'. 팀의 코드 클라우드 같은 곳.">GitHub</span> + <span class="tt" data-tip="PostgreSQL 기반으로 데이터베이스·인증·저장소를 한 번에 주는 개발 플랫폼. 백엔드를 빠르게 구축할 때 쓴다.">Supabase</span> + <span class="tt" data-tip="웹사이트를 코드만 올리면 자동으로 배포·운영해주는 서비스. 서버 설정 없이 빠르게 웹을 띄울 때 씀.">Vercel</span></strong> 조합을 추천합니다. <strong><span class="tt" data-tip="Git 프로젝트를 온라인에 올려 함께 작업하는 '코드 저장·협업 공간'. 팀의 코드 클라우드 같은 곳.">GitHub</span></strong>으로 코드와 버전을 관리하고, <strong><span class="tt" data-tip="PostgreSQL 기반으로 데이터베이스·인증·저장소를 한 번에 주는 개발 플랫폼. 백엔드를 빠르게 구축할 때 쓴다.">Supabase</span></strong>(<span class="tt" data-tip="백엔드를 직접 안 만들고 빌려 쓰는 서비스(Backend as a Service). 로그인·DB 등을 완제품처럼 가져다 쓴다.">BaaS</span>)로 DB·인증·스토리지를 한 번에 해결하며, <strong><span class="tt" data-tip="웹사이트를 코드만 올리면 자동으로 배포·운영해주는 서비스. 서버 설정 없이 빠르게 웹을 띄울 때 씀.">Vercel</span></strong>(<span class="tt" data-tip="앱 개발·실행에 필요한 환경까지 갖춰서 빌려주는 클라우드. 주방 설비 딸린 공간을 빌려 요리(개발)에만 집중.">PaaS</span>)로 프론트엔드를 배포하면 <span class="tt" data-tip="파일 변경 이력을 저장·되돌리는 '버전 관리 도구'. 언제든 이전 상태로 복구 가능한 무한 되돌리기 장부.">Git</span>에 푸시할 때마다 자동으로 재배포됩니다. 대부분 무료 티어로 충분하고, 이 교재의 RSVP 예시가 바로 이 조합입니다.</p>
+<p>더 가벼운 경우도 있습니다.</p>
+<ul>
+<li><strong>정적 페이지(화면만 보여주면 되고 DB가 필요 없는 경우)</strong> — 굳이 서버가 필요 없습니다. <strong><span class="tt" data-tip="Git 프로젝트를 온라인에 올려 함께 작업하는 '코드 저장·협업 공간'. 팀의 코드 클라우드 같은 곳.">GitHub</span> Pages</strong>만으로 무료로 정적 사이트를 배포할 수 있습니다. 소개 페이지·포트폴리오·행사 안내처럼 데이터가 고정된 화면에 알맞습니다.</li>
+<li><strong>정적인데 입력값 수집만 필요한 경우(신청 폼 등)</strong> — 전체 백엔드를 세우지 않고도 처리할 수 있습니다. <strong>Google Sheets를 간이 데이터베이스처럼</strong> 쓰고, <strong>Apps Script</strong>로 폼 제출 데이터를 시트에 기록·연동하면 됩니다. 서버 없이 "정적 페이지 + 폼 수집"이 완성됩니다. RSVP도 아주 초기라면 이 방식으로 신청만 받아볼 수 있습니다.</li>
+</ul>
+<h3 id="d4-h16">12.2 회사의 가벼운 배포</h3>
+<p>사내 인프라가 이미 <strong><span class="tt" data-tip="아마존이 운영하는 세계 1위 클라우드 서비스. 서버·저장소 등 IT 자원을 필요한 만큼 빌려 쓰는 대표 플랫폼.">AWS</span>로 통일</strong>되어 있다면, 개인 조합 대신 <span class="tt" data-tip="아마존이 운영하는 세계 1위 클라우드 서비스. 서버·저장소 등 IT 자원을 필요한 만큼 빌려 쓰는 대표 플랫폼.">AWS</span> 생태계로 묶는 편이 관리가 편합니다. 추천 조합은 <strong><span class="tt" data-tip="Git 프로젝트를 온라인에 올려 함께 작업하는 '코드 저장·협업 공간'. 팀의 코드 클라우드 같은 곳.">GitHub</span> + <span class="tt" data-tip="웹·모바일 앱의 개발과 배포를 한 번에 도와주는 AWS 도구. 로그인·저장소 등 기능을 빠르게 붙일 때 유용.">AWS Amplify</span> + <span class="tt" data-tip="PostgreSQL 기반으로 데이터베이스·인증·저장소를 한 번에 주는 개발 플랫폼. 백엔드를 빠르게 구축할 때 쓴다.">Supabase</span> + <span class="tt" data-tip="아마존이 운영하는 세계 1위 클라우드 서비스. 서버·저장소 등 IT 자원을 필요한 만큼 빌려 쓰는 대표 플랫폼.">AWS</span> 관리형 서비스(Lambda 등)</strong> 입니다. <strong><span class="tt" data-tip="Git 프로젝트를 온라인에 올려 함께 작업하는 '코드 저장·협업 공간'. 팀의 코드 클라우드 같은 곳.">GitHub</span></strong>으로 코드를 관리하고, <strong><span class="tt" data-tip="웹·모바일 앱의 개발과 배포를 한 번에 도와주는 AWS 도구. 로그인·저장소 등 기능을 빠르게 붙일 때 유용.">AWS Amplify</span></strong>로 프론트엔드 호스팅과 백엔드 정의를 맡기며(§11.1), DB는 <strong><span class="tt" data-tip="PostgreSQL 기반으로 데이터베이스·인증·저장소를 한 번에 주는 개발 플랫폼. 백엔드를 빠르게 구축할 때 쓴다.">Supabase</span></strong>를 그대로 쓰거나 Amplify 기본 데이터로 대체하고, 커스텀 백엔드 로직은 <strong>Lambda 같은 <span class="tt" data-tip="아마존이 운영하는 세계 1위 클라우드 서비스. 서버·저장소 등 IT 자원을 필요한 만큼 빌려 쓰는 대표 플랫폼.">AWS</span> 관리형 서비스</strong>로 처리합니다. 인증·데이터·파일·컴퓨팅을 한 계정·한 청구서로 묶을 수 있어, 보안·정산·감사 측면에서 회사에 유리합니다.</p>
+<blockquote>
+<p>💡 <strong>이 셋업·배포는 Claude가 진행합니다</strong> — 위 조합의 저장소 생성, <span class="tt" data-tip="비밀번호·설정값 등을 코드 밖에 따로 저장해 두는 값. 민감 정보를 코드에 안 적고 안전하게 관리하는 방법.">환경 변수</span> 설정, 빌드, 배포까지의 과정은 Cowork·Code에게 자연어로 지시하면 대신 수행합니다. 기획자는 "무엇을 어디에 배포할지"만 정하고, 반복적인 배포 작업은 <span class="tt" data-tip="목표를 주면 스스로 판단해 여러 단계를 실행하는 AI. 시키는 것만 답하는 챗봇과 달리 '일을 처리'함.">에이전트</span>에 위임하는 것이 이 교재가 지향하는 방식입니다.</p>
+</blockquote>
+<p>정리하면, <strong>혼자·빠르게</strong>면 <span class="tt" data-tip="Git 프로젝트를 온라인에 올려 함께 작업하는 '코드 저장·협업 공간'. 팀의 코드 클라우드 같은 곳.">GitHub</span>+<span class="tt" data-tip="PostgreSQL 기반으로 데이터베이스·인증·저장소를 한 번에 주는 개발 플랫폼. 백엔드를 빠르게 구축할 때 쓴다.">Supabase</span>+<span class="tt" data-tip="웹사이트를 코드만 올리면 자동으로 배포·운영해주는 서비스. 서버 설정 없이 빠르게 웹을 띄울 때 씀.">Vercel</span>, <strong>화면만</strong>이면 <span class="tt" data-tip="Git 프로젝트를 온라인에 올려 함께 작업하는 '코드 저장·협업 공간'. 팀의 코드 클라우드 같은 곳.">GitHub</span> Pages, <strong>정적+폼 수집</strong>이면 Google Sheets+Apps Script, <strong>회사가 이미 <span class="tt" data-tip="아마존이 운영하는 세계 1위 클라우드 서비스. 서버·저장소 등 IT 자원을 필요한 만큼 빌려 쓰는 대표 플랫폼.">AWS</span></strong>면 <span class="tt" data-tip="Git 프로젝트를 온라인에 올려 함께 작업하는 '코드 저장·협업 공간'. 팀의 코드 클라우드 같은 곳.">GitHub</span>+Amplify+<span class="tt" data-tip="PostgreSQL 기반으로 데이터베이스·인증·저장소를 한 번에 주는 개발 플랫폼. 백엔드를 빠르게 구축할 때 쓴다.">Supabase</span>+Lambda 조합입니다. <span class="tt" data-tip="웹사이트를 코드만 올리면 자동으로 배포·운영해주는 서비스. 서버 설정 없이 빠르게 웹을 띄울 때 씀.">Vercel</span>+<span class="tt" data-tip="PostgreSQL 기반으로 데이터베이스·인증·저장소를 한 번에 주는 개발 플랫폼. 백엔드를 빠르게 구축할 때 쓴다.">Supabase</span>와 <span class="tt" data-tip="웹·모바일 앱의 개발과 배포를 한 번에 도와주는 AWS 도구. 로그인·저장소 등 기능을 빠르게 붙일 때 유용.">AWS Amplify</span>는 둘 다 여러 인프라 조각을 자동으로 엮어 준다는 점에서 성격이 같습니다(§1의 <span class="tt" data-tip="앱 개발·실행에 필요한 환경까지 갖춰서 빌려주는 클라우드. 주방 설비 딸린 공간을 빌려 요리(개발)에만 집중.">PaaS</span>/<span class="tt" data-tip="백엔드를 직접 안 만들고 빌려 쓰는 서비스(Backend as a Service). 로그인·DB 등을 완제품처럼 가져다 쓴다.">BaaS</span>).</p>
+<hr/>
+<h2 id="d4-h17">13. 핵심 용어</h2>
+<table>
+<thead>
+<tr>
+<th>용어</th>
+<th>정의</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><span class="tt" data-tip="서버·저장공간 같은 IT 하드웨어를 빌려 쓰는 클라우드 서비스. 건물 뼈대만 임대받고 내부는 직접 꾸미는 방식.">IaaS</span>/<span class="tt" data-tip="앱 개발·실행에 필요한 환경까지 갖춰서 빌려주는 클라우드. 주방 설비 딸린 공간을 빌려 요리(개발)에만 집중.">PaaS</span>/<span class="tt" data-tip="설치 없이 인터넷으로 바로 쓰는 완성된 소프트웨어. 노션·구글독스처럼 로그인만 하면 되는 서비스.">SaaS</span>/<span class="tt" data-tip="백엔드를 직접 안 만들고 빌려 쓰는 서비스(Backend as a Service). 로그인·DB 등을 완제품처럼 가져다 쓴다.">BaaS</span></strong></td>
+<td>인프라 / 플랫폼 / 소프트웨어 / 백엔드를 서비스로</td>
+</tr>
+<tr>
+<td><strong>도메인 / <span class="tt" data-tip="사람이 쓰는 인터넷 주소를 컴퓨터 주소(숫자)로 바꿔주는 시스템. 인터넷 세상의 전화번호부.">DNS</span> / A·<span class="tt" data-tip="한 도메인 주소를 다른 주소로 연결하는 DNS 별명 설정. '이 이름은 저 이름과 같다'고 알려주는 방식.">CNAME</span>·MX·TXT</strong></td>
+<td>주소 / 이름→IP 변환 / 레코드 종류</td>
+</tr>
+<tr>
+<td><strong>HTTP / <span class="tt" data-tip="웹사이트 통신을 암호화해 안전하게 주고받는 방식. 주소에 자물쇠가 붙는, 도청 걱정 없는 연결.">HTTPS</span> / <span class="tt" data-tip="웹 통신을 암호화해 정보를 보호하는 보안 기술. HTTPS를 가능하게 하는 자물쇠 역할(현재는 TLS로 발전).">SSL</span>·<span class="tt" data-tip="인터넷 통신을 암호화하는 최신 보안 기술. SSL의 후속으로, 데이터를 안전하게 주고받게 해줌.">TLS</span> / 인증서</strong></td>
+<td>평문 / 암호화 / 암호화 프로토콜 / 신원 증명</td>
+</tr>
+<tr>
+<td><strong><span class="tt" data-tip="HTTPS에 필요한 보안 인증서를 무료로 발급해주는 서비스. 돈 안 들이고 웹사이트에 자물쇠를 달 수 있음.">Let's Encrypt</span></strong></td>
+<td>무료 인증서 발급 기관</td>
+</tr>
+<tr>
+<td><strong><span class="tt" data-tip="비밀번호·설정값 등을 코드 밖에 따로 저장해 두는 값. 민감 정보를 코드에 안 적고 안전하게 관리하는 방법.">환경 변수</span> / Secret Manager / 회전</strong></td>
+<td>코드 밖 값 / 비밀 저장소 / 키 교체</td>
+</tr>
+<tr>
+<td><strong><span class="tt" data-tip="입력창에 악성 코드를 넣어 데이터베이스를 조작·탈취하는 공격. 검색창에 명령어를 몰래 심는 해킹 수법.">SQL Injection</span> / <span class="tt" data-tip="웹페이지에 악성 스크립트를 심어 방문자를 노리는 공격. 댓글 등에 나쁜 코드를 숨겨 정보를 빼가는 수법.">XSS</span> / <span class="tt" data-tip="로그인된 사용자를 속여 원치 않는 요청을 대신 실행시키는 공격. 몰래 클릭을 유도해 계정을 악용하는 수법.">CSRF</span></strong></td>
+<td>SQL 삽입 / 스크립트 삽입 / 무단 요청 공격</td>
+</tr>
+<tr>
+<td><strong>매개변수화 쿼리 / CSP / SameSite</strong></td>
+<td>SQLi 방어 / <span class="tt" data-tip="웹페이지에 악성 스크립트를 심어 방문자를 노리는 공격. 댓글 등에 나쁜 코드를 숨겨 정보를 빼가는 수법.">XSS</span> 방어 / <span class="tt" data-tip="로그인된 사용자를 속여 원치 않는 요청을 대신 실행시키는 공격. 몰래 클릭을 유도해 계정을 악용하는 수법.">CSRF</span> 방어</td>
+</tr>
+<tr>
+<td><strong>모니터링 / 로깅 / 알림</strong></td>
+<td>상태 감시 / 기록 / 담당자 호출</td>
+</tr>
+<tr>
+<td><strong><span class="tt" data-tip="장애 발생 후 서비스를 다시 정상화하기까지 목표 복구 시간. '몇 시간 안에 복구하겠다'는 약속 기준.">RTO</span> / <span class="tt" data-tip="장애 시 감수할 수 있는 데이터 손실의 최대 범위(시간). '최근 몇 분/시간치 데이터까진 잃어도 된다'는 기준.">RPO</span> / <span class="tt" data-tip="서비스 제공자가 보장하는 품질·가동률에 대한 약속. '99.9% 이상 정상 운영' 같은 서비스 계약 기준.">SLA</span> / MTTR</strong></td>
+<td>복구 목표 시간 / 허용 손실 / 가용성 약정 / 평균 복구 시간</td>
+</tr>
+<tr>
+<td><strong>PIPA / GDPR</strong></td>
+<td>개인정보보호법(한국) / EU 개인정보법</td>
+</tr>
+<tr>
+<td><strong>Blue-Green / Canary 배포</strong></td>
+<td>두 환경 교대 / 일부에게만 먼저</td>
+</tr>
+<tr>
+<td><strong><span class="tt" data-tip="아마존이 운영하는 세계 1위 클라우드 서비스. 서버·저장소 등 IT 자원을 필요한 만큼 빌려 쓰는 대표 플랫폼.">AWS</span> 주요 서비스</strong></td>
+<td><span class="tt" data-tip="AWS에서 빌려 쓰는 가상 서버(컴퓨터). 원하는 사양으로 서버를 켜고 끄며 앱을 직접 운영할 때 사용.">EC2</span>·Lambda(컴퓨트) · <span class="tt" data-tip="파일·이미지·영상 등을 저장하는 AWS의 대용량 창고. 인터넷 어디서든 꺼내 쓸 수 있는 온라인 저장소.">S3</span>(스토리지) · RDS/<span class="tt" data-tip="아마존(AWS)이 운영하는 관리형 NoSQL 데이터베이스. 사용량이 폭증해도 알아서 확장돼 대규모 트래픽에 강하다.">DynamoDB</span>(DB) · <span class="tt" data-tip="도메인 주소를 실제 서버로 연결해주는 AWS의 DNS 서비스. 인터넷 주소를 관리하는 전화번호부 역할.">Route 53</span>·<span class="tt" data-tip="콘텐츠를 전 세계 가까운 곳에 미리 두어 빠르게 전달하는 AWS 서비스. 사용자가 웹을 더 빨리 열게 해줌.">CloudFront</span>(전송) · <span class="tt" data-tip="누가 무엇에 접근할 수 있는지 권한을 관리하는 AWS 기능. 직원마다 출입 가능한 방을 정하는 출입증 시스템.">IAM</span>·<span class="tt" data-tip="회원가입·로그인 기능을 대신 처리해주는 AWS 서비스. 사용자 인증을 직접 만들지 않고 손쉽게 붙일 때 씀.">Cognito</span>(보안) · <span class="tt" data-tip="AWS 서비스가 잘 돌아가는지 감시하고 기록하는 도구. 서버 상태를 지켜보는 CCTV·계기판 역할.">CloudWatch</span>(관측)</td>
+</tr>
+<tr>
+<td><strong><span class="tt" data-tip="웹·모바일 앱의 개발과 배포를 한 번에 도와주는 AWS 도구. 로그인·저장소 등 기능을 빠르게 붙일 때 유용.">AWS Amplify</span></strong></td>
+<td>인증·데이터·스토리지·함수 + 호스팅을 코드로 묶는 <span class="tt" data-tip="아마존이 운영하는 세계 1위 클라우드 서비스. 서버·저장소 등 IT 자원을 필요한 만큼 빌려 쓰는 대표 플랫폼.">AWS</span> 풀스택 도구(Gen 2)</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="d4-h18">14. 한눈에 정리</h2>
+<ul>
+<li>인프라는 <strong><span class="tt" data-tip="서버·저장공간 같은 IT 하드웨어를 빌려 쓰는 클라우드 서비스. 건물 뼈대만 임대받고 내부는 직접 꾸미는 방식.">IaaS</span>→<span class="tt" data-tip="앱 개발·실행에 필요한 환경까지 갖춰서 빌려주는 클라우드. 주방 설비 딸린 공간을 빌려 요리(개발)에만 집중.">PaaS</span>→<span class="tt" data-tip="백엔드를 직접 안 만들고 빌려 쓰는 서비스(Backend as a Service). 로그인·DB 등을 완제품처럼 가져다 쓴다.">BaaS</span>→<span class="tt" data-tip="설치 없이 인터넷으로 바로 쓰는 완성된 소프트웨어. 노션·구글독스처럼 로그인만 하면 되는 서비스.">SaaS</span></strong> 로 갈수록 관리 책임↓·자유도↓. 초기 팀은 <span class="tt" data-tip="앱 개발·실행에 필요한 환경까지 갖춰서 빌려주는 클라우드. 주방 설비 딸린 공간을 빌려 요리(개발)에만 집중.">PaaS</span>+BaaS.</li>
+<li>이름은 <strong>도메인·<span class="tt" data-tip="사람이 쓰는 인터넷 주소를 컴퓨터 주소(숫자)로 바꿔주는 시스템. 인터넷 세상의 전화번호부.">DNS</span>(A·<span class="tt" data-tip="한 도메인 주소를 다른 주소로 연결하는 DNS 별명 설정. '이 이름은 저 이름과 같다'고 알려주는 방식.">CNAME</span>·MX·TXT)</strong> 로 서버에 연결, 전송은 <strong><span class="tt" data-tip="웹사이트 통신을 암호화해 안전하게 주고받는 방식. 주소에 자물쇠가 붙는, 도청 걱정 없는 연결.">HTTPS</span>(인증서·자동 갱신)</strong> 로 암호화.</li>
+<li>보안 5위협 = <strong>SQLi·<span class="tt" data-tip="웹페이지에 악성 스크립트를 심어 방문자를 노리는 공격. 댓글 등에 나쁜 코드를 숨겨 정보를 빼가는 수법.">XSS</span>·<span class="tt" data-tip="로그인된 사용자를 속여 원치 않는 요청을 대신 실행시키는 공격. 몰래 클릭을 유도해 계정을 악용하는 수법.">CSRF</span>·계정 탈취·시크릿 노출</strong>, 각각 매개변수화·이스케이프·토큰/SameSite·MFA·키 회전으로 방어.</li>
+<li>비밀은 <em>코드에서 멀수록</em> 안전. <strong>모니터링·알림·<span class="tt" data-tip="장애 발생 후 서비스를 다시 정상화하기까지 목표 복구 시간. '몇 시간 안에 복구하겠다'는 약속 기준.">RTO</span>/<span class="tt" data-tip="장애 시 감수할 수 있는 데이터 손실의 최대 범위(시간). '최근 몇 분/시간치 데이터까진 잃어도 된다'는 기준.">RPO</span>/<span class="tt" data-tip="서비스 제공자가 보장하는 품질·가동률에 대한 약속. '99.9% 이상 정상 운영' 같은 서비스 계약 기준.">SLA</span></strong> 로 장애를 관리하고, <strong>개인정보 법규(PIPA·GDPR)</strong> 를 준수.</li>
+<li>많은 서비스가 <strong><span class="tt" data-tip="아마존이 운영하는 세계 1위 클라우드 서비스. 서버·저장소 등 IT 자원을 필요한 만큼 빌려 쓰는 대표 플랫폼.">AWS</span></strong> 위에서 돌아갑니다. 역할별 대표 서비스(<span class="tt" data-tip="파일·이미지·영상 등을 저장하는 AWS의 대용량 창고. 인터넷 어디서든 꺼내 쓸 수 있는 온라인 저장소.">S3</span>·RDS·<span class="tt" data-tip="도메인 주소를 실제 서버로 연결해주는 AWS의 DNS 서비스. 인터넷 주소를 관리하는 전화번호부 역할.">Route 53</span>·<span class="tt" data-tip="콘텐츠를 전 세계 가까운 곳에 미리 두어 빠르게 전달하는 AWS 서비스. 사용자가 웹을 더 빨리 열게 해줌.">CloudFront</span>·<span class="tt" data-tip="누가 무엇에 접근할 수 있는지 권한을 관리하는 AWS 기능. 직원마다 출입 가능한 방을 정하는 출입증 시스템.">IAM</span>·<span class="tt" data-tip="AWS 서비스가 잘 돌아가는지 감시하고 기록하는 도구. 서버 상태를 지켜보는 CCTV·계기판 역할.">CloudWatch</span>)를 알아 두고, 이를 한 번에 묶는 <strong><span class="tt" data-tip="웹·모바일 앱의 개발과 배포를 한 번에 도와주는 AWS 도구. 로그인·저장소 등 기능을 빠르게 붙일 때 유용.">AWS Amplify</span></strong>(인증·데이터·스토리지·함수+호스팅)는 <span class="tt" data-tip="웹사이트를 코드만 올리면 자동으로 배포·운영해주는 서비스. 서버 설정 없이 빠르게 웹을 띄울 때 씀.">Vercel</span>+<span class="tt" data-tip="PostgreSQL 기반으로 데이터베이스·인증·저장소를 한 번에 주는 개발 플랫폼. 백엔드를 빠르게 구축할 때 쓴다.">Supabase</span>에 대응하는 '<span class="tt" data-tip="아마존이 운영하는 세계 1위 클라우드 서비스. 서버·저장소 등 IT 자원을 필요한 만큼 빌려 쓰는 대표 플랫폼.">AWS</span> 한 지붕' 선택지입니다.</li>
+<li><strong>배포 시나리오</strong>: 혼자·빠르게=<strong><span class="tt" data-tip="Git 프로젝트를 온라인에 올려 함께 작업하는 '코드 저장·협업 공간'. 팀의 코드 클라우드 같은 곳.">GitHub</span>+<span class="tt" data-tip="PostgreSQL 기반으로 데이터베이스·인증·저장소를 한 번에 주는 개발 플랫폼. 백엔드를 빠르게 구축할 때 쓴다.">Supabase</span>+<span class="tt" data-tip="웹사이트를 코드만 올리면 자동으로 배포·운영해주는 서비스. 서버 설정 없이 빠르게 웹을 띄울 때 씀.">Vercel</span></strong>, 화면만=<strong><span class="tt" data-tip="Git 프로젝트를 온라인에 올려 함께 작업하는 '코드 저장·협업 공간'. 팀의 코드 클라우드 같은 곳.">GitHub</span> Pages</strong>, 정적+폼 수집=<strong>Google Sheets+Apps Script</strong>, 회사가 <span class="tt" data-tip="아마존이 운영하는 세계 1위 클라우드 서비스. 서버·저장소 등 IT 자원을 필요한 만큼 빌려 쓰는 대표 플랫폼.">AWS</span>면=<strong><span class="tt" data-tip="Git 프로젝트를 온라인에 올려 함께 작업하는 '코드 저장·협업 공간'. 팀의 코드 클라우드 같은 곳.">GitHub</span>+Amplify+<span class="tt" data-tip="PostgreSQL 기반으로 데이터베이스·인증·저장소를 한 번에 주는 개발 플랫폼. 백엔드를 빠르게 구축할 때 쓴다.">Supabase</span>+Lambda</strong>(셋업·배포는 Claude가 진행).</li>
+</ul>
+<h2 id="d4-h19">자가 진단</h2>
+<p>① <span class="tt" data-tip="서버·저장공간 같은 IT 하드웨어를 빌려 쓰는 클라우드 서비스. 건물 뼈대만 임대받고 내부는 직접 꾸미는 방식.">IaaS</span>와 <span class="tt" data-tip="앱 개발·실행에 필요한 환경까지 갖춰서 빌려주는 클라우드. 주방 설비 딸린 공간을 빌려 요리(개발)에만 집중.">PaaS</span>의 차이를 설명할 수 있나 ② 도메인을 호스팅에 연결하려면 어떤 <span class="tt" data-tip="사람이 쓰는 인터넷 주소를 컴퓨터 주소(숫자)로 바꿔주는 시스템. 인터넷 세상의 전화번호부.">DNS</span> 레코드가 필요한가 ③ <span class="tt" data-tip="입력창에 악성 코드를 넣어 데이터베이스를 조작·탈취하는 공격. 검색창에 명령어를 몰래 심는 해킹 수법.">SQL Injection</span>을 어떻게 막나 ④ API 키가 <span class="tt" data-tip="파일 변경 이력을 저장·되돌리는 '버전 관리 도구'. 언제든 이전 상태로 복구 가능한 무한 되돌리기 장부.">Git</span>에 노출됐을 때의 대응 순서.</p>
+<hr/>
+<h3 id="d4-h20">다음 강 예고</h3>
+<p>여기까지가 <strong>입문(기술 기초)</strong> — 프론트·백·데이터·인프라의 개념 지도입니다. 이제 <strong>코딩 with Claude 초급</strong> 으로 넘어가, Claude(Cowork·Code)로 <em>무엇을·어떻게</em> 시키는지 봅니다.</p>
+<hr/>
+<p><sub>※ 원문(선수 M5)을 구성·내용 보존 원칙으로 재구성하고 존댓말로 통일했으며, 실습형 배포 튜토리얼은 개념 요약으로 대체하고 다이어그램을 보강(4계층·<span class="tt" data-tip="사람이 쓰는 인터넷 주소를 컴퓨터 주소(숫자)로 바꿔주는 시스템. 인터넷 세상의 전화번호부.">DNS</span>·<span class="tt" data-tip="웹사이트 통신을 암호화해 안전하게 주고받는 방식. 주소에 자물쇠가 붙는, 도청 걱정 없는 연결.">HTTPS</span>·보안 위협·시크릿)했습니다. 사업자·도구·법규·가격은 시점에 따라 달라질 수 있습니다.</sub></p>
+</article></main>
+</div>
+<div id="tip" class="tip"></div>
+<script>window.__PARTNAME__="1부 · 기술 기초";window.__DOCS__=[{"idx": 0, "title": "0강. 러닝 예시 — 이벤트 RSVP 서비스"}, {"idx": 1, "title": "입문(기술 기초) 2강. 프론트엔드"}, {"idx": 2, "title": "입문(기술 기초) 3강. 백엔드"}, {"idx": 3, "title": "입문(기술 기초) 4강. 데이터"}, {"idx": 4, "title": "입문(기술 기초) 5강. 인프라 · 배포 · 보안"}];</script>
+<script src="assets/app.js"></script>
+</body></html>

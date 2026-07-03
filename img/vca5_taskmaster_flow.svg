@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="400" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">Task Master 흐름 — PRD에서 실행까지</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">한 편의 PRD가 작업 그래프가 되고, 매일 아침 next 한 줄로 다음 할 일이 나옵니다.</text>
+
+  <defs><marker id="vca5tmf_ar" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/></marker></defs>
+
+  <!-- step 1 PRD -->
+  <rect x="40" y="100" width="180" height="90" rx="11" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="130" y="128" font-size="12" font-weight="700" fill="#7c3aed" text-anchor="middle">① PRD 작성</text>
+  <text x="130" y="150" font-size="10" fill="#444" text-anchor="middle">docs/prd.md</text>
+  <text x="130" y="168" font-size="9.5" fill="#444" text-anchor="middle">배경·핵심 기능·비기능</text>
+  <text x="130" y="183" font-size="9.5" fill="#6b6b6b" text-anchor="middle">RSVP 풀세트 요구사항</text>
+
+  <!-- step 2 parse -->
+  <rect x="270" y="100" width="180" height="90" rx="11" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="360" y="128" font-size="12" font-weight="700" fill="#3a6fd6" text-anchor="middle">② parse-prd</text>
+  <text x="360" y="150" font-size="9.5" fill="#444" text-anchor="middle">분석 · 작업 생성</text>
+  <text x="360" y="167" font-size="9.5" fill="#444" text-anchor="middle">의존 추론 · 복잡도 점수</text>
+  <text x="360" y="183" font-size="9.5" fill="#6b6b6b" text-anchor="middle">AI가 자동 수행</text>
+
+  <!-- step 3 tasks.json -->
+  <rect x="500" y="100" width="180" height="90" rx="11" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="590" y="128" font-size="12" font-weight="700" fill="#1a7f37" text-anchor="middle">③ 작업 그래프</text>
+  <text x="590" y="150" font-size="9.5" fill="#444" text-anchor="middle">tasks.json 저장</text>
+  <text x="590" y="167" font-size="9.5" fill="#444" text-anchor="middle">Phase별 87개 예시</text>
+  <text x="590" y="183" font-size="9.5" fill="#6b6b6b" text-anchor="middle">단일 진실 원천</text>
+
+  <!-- step 4 execute -->
+  <rect x="730" y="100" width="130" height="90" rx="11" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="795" y="128" font-size="12" font-weight="700" fill="#b8860b" text-anchor="middle">④ 실행</text>
+  <text x="795" y="150" font-size="9.5" fill="#444" text-anchor="middle">next · show</text>
+  <text x="795" y="167" font-size="9.5" fill="#444" text-anchor="middle">set-status · expand</text>
+  <text x="795" y="183" font-size="9.5" fill="#6b6b6b" text-anchor="middle">자연어(MCP)로</text>
+
+  <line x1="220" y1="145" x2="268" y2="145" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#vca5tmf_ar)"/>
+  <line x1="450" y1="145" x2="498" y2="145" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#vca5tmf_ar)"/>
+  <line x1="680" y1="145" x2="728" y2="145" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#vca5tmf_ar)"/>
+
+  <!-- phases box -->
+  <rect x="40" y="220" width="500" height="150" rx="11" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="60" y="245" font-size="12" font-weight="700" fill="#1a1a1a">생성된 작업 예시 — RSVP 87개</text>
+  <text x="60" y="270" font-size="10" fill="#444">Phase 1 Setup 8 · Phase 2 Auth 12 · Phase 3 DB Schema 6</text>
+  <text x="60" y="290" font-size="10" fill="#444">Phase 4 CRUD 22 · Phase 5 UI 18</text>
+  <text x="60" y="310" font-size="10" fill="#444">Phase 6 Testing 12 · Phase 7 Deploy 9</text>
+  <text x="60" y="336" font-size="9.5" fill="#6b6b6b">각 작업에 의존 관계와 복잡도 점수가 붙어 순서가 잡힙니다.</text>
+  <text x="60" y="354" font-size="9.5" fill="#6b6b6b">첫 분해 후 사람이 검토·승인해야 잘못된 의존이 걸러집니다.</text>
+
+  <!-- daily loop box -->
+  <rect x="560" y="220" width="300" height="150" rx="11" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="580" y="245" font-size="12" font-weight="700" fill="#b8860b">매일·매주 루프</text>
+  <text x="580" y="270" font-size="10" fill="#444">아침 · next로 다음 작업 시작</text>
+  <text x="580" y="290" font-size="10" fill="#444">작업 단위로 commit</text>
+  <text x="580" y="310" font-size="10" fill="#444">매주 · report로 진척률 보고서</text>
+  <text x="580" y="330" font-size="10" fill="#444">변경 · add-task · remove-task</text>
+  <text x="580" y="354" font-size="9.5" fill="#6b6b6b">PM 반복 작업이 자연어 몇 줄로 대체됩니다.</text>
+</svg>

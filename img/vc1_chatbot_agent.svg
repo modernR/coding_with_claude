@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="420" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">챗봇 vs 에이전트 — 답을 하나, 일을 끝내나</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">같은 언어 모델이지만, 도구를 손에 쥐느냐가 결정적 차이입니다.</text>
+
+  <defs><marker id="a1" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/></marker></defs>
+
+  <!-- 챗봇 -->
+  <rect x="36" y="92" width="400" height="296" rx="12" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="56" y="122" font-size="15" font-weight="700" fill="#6b6b6b">챗봇 — 도서관 사서</text>
+  <text x="56" y="146" font-size="11.5" fill="#6b6b6b">묻는 것에 답한다. 그러나 내 책상까지 오지 않는다.</text>
+
+  <rect x="56" y="166" width="100" height="40" rx="8" fill="#ffffff" stroke="#cfd4da"/><text x="106" y="191" font-size="12" fill="#1a1a1a" text-anchor="middle">사용자 질문</text>
+  <line x1="156" y1="186" x2="230" y2="186" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#a1)"/>
+  <rect x="230" y="166" width="100" height="40" rx="8" fill="#ffffff" stroke="#cfd4da"/><text x="280" y="191" font-size="12" fill="#1a1a1a" text-anchor="middle">텍스트 답변</text>
+
+  <rect x="56" y="228" width="360" height="140" rx="8" fill="#ffffff" stroke="#e3e6ea"/>
+  <text x="72" y="252" font-size="12" font-weight="700" fill="#1a1a1a">할 수 없는 것</text>
+  <text x="72" y="276" font-size="11.5" fill="#444">· 내 컴퓨터의 파일을 만들거나 고치지 못함</text>
+  <text x="72" y="298" font-size="11.5" fill="#444">· 웹·노션·슬랙에 직접 접속하지 못함</text>
+  <text x="72" y="320" font-size="11.5" fill="#444">· "이 코드 돌려보세요"라고만 하고 실행은 안 함</text>
+  <text x="72" y="348" font-size="11.5" fill="#b00020">→ "이 폴더 30개 파일을 요약해 노션에 올려줘"는 불가</text>
+
+  <!-- 에이전트 -->
+  <rect x="464" y="92" width="400" height="296" rx="12" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="484" y="122" font-size="15" font-weight="700" fill="#b8860b">에이전트 — 외주 프리랜서</text>
+  <text x="484" y="146" font-size="11.5" fill="#8a6d1a">한 마디만 받으면 도구를 직접 들고 일을 끝낸다.</text>
+
+  <rect x="484" y="166" width="86" height="40" rx="8" fill="#ffffff" stroke="#f0d6b8"/><text x="527" y="191" font-size="11.5" fill="#1a1a1a" text-anchor="middle">지시</text>
+  <line x1="570" y1="186" x2="600" y2="186" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#a1)"/>
+  <rect x="600" y="166" width="110" height="40" rx="8" fill="#ffffff" stroke="#f0d6b8"/><text x="655" y="188" font-size="11" fill="#1a1a1a" text-anchor="middle">도구 사용</text><text x="655" y="201" font-size="9" fill="#8a6d1a" text-anchor="middle">파일·웹·API</text>
+  <line x1="710" y1="186" x2="740" y2="186" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#a1)"/>
+  <rect x="740" y="166" width="104" height="40" rx="8" fill="#ffffff" stroke="#f0d6b8"/><text x="792" y="191" font-size="11.5" fill="#1a1a1a" text-anchor="middle">결과물</text>
+
+  <text x="484" y="240" font-size="12" font-weight="700" fill="#1a1a1a">에이전틱 AI의 3대 특성</text>
+  <rect x="484" y="252" width="116" height="116" rx="10" fill="#ffffff" stroke="#f0d6b8"/><text x="542" y="300" font-size="12.5" font-weight="700" fill="#b8860b" text-anchor="middle">자율성</text><text x="542" y="322" font-size="9.5" fill="#6b6b6b" text-anchor="middle">다음 단계를</text><text x="542" y="336" font-size="9.5" fill="#6b6b6b" text-anchor="middle">스스로 결정</text>
+  <rect x="612" y="252" width="116" height="116" rx="10" fill="#ffffff" stroke="#f0d6b8"/><text x="670" y="300" font-size="12.5" font-weight="700" fill="#b8860b" text-anchor="middle">도구 사용</text><text x="670" y="322" font-size="9.5" fill="#6b6b6b" text-anchor="middle">파일·명령어·</text><text x="670" y="336" font-size="9.5" fill="#6b6b6b" text-anchor="middle">API를 직접 호출</text>
+  <rect x="740" y="252" width="104" height="116" rx="10" fill="#ffffff" stroke="#f0d6b8"/><text x="792" y="300" font-size="12.5" font-weight="700" fill="#b8860b" text-anchor="middle">계획 수립</text><text x="792" y="322" font-size="9.5" fill="#6b6b6b" text-anchor="middle">단계로 쪼개고</text><text x="792" y="336" font-size="9.5" fill="#6b6b6b" text-anchor="middle">순서를 설계</text>
+</svg>

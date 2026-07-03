@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="400" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">좋은 프롬프트 — 3대 함정과 RACE-V 프레임</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">잘못된 프롬프트는 잘못된 답이 아니라 잘못된 '행동'으로 이어집니다.</text>
+
+  <!-- 3 함정 -->
+  <text x="40" y="98" font-size="13" font-weight="700" fill="#b00020">피해야 할 3대 함정</text>
+  <rect x="40" y="110" width="266" height="66" rx="9" fill="#fff5f6" stroke="#f3c9cf"/>
+  <text x="56" y="132" font-size="11.5" font-weight="700" fill="#b00020">① 추상화 함정</text>
+  <text x="56" y="152" font-size="10" fill="#444">"알아서", "대충", "잘 써줘"</text>
+  <text x="56" y="168" font-size="10" fill="#6b6b6b">→ 평균값으로 추론, 의도와 어긋남</text>
+  <rect x="317" y="110" width="266" height="66" rx="9" fill="#fff5f6" stroke="#f3c9cf"/>
+  <text x="333" y="132" font-size="11.5" font-weight="700" fill="#b00020">② 맥락 결손 함정</text>
+  <text x="333" y="152" font-size="10" fill="#444">"이 파일 정리해줘"</text>
+  <text x="333" y="168" font-size="10" fill="#6b6b6b">→ 입력·출력·제약이 빠짐</text>
+  <rect x="594" y="110" width="266" height="66" rx="9" fill="#fff5f6" stroke="#f3c9cf"/>
+  <text x="610" y="132" font-size="11.5" font-weight="700" fill="#b00020">③ 모순 표현 함정</text>
+  <text x="610" y="152" font-size="10" fill="#444">"간결하면서 자세히"</text>
+  <text x="610" y="168" font-size="10" fill="#6b6b6b">→ 양립 불가, 둘 다 못 맞춤</text>
+
+  <!-- RACE-V -->
+  <text x="40" y="212" font-size="13" font-weight="700" fill="#1a7f37">자가 점검 프레임 — R·A·C·E·V</text>
+  <g>
+    <rect x="40" y="224" width="158" height="120" rx="9" fill="#f1faf3" stroke="#cfe9d7"/>
+    <text x="119" y="250" font-size="18" font-weight="700" fill="#1a7f37" text-anchor="middle">R</text>
+    <text x="119" y="272" font-size="11" font-weight="700" fill="#1a1a1a" text-anchor="middle">Role</text>
+    <text x="119" y="292" font-size="9.5" fill="#6b6b6b" text-anchor="middle">역할</text>
+    <text x="119" y="314" font-size="9" fill="#444" text-anchor="middle">"당신은 ___</text>
+    <text x="119" y="328" font-size="9" fill="#444" text-anchor="middle">전문가다"</text>
+
+    <rect x="206" y="224" width="158" height="120" rx="9" fill="#f1faf3" stroke="#cfe9d7"/>
+    <text x="285" y="250" font-size="18" font-weight="700" fill="#1a7f37" text-anchor="middle">A</text>
+    <text x="285" y="272" font-size="11" font-weight="700" fill="#1a1a1a" text-anchor="middle">Action</text>
+    <text x="285" y="292" font-size="9.5" fill="#6b6b6b" text-anchor="middle">요구 행동</text>
+    <text x="285" y="314" font-size="9" fill="#444" text-anchor="middle">동사로 명확히</text>
+    <text x="285" y="328" font-size="9" fill="#444" text-anchor="middle">"5개로 분류"</text>
+
+    <rect x="372" y="224" width="158" height="120" rx="9" fill="#f1faf3" stroke="#cfe9d7"/>
+    <text x="451" y="250" font-size="18" font-weight="700" fill="#1a7f37" text-anchor="middle">C</text>
+    <text x="451" y="272" font-size="11" font-weight="700" fill="#1a1a1a" text-anchor="middle">Context</text>
+    <text x="451" y="292" font-size="9.5" fill="#6b6b6b" text-anchor="middle">맥락</text>
+    <text x="451" y="314" font-size="9" fill="#444" text-anchor="middle">입력 형식·자료·</text>
+    <text x="451" y="328" font-size="9" fill="#444" text-anchor="middle">금기 사항</text>
+
+    <rect x="538" y="224" width="158" height="120" rx="9" fill="#f1faf3" stroke="#cfe9d7"/>
+    <text x="617" y="250" font-size="18" font-weight="700" fill="#1a7f37" text-anchor="middle">E</text>
+    <text x="617" y="272" font-size="11" font-weight="700" fill="#1a1a1a" text-anchor="middle">Expected</text>
+    <text x="617" y="292" font-size="9.5" fill="#6b6b6b" text-anchor="middle">기대 결과 형식</text>
+    <text x="617" y="314" font-size="9" fill="#444" text-anchor="middle">표·JSON·길이·</text>
+    <text x="617" y="328" font-size="9" fill="#444" text-anchor="middle">언어</text>
+
+    <rect x="704" y="224" width="156" height="120" rx="9" fill="#eef3fd" stroke="#bcd0f5"/>
+    <text x="782" y="250" font-size="18" font-weight="700" fill="#3a6fd6" text-anchor="middle">V</text>
+    <text x="782" y="272" font-size="11" font-weight="700" fill="#1a1a1a" text-anchor="middle">Verification</text>
+    <text x="782" y="292" font-size="9.5" fill="#6b6b6b" text-anchor="middle">검증 방식</text>
+    <text x="782" y="314" font-size="9" fill="#444" text-anchor="middle">"근거 1줄과</text>
+    <text x="782" y="328" font-size="9" fill="#444" text-anchor="middle">함께"</text>
+  </g>
+  <text x="40" y="372" font-size="11" fill="#1a1a1a">동료 테스트: 프롬프트를 사람 동료에게 보이고 "혼자 할 수 있겠어?"라고 물어 되묻는 게 있으면 그만큼 부족한 것.</text>
+</svg>

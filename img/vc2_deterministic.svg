@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 340" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="340" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">고정 응답 vs 추론 응답 — 에이전트는 둘을 섞는다</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">일관성이 필요한 곳은 규칙으로 고정하고, 판단이 필요한 곳은 추론에 맡깁니다.</text>
+
+  <!-- 자판기 -->
+  <rect x="40" y="92" width="400" height="220" rx="12" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="60" y="124" font-size="15" font-weight="700" fill="#3a6fd6">고정 응답 — 자판기</text>
+  <text x="60" y="148" font-size="11.5" fill="#3a6fd6">같은 동전 → 항상 같은 음료. 100번 같음.</text>
+  <rect x="60" y="164" width="360" height="60" rx="8" fill="#ffffff" stroke="#bcd0f5"/>
+  <text x="76" y="188" font-size="11.5" fill="#1a1a1a">구현: if-else · 조건문 · DB 쿼리 · 셸 명령</text>
+  <text x="76" y="210" font-size="11.5" fill="#1a1a1a">특징: 예측 가능 · 재현 가능 · 융통성 없음</text>
+  <rect x="60" y="236" width="360" height="58" rx="8" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="76" y="258" font-size="11" font-weight="700" fill="#1a7f37">에이전트에서 맡기는 일</text>
+  <text x="76" y="279" font-size="10.5" fill="#444">권한 제어 · 폴더 접근 · 규정 준수 (Rules/Hook)</text>
+
+  <!-- 비서 -->
+  <rect x="460" y="92" width="400" height="220" rx="12" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="480" y="124" font-size="15" font-weight="700" fill="#b8860b">추론 응답 — 베테랑 비서</text>
+  <text x="480" y="148" font-size="11.5" fill="#b8860b">같은 요청에도 맥락 따라 표현이 달라짐.</text>
+  <rect x="480" y="164" width="360" height="60" rx="8" fill="#ffffff" stroke="#f0d6b8"/>
+  <text x="496" y="188" font-size="11.5" fill="#1a1a1a">구현: 언어 모델이 "다음에 올 단어"를 선택</text>
+  <text x="496" y="210" font-size="11.5" fill="#1a1a1a">특징: 자연스러움 · 맥락 민감 · 완벽 예측 불가</text>
+  <rect x="480" y="236" width="360" height="58" rx="8" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="496" y="258" font-size="11" font-weight="700" fill="#1a7f37">에이전트에서 맡기는 일</text>
+  <text x="496" y="279" font-size="10.5" fill="#444">문서 작성 · 문제 분석 · 피드백 (LLM 추론)</text>
+</svg>

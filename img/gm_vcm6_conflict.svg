@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="320" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">충돌 — 언제 나고, 어떻게 예방하나</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">두 브랜치가 같은 파일의 같은 라인을 다르게 바꾸면 충돌. 예방이 해결보다 훨씬 쌉니다.</text>
+
+  <defs><marker id="gm6cf" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/></marker></defs>
+
+  <!-- how it happens -->
+  <rect x="40" y="95" width="400" height="150" rx="12" fill="#fff5f6" stroke="#f3c9cf"/>
+  <text x="240" y="121" font-size="13" font-weight="700" fill="#b00020" text-anchor="middle">발생 — 같은 라인, 다른 변경</text>
+  <rect x="60" y="138" width="150" height="40" rx="7" fill="#ffffff" stroke="#f3c9cf"/>
+  <text x="135" y="156" font-size="10" fill="#444" text-anchor="middle">A: 검증 로직 수정</text>
+  <text x="135" y="171" font-size="9" fill="#6b6b6b" text-anchor="middle">rsvp-form.ts:42</text>
+  <rect x="270" y="138" width="150" height="40" rx="7" fill="#ffffff" stroke="#f3c9cf"/>
+  <text x="345" y="156" font-size="10" fill="#444" text-anchor="middle">B: 같은 부분 수정</text>
+  <text x="345" y="171" font-size="9" fill="#6b6b6b" text-anchor="middle">rsvp-form.ts:42</text>
+  <line x1="210" y1="198" x2="245" y2="210" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#gm6cf)"/>
+  <line x1="270" y1="198" x2="235" y2="210" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#gm6cf)"/>
+  <rect x="175" y="212" width="130" height="26" rx="6" fill="#b00020"/>
+  <text x="240" y="230" font-size="10.5" font-weight="700" fill="#fff" text-anchor="middle">충돌 — 사람이 결정</text>
+
+  <!-- prevention -->
+  <rect x="460" y="95" width="400" height="150" rx="12" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="660" y="121" font-size="13" font-weight="700" fill="#1a7f37" text-anchor="middle">예방 — 세 가지 습관</text>
+  <rect x="482" y="136" width="356" height="30" rx="6" fill="#ffffff" stroke="#cfe9d7"/>
+  <text x="496" y="155" font-size="10.5" fill="#444">자주 동기화 (하루 한 번 main을 rebase/merge)</text>
+  <rect x="482" y="170" width="356" height="30" rx="6" fill="#ffffff" stroke="#cfe9d7"/>
+  <text x="496" y="189" font-size="10.5" fill="#444">PR을 작게 유지 (작은 단위로 자주 머지)</text>
+  <rect x="482" y="204" width="356" height="30" rx="6" fill="#ffffff" stroke="#cfe9d7"/>
+  <text x="496" y="223" font-size="10.5" fill="#444">핫스팟 파일을 미리 공유 (공통 타입·라우팅)</text>
+
+  <rect x="40" y="258" width="820" height="46" rx="9" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="56" y="286" font-size="11" fill="#8a6d00">Cowork에게 "양쪽 변경을 보존하되 모호하면 내가 결정" 방식으로 해결을 맡길 수 있습니다.</text>
+</svg>

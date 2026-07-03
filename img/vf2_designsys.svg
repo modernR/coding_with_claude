@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 320" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="860" height="320" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">디자인 시스템의 3계층 — 토큰 · 컴포넌트 · 패턴</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">작은 값(토큰)을 조합해 컴포넌트를, 컴포넌트를 조합해 화면 부분(패턴)을 만듭니다.</text>
+
+  <defs><marker id="ds" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/></marker></defs>
+
+  <rect x="40" y="100" width="240" height="180" rx="12" fill="#fff7e6" stroke="#f3d488"/>
+  <text x="160" y="126" font-size="14" font-weight="700" fill="#b8860b" text-anchor="middle">① 디자인 토큰</text>
+  <text x="160" y="146" font-size="11" fill="#6b6b6b" text-anchor="middle">가장 기본이 되는 값</text>
+  <text x="60" y="176" font-size="12" fill="#1a1a1a">· 색상: Primary Blue …</text>
+  <text x="60" y="200" font-size="12" fill="#1a1a1a">· 타이포: 제목 32 / 본문 16</text>
+  <text x="60" y="224" font-size="12" fill="#1a1a1a">· 간격: 4·8·16·24 …</text>
+
+  <rect x="310" y="100" width="240" height="180" rx="12" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="430" y="126" font-size="14" font-weight="700" fill="#3a6fd6" text-anchor="middle">② 컴포넌트</text>
+  <text x="430" y="146" font-size="11" fill="#6b6b6b" text-anchor="middle">토큰으로 만든 재사용 단위</text>
+  <text x="330" y="176" font-size="12" fill="#1a1a1a">· Button (색+타이포+간격)</text>
+  <text x="330" y="200" font-size="12" fill="#1a1a1a">· Card (배경+그림자+여백)</text>
+  <text x="330" y="224" font-size="12" fill="#1a1a1a">· Input (테두리+포커스)</text>
+
+  <rect x="580" y="100" width="240" height="180" rx="12" fill="#fdeef1" stroke="#f7c0c8"/>
+  <text x="700" y="126" font-size="14" font-weight="700" fill="#E8344E" text-anchor="middle">③ 패턴</text>
+  <text x="700" y="146" font-size="11" fill="#6b6b6b" text-anchor="middle">컴포넌트로 만든 화면 부분</text>
+  <text x="600" y="176" font-size="12" fill="#1a1a1a">· Header (로고+내비+버튼)</text>
+  <text x="600" y="200" font-size="12" fill="#1a1a1a">· Form (입력+라벨+검증)</text>
+  <text x="600" y="224" font-size="12" fill="#1a1a1a">· Modal (카드+버튼)</text>
+
+  <line x1="280" y1="190" x2="308" y2="190" stroke="#9aa0a6" stroke-width="1.8" marker-end="url(#ds)"/>
+  <line x1="550" y1="190" x2="578" y2="190" stroke="#9aa0a6" stroke-width="1.8" marker-end="url(#ds)"/>
+
+  <text x="40" y="306" font-size="12.5" fill="#6b6b6b">비유 — '사내 PPT 마스터 슬라이드'. 미리 정한 폰트·색·틀 덕에, 채우기만 해도 일관되고 빠릅니다.</text>
+</svg>

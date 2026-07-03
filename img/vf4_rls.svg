@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 340" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="880" height="340" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">권한은 코드가 아니라 DB에서 강제 — RLS</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">코드로만 막으면 뚫립니다. 데이터베이스가 '행 단위'로 강제하면 안전합니다.</text>
+
+  <!-- 코드에서만 -->
+  <rect x="36" y="92" width="392" height="150" rx="12" fill="#fff5f6" stroke="#f3c9cf"/>
+  <text x="56" y="118" font-size="14" font-weight="700" fill="#b00020">코드에서만 확인 — 위험 ✕</text>
+  <text x="56" y="146" font-size="12" fill="#1a1a1a">if (user.role === "admin") { 허용 }</text>
+  <text x="56" y="176" font-size="11.5" fill="#444">· 브라우저 도구로 값 위조 가능</text>
+  <text x="56" y="198" font-size="11.5" fill="#444">· 로직 버그 하나로 뚫림</text>
+  <text x="56" y="220" font-size="11.5" fill="#444">· 누구나 'admin'을 흉내낼 수 있음</text>
+
+  <!-- DB에서 -->
+  <rect x="452" y="92" width="392" height="150" rx="12" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="472" y="118" font-size="14" font-weight="700" fill="#1a7f37">DB에서 강제(RLS) — 안전 ✓</text>
+  <text x="472" y="146" font-size="11.5" fill="#1a1a1a">CREATE POLICY … USING (auth.uid() = user_id)</text>
+  <text x="472" y="176" font-size="11.5" fill="#444">· 코드에 버그가 있어도 DB가 정책 지킴</text>
+  <text x="472" y="198" font-size="11.5" fill="#444">· 직접 쿼리해도 권한 위반 불가</text>
+  <text x="472" y="220" font-size="11.5" fill="#444">· 단일 진실 공급원(SSOT)</text>
+
+  <!-- 행 단위 -->
+  <text x="40" y="272" font-size="13" font-weight="700" fill="#1a1a1a">행 단위(Row Level Security)</text>
+  <g font-size="10.5" text-anchor="middle">
+    <rect x="40" y="284" width="180" height="40" rx="8" fill="#eef3fd" stroke="#bcd0f5"/><text x="130" y="300" fill="#3a6fd6" font-weight="700">일반 사용자</text><text x="130" y="316" fill="#444">자신의 행만 조회/수정</text>
+    <rect x="234" y="284" width="180" height="40" rx="8" fill="#fff7e6" stroke="#f3d488"/><text x="324" y="300" fill="#b8860b" font-weight="700">이벤트 호스트</text><text x="324" y="316" fill="#444">담당 이벤트 신청 관리</text>
+    <rect x="428" y="284" width="180" height="40" rx="8" fill="#fdeef1" stroke="#f7c0c8"/><text x="518" y="300" fill="#E8344E" font-weight="700">관리자</text><text x="518" y="316" fill="#444">모든 행</text>
+  </g>
+  <text x="628" y="308" font-size="11" fill="#6b6b6b">→ 백엔드가 권한 검사를 잊어도 DB가 자동으로 막습니다.</text>
+</svg>

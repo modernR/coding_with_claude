@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="300" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">Edge Function — 신청 시 확인 메일 자동 발송</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">클라이언트에 두면 위험하거나 무거운 로직을 서버로 옮깁니다. 비밀 키는 secrets에 보관.</text>
+
+  <defs><marker id="gm6ef" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/></marker></defs>
+
+  <rect x="40" y="110" width="150" height="70" rx="10" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="115" y="140" font-size="11.5" font-weight="700" fill="#3a6fd6" text-anchor="middle">신규 신청</text>
+  <text x="115" y="162" font-size="9.5" fill="#6b6b6b" text-anchor="middle">participants INSERT</text>
+
+  <line x1="190" y1="145" x2="228" y2="145" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#gm6ef)"/>
+
+  <rect x="232" y="110" width="150" height="70" rx="10" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="307" y="140" font-size="11.5" font-weight="700" fill="#b8860b" text-anchor="middle">DB 트리거</text>
+  <text x="307" y="162" font-size="9.5" fill="#6b6b6b" text-anchor="middle">함수 자동 호출</text>
+
+  <line x1="382" y1="145" x2="420" y2="145" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#gm6ef)"/>
+
+  <rect x="424" y="110" width="200" height="70" rx="10" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="524" y="138" font-size="11.5" font-weight="700" fill="#7c3aed" text-anchor="middle">Edge Function</text>
+  <text x="524" y="158" font-size="9.5" fill="#444" text-anchor="middle">send-rsvp-confirmation</text>
+  <text x="524" y="173" font-size="9" fill="#6b6b6b" text-anchor="middle">키는 secrets에서</text>
+
+  <line x1="624" y1="145" x2="662" y2="145" stroke="#9aa0a6" stroke-width="1.5" marker-end="url(#gm6ef)"/>
+
+  <rect x="666" y="110" width="194" height="70" rx="10" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="763" y="140" font-size="11.5" font-weight="700" fill="#1a7f37" text-anchor="middle">외부 메일 (Resend)</text>
+  <text x="763" y="162" font-size="9.5" fill="#6b6b6b" text-anchor="middle">확인 메일 발송</text>
+
+  <rect x="40" y="205" width="820" height="70" rx="9" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="56" y="230" font-size="12" font-weight="700" fill="#1a1a1a">대표 쓰임새</text>
+  <text x="56" y="253" font-size="10.5" fill="#444">결제 webhook 처리 · 외부 API 키 은닉 · 사용자별 알림 발송 · 정기 작업(cron)</text>
+  <text x="56" y="270" font-size="10" fill="#6b6b6b">공통점: 클라이언트에 두면 위험하거나 무거운 로직을 서버로 이동</text>
+</svg>

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="420" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">모델 선택 매트릭스 — 작업 성격별 전략</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">작업의 난이도와 입력 크기를 기준으로 별칭을 고릅니다. 가격은 1M 토큰 기준(입력/출력).</text>
+
+  <!-- column headers -->
+  <rect x="200" y="90" width="216" height="34" rx="7" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="308" y="112" font-size="11" font-weight="700" fill="#1a7f37" text-anchor="middle">비용 우선</text>
+  <rect x="424" y="90" width="216" height="34" rx="7" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="532" y="112" font-size="11" font-weight="700" fill="#3a6fd6" text-anchor="middle">균형</text>
+  <rect x="648" y="90" width="212" height="34" rx="7" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="754" y="112" font-size="11" font-weight="700" fill="#7c3aed" text-anchor="middle">품질·규모 우선</text>
+
+  <!-- row 1: 일상 -->
+  <rect x="40" y="132" width="152" height="82" rx="9" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="116" y="170" font-size="11" font-weight="700" fill="#1a1a1a" text-anchor="middle">단순 · 반복</text>
+  <text x="116" y="190" font-size="9" fill="#6b6b6b" text-anchor="middle">검색 · 코딩</text>
+
+  <rect x="200" y="132" width="216" height="82" rx="9" fill="#f1faf3" stroke="#cfe9d7"/>
+  <text x="308" y="158" font-size="12" font-weight="700" fill="#1a7f37" text-anchor="middle">haiku</text>
+  <text x="308" y="178" font-size="9.5" fill="#444" text-anchor="middle">파일 탐색·검색·서브에이전트</text>
+  <text x="308" y="196" font-size="9" fill="#6b6b6b" text-anchor="middle">$1 / $5 · 상대비용 1배</text>
+
+  <rect x="424" y="132" width="216" height="82" rx="9" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="532" y="158" font-size="12" font-weight="700" fill="#3a6fd6" text-anchor="middle">sonnet</text>
+  <text x="532" y="178" font-size="9.5" fill="#444" text-anchor="middle">일반 코딩·리팩토링·버그 수정</text>
+  <text x="532" y="196" font-size="9" fill="#6b6b6b" text-anchor="middle">$3 / $15 · 상대비용 2배</text>
+
+  <rect x="648" y="132" width="212" height="82" rx="9" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="754" y="176" font-size="9.5" fill="#9aa0a6" text-anchor="middle">(과잉 — 낭비)</text>
+
+  <!-- row 2: 고난도 -->
+  <rect x="40" y="222" width="152" height="82" rx="9" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="116" y="260" font-size="11" font-weight="700" fill="#1a1a1a" text-anchor="middle">복잡 · 설계</text>
+  <text x="116" y="280" font-size="9" fill="#6b6b6b" text-anchor="middle">아키텍처·추론</text>
+
+  <rect x="200" y="222" width="216" height="82" rx="9" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="308" y="266" font-size="9.5" fill="#9aa0a6" text-anchor="middle">(품질 부족 — 위험)</text>
+
+  <rect x="424" y="222" width="216" height="82" rx="9" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="532" y="256" font-size="12" font-weight="700" fill="#3a6fd6" text-anchor="middle">opusplan</text>
+  <text x="532" y="276" font-size="9.5" fill="#444" text-anchor="middle">계획(opus)+실행(sonnet) 2단계</text>
+  <text x="532" y="294" font-size="9" fill="#6b6b6b" text-anchor="middle">거대 리팩토링에 적합</text>
+
+  <rect x="648" y="222" width="212" height="82" rx="9" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="754" y="248" font-size="12" font-weight="700" fill="#7c3aed" text-anchor="middle">opus</text>
+  <text x="754" y="268" font-size="9.5" fill="#444" text-anchor="middle">복잡 설계·멀티스텝 추론</text>
+  <text x="754" y="286" font-size="9" fill="#6b6b6b" text-anchor="middle">$5 / $25 · 상대비용 3배</text>
+
+  <!-- row 3: 대규모 입력 -->
+  <rect x="40" y="312" width="152" height="82" rx="9" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="116" y="350" font-size="11" font-weight="700" fill="#1a1a1a" text-anchor="middle">대규모 입력</text>
+  <text x="116" y="370" font-size="9" fill="#6b6b6b" text-anchor="middle">monorepo·장문서</text>
+
+  <rect x="200" y="312" width="440" height="82" rx="9" fill="#fff7ef" stroke="#f0d6b8"/>
+  <text x="420" y="346" font-size="12" font-weight="700" fill="#b8860b" text-anchor="middle">sonnet[1m]</text>
+  <text x="420" y="366" font-size="9.5" fill="#444" text-anchor="middle">50K+ 토큰 대규모 코드베이스 분석 · 200K 초과 입력 시 입력 단가 상승</text>
+
+  <rect x="648" y="312" width="212" height="82" rx="9" fill="#fafbfc" stroke="#e3e6ea"/>
+  <text x="754" y="346" font-size="11" font-weight="700" fill="#1a1a1a" text-anchor="middle">default</text>
+  <text x="754" y="366" font-size="9" fill="#6b6b6b" text-anchor="middle">명시 없을 때 자동 선택</text>
+</svg>

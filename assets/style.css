@@ -1,0 +1,92 @@
+:root{
+  --red:#E8344E; --ink:#1a1a1a; --muted:#6b6b6b; --line:#e7e9ee; --bg:#ffffff;
+  --sidebar-w:320px; --topbar-h:52px;
+  --code-bg:#f7f8fa; --link:#3a6fd6;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',system-ui,sans-serif;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased}
+a{color:var(--link);text-decoration:none}
+
+/* ---------- 랜딩 ---------- */
+.landing{max-width:1080px;margin:0 auto;padding:64px 24px 80px}
+.hero{text-align:center;margin-bottom:48px}
+.hero-badge{display:inline-block;color:var(--red);font-weight:700;letter-spacing:2px;font-size:13px;margin-bottom:10px}
+.hero h1{font-size:44px;margin:0 0 14px;letter-spacing:-1px}
+.hero-sub{color:var(--muted);font-size:17px;line-height:1.7;max-width:680px;margin:0 auto}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.card{border:1px solid var(--line);border-radius:16px;padding:26px 24px;display:block;transition:.15s;background:#fff;border-top:4px solid var(--accent)}
+.card:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(0,0,0,.08)}
+.card-badge{color:var(--accent);font-weight:700;font-size:13px;letter-spacing:1px}
+.card-title{font-size:24px;font-weight:800;margin:6px 0 8px;color:var(--ink)}
+.card-sub{color:var(--muted);font-size:14px;line-height:1.6;min-height:44px}
+.card-go{margin-top:14px;color:var(--accent);font-weight:700;font-size:14px}
+.foot{text-align:center;color:#9aa0a6;font-size:13px;margin-top:44px;line-height:1.7}
+@media(max-width:720px){.cards{grid-template-columns:1fr}.hero h1{font-size:34px}}
+
+/* ---------- 리더 레이아웃 ---------- */
+.reader{height:100vh;overflow:hidden}
+.topbar{height:var(--topbar-h);display:flex;align-items:center;gap:14px;padding:0 16px;border-bottom:1px solid var(--line);position:sticky;top:0;background:#fff;z-index:30}
+.home{font-weight:800;color:var(--ink);white-space:nowrap}
+.crumb{flex:1;color:var(--muted);font-size:13px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.crumb b{color:var(--ink)}
+.crumb .sep{color:#c3c8d0;margin:0 7px}
+.nav-btns button{border:1px solid var(--line);background:#fff;border-radius:8px;padding:6px 11px;font-size:13px;cursor:pointer;color:var(--ink)}
+.nav-btns button:hover{background:#f4f5f7}
+.nav-btns button:disabled{opacity:.4;cursor:default}
+
+.layout{display:flex;height:calc(100vh - var(--topbar-h))}
+.sidebar{width:var(--sidebar-w);min-width:180px;max-width:620px;overflow-y:auto;border-right:1px solid var(--line);padding:14px 8px 60px;background:#fcfcfd;flex-shrink:0}
+.sidebar-title{font-size:12px;font-weight:800;color:var(--red);letter-spacing:.5px;padding:6px 12px 12px}
+.resizer{width:6px;cursor:col-resize;background:transparent;flex-shrink:0;position:relative}
+.resizer:hover,.resizer.active{background:var(--red)}
+.content{flex:1;overflow-y:auto;padding:34px 52px 120px;scroll-behavior:smooth}
+
+/* ---------- 사이드바 목차 ---------- */
+.toc-doc{margin-bottom:2px}
+.toc-doc-btn{display:flex;align-items:center;gap:6px;width:100%;text-align:left;border:0;background:none;cursor:pointer;padding:8px 10px;border-radius:8px;font-size:14px;font-weight:700;color:var(--ink);line-height:1.4}
+.toc-doc-btn:hover{background:#eef0f4}
+.toc-doc-btn.active{background:#fdeaed;color:var(--red)}
+.toc-doc-btn .caret{font-size:10px;color:#9aa0a6;transition:transform .15s;display:inline-block}
+.toc-doc-btn.open .caret{transform:rotate(90deg)}
+.toc-sub{display:none;padding:2px 0 6px 14px;border-left:1px solid var(--line);margin-left:16px}
+.toc-sub.open{display:block}
+.toc-l2{display:block;padding:5px 10px;border-radius:6px;font-size:13px;color:#444;line-height:1.45}
+.toc-l2:hover{background:#eef0f4}
+.toc-l2.active{color:var(--red);font-weight:700}
+.toc-l3{padding-left:12px}
+.toc-l3-a{display:block;padding:3px 10px;border-radius:6px;font-size:12px;color:#7a8089;line-height:1.4}
+.toc-l3-a:hover{background:#eef0f4}
+.toc-l3-a.active{color:var(--red);font-weight:600}
+
+/* ---------- 본문 ---------- */
+.content{max-width:none}
+.doc{max-width:860px;margin:0 auto}
+.doc-head{border-bottom:2px solid var(--red);padding-bottom:12px;margin-bottom:22px}
+.crumb-part{color:var(--red);font-size:12px;font-weight:700;letter-spacing:.5px}
+.doc-head h1{font-size:28px;margin:6px 0 0;line-height:1.3}
+.doc h2{font-size:21px;margin:34px 0 12px;padding-bottom:6px;border-bottom:1px solid #eee;color:#b3243b;scroll-margin-top:70px}
+.doc h3{font-size:17px;margin:24px 0 8px;color:#333;scroll-margin-top:70px}
+.doc p{line-height:1.85;margin:12px 0;font-size:15.5px}
+.doc ul,.doc ol{line-height:1.8;padding-left:22px}
+.doc li{margin:5px 0}
+.doc strong{color:#111}
+.doc em{color:var(--link);font-style:normal}
+.doc img{max-width:100%;display:block;margin:20px auto;border:1px solid #eef0f3;border-radius:10px;background:#fff}
+.doc blockquote{margin:16px 0;padding:12px 18px;background:#fafbfc;border-left:3px solid var(--red);border-radius:0 8px 8px 0;color:#444}
+.doc blockquote p{margin:5px 0}
+.doc code{background:#eef1f4;color:#b3243b;padding:2px 6px;border-radius:5px;font-size:.9em;font-family:'SFMono-Regular',Consolas,monospace}
+.doc pre{background:var(--code-bg);border:1px solid var(--line);border-radius:10px;padding:16px 18px;overflow-x:auto;line-height:1.55}
+.doc pre code{background:none;color:#1a1a1a;padding:0;font-size:13px}
+.doc table{border-collapse:collapse;width:100%;margin:16px 0;font-size:14px;display:block;overflow-x:auto}
+.doc th,.doc td{border:1px solid #e2e5ea;padding:8px 11px;text-align:left;vertical-align:top}
+.doc th{background:#f4f5f7;font-weight:700}
+.doc hr{border:0;border-top:1px solid #eee;margin:22px 0}
+.doc h1:first-of-type{display:none}
+
+/* ---------- 툴팁 ---------- */
+.tt{border-bottom:1px dotted #9bb4e0;cursor:help;color:inherit}
+.tt:hover{background:#eef3fd}
+.tip{position:fixed;z-index:100;max-width:320px;background:#1f2430;color:#fff;font-size:13px;line-height:1.55;padding:10px 13px;border-radius:9px;box-shadow:0 8px 24px rgba(0,0,0,.22);pointer-events:none;opacity:0;transition:opacity .12s;display:none}
+.tip.show{opacity:1;display:block}
+.tip .tip-term{font-weight:800;color:#8ec7ff;display:block;margin-bottom:3px;font-size:12.5px}

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="300" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">양방향 동기화 — 실시간 vs 정기, 그리고 충돌 방지</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">PM 도구 변경을 되받는 두 방식. 한 쪽을 master로 정해 충돌을 막습니다.</text>
+  <defs>
+    <marker id="sd_a" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#9aa0a6"/></marker>
+  </defs>
+  <rect x="60" y="100" width="180" height="60" rx="10" fill="#ede9fe" stroke="#a78bda"/>
+  <text x="150" y="126" font-size="12" font-weight="700" fill="#7c3aed" text-anchor="middle">task-master</text>
+  <text x="150" y="147" font-size="10" fill="#444" text-anchor="middle">tasks.json (SSOT)</text>
+  <rect x="660" y="100" width="180" height="60" rx="10" fill="#eef3fd" stroke="#bcd0f5"/>
+  <text x="750" y="126" font-size="12" font-weight="700" fill="#3a6fd6" text-anchor="middle">Linear · Notion</text>
+  <text x="750" y="147" font-size="10" fill="#444" text-anchor="middle">이슈·milestone</text>
+  <line x1="242" y1="120" x2="658" y2="120" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#sd_a)"/>
+  <text x="450" y="113" font-size="10" fill="#6b6b6b" text-anchor="middle">작업 완료 → 이슈 close</text>
+  <line x1="658" y1="147" x2="242" y2="147" stroke="#9aa0a6" stroke-width="1.6" marker-end="url(#sd_a)"/>
+  <text x="450" y="164" font-size="10" fill="#6b6b6b" text-anchor="middle">이슈 상태 변경 → task-master 반영</text>
+  <g>
+    <rect x="60" y="185" width="380" height="72" rx="10" fill="#f1faf3" stroke="#cfe9d7"/>
+    <text x="80" y="208" font-size="12" font-weight="700" fill="#1a7f37">실시간 (webhook + hook)</text>
+    <text x="80" y="228" font-size="10.5" fill="#444">변경 즉시 감지 · 반응 빠름</text>
+    <text x="80" y="246" font-size="10.5" fill="#6b6b6b">단점: 설정이 복잡</text>
+    <rect x="460" y="185" width="380" height="72" rx="10" fill="#fff7e6" stroke="#f3d488"/>
+    <text x="480" y="208" font-size="12" font-weight="700" fill="#b8860b">정기 (주기 동기화)</text>
+    <text x="480" y="228" font-size="10.5" fill="#444">매시간 등 정해진 주기에 맞춤 · 단순</text>
+    <text x="480" y="246" font-size="10.5" fill="#6b6b6b">단점: 반영에 시차</text>
+  </g>
+  <text x="450" y="288" font-size="11" fill="#b00020" text-anchor="middle">충돌 방지 원칙 — 한 쪽을 master, 다른 쪽을 read-only로 정하고 동기화 시점을 명확히 합니다.</text>
+</svg>

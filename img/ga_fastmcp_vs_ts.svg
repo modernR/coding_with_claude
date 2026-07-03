@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect width="900" height="320" fill="#ffffff"/>
+  <text x="40" y="40" font-size="21" font-weight="700" fill="#1a1a1a">서버를 짓는 두 갈래 — FastMCP vs TypeScript SDK</text>
+  <text x="40" y="65" font-size="14" fill="#6b6b6b">같은 프로토콜이라 클라이언트 입장에선 동일합니다. 짓는 방식만 다릅니다.</text>
+  <g>
+    <rect x="40" y="95" width="390" height="190" rx="12" fill="#f1faf3" stroke="#cfe9d7"/>
+    <text x="60" y="122" font-size="15" font-weight="700" fill="#1a7f37">FastMCP (Python)</text>
+    <text x="60" y="146" font-size="11" fill="#444">데코레이터 기반 · 빠른 시작</text>
+    <line x1="60" y1="158" x2="410" y2="158" stroke="#cfe9d7" stroke-width="1"/>
+    <text x="60" y="180" font-size="10.5" fill="#444">· @mcp.tool() 하나로 도구 등록</text>
+    <text x="60" y="200" font-size="10.5" fill="#444">· 타입 힌트+docstring → 스키마 자동생성</text>
+    <text x="60" y="220" font-size="10.5" fill="#444">· 스키마를 손으로 쓸 필요 없음</text>
+    <rect x="60" y="236" width="350" height="36" rx="7" fill="#e8f6ec"/>
+    <text x="70" y="259" font-size="10.5" fill="#1a7f37">적합: 첫 MCP · Python 사내 시스템 · 빠른 제작</text>
+  </g>
+  <g>
+    <rect x="470" y="95" width="390" height="190" rx="12" fill="#eef3fd" stroke="#bcd0f5"/>
+    <text x="490" y="122" font-size="15" font-weight="700" fill="#3a6fd6">TypeScript SDK (Node.js)</text>
+    <text x="490" y="146" font-size="11" fill="#444">핸들러 명시 · 세밀 제어</text>
+    <line x1="490" y1="158" x2="840" y2="158" stroke="#bcd0f5" stroke-width="1"/>
+    <text x="490" y="180" font-size="10.5" fill="#444">· inputSchema를 직접 작성</text>
+    <text x="490" y="200" font-size="10.5" fill="#444">· 목록·호출 요청에 핸들러 각각 부착</text>
+    <text x="490" y="220" font-size="10.5" fill="#444">· 입력 형식을 정확히 못박음</text>
+    <rect x="490" y="236" width="350" height="36" rx="7" fill="#e3edfb"/>
+    <text x="500" y="259" font-size="10.5" fill="#3a6fd6">적합: Node 기반 · 응답 세밀 제어 · TS 팀</text>
+  </g>
+  <text x="450" y="305" font-size="11" fill="#6b6b6b" text-anchor="middle">빌드 이후 등록·테스트·사용 단계는 두 갈래가 같습니다.</text>
+</svg>
